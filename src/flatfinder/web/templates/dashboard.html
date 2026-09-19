@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block body %}
+<header>
+  <h1>flatfinder · {{ criteria.city }}</h1>
+  <div class="sub">
+    bis {{ criteria.price_max }} € kalt · ab {{ "%.0f"|format(criteria.sqm_min) }} m² ·
+    {{ "%.0f"|format(criteria.rooms_min) }}–{{ "%.0f"|format(criteria.rooms_max) }} Zimmer ·
+    meldet ab Score {{ criteria.notify_threshold }}
+  </div>
+</header>
+
+{% if settings.dry_run %}
+<div class="banner">
+  <b>DRY_RUN aktiv.</b> Texte werden generiert, aber nichts wird versendet.
+  Zum Scharfschalten <code>DRY_RUN=false</code> in <code>.env</code> setzen —
+  vorher mindestens zehn generierte Texte gelesen haben.
+</div>
+{% endif %}
+
+<div class="stats">
+  <div class="stat"><b>{{ stats.gefunden }}</b><span>gefunden</span></div>
+  <div class="stat"><b>{{ stats.gemeldet }}</b><span>gemeldet</span></div>
+  <div class="stat"><b>{{ stats.offen }}</b><span>offen</span></div>
+  <div class="stat"><b>{{ stats.beworben }}</b><span>beworben</span></div>
+</div>
+
+{% if listings %}
+<table>
+  <thead><tr>
+    <th>Objekt</th><th class="num">Miete</th><th class="num hide-s">€/m²</th>
+    <th class="num">Score</th><th>Status</th>
+  </tr></thead>
+  <tbody>
+  {% for l in listings %}
+    {% set a = apps.get(l.key) %}
+    <tr>
+      <td>
+        <div class="title"><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.title[:64] }}</a></div>
+        <div class="meta">
+          {% if l.rooms %}{{ "%.0f"|format(l.rooms) }} Zi{% endif %}
+          {% if l.sqm %} · {{ "%.0f"|format(l.sqm) }} m²{% endif %}
+          {% if l.district or l.city %} · {{ l.district or l.city }}{% endif %}
+          · {{ l.source }}
+        </div>
+      </td>
+      <td class="num">{% if l.price_cold %}{{ l.price_cold }} €{% else %}—{% endif %}</td>
+      <td class="num hide-s">{% if l.price_per_sqm %}{{ "%.2f"|format(l.price_per_sqm) }}{% else %}—{% endif %}</td>
+      <td class="num">
+        {% if l.score is not none %}
+          <span class="score {{ 's-hi' if l.score >= 80 else ('s-mid' if l.score >= criteria.notify_threshold else 's-lo') }}">{{ l.score }}</span>
+        {% else %}—{% endif %}
+      </td>
+      <td>
+        {% if a %}
+          <a href="/bewerbung/{{ a.id }}" class="tag
+            {{ 't-sent' if a.status in ('sent','replied') else ('t-failed' if a.status == 'failed' else ('t-pending' if a.status == 'pending' else '')) }}">{{ a.status }}</a>
+        {% else %}<span class="tag">{{ l.status }}</span>{% endif %}
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="empty">Noch nichts gefunden. Der erste Durchlauf läuft binnen {{ settings.poll_interval_seconds }} Sekunden.</div>
+{% endif %}
+{% endblock %}

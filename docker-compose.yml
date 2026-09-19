@@ -1,0 +1,15 @@
+services:
+  core:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    command: uvicorn flatfinder.web.app:app --host 0.0.0.0 --port 8000
+
+# Der Heim-Node laeuft NICHT hier, sondern bei dir zu Hause:
+#   docker compose -f docker-compose.home.yml up -d
+# Grund: IS24 und Kleinanzeigen sperren Rechenzentrums-IPs pauschal
+# (gemessen 2026-09-19: 401 bzw. "IP-Bereich voruebergehend gesperrt").

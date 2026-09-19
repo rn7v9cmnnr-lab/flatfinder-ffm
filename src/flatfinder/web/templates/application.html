@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+<header>
+  <h1>Bewerbung #{{ app.id }}</h1>
+  <div class="sub">
+    {% if listing %}<a href="{{ listing.url }}" target="_blank" rel="noopener">{{ listing.title }}</a> · {% endif %}
+    Status {{ app.status }}{% if app.decision %} · Entscheidung {{ app.decision }}{% endif %}
+    {% if app.sent_via %} · gesendet via {{ app.sent_via }}{% endif %}
+  </div>
+</header>
+
+{% if app.error %}<div class="banner"><b>Fehler:</b> {{ app.error }}</div>{% endif %}
+
+{% if app.message_text %}
+  <pre>{{ app.message_text }}</pre>
+  <div class="sub">generiert von {{ app.message_model or "—" }}</div>
+{% else %}
+  <div class="empty">Noch kein Text generiert.</div>
+{% endif %}
+
+<p style="margin-top:28px"><a href="/">← zurück</a></p>
+{% endblock %}
