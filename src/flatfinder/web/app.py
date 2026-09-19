@@ -18,6 +18,7 @@ from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.responses import HTMLResponse, PlainTextResponse
 from fastapi.templating import Jinja2Templates
 
+from ..adapters.nhw import NhwAdapter
 from ..adapters.vonovia import VonoviaAdapter
 from ..config import Criteria, Profile, Settings
 from ..db import Store
@@ -36,7 +37,10 @@ store = Store(settings.db_path)
 messenger = build_messenger(settings)
 
 pipeline = Pipeline(store, messenger, settings, criteria, profile,
-                    adapters=[VonoviaAdapter(criteria.city)])
+                    adapters=[
+                        VonoviaAdapter(criteria.city),
+                        NhwAdapter(criteria.city),
+                    ])
 
 
 @asynccontextmanager

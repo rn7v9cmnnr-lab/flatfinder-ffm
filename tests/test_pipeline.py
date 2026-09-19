@@ -62,13 +62,16 @@ def listings():
     return [VonoviaAdapter.parse(i) for i in raw if _is_flat(i)]
 
 
-def build(tmp_path, listings, **crit):
+def build(tmp_path, listings, notify_only=False, **crit):
+    """notify_only=False fuer die Bewerbungs-Tests: die pruefen den Pfad,
+    der im Alarm-Modus bewusst abgeschaltet ist."""
     store = Store(tmp_path / "t.db")
     msg = FakeMessenger()
+    crit.setdefault("notify_threshold", 50)
     criteria = Criteria(price_max=1400, price_ideal=1000, sqm_min=50,
-                        rooms_min=1, rooms_max=5, notify_threshold=50, **crit)
-    p = Pipeline(store, msg, Settings(dry_run=True), criteria, Profile(),
-                 adapters=[FakeAdapter(listings)])
+                        rooms_min=1, rooms_max=5, **crit)
+    p = Pipeline(store, msg, Settings(dry_run=True, notify_only=notify_only),
+                 criteria, Profile(), adapters=[FakeAdapter(listings)])
     p._composer = FakeComposer()
     return p, store, msg
 
@@ -132,8 +135,8 @@ async def test_gesperrter_adapter_wird_abgeschaltet_nicht_umgangen(tmp_path):
     store = Store(tmp_path / "t.db")
     msg = FakeMessenger()
     adapter = FakeAdapter(raise_blocked=True)
-    p = Pipeline(store, msg, Settings(dry_run=True), Criteria(), Profile(),
-                 adapters=[adapter])
+    p = Pipeline(store, msg, Settings(dry_run=True, notify_only=True),
+                 Criteria(), Profile(), adapters=[adapter])
 
     await p.collect()
 
@@ -168,3 +171,39 @@ async def test_auto_ja_greift_nur_ueber_der_schwelle(tmp_path, listings):
         assert a.decision is Decision.AUTO_YES
     for a in abgelaufen:
         assert (store.get(a.listing_key).score or 0) < 85
+
+
+# ---------------- Alarm-Modus (der Standard) ----------------
+
+async def test_alarmmodus_meldet_ohne_zu_bewerben(tmp_path, listings):
+    """NOTIFY_ONLY=true ist der Standard: finden und melden, sonst nichts.
+    Kein Anschreiben, keine Textgenerierung, keine Kosten."""
+    p, store, msg = build(tmp_path, listings[:3], notify_only=True)
+
+    await p.collect()
+
+    assert msg.notes, "Es haette gemeldet werden muessen"
+    assert not msg.asked, "Im Alarm-Modus darf nicht nach Ja/Nein gefragt werden"
+    assert store.applications() == [], "Im Alarm-Modus entsteht keine Bewerbung"
+    gemeldet = [l for l in store.recent(50) if l.status is ListingStatus.NOTIFIED]
+    assert gemeldet
+
+
+async def test_alarmmodus_meldet_kein_objekt_zweimal(tmp_path, listings):
+    p, store, msg = build(tmp_path, listings[:3], notify_only=True)
+    await p.collect()
+    erste = len(msg.notes)
+    await p.collect()
+    assert len(msg.notes) == erste, "Dasselbe Objekt wurde erneut gemeldet"
+
+
+async def test_alarmmodus_meldet_nur_ueber_der_schwelle(tmp_path, listings):
+    p, store, msg = build(tmp_path, listings, notify_only=True,
+                          notify_threshold=85)
+    await p.collect()
+
+    gemeldet = [l for l in store.recent(50) if l.status is ListingStatus.NOTIFIED]
+    verworfen = [l for l in store.recent(50) if l.status is ListingStatus.DISCARDED]
+    assert all((l.score or 0) >= 85 for l in gemeldet)
+    assert all((l.score or 0) < 85 for l in verworfen)
+    assert len(msg.notes) == len(gemeldet)

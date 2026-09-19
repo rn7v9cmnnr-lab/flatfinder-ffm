@@ -15,7 +15,7 @@ from .apply.compose import Composer
 from .apply.senders import SendError, send
 from .config import Criteria, Profile, Settings
 from .db import Store
-from .messenger.base import Answer, Messenger
+from .messenger.base import Answer, Messenger, summary
 from .models import ApplicationStatus, Decision, ListingStatus
 from .scoring import score as score_listing
 
@@ -77,6 +77,14 @@ class Pipeline:
         return neu
 
     async def _ask(self, listing) -> None:
+        if self.settings.notify_only:
+            # Alarm-Modus: melden und fertig. Keine Bewerbung, keine Buttons,
+            # keine Kosten fuer Textgenerierung.
+            await self.messenger.notify(summary(listing, listing.score_reasons))
+            listing.status = ListingStatus.NOTIFIED
+            self.store.upsert(listing)
+            return
+
         app = self.store.create_application(listing.key)
         if app is None:
             log.info("%s: Bewerbung existiert schon, keine zweite Nachricht", listing.key)

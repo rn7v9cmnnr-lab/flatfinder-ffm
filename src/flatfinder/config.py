@@ -74,7 +74,11 @@ class Settings(BaseSettings):
     smtp_user: str = ""
     smtp_password: str = ""
 
+    # Alarm-Modus: nur finden und melden, keine Bewerbungen.
+    # Der Bewerbungs-Teil bleibt im Code, ist aber vom Weg.
+    notify_only: bool = True
+
     db_path: str = "data/flatfinder.db"
-    poll_interval_seconds: int = 120
+    poll_interval_seconds: int = 3600
     ingest_token: str = ""              # Heim-Node -> Core Authentifizierung
     dry_run: bool = True                # NICHTS wird wirklich versendet

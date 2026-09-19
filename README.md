@@ -1,15 +1,29 @@
 # flatfinder-ffm
 
-Wohnungssuche Frankfurt: findet Angebote, bewertet sie, meldet sie aufs Handy
-und verschickt auf ein „Ja" eine individuell geschriebene Bewerbung.
+Durchsucht stündlich alle Wohnungsportale nach passenden Angeboten in
+Frankfurt und meldet Treffer aufs Handy.
 
 ```
-Adapter → Dedupe → Scoring → Nachricht [Ja]/[Nein] → Claude schreibt → Versand
+Adapter → Dedupe → Scoring → Nachricht aufs Handy
 ```
 
-**Status:** Vonovia-Adapter läuft gegen echte Daten. Pipeline, Scoring,
-Speicher, Messenger und Weboberfläche stehen. Textgenerierung ist gebaut,
-aber noch nicht gegen die echte API getestet (API-Key fehlt).
+**Status:** Vonovia und NHW laufen gegen echte Daten — beim letzten Lauf
+28 Objekte, 13 über der Meldeschwelle. Pipeline, Scoring, Speicher,
+Telegram/WhatsApp und Weboberfläche stehen. 33 Tests, alle ohne Netz.
+
+Der Modus ist **`NOTIFY_ONLY=true`**: finden und melden, sonst nichts.
+
+<details>
+<summary>Automatische Bewerbungen (gebaut, aber abgeschaltet)</summary>
+
+Im Repo liegt eine vollständige Bewerbungs-Strecke: Ja/Nein-Buttons im
+Messenger, Textgenerierung mit Claude Opus 5, Versand per Formular-POST oder
+SMTP, Bewerbungs-Tracking. Einschalten mit `NOTIFY_ONLY=false`.
+
+Nicht gelöscht, weil getesteter Code, der wieder gebraucht werden kann.
+Nicht im Weg, weil vom Pfad genommen. Die Textgenerierung wurde nie gegen
+die echte API getestet — dafür fehlte der `ANTHROPIC_API_KEY`.
+</details>
 
 ---
 
@@ -42,14 +56,16 @@ verschickt**. Erst umstellen, wenn ihr zehn generierte Texte gelesen habt.
 
 ## Arbeitsteilung
 
-Zwei Tracks, die sich **nur an zwei DB-Tabellen** berühren. Deshalb könnt ihr
-parallel arbeiten, ohne euch zu blockieren.
+Im Alarm-Modus ist **Breite das ganze Produkt**: je mehr Quellen, desto besser.
+Deshalb teilt ihr euch nach Quellen auf, nicht nach Schichten.
 
-| | **Track A — Finden & Melden** | **Track B — Texten & Senden** |
+| | **Einer von euch** | **Der andere** |
 |---|---|---|
-| Verzeichnisse | `adapters/`, `scoring.py`, `db.py` (Listings) | `apply/`, `messenger/`, `web/` |
-| Schreibt | Tabelle `listings` | Tabelle `applications` |
-| Typische Aufgabe | „NHW-Adapter bauen" | „Bewerbungstext verbessern" |
+| Verzeichnisse | `adapters/` (neue Quellen) | `scoring.py`, `messenger/`, `web/` |
+| Typische Aufgabe | „GWH-Adapter bauen" | „Scoring nachschärfen", „Telegram anbinden" |
+
+Adapter sind vollständig voneinander unabhängig — zwei Leute können an zwei
+Quellen arbeiten, ohne sich je in dieselbe Datei zu setzen.
 
 **Gemeinsam und zuerst:** `models.py`. Das ist der Vertrag. Änderungen daran
 gehen immer in einen eigenen PR mit Review vom jeweils anderen — sonst
@@ -94,8 +110,8 @@ Dazu `tests/fixtures/meinequelle_*.json` (echte Antwort einfrieren) und
 | Quelle | Zugang | Wo es läuft |
 |---|---|---|
 | **Vonovia** ✅ | offene JSON-API, `X-VON-Search-Token`, Paging über `offset` | VPS |
-| **NHW** | server-gerendertes HTML, kein Bot-Schutz | VPS |
-| **GWH** | server-gerendertes HTML (Nuxt SSR) | VPS |
+| **NHW** ✅ | server-gerendertes HTML, kein Bot-Schutz, 15 FFM-Angebote | VPS |
+| **GWH** ⏳ | Angebote werden per XHR nachgeladen, Endpunkt noch unbekannt | VPS |
 | wg-gesucht | HTML offen — Kontaktstrecke aber in robots.txt gesperrt | VPS, nur melden |
 | Kleinanzeigen | sperrt Rechenzentrums-IPs pauschal | **Heim-Node** |
 | ImmoScout24 | 401 vom Rechenzentrum, starke Bot-Erkennung | **Heim-Node**, eingeloggt |
@@ -136,9 +152,26 @@ Ausführlich in [DECISIONS.md](DECISIONS.md).
 
 ## Was noch fehlt
 
-- [ ] NHW- und GWH-Adapter (HTML-Parsing, Gerüst steht)
-- [ ] Bewerbermappe als PDF automatisch anhängen ← **größter Hebel**
-- [ ] IS24-Adapter (Playwright, Heim-Node)
-- [ ] Entscheidung: auf [flathunter](https://github.com/flathunters/flathunter)
-      aufsetzen statt vier Adapter selbst zu pflegen?
-- [ ] Rückmeldungen der Vermieter erfassen (`REPLIED`)
+### GWH-Adapter — braucht 2 Minuten am eigenen Rechner
+
+Die Angebote stehen nicht im HTML, GWH lädt sie per XHR nach. Den Endpunkt
+habe ich von außen nicht gefunden; im Browser ist er in zwei Minuten da:
+
+1. https://www.gwh.de/immobiliensuche/ öffnen
+2. F12 → Tab **Netzwerk** → Filter **Fetch/XHR**
+3. Seite neu laden, nach Frankfurt filtern
+4. Den Request suchen, dessen Antwort die Wohnungen enthält
+   (Rechtsklick → *Copy as cURL*)
+
+Diese cURL hier reinpasten, dann baue ich den Adapter. Das gleiche Rezept
+funktioniert für jede weitere Quelle, die nicht server-gerendert ist.
+
+### Weitere Quellen
+
+- [ ] **ABG Frankfurt Holding** — von außen TLS-Fehler, lokal gegenprüfen
+- [ ] **wg-gesucht** — HTML ist offen, nur melden (Kontaktstrecke ist in
+      robots.txt gesperrt, im Alarm-Modus egal)
+- [ ] **IS24 / Kleinanzeigen / Immowelt** — sperren Rechenzentrums-IPs.
+      Statt selbst zu bauen: [flathunter](https://github.com/flathunters/flathunter)
+      auf dem Heim-Node laufen lassen und seinen Notifier auf `/ingest`
+      zeigen. Spart die Adapter-Pflege für vier Portale.
