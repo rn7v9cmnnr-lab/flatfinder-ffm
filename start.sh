@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+# flatfinder starten. Einmal ausfuehrbar machen: chmod +x start.sh
+# Danach reicht:  ./start.sh
+set -euo pipefail
+cd "$(dirname "$0")"
+
+MIN="3.11"
+
+# --- passendes Python finden ---------------------------------------------
+# Wichtig auf dem Mac: das mitgelieferte "python3" ist oft 3.9 und bringt
+# ein pip mit, das moderne pyproject-Projekte nicht installieren kann.
+PY=""
+for cand in python3.14 python3.13 python3.12 python3.11 python3 python; do
+  command -v "$cand" >/dev/null 2>&1 || continue
+  if "$cand" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3,11) else 1)' 2>/dev/null; then
+    PY="$cand"; break
+  fi
+done
+
+if [ -z "$PY" ]; then
+  have=$(python3 -c 'import sys; print("%d.%d" % sys.version_info[:2])' 2>/dev/null || echo "keins")
+  cat >&2 <<EOF
+
+  Es fehlt Python $MIN oder neuer. Gefunden: $have
+
+  Auf dem Mac installierst du es so:
+
+      brew install python@3.12
+
+  Falls Homebrew fehlt, steht die eine Zeile zum Installieren auf
+  https://brew.sh — danach dieses Skript einfach nochmal starten.
+
+EOF
+  exit 1
+fi
+
+echo "==> Python: $("$PY" --version) ($PY)"
+
+# --- venv ------------------------------------------------------------------
+if [ ! -d .venv ]; then
+  echo "==> Lege .venv an"
+  "$PY" -m venv .venv
+fi
+
+# pip in der venv MUSS aktuell sein, sonst scheitert die Installation unten.
+echo "==> Aktualisiere pip"
+./.venv/bin/python -m pip install --quiet --upgrade pip setuptools wheel
+
+echo "==> Installiere Abhaengigkeiten"
+./.venv/bin/python -m pip install --quiet -e ".[dev]"
+
+# --- Konfiguration ---------------------------------------------------------
+if [ ! -f .env ]; then
+  cp .env.example .env
+  echo "==> .env aus .env.example angelegt."
+  echo "    Suchkriterien stehen dort unter SEARCH_ - kannst du jederzeit aendern."
+fi
+
+# --- los -------------------------------------------------------------------
+PORT="${PORT:-8000}"
+echo
+echo "==> flatfinder laeuft gleich auf http://localhost:$PORT"
+echo "    Beenden mit Strg+C."
+echo
+exec ./.venv/bin/uvicorn flatfinder.web.app:app --host 127.0.0.1 --port "$PORT"
