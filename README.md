@@ -134,6 +134,25 @@ Port-Forwarding im Router nötig.
 
 ---
 
+## Python-Versionen
+
+Das Projekt läuft ab **3.9**, damit es auf einem frischen Mac ohne
+Vorbereitung startet. Getestet wird gegen 3.9 und 3.13.
+
+Zwei Stellen kosten das:
+
+- `compat.py` bringt `StrEnum` für alles unter 3.11 mit — inklusive
+  `__str__`, sonst landet `"ListingStatus.NEW"` statt `"new"` in der
+  Datenbank.
+- Typen in Pydantic-Modellen stehen als `Optional[X]` und `List[X]`, nicht
+  als `X | None` und `list[X]`. Pydantic wertet sie zur Laufzeit aus, und
+  vor 3.10 gibt es `|` für Typen nicht.
+
+Die Bewerbungstexte mit Claude brauchen als Einzige 3.10+ (das
+anthropic-SDK). Deshalb ist das Paket optional (`pip install -e ".[apply]"`)
+und wird erst beim tatsächlichen Gebrauch importiert. Der Alarm-Modus läuft
+ohne.
+
 ## Grenzen, die wir bewusst ziehen
 
 - **Kein Captcha-Löser, keine Proxy-Rotation.** Wir automatisieren einen

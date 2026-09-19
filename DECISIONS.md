@@ -25,6 +25,8 @@ will: Eintrag ergänzen, nicht überschreiben.
 | 2026-09-19 | **Weboberfläche statt Handy-Nachricht** (`MESSENGER=web`) | Davids Entscheidung; spart Token, Meta-Konto und laufende Kosten |
 | 2026-09-19 | **GWH: Kaltmiete per Detail-Request nachladen** | `overalRent` der Liste ist die WARMmiete; Scoring auf Warmmiete filtert jede bezahlbare Wohnung weg |
 | 2026-09-19 | **HTTP-Client legt sich selbst an** statt `async with` zu erzwingen | der Webdienst baut Adapter beim Start und betritt nie einen async-Kontext |
+| 2026-09-19 | **Python 3.9 statt 3.11 als Mindestversion** | macOS liefert 3.9; ohne das braucht man erst Homebrew, nur um eine Wohnungsliste zu sehen. Getestet gegen 3.9 und 3.13 |
+| 2026-09-19 | **anthropic-SDK ist optional** und wird spät importiert | es braucht 3.10+; der Alarm-Modus soll nicht daran hängen |
 
 ## Offen
 

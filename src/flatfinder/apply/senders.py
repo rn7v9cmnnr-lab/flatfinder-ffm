@@ -10,13 +10,15 @@ from __future__ import annotations
 
 import logging
 import smtplib
+from typing import TYPE_CHECKING
 from email.message import EmailMessage
 
 import httpx
 
 from ..config import Profile, Settings
 from ..models import Listing
-from .compose import Bewerbung
+if TYPE_CHECKING:
+    from .compose import Bewerbung
 
 log = logging.getLogger(__name__)
 
@@ -25,7 +27,7 @@ class SendError(RuntimeError):
     pass
 
 
-async def send(listing: Listing, text: Bewerbung, s: Settings, p: Profile) -> str:
+async def send(listing: Listing, text: "Bewerbung", s: Settings, p: Profile) -> str:
     """Waehlt den Kontaktweg. Gibt zurueck, worueber gesendet wurde."""
     if s.dry_run:
         log.warning("DRY_RUN - nichts versendet. Text waere gewesen:\n%s\n%s",
@@ -41,7 +43,7 @@ async def send(listing: Listing, text: Bewerbung, s: Settings, p: Profile) -> st
     raise SendError(f"{listing.key}: kein Kontaktweg bekannt")
 
 
-async def _vonovia_form(listing: Listing, text: Bewerbung, p: Profile) -> None:
+async def _vonovia_form(listing: Listing, text: "Bewerbung", p: Profile) -> None:
     """Vonovia nimmt die Kontaktanfrage als schlichten POST entgegen -
     kein Browser noetig. Feldnamen stammen aus dem Frontend-Formular
     (real-estate-contact-form).
@@ -62,7 +64,7 @@ async def _vonovia_form(listing: Listing, text: Bewerbung, p: Profile) -> None:
     log.info("Bewerbung an Vonovia gesendet: %s", listing.key)
 
 
-def _smtp(listing: Listing, text: Bewerbung, s: Settings, p: Profile) -> None:
+def _smtp(listing: Listing, text: "Bewerbung", s: Settings, p: Profile) -> None:
     if not s.smtp_host:
         raise SendError("SMTP nicht konfiguriert")
     msg = EmailMessage()

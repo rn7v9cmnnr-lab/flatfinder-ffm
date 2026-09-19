@@ -4,15 +4,16 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-MIN="3.11"
+MIN="3.9"
 
 # --- passendes Python finden ---------------------------------------------
-# Wichtig auf dem Mac: das mitgelieferte "python3" ist oft 3.9 und bringt
-# ein pip mit, das moderne pyproject-Projekte nicht installieren kann.
+# Das Projekt laeuft ab Python 3.9 - also mit dem, was macOS mitbringt.
+# Kein Homebrew noetig. Das mitgelieferte pip ist allerdings zu alt fuer
+# dieses Projekt; es wird weiter unten in der venv aktualisiert.
 PY=""
-for cand in python3.14 python3.13 python3.12 python3.11 python3 python; do
+for cand in python3.13 python3.12 python3.11 python3.10 python3.9 python3 python; do
   command -v "$cand" >/dev/null 2>&1 || continue
-  if "$cand" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3,11) else 1)' 2>/dev/null; then
+  if "$cand" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3,9) else 1)' 2>/dev/null; then
     PY="$cand"; break
   fi
 done
@@ -43,7 +44,7 @@ echo "==> Python: $("$PY" --version) ($PY)"
 # uebernehmen.
 venv_ok() {
   [ -x .venv/bin/python ] || return 1
-  ./.venv/bin/python -c 'import sys; raise SystemExit(0 if sys.version_info >= (3,11) else 1)' 2>/dev/null
+  ./.venv/bin/python -c 'import sys; raise SystemExit(0 if sys.version_info >= (3,9) else 1)' 2>/dev/null
 }
 
 if [ -d .venv ] && ! venv_ok; then

@@ -6,12 +6,15 @@ gehoeren deshalb immer in einen eigenen PR mit Review vom jeweils anderen.
 
 from __future__ import annotations
 
+from typing import List, Optional
+
 import hashlib
 import re
 from datetime import datetime, timezone
-from enum import StrEnum
 
 from pydantic import BaseModel, Field, field_validator
+
+from .compat import StrEnum
 
 
 def _now() -> datetime:
@@ -56,39 +59,39 @@ class Listing(BaseModel):
     url: str
     title: str
 
-    price_cold: int | None = None    # Kaltmiete in Euro
-    price_warm: int | None = None
-    sqm: float | None = None
-    rooms: float | None = None
+    price_cold: Optional[int] = None    # Kaltmiete in Euro
+    price_warm: Optional[int] = None
+    sqm: Optional[float] = None
+    rooms: Optional[float] = None
 
-    street: str | None = None
-    zip: str | None = None
-    city: str | None = None
-    district: str | None = None
-    lat: float | None = None
-    lng: float | None = None
+    street: Optional[str] = None
+    zip: Optional[str] = None
+    city: Optional[str] = None
+    district: Optional[str] = None
+    lat: Optional[float] = None
+    lng: Optional[float] = None
 
-    wbs_required: bool | None = None       # Wohnberechtigungsschein
-    commission: bool | None = None         # Provision faellig
-    available_from: str | None = None
-    description: str | None = None         # fuer die Textgenerierung wichtig
-    image_url: str | None = None
+    wbs_required: Optional[bool] = None       # Wohnberechtigungsschein
+    commission: Optional[bool] = None         # Provision faellig
+    available_from: Optional[str] = None
+    description: Optional[str] = None         # fuer die Textgenerierung wichtig
+    image_url: Optional[str] = None
 
     # Kontaktweg - entscheidet, wie Track B bewirbt
-    contact_email: str | None = None
-    contact_form_url: str | None = None
-    contact_payload: dict | None = None    # quellenspezifisch, z.B. {"wrkID": ...}
+    contact_email: Optional[str] = None
+    contact_form_url: Optional[str] = None
+    contact_payload: Optional[dict] = None    # quellenspezifisch, z.B. {"wrkID": ...}
 
-    posted_at: datetime | None = None
+    posted_at: Optional[datetime] = None
     seen_at: datetime = Field(default_factory=_now)
 
     status: ListingStatus = ListingStatus.NEW
-    score: int | None = None
-    score_reasons: list[str] = Field(default_factory=list)
+    score: Optional[int] = None
+    score_reasons: List[str] = Field(default_factory=list)
 
     @field_validator("zip")
     @classmethod
-    def _clean_zip(cls, v: str | None) -> str | None:
+    def _clean_zip(cls, v: Optional[str]) -> str | None:
         if not v:
             return None
         m = re.search(r"\b(\d{5})\b", v)
@@ -120,20 +123,20 @@ class Listing(BaseModel):
 class Application(BaseModel):
     """Eine Bewerbung auf ein Listing. Gehoert Track B."""
 
-    id: int | None = None
+    id: Optional[int] = None
     listing_key: str
     status: ApplicationStatus = ApplicationStatus.PENDING
 
-    decision: Decision | None = None
-    decided_at: datetime | None = None
+    decision: Optional[Decision] = None
+    decided_at: Optional[datetime] = None
 
-    message_text: str | None = None       # der generierte Bewerbungstext
-    message_model: str | None = None      # welches Modell ihn geschrieben hat
-    sent_via: str | None = None           # "vonovia_form", "smtp", "is24_browser"
-    sent_at: datetime | None = None
-    error: str | None = None
+    message_text: Optional[str] = None       # der generierte Bewerbungstext
+    message_model: Optional[str] = None      # welches Modell ihn geschrieben hat
+    sent_via: Optional[str] = None           # "vonovia_form", "smtp", "is24_browser"
+    sent_at: Optional[datetime] = None
+    error: Optional[str] = None
 
     # ID der Messenger-Nachricht, damit eine Antwort zugeordnet werden kann
-    messenger_ref: str | None = None
+    messenger_ref: Optional[str] = None
 
     created_at: datetime = Field(default_factory=_now)

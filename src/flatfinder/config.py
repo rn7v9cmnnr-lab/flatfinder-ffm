@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import List
+
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -18,8 +20,8 @@ class Criteria(BaseSettings):
     rooms_min: float = 2.0
     rooms_max: float = 4.0
     # Leere Liste = alle Stadtteile. Sonst Bonus fuer Treffer in der Liste.
-    districts_preferred: list[str] = Field(default_factory=list)
-    districts_excluded: list[str] = Field(default_factory=list)
+    districts_preferred: List[str] = Field(default_factory=list)
+    districts_excluded: List[str] = Field(default_factory=list)
     accept_wbs: bool = False       # Wohnberechtigungsschein vorhanden?
     accept_commission: bool = True
 

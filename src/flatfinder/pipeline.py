@@ -11,7 +11,6 @@ import logging
 from datetime import datetime, timedelta, timezone
 
 from .adapters.base import Adapter, Blocked
-from .apply.compose import Composer
 from .apply.senders import SendError, send
 from .config import Criteria, Profile, Settings
 from .db import Store
@@ -35,8 +34,12 @@ class Pipeline:
         self._composer: Composer | None = None
 
     @property
-    def composer(self) -> Composer:
+    def composer(self):
+        """Wird nur gebraucht, wenn NOTIFY_ONLY=false ist. Deshalb erst hier
+        importieren - sonst braeuchte auch der Alarm-Modus das anthropic-SDK
+        und damit Python 3.10+."""
         if self._composer is None:
+            from .apply.compose import Composer
             self._composer = Composer(self.settings, self.profile)
         return self._composer
 

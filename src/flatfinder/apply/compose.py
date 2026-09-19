@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import logging
 
-import anthropic
 from pydantic import BaseModel, Field
 
 from ..config import Profile, Settings
@@ -111,6 +110,18 @@ class Composer:
     def __init__(self, settings: Settings, profile: Profile) -> None:
         self.settings = settings
         self.profile = profile
+        # Erst hier importieren, nicht oben: das anthropic-SDK braucht
+        # Python 3.10+, der Rest des Projekts laeuft ab 3.9. Im Alarm-Modus
+        # (NOTIFY_ONLY=true, Standard) wird diese Klasse nie gebaut.
+        try:
+            import anthropic
+        except ImportError as e:
+            raise RuntimeError(
+                "Fuer die Bewerbungstexte fehlt das anthropic-Paket. "
+                "Installieren mit:  pip install -e \".[apply]\"  "
+                "(braucht Python 3.10 oder neuer). "
+                "Im Alarm-Modus wird es nicht gebraucht."
+            ) from e
         self._client = anthropic.Anthropic(api_key=settings.anthropic_api_key or None)
 
     def compose(self, listing: Listing) -> Bewerbung:
