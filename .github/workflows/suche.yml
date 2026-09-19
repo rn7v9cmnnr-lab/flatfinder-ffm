@@ -38,14 +38,20 @@ jobs:
       - name: Suchen
         env:
           SEARCH_CITY: Frankfurt am Main
-          # Die Suchkriterien hier sind bewusst weit gefasst: gefiltert wird
-          # im Browser. Enger gestellt wuerde man Angebote gar nicht erst
-          # sehen, ohne es zu merken.
-          SEARCH_PRICE_MAX: "3000"
-          SEARCH_SQM_MIN: "15"
-          SEARCH_ROOMS_MIN: "1"
-          SEARCH_ROOMS_MAX: "8"
-          SEARCH_NOTIFY_THRESHOLD: "0"
+          # WICHTIG: Diese Werte werfen nichts weg - der Export schreibt
+          # IMMER alle gefundenen Angebote. Sie steuern nur die Bewertung:
+          # was hier durchfaellt, bekommt Score 0 und wird in der
+          # Oberflaeche standardmaessig ausgeblendet ("Score ab 50").
+          # Wer alles sehen will, stellt den Score-Filter im Browser auf 0.
+          #
+          # Zu weit gestellt macht den Score wertlos - dann bekommt jedes
+          # Angebot mindestens die Grundpunktzahl und nichts sticht heraus.
+          SEARCH_PRICE_MAX: "1400"
+          SEARCH_PRICE_IDEAL: "1000"
+          SEARCH_SQM_MIN: "50"
+          SEARCH_ROOMS_MIN: "2"
+          SEARCH_ROOMS_MAX: "4"
+          SEARCH_DISTRICTS_PREFERRED: '["Sachsenhausen","Bockenheim","Nordend","Ostend","Bornheim","Westend"]' 
         run: python -m flatfinder.export -v -o docs/data/listings.json
 
       - name: Ergebnis committen
