@@ -37,6 +37,21 @@ fi
 echo "==> Python: $("$PY" --version) ($PY)"
 
 # --- venv ------------------------------------------------------------------
+# Eine .venv, die von einem frueheren Versuch mit zu altem Python stammt,
+# ist unbrauchbar - und der haeufigste Grund, warum es beim zweiten Anlauf
+# immer noch nicht laeuft. Deshalb pruefen wir sie, statt sie blind zu
+# uebernehmen.
+venv_ok() {
+  [ -x .venv/bin/python ] || return 1
+  ./.venv/bin/python -c 'import sys; raise SystemExit(0 if sys.version_info >= (3,11) else 1)' 2>/dev/null
+}
+
+if [ -d .venv ] && ! venv_ok; then
+  alt=$(./.venv/bin/python --version 2>&1 || echo "defekt")
+  echo "==> Vorhandene .venv ist unbrauchbar ($alt), lege sie neu an"
+  rm -rf .venv
+fi
+
 if [ ! -d .venv ]; then
   echo "==> Lege .venv an"
   "$PY" -m venv .venv
@@ -47,7 +62,20 @@ echo "==> Aktualisiere pip"
 ./.venv/bin/python -m pip install --quiet --upgrade pip setuptools wheel
 
 echo "==> Installiere Abhaengigkeiten"
-./.venv/bin/python -m pip install --quiet -e ".[dev]"
+if ! ./.venv/bin/python -m pip install --quiet -e ".[dev]"; then
+  cat >&2 <<EOF
+
+  Die Installation ist fehlgeschlagen. Meistens hilft ein sauberer Neuanfang:
+
+      rm -rf .venv && ./start.sh
+
+  Wenn es danach immer noch klemmt, schick die Ausgabe von:
+
+      ./.venv/bin/python -m pip install -e ".[dev]"
+
+EOF
+  exit 1
+fi
 
 # --- Konfiguration ---------------------------------------------------------
 if [ ! -f .env ]; then
