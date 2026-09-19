@@ -1,18 +1,19 @@
 # flatfinder-ffm
 
-Durchsucht stündlich alle Wohnungsportale nach passenden Angeboten in
-Frankfurt und zeigt die Treffer in einer Weboberfläche.
+Durchsucht stündlich die Frankfurter Wohnungsportale und zeigt die Treffer
+in einer Weboberfläche — **ohne dass ein Rechner von dir läuft.**
 
 ```
-Adapter → Dedupe → Scoring → Dashboard im Browser
+GitHub Action (stündlich)  →  docs/data/listings.json  →  GitHub Pages
+     sucht alle Quellen          committet ins Repo        Oberfläche
 ```
 
-**Status: läuft.** Drei Quellen live — beim letzten Durchlauf 40 Objekte,
-22 über der Schwelle. 55 Tests, alle ohne Netz.
+Kein Server, keine Hosting-Kosten, von überall erreichbar. Filtern,
+sortieren und Details ansehen passiert im Browser — Filteränderungen wirken
+sofort, ohne neuen Suchlauf.
 
-Kein Token, kein Konto, keine laufenden Kosten: `MESSENGER=web` heißt, das
-Dashboard ist der Kanal. Telegram oder WhatsApp lassen sich per `.env`
-dazuschalten, ohne dass sich am übrigen Code etwas ändert.
+**Status: läuft.** Drei Quellen, zuletzt 42 Angebote. 55 Tests, alle ohne
+Netz, grün auf Python 3.9 und 3.13.
 
 <details>
 <summary>Automatische Bewerbungen (gebaut, aber abgeschaltet)</summary>
@@ -62,8 +63,8 @@ Deshalb teilt ihr euch nach Quellen auf, nicht nach Schichten.
 
 | | **Einer von euch** | **Der andere** |
 |---|---|---|
-| Verzeichnisse | `adapters/` (neue Quellen) | `scoring.py`, `messenger/`, `web/` |
-| Typische Aufgabe | „GWH-Adapter bauen" | „Scoring nachschärfen", „Telegram anbinden" |
+| Verzeichnisse | `adapters/` (neue Quellen) | `scoring.py`, `docs/index.html` |
+| Typische Aufgabe | „wg-gesucht-Adapter bauen" | „Scoring nachschärfen", „Kartenansicht" |
 
 Adapter sind vollständig voneinander unabhängig — zwei Leute können an zwei
 Quellen arbeiten, ohne sich je in dieselbe Datei zu setzen.

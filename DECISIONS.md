@@ -27,6 +27,12 @@ will: Eintrag ergänzen, nicht überschreiben.
 | 2026-09-19 | **HTTP-Client legt sich selbst an** statt `async with` zu erzwingen | der Webdienst baut Adapter beim Start und betritt nie einen async-Kontext |
 | 2026-09-19 | **Python 3.9 statt 3.11 als Mindestversion** | macOS liefert 3.9; ohne das braucht man erst Homebrew, nur um eine Wohnungsliste zu sehen. Getestet gegen 3.9 und 3.13 |
 | 2026-09-19 | **anthropic-SDK ist optional** und wird spät importiert | es braucht 3.10+; der Alarm-Modus soll nicht daran hängen |
+| 2026-09-19 | **GitHub Actions + Pages statt VPS** | kostenlos, kein Server zu pflegen, von überall erreichbar; der Preis ist ein öffentliches Repo |
+| 2026-09-19 | **Ordner heißt `docs/`, nicht `site/`** | GitHub Pages kann nur `/` oder `/docs` ausliefern |
+| 2026-09-19 | **Die JSON-Datei ist das Gedächtnis**, keine Datenbank | jeder Action-Lauf startet in einem frischen Container; daraus kommt `first_seen` für die „neu"-Markierung |
+| 2026-09-19 | **Breit sammeln, im Browser filtern** | Filteränderungen wirken sofort; zu eng gesammelt sieht man Angebote nie, ohne es zu merken |
+| 2026-09-19 | **Eine Oberfläche für lokal und online** (`docs/index.html`) | zwei UIs zu pflegen wäre der sichere Weg, dass eine davon verrottet |
+| 2026-09-19 | **Commit-Mails auf GitHub-Noreply umgeschrieben** | vor dem Öffentlichmachen; Davids private Adresse stand in jedem Commit |
 
 ## Offen
 

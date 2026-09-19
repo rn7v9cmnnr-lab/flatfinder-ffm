@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flatfinder</title>
+<meta name="description" content="Wohnungsangebote Frankfurt, stündlich aktualisiert.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<style>
+  :root{
+    --bg:#fbfbfa; --fg:#21201c; --muted:#6f6d66; --line:#e4e2dc; --card:#fff;
+    --accent:#2d6a4f; --warn:#b45309; --bad:#b3261e; --shadow:0 1px 3px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#1a1917; --fg:#eceae4; --muted:#9a968c; --line:#33312c; --card:#232220;
+    --accent:#74c69d; --warn:#e0a458; --bad:#f2836b; --shadow:0 1px 3px rgba(0,0,0,.3);
+  }}
+  :root[data-theme="dark"]{
+    --bg:#1a1917; --fg:#eceae4; --muted:#9a968c; --line:#33312c; --card:#232220;
+    --accent:#74c69d; --warn:#e0a458; --bad:#f2836b; --shadow:0 1px 3px rgba(0,0,0,.3);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:0 16px 80px;background:var(--bg);color:var(--fg);
+       font:15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;}
+  .wrap{max-width:1000px;margin:0 auto}
+  header{padding:26px 0 16px;border-bottom:1px solid var(--line);margin-bottom:18px}
+  h1{margin:0;font-size:21px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:12.5px;margin-top:5px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:5px}
+
+  /* --- Filter --- */
+  .filters{background:var(--card);border:1px solid var(--line);border-radius:12px;
+           padding:14px 16px;margin-bottom:16px;box-shadow:var(--shadow)}
+  .frow{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:flex-end}
+  .f{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .f label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+  .f input[type=number],.f select{font:inherit;font-size:14px;padding:6px 8px;width:92px;
+      border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)}
+  .f select{width:auto;min-width:130px;max-width:200px}
+  .f.wide{flex:1 1 200px}
+  .f.wide input{width:100%}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);
+        background:var(--bg);color:var(--muted);cursor:pointer;user-select:none}
+  .chip[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);
+        background:color-mix(in srgb,var(--accent) 12%,transparent);font-weight:500}
+  button{font:inherit;padding:6px 14px;border-radius:7px;cursor:pointer;
+         border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+  button:hover{border-color:var(--accent);color:var(--accent)}
+  .reset{font-size:12.5px;color:var(--muted);background:none;border:none;padding:4px;text-decoration:underline}
+
+  /* --- Liste --- */
+  .bar{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin:0 0 12px}
+  .bar b{font-size:17px}
+  .muted{color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;
+     color:var(--muted);font-weight:600;padding:0 10px 8px;cursor:pointer;white-space:nowrap}
+  th:hover{color:var(--fg)}
+  th[aria-sort]{color:var(--fg)}
+  th[aria-sort]::after{content:" ↓";opacity:.6}
+  th[aria-sort="ascending"]::after{content:" ↑"}
+  td{padding:11px 10px;border-top:1px solid var(--line);vertical-align:top}
+  tbody tr{cursor:pointer}
+  tbody tr:hover td{background:var(--card)}
+  .title{font-weight:500}
+  .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .score{display:inline-block;min-width:34px;text-align:center;padding:2px 7px;border-radius:5px;
+         font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+  .s-hi{background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent)}
+  .s-mid{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+  .s-lo{color:var(--muted)}
+  .neu{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+       color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:1px 5px;margin-left:7px}
+  .weg{font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);
+       border:1px solid var(--line);border-radius:4px;padding:1px 5px;margin-left:7px}
+  .src{font-variant:all-small-caps;letter-spacing:.03em}
+  .empty{padding:56px 16px;text-align:center;color:var(--muted)}
+
+  /* --- Detail --- */
+  dialog{border:none;border-radius:14px;padding:0;background:var(--card);color:var(--fg);
+         max-width:560px;width:calc(100% - 32px);box-shadow:0 12px 40px rgba(0,0,0,.25)}
+  dialog::backdrop{background:rgba(0,0,0,.45)}
+  .d-head{padding:20px 22px 0}
+  .d-head h2{margin:0;font-size:18px;line-height:1.35}
+  .d-img{width:100%;height:190px;object-fit:cover;margin-top:14px;background:var(--bg)}
+  .d-body{padding:16px 22px 20px}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;margin-bottom:16px}
+  .fact b{display:block;font-size:16px;font-variant-numeric:tabular-nums}
+  .fact span{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .why{font-size:13px;color:var(--muted);font-style:italic;margin-bottom:16px}
+  .d-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .d-actions a{flex:1;text-align:center;text-decoration:none;padding:9px 14px;border-radius:8px;
+               border:1px solid var(--accent);color:var(--accent);font-weight:500;font-size:14px}
+  .d-actions a.primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+  .d-close{position:absolute;top:14px;right:16px;border:none;background:none;font-size:22px;
+           line-height:1;color:var(--muted);cursor:pointer;padding:2px 6px}
+  @media (max-width:640px){
+    .hide-s{display:none}
+    td,th{padding-left:6px;padding-right:6px}
+    .f input[type=number]{width:74px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>flatfinder · <span id="ort">Frankfurt</span></h1>
+  <div class="sub"><span class="dot"></span><span id="stand">lädt…</span></div>
+</header>
+
+<form class="filters" id="filters" onsubmit="return false">
+  <div class="frow">
+    <div class="f"><label for="pmax">Kaltmiete bis</label>
+      <input type="number" id="pmax" step="50" placeholder="€"></div>
+    <div class="f"><label for="qmin">Fläche ab</label>
+      <input type="number" id="qmin" step="5" placeholder="m²"></div>
+    <div class="f"><label for="rmin">Zimmer ab</label>
+      <input type="number" id="rmin" step="1" min="1" placeholder="–"></div>
+    <div class="f"><label for="rmax">Zimmer bis</label>
+      <input type="number" id="rmax" step="1" min="1" placeholder="–"></div>
+    <div class="f"><label for="smin">Score ab</label>
+      <input type="number" id="smin" step="5" min="0" max="100" placeholder="0"></div>
+    <div class="f wide"><label for="suche">Suchbegriff</label>
+      <input type="text" id="suche" placeholder="Balkon, Stadtteil, Straße…"
+             style="font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)"></div>
+  </div>
+  <div class="frow" style="margin-top:12px">
+    <div class="f" style="flex:1 1 100%">
+      <label>Stadtteil</label>
+      <div class="chips" id="bezirke"></div>
+    </div>
+  </div>
+  <div class="frow" style="margin-top:12px">
+    <div class="f"><label>Quelle</label><div class="chips" id="quellen"></div></div>
+    <div class="f"><label>Sonstiges</label><div class="chips">
+      <button type="button" class="chip" id="chipNeu" aria-pressed="false">nur neue</button>
+      <button type="button" class="chip" id="chipWeg" aria-pressed="false">verschwundene zeigen</button>
+    </div></div>
+    <button type="button" class="reset" id="reset" style="margin-left:auto">Filter zurücksetzen</button>
+  </div>
+</form>
+
+<div class="bar">
+  <b id="anzahl">–</b><span class="muted" id="vonwie"></span>
+  <span class="muted" style="margin-left:auto" id="quellenstand"></span>
+</div>
+
+<table id="tabelle">
+  <thead><tr>
+    <th data-sort="score" aria-sort="descending">Score</th>
+    <th data-sort="title">Objekt</th>
+    <th class="num" data-sort="price_cold">Kalt</th>
+    <th class="num hide-s" data-sort="sqm">m²</th>
+    <th class="num hide-s" data-sort="price_per_sqm">€/m²</th>
+  </tr></thead>
+  <tbody id="zeilen"></tbody>
+</table>
+<div class="empty" id="leer" hidden></div>
+
+</div>
+
+<dialog id="detail">
+  <button class="d-close" onclick="document.getElementById('detail').close()" aria-label="Schließen">×</button>
+  <div class="d-head"><h2 id="dTitel"></h2></div>
+  <img id="dBild" class="d-img" alt="" hidden onerror="this.hidden=true">
+  <div class="d-body">
+    <div class="facts" id="dFacts"></div>
+    <div class="why" id="dWhy"></div>
+    <div class="d-actions">
+      <a id="dLink" class="primary" target="_blank" rel="noopener">Zum Angebot</a>
+      <a id="dKarte" target="_blank" rel="noopener">Auf der Karte</a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const LS = "flatfinder.filter.v1";
+let ALLE = [], SORT = {feld:"score", ab:true};
+
+const el = id => document.getElementById(id);
+const eur = n => n == null ? "—" : n.toLocaleString("de-DE") + " €";
+const num = (n,d=0) => n == null ? "—" : n.toLocaleString("de-DE",{minimumFractionDigits:d,maximumFractionDigits:d});
+
+// --- Filterzustand: bleibt im Browser, damit er einen Neuladen überlebt ---
+function filterLesen(){
+  return {
+    pmax:+el("pmax").value||null, qmin:+el("qmin").value||null,
+    rmin:+el("rmin").value||null, rmax:+el("rmax").value||null,
+    smin:+el("smin").value||null, suche:el("suche").value.trim().toLowerCase(),
+    bezirke:[...document.querySelectorAll('#bezirke .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
+    quellen:[...document.querySelectorAll('#quellen .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
+    nurNeu:el("chipNeu").getAttribute("aria-pressed")==="true",
+    zeigWeg:el("chipWeg").getAttribute("aria-pressed")==="true",
+  };
+}
+function filterSchreiben(f){
+  if(!f) return;
+  for(const k of ["pmax","qmin","rmin","rmax","smin","suche"]) if(f[k]!=null) el(k).value=f[k];
+  el("chipNeu").setAttribute("aria-pressed", !!f.nurNeu);
+  el("chipWeg").setAttribute("aria-pressed", !!f.zeigWeg);
+}
+function speichern(){
+  try{ localStorage.setItem(LS, JSON.stringify(filterLesen())); }catch(e){}
+}
+function geladen(){
+  try{ return JSON.parse(localStorage.getItem(LS)||"null"); }catch(e){ return null; }
+}
+
+function istNeu(l){
+  return (Date.now() - new Date(l.first_seen).getTime()) < 36e5*24;
+}
+
+function passt(l, f){
+  if(l.gone && !f.zeigWeg) return false;
+  if(f.pmax && (l.price_cold==null || l.price_cold > f.pmax)) return false;
+  if(f.qmin && (l.sqm==null || l.sqm < f.qmin)) return false;
+  if(f.rmin && (l.rooms==null || l.rooms < f.rmin)) return false;
+  if(f.rmax && (l.rooms==null || l.rooms > f.rmax)) return false;
+  if(f.smin && (l.score||0) < f.smin) return false;
+  if(f.quellen.length && !f.quellen.includes(l.source)) return false;
+  if(f.bezirke.length && !f.bezirke.includes(l.district || l.city || "?")) return false;
+  if(f.nurNeu && !istNeu(l)) return false;
+  if(f.suche){
+    const heu = [l.title,l.street,l.district,l.city,l.zip,(l.score_reasons||[]).join(" ")]
+      .filter(Boolean).join(" ").toLowerCase();
+    if(!heu.includes(f.suche)) return false;
+  }
+  return true;
+}
+
+function zeichnen(){
+  const f = filterLesen();
+  let liste = ALLE.filter(l => passt(l,f));
+  const rv = SORT.ab ? -1 : 1;
+  liste.sort((a,b)=>{
+    const x=a[SORT.feld], y=b[SORT.feld];
+    if(x==null && y==null) return 0;
+    if(x==null) return 1;            // Leerwerte immer ans Ende
+    if(y==null) return -1;
+    return (typeof x==="string" ? x.localeCompare(y,"de") : x-y) * rv;
+  });
+
+  el("anzahl").textContent = liste.length;
+  el("vonwie").textContent = `von ${ALLE.filter(l=>!l.gone).length} Angeboten`;
+
+  const tb = el("zeilen");
+  tb.replaceChildren();
+  for(const l of liste){
+    const tr = document.createElement("tr");
+    tr.onclick = () => zeigeDetail(l);
+    const sc = l.score||0;
+    tr.innerHTML = `
+      <td class="num"><span class="score ${sc>=85?'s-hi':sc>=60?'s-mid':'s-lo'}">${sc}</span></td>
+      <td>
+        <div class="title">${esc(l.title).slice(0,78)}${istNeu(l)?'<span class="neu">neu</span>':''}${l.gone?'<span class="weg">weg</span>':''}</div>
+        <div class="meta">${l.rooms?num(l.rooms)+" Zi · ":""}${l.sqm?num(l.sqm)+" m² · ":""}${esc(l.zip||"")} ${esc(l.district||l.city||"")} · <span class="src">${esc(l.source)}</span></div>
+      </td>
+      <td class="num">${eur(l.price_cold)}</td>
+      <td class="num hide-s">${num(l.sqm)}</td>
+      <td class="num hide-s">${num(l.price_per_sqm,2)}</td>`;
+    tb.appendChild(tr);
+  }
+  const leer = el("leer");
+  leer.hidden = liste.length > 0;
+  leer.textContent = ALLE.length
+    ? "Nichts passt zu diesen Filtern. Probier weniger streng — oder „Filter zurücksetzen“."
+    : "Noch keine Daten.";
+  speichern();
+}
+
+function zeigeDetail(l){
+  el("dTitel").textContent = l.title;
+  const bild = el("dBild");
+  bild.hidden = true;
+  if(l.image_url){ bild.src = l.image_url; bild.hidden = false; }
+
+  const facts = [
+    ["Kaltmiete", eur(l.price_cold)], ["Warmmiete", eur(l.price_warm)],
+    ["Fläche", l.sqm?num(l.sqm)+" m²":"—"], ["Zimmer", l.rooms?num(l.rooms):"—"],
+    ["€/m²", num(l.price_per_sqm,2)], ["Score", String(l.score??"—")],
+    ["Frei ab", l.available_from || "—"],
+    ["Adresse", [l.street, [l.zip,l.district||l.city].filter(Boolean).join(" ")].filter(Boolean).join(", ") || "—"],
+  ];
+  el("dFacts").replaceChildren(...facts.map(([k,v])=>{
+    const d=document.createElement("div"); d.className="fact";
+    d.innerHTML=`<b>${esc(v)}</b><span>${esc(k)}</span>`; return d;
+  }));
+  el("dWhy").textContent = (l.score_reasons||[]).join(" · ");
+  el("dLink").href = l.url;
+  const karte = el("dKarte");
+  if(l.lat && l.lng){ karte.href = `https://www.openstreetmap.org/?mlat=${l.lat}&mlon=${l.lng}#map=17/${l.lat}/${l.lng}`; karte.hidden=false; }
+  else { karte.hidden = true; }
+  el("detail").showModal();
+}
+
+function esc(s){ return String(s??"").replace(/[<>&"]/g, c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c])); }
+
+function chips(ziel, werte, gespeichert){
+  const box = el(ziel);
+  box.replaceChildren(...werte.map(v=>{
+    const b=document.createElement("button");
+    b.type="button"; b.className="chip"; b.dataset.v=v; b.textContent=v;
+    b.setAttribute("aria-pressed", (gespeichert||[]).includes(v));
+    b.onclick=()=>{ b.setAttribute("aria-pressed", b.getAttribute("aria-pressed")!=="true"); zeichnen(); };
+    return b;
+  }));
+}
+
+async function start(){
+  let d;
+  try{
+    const r = await fetch("data/listings.json?t=" + Date.now());
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    d = await r.json();
+  }catch(e){
+    el("stand").textContent = "Daten konnten nicht geladen werden (" + e.message + ")";
+    return;
+  }
+  ALLE = d.listings || [];
+  el("ort").textContent = (d.city||"").replace(" am Main","");
+  const alter = Math.round((Date.now()-new Date(d.generated_at).getTime())/6e4);
+  el("stand").textContent = alter < 90
+    ? `aktualisiert vor ${alter} Min.`
+    : `aktualisiert ${new Date(d.generated_at).toLocaleString("de-DE",{dateStyle:"short",timeStyle:"short"})}`;
+  el("quellenstand").textContent = Object.entries(d.sources||{}).map(([k,v])=>`${k}: ${v}`).join(" · ");
+
+  const gesp = geladen();
+  if(gesp) filterSchreiben(gesp);
+  else el("smin").value = 50;   // Erstbesuch: Ausschusskriterien ausblenden
+  chips("bezirke", [...new Set(ALLE.map(l=>l.district||l.city||"?"))].sort((a,b)=>a.localeCompare(b,"de")), gesp?.bezirke);
+  chips("quellen", [...new Set(ALLE.map(l=>l.source))].sort(), gesp?.quellen);
+
+  el("filters").addEventListener("input", zeichnen);
+  el("chipNeu").onclick = el("chipWeg").onclick = e => {
+    e.target.setAttribute("aria-pressed", e.target.getAttribute("aria-pressed")!=="true"); zeichnen();
+  };
+  el("reset").onclick = () => {
+    try{ localStorage.removeItem(LS); }catch(e){}
+    el("filters").reset();
+    document.querySelectorAll('.chip').forEach(c=>c.setAttribute("aria-pressed","false"));
+    zeichnen();
+  };
+  document.querySelectorAll("th[data-sort]").forEach(th=>{
+    th.onclick = () => {
+      const feld = th.dataset.sort;
+      SORT = {feld, ab: SORT.feld===feld ? !SORT.ab : true};
+      document.querySelectorAll("th[data-sort]").forEach(t=>t.removeAttribute("aria-sort"));
+      th.setAttribute("aria-sort", SORT.ab ? "descending" : "ascending");
+      zeichnen();
+    };
+  });
+  zeichnen();
+}
+start();
+</script>
+</body>
+</html>

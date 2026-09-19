@@ -1,10 +1,17 @@
-"""Weboberflaeche + Webhooks.
+"""Lokaler Betrieb der Weboberflaeche.
 
-Drei Aufgaben:
-  1. Dashboard - was wurde gefunden, was wurde beworben, was kam zurueck
-  2. Webhook-Endpunkte fuer Telegram und WhatsApp (die Ja/Nein-Antworten)
-  3. Ingest-Endpunkt fuer den Heim-Node (IS24/Kleinanzeigen laufen dort,
-     weil beide Rechenzentrums-IPs sperren)
+Zeigt dieselbe Seite wie die gehostete Fassung (docs/index.html) und
+schreibt nach jedem Durchlauf dieselbe Datendatei. Dadurch gibt es nur
+EINE Oberflaeche zu pflegen - was hier funktioniert, funktioniert auch
+auf GitHub Pages, und umgekehrt.
+
+Gehostet braucht man diesen Dienst gar nicht: dort sucht eine GitHub
+Action und Pages liefert docs/ aus. Lokal ist er praktisch, wenn man
+sofort suchen will oder an den Adaptern arbeitet.
+
+Ausserdem hier: die Webhooks fuer Telegram/WhatsApp und der
+Ingest-Endpunkt fuer einen Heim-Node (fuer Quellen, die
+Rechenzentrums-IPs sperren).
 """
 
 from __future__ import annotations
@@ -17,11 +24,13 @@ from pathlib import Path
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
-from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse
+from fastapi.responses import (FileResponse, HTMLResponse, PlainTextResponse,
+                               RedirectResponse)
 from fastapi.templating import Jinja2Templates
 
 from ..adapters.gwh import GwhAdapter
 from ..adapters.nhw import NhwAdapter
+from ..export import merge as export_merge
 from ..adapters.vonovia import VonoviaAdapter
 from ..config import Criteria, Profile, Settings
 from ..db import Store
@@ -32,6 +41,11 @@ from ..pipeline import Pipeline
 
 log = logging.getLogger(__name__)
 TEMPLATES = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
+
+#: Die gehostete Oberflaeche. Liegt in docs/, weil GitHub Pages nur "/" oder
+#: "/docs" ausliefern kann.
+SITE = Path(__file__).resolve().parents[3] / "docs"
+DATEN = SITE / "data" / "listings.json"
 
 settings = Settings()
 criteria = Criteria()
@@ -85,6 +99,7 @@ async def _tick() -> None:
         try:
             LAUF["neu"] = await pipeline.collect()
             LAUF["fehler"] = None
+            _schreibe_daten()
             log.info("Durchlauf fertig: %s neue Objekte", LAUF["neu"])
         except Exception as e:
             LAUF["fehler"] = str(e)
@@ -94,13 +109,45 @@ async def _tick() -> None:
             LAUF["laeuft"] = False
 
 
+def _schreibe_daten() -> None:
+    """Denselben Datenstand erzeugen, den auch die GitHub Action schreibt."""
+    import json
+
+    listings = store.recent(limit=2000)
+    eintraege = export_merge(listings, DATEN)
+    DATEN.parent.mkdir(parents=True, exist_ok=True)
+    DATEN.write_text(json.dumps({
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "city": criteria.city,
+        "sources": {a.source: ("aus" if not a.enabled else "aktiv")
+                    for a in pipeline.adapters},
+        "count": len(eintraege),
+        "listings": eintraege,
+    }, ensure_ascii=False, indent=1))
+
+
 app = FastAPI(title="flatfinder-ffm", lifespan=lifespan)
 
 
 # ---------------- Dashboard ----------------
 
 @app.get("/", response_class=HTMLResponse)
-async def dashboard(request: Request, alle: int = 0):
+async def startseite():
+    """Dieselbe Seite wie auf GitHub Pages."""
+    return HTMLResponse((SITE / "index.html").read_text(encoding="utf-8"))
+
+
+@app.get("/data/listings.json")
+async def daten():
+    """Die Datendatei. Wird nach jedem Durchlauf neu geschrieben."""
+    if not DATEN.exists():
+        _schreibe_daten()
+    return FileResponse(DATEN, media_type="application/json",
+                        headers={"Cache-Control": "no-store"})
+
+
+@app.get("/alt", response_class=HTMLResponse)
+async def dashboard_alt(request: Request, alle: int = 0):
     """alle=1 zeigt auch die aussortierten Objekte - zum Nachjustieren
     der Kriterien, wenn zu wenig durchkommt."""
     listings = store.recent(limit=300)

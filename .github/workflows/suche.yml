@@ -1,0 +1,69 @@
+name: Wohnungen suchen
+
+# Stuendlich suchen und das Ergebnis nach docs/data/listings.json schreiben.
+# GitHub Pages liefert docs/ aus - dadurch laeuft nirgends ein Server.
+on:
+  schedule:
+    - cron: "17 * * * *"      # stuendlich zur Minute 17; volle Stunden sind
+                              # bei GitHub am staerksten belastet und oft verzoegert
+  workflow_dispatch:           # Knopf "Run workflow" fuer sofort
+  push:
+    paths:
+      - "src/flatfinder/**"    # Adapter geaendert -> gleich neu einlesen
+      - ".github/workflows/suche.yml"
+
+concurrency:
+  group: suche
+  cancel-in-progress: false    # niemals mittendrin abbrechen, sonst gibt es
+                               # halbe Datenstaende
+
+permissions:
+  contents: write
+
+jobs:
+  suchen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Abhaengigkeiten
+        run: pip install -e .
+
+      - name: Suchen
+        env:
+          SEARCH_CITY: Frankfurt am Main
+          # Die Suchkriterien hier sind bewusst weit gefasst: gefiltert wird
+          # im Browser. Enger gestellt wuerde man Angebote gar nicht erst
+          # sehen, ohne es zu merken.
+          SEARCH_PRICE_MAX: "3000"
+          SEARCH_SQM_MIN: "15"
+          SEARCH_ROOMS_MIN: "1"
+          SEARCH_ROOMS_MAX: "8"
+          SEARCH_NOTIFY_THRESHOLD: "0"
+        run: python -m flatfinder.export -v -o docs/data/listings.json
+
+      - name: Ergebnis committen
+        run: |
+          if git diff --quiet -- docs/data/listings.json; then
+            echo "Keine Aenderung - nichts zu committen."
+            exit 0
+          fi
+          git config user.name "flatfinder-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          n=$(python -c "import json;print(json.load(open('docs/data/listings.json'))['count'])")
+          git add docs/data/listings.json
+          git commit -m "Angebote aktualisiert: $n [skip ci]"
+          # Zwischen Lesen und Schreiben kann ein anderer Lauf gepusht haben.
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "Push fehlgeschlagen, rebase und nochmal ($i/3)"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+            sleep 5
+          done
+          exit 1
