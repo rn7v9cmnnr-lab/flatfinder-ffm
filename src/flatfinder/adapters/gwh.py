@@ -26,7 +26,7 @@ import asyncio
 import logging
 from typing import Any
 
-from ..models import Listing
+from ..models import Kind, Listing
 from .base import HttpAdapter
 
 log = logging.getLogger(__name__)
@@ -97,6 +97,7 @@ class GwhAdapter(HttpAdapter):
 
         return Listing(
             source="gwh",
+            kind=Kind.LANDLORD,
             source_id=str(ext).replace(" ", "-").replace("/", "-"),
             url=SITE + url_path,
             title=_title(c),

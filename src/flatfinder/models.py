@@ -21,6 +21,20 @@ def _now() -> datetime:
     return datetime.now(timezone.utc)
 
 
+class Kind(StrEnum):
+    """Was fuer eine Art Anbieter das ist.
+
+    Bestimmt die Farbe in der Oberflaeche. Bewusst nur drei Farben plus
+    neutral: mehr kategoriale Farben lassen sich nicht mehr zuverlaessig
+    unterscheiden - geprueft mit dem Palettenvalidator, in hell und dunkel.
+    """
+
+    LANDLORD = "grossvermieter"   # vermietet selbst, nie Provision
+    COOP = "genossenschaft"       # Genossenschaft, meist Anteile noetig
+    PORTAL = "portal"             # Anzeigenportal, Anbieter gemischt
+    OTHER = "sonstige"
+
+
 class ListingStatus(StrEnum):
     NEW = "new"              # frisch eingesammelt
     SCORED = "scored"        # bewertet
@@ -55,6 +69,7 @@ class Listing(BaseModel):
     """
 
     source: str                      # "vonovia", "nhw", "is24", ...
+    kind: Kind = Kind.OTHER          # Art des Anbieters, steuert die Farbe
     source_id: str                   # ID in der Quelle
     url: str
     title: str
@@ -70,6 +85,8 @@ class Listing(BaseModel):
     district: Optional[str] = None
     lat: Optional[float] = None
     lng: Optional[float] = None
+    #: True = Position nur ueber den Stadtteil geschaetzt, nicht exakt.
+    position_approx: bool = False
 
     wbs_required: Optional[bool] = None       # Wohnberechtigungsschein
     commission: Optional[bool] = None         # Provision faellig

@@ -19,10 +19,11 @@ from __future__ import annotations
 
 import logging
 import re
+from typing import Dict, List, Optional, Tuple
 
 from selectolax.parser import HTMLParser, Node
 
-from ..models import Listing
+from ..models import Kind, Listing
 from .base import HttpAdapter
 
 log = logging.getLogger(__name__)
@@ -48,6 +49,7 @@ class NhwAdapter(HttpAdapter):
     @classmethod
     def parse_page(cls, html: str, city: str) -> list[Listing]:
         tree = HTMLParser(html)
+        koordinaten = cls.parse_koordinaten(html)
         out: list[Listing] = []
         for node in tree.css("div.immo--item"):
             listing = cls.parse_item(node)
@@ -56,8 +58,32 @@ class NhwAdapter(HttpAdapter):
             # NHW listet ganz Hessen - nur die gesuchte Stadt behalten.
             if city.lower() not in (listing.city or "").lower():
                 continue
+            pos = koordinaten.get(listing.source_id)
+            if pos:
+                listing.lat, listing.lng = pos
             out.append(listing)
         return out
+
+    #: Koordinaten stehen nicht an den Angeboten, sondern im Karten-JavaScript:
+    #:     link: '.../immobilie/5000-S2712-001-015?cHash=...',
+    #:     position: { lat: parseFloat('50.1125146'), lng: parseFloat('8.7860368') },
+    #: Zugeordnet wird ueber die Objektnummer aus dem Link - dieselbe, die
+    #: parse_item als source_id verwendet.
+    _KOORD = re.compile(
+        r"link:\s*'[^']*?/immobilie/([^?']+)[^']*'"
+        r".*?position:\s*\{\s*lat:\s*parseFloat\('([-\d.]+)'\)"
+        r"\s*,\s*lng:\s*parseFloat\('([-\d.]+)'\)",
+        re.S)
+
+    @classmethod
+    def parse_koordinaten(cls, html: str) -> dict:
+        raus = {}
+        for objektnr, lat, lng in cls._KOORD.findall(html):
+            try:
+                raus[objektnr] = (float(lat), float(lng))
+            except ValueError:
+                continue
+        return raus
 
     @staticmethod
     def parse_item(node: Node) -> Listing | None:
@@ -110,6 +136,7 @@ class NhwAdapter(HttpAdapter):
 
         return Listing(
             source="nhw",
+            kind=Kind.LANDLORD,
             source_id=source_id,
             url=url,
             title=title,

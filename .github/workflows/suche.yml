@@ -33,7 +33,14 @@ jobs:
           cache: pip
 
       - name: Abhaengigkeiten
-        run: pip install -e .
+        run: pip install -e ".[browser]"
+
+      - name: Browser fuer Immowelt
+        # Immowelt baut seine Liste per JavaScript auf und laeuft hinter
+        # DataDome. Schlaegt das hier fehl oder sperrt DataDome den Runner,
+        # meldet der Adapter das und die anderen Quellen laufen weiter.
+        run: python -m playwright install --with-deps chromium
+        continue-on-error: true
 
       - name: Suchen
         env:

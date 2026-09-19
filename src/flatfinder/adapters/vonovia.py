@@ -20,7 +20,7 @@ import logging
 import time
 from typing import Any
 
-from ..models import Listing
+from ..models import Kind, Listing
 from .base import AdapterError, HttpAdapter
 
 log = logging.getLogger(__name__)
@@ -120,6 +120,7 @@ class VonoviaAdapter(HttpAdapter):
 
         return Listing(
             source="vonovia",
+            kind=Kind.LANDLORD,
             source_id=wrk_id,
             url=EXPOSE_URL.format(slug=slug),
             title=item.get("titel") or "Wohnung",

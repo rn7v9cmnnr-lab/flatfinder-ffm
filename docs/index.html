@@ -76,6 +76,36 @@
   .weg{font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);
        border:1px solid var(--line);border-radius:4px;padding:1px 5px;margin-left:7px}
   .src{font-variant:all-small-caps;letter-spacing:.03em}
+
+  /* Farben nach Art des Anbieters. Drei Hues plus neutral - mehr lassen
+     sich nicht zuverlaessig unterscheiden (mit Palettenvalidator geprueft,
+     hell und dunkel, alle Paare). Die Art steht immer auch als Text im
+     Badge, Farbe ist nie das einzige Merkmal. */
+  :root{ --k-landlord:#2a78d6; --k-portal:#eb6834; --k-coop:#1baf7a; --k-other:var(--muted); }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --k-landlord:#3987e5; --k-portal:#d95926; --k-coop:#199e70;
+  }}
+  :root[data-theme="dark"]{ --k-landlord:#3987e5; --k-portal:#d95926; --k-coop:#199e70; }
+
+  .kind{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;
+        color:var(--muted);white-space:nowrap}
+  .kind::before{content:"";width:8px;height:8px;border-radius:2px;flex:none;
+                background:var(--k-other)}
+  .kind.k-grossvermieter::before{background:var(--k-landlord)}
+  .kind.k-portal::before{background:var(--k-portal)}
+  .kind.k-genossenschaft::before{background:var(--k-coop)}
+  td.artcell{border-left:3px solid var(--k-other);padding-left:9px}
+  tr.k-grossvermieter td.artcell{border-left-color:var(--k-landlord)}
+  tr.k-portal td.artcell{border-left-color:var(--k-portal)}
+  tr.k-genossenschaft td.artcell{border-left-color:var(--k-coop)}
+
+  .legende{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;
+           color:var(--muted);margin:-4px 0 14px}
+  .preis b{font-variant-numeric:tabular-nums}
+  .preis small{display:block;font-size:10.5px;text-transform:uppercase;
+               letter-spacing:.04em;color:var(--muted);font-weight:600}
+  .warmonly b{color:var(--muted)}
+  .dist{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
   .empty{padding:56px 16px;text-align:center;color:var(--muted)}
 
   /* --- Detail --- */
@@ -123,6 +153,19 @@
       <input type="number" id="rmax" step="1" min="1" placeholder="–"></div>
     <div class="f"><label for="smin">Score ab</label>
       <input type="number" id="smin" step="5" min="0" max="100" placeholder="0"></div>
+    <div class="f"><label for="mitte">Umkreis um</label>
+      <select id="mitte">
+        <option value="">— egal —</option>
+        <option value="50.1136,8.6797">Hauptwache</option>
+        <option value="50.1070,8.6638">Hauptbahnhof</option>
+        <option value="50.1204,8.6520">Messe</option>
+        <option value="50.1094,8.7012">EZB / Ostend</option>
+        <option value="50.1250,8.6800">Nordend</option>
+        <option value="50.1020,8.6830">Sachsenhausen</option>
+      </select></div>
+    <div class="f"><label for="umkreis">max. km</label>
+      <input type="number" id="umkreis" step="0.5" min="0.5" placeholder="km"
+             title="Luftlinie. Ein ~ vor der Entfernung heißt: Position nur über den Stadtteil geschätzt."></div>
     <div class="f wide"><label for="suche">Suchbegriff</label>
       <input type="text" id="suche" placeholder="Balkon, Stadtteil, Straße…"
              style="font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)"></div>
@@ -143,6 +186,8 @@
   </div>
 </form>
 
+<div class="legende" id="legende"></div>
+
 <div class="bar">
   <b id="anzahl">–</b><span class="muted" id="vonwie"></span>
   <span class="muted" style="margin-left:auto" id="quellenstand"></span>
@@ -152,9 +197,10 @@
   <thead><tr>
     <th data-sort="score" aria-sort="descending">Score</th>
     <th data-sort="title">Objekt</th>
-    <th class="num" data-sort="price_cold">Kalt</th>
+    <th class="num" data-sort="_preis">Miete</th>
     <th class="num hide-s" data-sort="sqm">m²</th>
     <th class="num hide-s" data-sort="price_per_sqm">€/m²</th>
+    <th class="num hide-s" data-sort="_dist">Entf.</th>
   </tr></thead>
   <tbody id="zeilen"></tbody>
 </table>
@@ -190,6 +236,7 @@ function filterLesen(){
     pmax:+el("pmax").value||null, qmin:+el("qmin").value||null,
     rmin:+el("rmin").value||null, rmax:+el("rmax").value||null,
     smin:+el("smin").value||null, suche:el("suche").value.trim().toLowerCase(),
+    mitte:el("mitte").value, umkreis:+el("umkreis").value||null,
     bezirke:[...document.querySelectorAll('#bezirke .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
     quellen:[...document.querySelectorAll('#quellen .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
     nurNeu:el("chipNeu").getAttribute("aria-pressed")==="true",
@@ -198,7 +245,8 @@ function filterLesen(){
 }
 function filterSchreiben(f){
   if(!f) return;
-  for(const k of ["pmax","qmin","rmin","rmax","smin","suche"]) if(f[k]!=null) el(k).value=f[k];
+  for(const k of ["pmax","qmin","rmin","rmax","smin","suche","mitte","umkreis"])
+    if(f[k]!=null) el(k).value=f[k];
   el("chipNeu").setAttribute("aria-pressed", !!f.nurNeu);
   el("chipWeg").setAttribute("aria-pressed", !!f.zeigWeg);
 }
@@ -209,13 +257,45 @@ function geladen(){
   try{ return JSON.parse(localStorage.getItem(LS)||"null"); }catch(e){ return null; }
 }
 
+const ART = {
+  grossvermieter: "Großvermieter",
+  genossenschaft: "Genossenschaft",
+  portal: "Portal",
+  sonstige: "Sonstige",
+};
+
+// Luftlinie in km. Reicht voellig - fuer "ist das noch in meiner Ecke"
+// braucht niemand Routing, und es geht ohne jeden fremden Dienst.
+function distanz(aLat,aLng,bLat,bLng){
+  const R=6371, r=Math.PI/180;
+  const dLat=(bLat-aLat)*r, dLng=(bLng-aLng)*r;
+  const h=Math.sin(dLat/2)**2 + Math.cos(aLat*r)*Math.cos(bLat*r)*Math.sin(dLng/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+
+// Die Quellen liefern mal Kalt-, mal nur Warmmiete. Das darf die
+// Oberflaeche nicht verwischen - sonst vergleicht man Aepfel mit Birnen.
+function miete(l){
+  if(l.price_cold!=null) return {wert:l.price_cold, art:"kalt", warm:false};
+  if(l.price_warm!=null) return {wert:l.price_warm, art:"warm", warm:true};
+  return {wert:null, art:"", warm:false};
+}
+
 function istNeu(l){
   return (Date.now() - new Date(l.first_seen).getTime()) < 36e5*24;
 }
 
 function passt(l, f){
   if(l.gone && !f.zeigWeg) return false;
-  if(f.pmax && (l.price_cold==null || l.price_cold > f.pmax)) return false;
+  if(f.pmax){
+    // Gegen die Kaltmiete pruefen, wo sie bekannt ist. Kennt die Quelle nur
+    // die Warmmiete, waere ein direkter Vergleich unfair - dann grosszuegig
+    // mit Aufschlag pruefen und das Angebot lieber zeigen als verstecken.
+    const m = miete(l);
+    if(m.wert==null) return false;
+    const grenze = m.warm ? f.pmax*1.35 : f.pmax;
+    if(m.wert > grenze) return false;
+  }
   if(f.qmin && (l.sqm==null || l.sqm < f.qmin)) return false;
   if(f.rmin && (l.rooms==null || l.rooms < f.rmin)) return false;
   if(f.rmax && (l.rooms==null || l.rooms > f.rmax)) return false;
@@ -223,6 +303,12 @@ function passt(l, f){
   if(f.quellen.length && !f.quellen.includes(l.source)) return false;
   if(f.bezirke.length && !f.bezirke.includes(l.district || l.city || "?")) return false;
   if(f.nurNeu && !istNeu(l)) return false;
+  if(f.umkreis && f.mitte){
+    // Ohne Koordinaten koennen wir nichts ausschliessen - solche Angebote
+    // bleiben sichtbar und werden in der Liste als "?" gekennzeichnet,
+    // statt stillschweigend zu verschwinden.
+    if(l._dist!=null && l._dist > f.umkreis) return false;
+  }
   if(f.suche){
     const heu = [l.title,l.street,l.district,l.city,l.zip,(l.score_reasons||[]).join(" ")]
       .filter(Boolean).join(" ").toLowerCase();
@@ -233,6 +319,13 @@ function passt(l, f){
 
 function zeichnen(){
   const f = filterLesen();
+  const mitte = f.mitte ? f.mitte.split(",").map(Number) : null;
+  for(const l of ALLE){
+    l._dist = (mitte && l.lat!=null && l.lng!=null)
+      ? distanz(mitte[0],mitte[1],l.lat,l.lng) : null;
+    const m = miete(l);
+    l._preis = m.wert;
+  }
   let liste = ALLE.filter(l => passt(l,f));
   const rv = SORT.ab ? -1 : 1;
   liste.sort((a,b)=>{
@@ -252,15 +345,21 @@ function zeichnen(){
     const tr = document.createElement("tr");
     tr.onclick = () => zeigeDetail(l);
     const sc = l.score||0;
+    const art = l.kind || "sonstige";
+    const m = miete(l);
+    tr.className = "k-" + art;
     tr.innerHTML = `
-      <td class="num"><span class="score ${sc>=85?'s-hi':sc>=60?'s-mid':'s-lo'}">${sc}</span></td>
+      <td class="num artcell"><span class="score ${sc>=85?'s-hi':sc>=60?'s-mid':'s-lo'}">${sc}</span></td>
       <td>
         <div class="title">${esc(l.title).slice(0,78)}${istNeu(l)?'<span class="neu">neu</span>':''}${l.gone?'<span class="weg">weg</span>':''}</div>
-        <div class="meta">${l.rooms?num(l.rooms)+" Zi · ":""}${l.sqm?num(l.sqm)+" m² · ":""}${esc(l.zip||"")} ${esc(l.district||l.city||"")} · <span class="src">${esc(l.source)}</span></div>
+        <div class="meta">${l.rooms?num(l.rooms)+" Zi · ":""}${l.sqm?num(l.sqm)+" m² · ":""}${esc(l.zip||"")} ${esc(l.district||l.city||"")}</div>
+        <div class="meta"><span class="kind k-${esc(art)}">${esc(ART[art]||art)}</span> · <span class="src">${esc(l.source)}</span></div>
       </td>
-      <td class="num">${eur(l.price_cold)}</td>
+      <td class="num preis ${m.warm?'warmonly':''}"><b>${eur(m.wert)}</b><small>${m.art}</small></td>
       <td class="num hide-s">${num(l.sqm)}</td>
-      <td class="num hide-s">${num(l.price_per_sqm,2)}</td>`;
+      <td class="num hide-s">${num(l.price_per_sqm,2)}</td>
+      <td class="num hide-s dist" title="${l.position_approx?'Position über den Stadtteil geschätzt':''}">${
+        l._dist!=null ? (l.position_approx?"~":"")+num(l._dist,1)+" km" : "–"}</td>`;
     tb.appendChild(tr);
   }
   const leer = el("leer");
@@ -279,6 +378,10 @@ function zeigeDetail(l){
 
   const facts = [
     ["Kaltmiete", eur(l.price_cold)], ["Warmmiete", eur(l.price_warm)],
+    ["Anbieterart", ART[l.kind||"sonstige"]||"—"],
+    ["Entfernung", l._dist!=null
+        ? (l.position_approx ? "~" : "") + num(l._dist,1) + " km"
+          + (l.position_approx ? " (Stadtteilmitte)" : "") : "—"],
     ["Fläche", l.sqm?num(l.sqm)+" m²":"—"], ["Zimmer", l.rooms?num(l.rooms):"—"],
     ["€/m²", num(l.price_per_sqm,2)], ["Score", String(l.score??"—")],
     ["Frei ab", l.available_from || "—"],
@@ -333,7 +436,18 @@ async function start(){
   chips("bezirke", [...new Set(ALLE.map(l=>l.district||l.city||"?"))].sort((a,b)=>a.localeCompare(b,"de")), gesp?.bezirke);
   chips("quellen", [...new Set(ALLE.map(l=>l.source))].sort(), gesp?.quellen);
 
+  // Legende nur fuer die Arten, die auch vorkommen.
+  const arten = [...new Set(ALLE.map(l=>l.kind||"sonstige"))]
+    .sort((a,b)=>Object.keys(ART).indexOf(a)-Object.keys(ART).indexOf(b));
+  el("legende").replaceChildren(...arten.map(a=>{
+    const n = ALLE.filter(l=>(l.kind||"sonstige")===a).length;
+    const sp=document.createElement("span");
+    sp.className="kind k-"+a; sp.textContent=`${ART[a]||a} (${n})`;
+    return sp;
+  }));
+
   el("filters").addEventListener("input", zeichnen);
+  el("mitte").addEventListener("change", zeichnen);
   el("chipNeu").onclick = el("chipWeg").onclick = e => {
     e.target.setAttribute("aria-pressed", e.target.getAttribute("aria-pressed")!=="true"); zeichnen();
   };

@@ -27,8 +27,11 @@ from typing import Any, Dict, List
 
 from .adapters.base import Adapter, Blocked
 from .adapters.gwh import GwhAdapter
+from .adapters.immowelt import ImmoweltAdapter
 from .adapters.nhw import NhwAdapter
 from .adapters.vonovia import VonoviaAdapter
+from .adapters.wggesucht import WgGesuchtAdapter
+from .bezirke import finde as bezirk_finden
 from .config import Criteria
 from .models import Listing
 from .scoring import score as score_listing
@@ -43,9 +46,14 @@ BEHALTEN_TAGE = 14
 
 def adapters_for(criteria: Criteria) -> List[Adapter]:
     return [
+        # Grossvermieter: offene Schnittstellen, zuverlaessig
         VonoviaAdapter(criteria.city),
         NhwAdapter(criteria.city),
         GwhAdapter(criteria.city),
+        # Portale
+        WgGesuchtAdapter(criteria.city),
+        # Braucht einen Browser und faellt bei Bot-Schutz sauber aus
+        ImmoweltAdapter(criteria.city),
     ]
 
 
@@ -72,6 +80,14 @@ async def collect(criteria: Criteria) -> tuple[List[Listing], Dict[str, str]]:
                 await close()
 
         for l in listings:
+            # Portale liefern keine Koordinaten. Ohne Naeherung waere der
+            # Umkreisfilter fuer sie wirkungslos - also den Stadtteilmittel-
+            # punkt nehmen und das ehrlich kennzeichnen.
+            if l.lat is None or l.lng is None:
+                pos = bezirk_finden(l.district)
+                if pos:
+                    l.lat, l.lng = pos
+                    l.position_approx = True
             l.score, l.score_reasons = score_listing(l, criteria)
         gefunden.extend(listings)
         status[adapter.source] = f"{len(listings)} Angebote"
@@ -124,6 +140,7 @@ def _to_dict(l: Listing) -> Dict[str, Any]:
     return {
         "key": l.key,
         "source": l.source,
+        "kind": str(l.kind),
         "url": l.url,
         "title": l.title,
         "price_cold": l.price_cold,
@@ -137,6 +154,7 @@ def _to_dict(l: Listing) -> Dict[str, Any]:
         "district": l.district,
         "lat": l.lat,
         "lng": l.lng,
+        "position_approx": l.position_approx,
         "available_from": l.available_from,
         "image_url": l.image_url,
         "wbs_required": l.wbs_required,

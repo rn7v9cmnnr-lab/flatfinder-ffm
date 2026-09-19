@@ -29,7 +29,9 @@ from fastapi.responses import (FileResponse, HTMLResponse, PlainTextResponse,
 from fastapi.templating import Jinja2Templates
 
 from ..adapters.gwh import GwhAdapter
+from ..adapters.immowelt import ImmoweltAdapter
 from ..adapters.nhw import NhwAdapter
+from ..adapters.wggesucht import WgGesuchtAdapter
 from ..export import merge as export_merge
 from ..adapters.vonovia import VonoviaAdapter
 from ..config import Criteria, Profile, Settings
@@ -58,6 +60,8 @@ pipeline = Pipeline(store, messenger, settings, criteria, profile,
                         VonoviaAdapter(criteria.city),
                         NhwAdapter(criteria.city),
                         GwhAdapter(criteria.city),
+                        WgGesuchtAdapter(criteria.city),
+                        ImmoweltAdapter(criteria.city),
                     ])
 
 
