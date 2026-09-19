@@ -55,7 +55,20 @@ class Adapter(abc.ABC):
 
 
 class HttpAdapter(Adapter):
-    """Basis fuer alles, was ueber httpx laeuft."""
+    """Basis fuer alles, was ueber httpx laeuft.
+
+    Zwei Betriebsarten, beide muessen funktionieren:
+
+      async with VonoviaAdapter() as a:    # Skript, Client wird aufgeraeumt
+          await a.fetch()
+
+      adapter = VonoviaAdapter()           # Dauerbetrieb im Webdienst:
+      await adapter.fetch()                # Client entsteht beim ersten Zugriff
+
+    Die zweite Form hat anfangs gefehlt - der Webdienst baut die Adapter beim
+    Start und betritt nie einen async-Kontext. Ergebnis: jeder Durchlauf
+    scheiterte sofort. Deshalb legt der Client sich jetzt selbst an.
+    """
 
     base_url: str = ""
 
@@ -63,23 +76,33 @@ class HttpAdapter(Adapter):
         self._client = client
         self._owns_client = client is None
 
+    def _new_client(self) -> httpx.AsyncClient:
+        return httpx.AsyncClient(
+            headers={"User-Agent": UA, "Accept-Language": "de-DE,de;q=0.9"},
+            timeout=httpx.Timeout(20.0),
+            follow_redirects=True,
+        )
+
     async def __aenter__(self):
         if self._client is None:
-            self._client = httpx.AsyncClient(
-                headers={"User-Agent": UA, "Accept-Language": "de-DE,de;q=0.9"},
-                timeout=httpx.Timeout(20.0),
-                follow_redirects=True,
-            )
+            self._client = self._new_client()
         return self
 
     async def __aexit__(self, *exc) -> None:
-        if self._owns_client and self._client is not None:
+        if self._owns_client:
+            await self.aclose()
+
+    async def aclose(self) -> None:
+        if self._client is not None:
             await self._client.aclose()
+            self._client = None
 
     @property
     def client(self) -> httpx.AsyncClient:
-        if self._client is None:
-            raise AdapterError(f"{self.source}: benutze 'async with', Client fehlt")
+        if self._client is None or self._client.is_closed:
+            if not self._owns_client:
+                raise AdapterError(f"{self.source}: uebergebener Client ist geschlossen")
+            self._client = self._new_client()
         return self._client
 
     async def get(self, url: str, **kw) -> httpx.Response:

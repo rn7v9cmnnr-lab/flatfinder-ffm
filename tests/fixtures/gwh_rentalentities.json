@@ -1,0 +1,2342 @@
+{
+ "form": {
+  "additionalFilters": [],
+  "existingParameters": null,
+  "pluginNamespace": "tx_solr",
+  "name": null,
+  "value": null,
+  "pageUid": null,
+  "languageUid": null,
+  "query": null
+ },
+ "documents": {
+  "list": {
+   "count": 25,
+   "results": [
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13305-59",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71536,
+      "title": "Schöne 2-Zimmer-Wohnung mit Balkon zu vermieten!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1969",
+      "availableFromDate": "nach Absprache",
+      "overallSpace": "64,4",
+      "externalId": "MO 1600/13305/59",
+      "overalRent": "1.016,00",
+      "numberOfRooms": "2",
+      "lat": "50.16798535",
+      "lon": "8.67972815",
+      "street": "Berkersheimer Weg",
+      "houseNumber": "8",
+      "zip": "60433",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 285,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/a/0/csm_Aussenansicht_eines_17.Stoeckigen_Wohngebaeudes_um_05f32b8d7d.jpg",
+         "title": "Außenansicht eines 17.Stöckigen Wohngebäudes umgeben von Bäumen",
+         "altText": "Außenansicht eines 17.Stöckigen Wohngebäudes umgeben von Bäumen",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/a/0/csm_Aussenansicht_eines_17.Stoeckigen_Wohngebaeudes_um_05f32b8d7d.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/7/5/csm_Flur_mit_weissen_Waenden__grauem_PVC-Boden_und_Zug_3cb8ba1c36.jpg",
+         "title": "Flur mit weißen Wänden, grauem PVC-Boden und Zugang zu weiteren Zimmern. ",
+         "altText": "Flur mit weißen Wänden, grauem PVC-Boden und Zugang zu weiteren Zimmern. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/7/5/csm_Flur_mit_weissen_Waenden__grauem_PVC-Boden_und_Zug_3cb8ba1c36.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/3/9/csm_Badezimmer_mit_weissen_Boden-und_Wandfliesen__Stan_da45555b74.jpg",
+         "title": "Badezimmer mit weißen Boden-und Wandfliesen, Stand WC, Handwaschbecken und Badewanne. ",
+         "altText": "Badezimmer mit weißen Boden-und Wandfliesen, Stand WC, Handwaschbecken und Badewanne. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/3/9/csm_Badezimmer_mit_weissen_Boden-und_Wandfliesen__Stan_da45555b74.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13305-59"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1700-96005-13",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71746,
+      "title": "4 Zimmerwohnung mit großzügigem Wohnbereich und Loggia wartet auf Sie!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "2022",
+      "availableFromDate": "nach Absprache",
+      "overallSpace": "120,5",
+      "externalId": "MO 1700/96005/13",
+      "overalRent": "2.445,00",
+      "numberOfRooms": "4",
+      "lat": "50.07751285",
+      "lon": "8.6249136557934",
+      "street": "Lyoner Straße",
+      "houseNumber": "38",
+      "zip": "60528",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/e/0/csm_Rueckansicht_der_Mehrfamilienhaeuser_mit_Loggien_dcad2b8f19.jpg",
+         "title": "Rückansicht der Mehrfamilienhäuser mit Loggien",
+         "altText": "Rückansicht der Mehrfamilienhäuser mit Loggien",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/e/0/csm_Rueckansicht_der_Mehrfamilienhaeuser_mit_Loggien_dcad2b8f19.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 257,
+         "publicUrl": "fileadmin/_processed_/f/3/csm_Grundriss_mit_Flur__12_45_m2___Bad__5_41_m2___Du_50ba8ce1c7.jpg",
+         "title": "Grundriss mit Flur (12,45 m²), Bad (5,41 m²), Duschbad (5,7 m²), Küche (12,38 m²), Wohnzimmer (32,39 m²), Schlafzimmer (17,03 m²), Kinderzimmer (16,69 m²), 2. Kinderzimmer (13,80 m²) und Loggia (4,65 m²)",
+         "altText": "Grundriss mit Flur (12,45 m²), Bad (5,41 m²), Duschbad (5,7 m²), Küche (12,38 m²), Wohnzimmer (32,39 m²), Schlafzimmer (17,03 m²), Kinderzimmer (16,69 m²), 2. Kinderzimmer (13,80 m²) und Loggia (4,65 m²)",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/f/3/csm_Grundriss_mit_Flur__12_45_m2___Bad__5_41_m2___Du_50ba8ce1c7.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/d/5/csm_Beispiel_eines_Badezimmers_mit_Dusche__weissem_Wan_2ba7a4efd5.jpg",
+         "title": "Beispiel eines Badezimmers mit Dusche, weißem Wandwaschbecken und Glas-Duschabtrennung mit weißen Wandfliesen auf anthrazitfarbenen Fliesenboden",
+         "altText": "Beispiel eines Badezimmers mit Dusche, weißem Wandwaschbecken und Glas-Duschabtrennung mit weißen Wandfliesen auf anthrazitfarbenen Fliesenboden",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/d/5/csm_Beispiel_eines_Badezimmers_mit_Dusche__weissem_Wan_2ba7a4efd5.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1700-96005-13"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13002-50",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71803,
+      "title": "Gut geschnittene 2-Zimmerwohnung zu vermieten!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1953",
+      "availableFromDate": "nach Absprache",
+      "overallSpace": "39,2",
+      "externalId": "MO 1600/13002/50",
+      "overalRent": "711,51",
+      "numberOfRooms": "2",
+      "lat": "50.16618385",
+      "lon": "8.6719179085425",
+      "street": "Ligusterweg",
+      "houseNumber": "54",
+      "zip": "60433",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 262,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/e/c/csm_Aussenansicht_eines_mehrstoeckigen_Wohnhauses_umge_3c1c74e667.png",
+         "title": "Außenansicht eines mehrstöckigen Wohnhauses umgeben von Bäumen und Sträuchern. ",
+         "altText": "Außenansicht eines mehrstöckigen Wohnhauses umgeben von Bäumen und Sträuchern. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/e/c/csm_Aussenansicht_eines_mehrstoeckigen_Wohnhauses_umge_3c1c74e667.png"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/5/0/csm_Kueche_mit_weissen_Wand-_und_Bodenfliesen__weissen_08ddbe3f61.jpg",
+         "title": "Küche mit weißen Wand- und Bodenfliesen, weißen Wänden und einem Fenster. ",
+         "altText": "Küche mit weißen Wand- und Bodenfliesen, weißen Wänden und einem Fenster. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/5/0/csm_Kueche_mit_weissen_Wand-_und_Bodenfliesen__weissen_08ddbe3f61.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/c/3/csm_Badezimmer_mit_weissen_Wand-_und_Bodenfliesen__wei_e7c7092f90.jpg",
+         "title": "Badezimmer mit weißen Wand- und Bodenfliesen, weißem Stand-WC, Handwaschbecken und kleiner Duschwanne. ",
+         "altText": "Badezimmer mit weißen Wand- und Bodenfliesen, weißem Stand-WC, Handwaschbecken und kleiner Duschwanne. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/c/3/csm_Badezimmer_mit_weissen_Wand-_und_Bodenfliesen__wei_e7c7092f90.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13002-50"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13511-58",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71902,
+      "title": "Großzügige, moderne 4-Zimmer-Wohnung mit Balkon!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "2021",
+      "availableFromDate": "01.08.2026",
+      "overallSpace": "93,9",
+      "externalId": "MO 1600/13511/58",
+      "overalRent": "1.828,00",
+      "numberOfRooms": "4",
+      "lat": "50.1904152",
+      "lon": "8.6650427",
+      "street": "Ben-Gurion-Ring",
+      "houseNumber": "50i",
+      "zip": "60437",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 242,
+         "publicUrl": "fileadmin/_processed_/c/c/csm_Aussenansicht_des_Gebaeudes_c35e3a6b1f.jpg",
+         "title": "Außenansicht des Gebäudes",
+         "altText": "Außenansicht des Gebäudes",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/c/c/csm_Aussenansicht_des_Gebaeudes_c35e3a6b1f.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 254,
+         "publicUrl": "fileadmin/_processed_/6/4/csm_Grundriss_mit_Raumaufteilung_und_Beispielmoeblieru_35b85c17bb.png",
+         "title": "Grundriss mit Raumaufteilung und Beispielmöblierung",
+         "altText": "Grundriss mit Raumaufteilung und Beispielmöblierung",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/6/4/csm_Grundriss_mit_Raumaufteilung_und_Beispielmoeblieru_35b85c17bb.png"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/9/2/csm_Wohnzimmer_9b01ba94e1.jpg",
+         "title": "Wohnzimmer",
+         "altText": "Wohnzimmer",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/9/2/csm_Wohnzimmer_9b01ba94e1.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13511-58"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13301-190",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71896,
+      "title": "Gut geschnittene 2-Zimmer-Wohnung mit Balkon zu vermieten!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1969",
+      "availableFromDate": "nach Absprache",
+      "overallSpace": "61,3",
+      "externalId": "MO 1600/13301/190",
+      "overalRent": "890,00",
+      "numberOfRooms": "2",
+      "lat": "50.1684364",
+      "lon": "8.6804916",
+      "street": "Julius-Brecht-Straße",
+      "houseNumber": "1",
+      "zip": "60433",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 267,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/c/d/csm_Aussenansicht_eines_19._stoeckigen_Mehrfamilienhau_071f476531.jpg",
+         "title": "Außenansicht eines 19. stöckigen Mehrfamilienhauses umgeben von Bäumen und Feldern. ",
+         "altText": "Außenansicht eines 19. stöckigen Mehrfamilienhauses umgeben von Bäumen und Feldern. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/c/d/csm_Aussenansicht_eines_19._stoeckigen_Mehrfamilienhau_071f476531.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/0/5/csm_Badezimmer_mit__weissen_Wandfliesen__weissem_WC__w_e69da0e99d.jpg",
+         "title": "Badezimmer mit  weißen Wandfliesen, weißem WC, weißem Wandwaschbecken, weißer Badewanne, sowie dunklen Bodenfliesen.    ",
+         "altText": "Badezimmer mit  weißen Wandfliesen, weißem WC, weißem Wandwaschbecken, weißer Badewanne, sowie dunklen Bodenfliesen.    ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/0/5/csm_Badezimmer_mit__weissen_Wandfliesen__weissem_WC__w_e69da0e99d.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/4/a/csm_Flur_mit_weissen_Waenden_und_grauem_PVC-Fussboden_ca0bf34597.jpg",
+         "title": "Flur mit weißen Wänden und grauem PVC-Fußboden. ",
+         "altText": "Flur mit weißen Wänden und grauem PVC-Fußboden. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/4/a/csm_Flur_mit_weissen_Waenden_und_grauem_PVC-Fussboden_ca0bf34597.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13301-190"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13513-16",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71908,
+      "title": "1600/13513/16",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "2022",
+      "availableFromDate": "01.11.2026",
+      "overallSpace": "63,9",
+      "externalId": "MO 1600/13513/16",
+      "overalRent": "1.287,00",
+      "numberOfRooms": "2",
+      "lat": "50.19049505",
+      "lon": "8.6628815251506",
+      "street": "An der Alten Ziegelei",
+      "houseNumber": "8",
+      "zip": "60437",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/0/4/csm_Aussenansicht_c36b13c361.jpg",
+         "title": "Außenansicht",
+         "altText": "Außenansicht",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/0/4/csm_Aussenansicht_c36b13c361.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/f/a/csm_Aussenansicht_01_f5755b16ad.jpg",
+         "title": "Außenansicht",
+         "altText": "Außenansicht",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/f/a/csm_Aussenansicht_01_f5755b16ad.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/1/d/csm_Eingangsflur_1a8086137a.jpg",
+         "title": "Eingangsflur",
+         "altText": "Eingangsflur",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/1/d/csm_Eingangsflur_1a8086137a.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13513-16"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13508-3",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71906,
+      "title": "Neubau-Zweitbezug! Großzügige 1-Zimmer-Wohnung mit Terrasse und Garten!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "2024",
+      "availableFromDate": "01.11.2026",
+      "overallSpace": "46,1",
+      "externalId": "MO 1600/13508/3",
+      "overalRent": "1.009,00",
+      "numberOfRooms": "1",
+      "lat": "50.1900811",
+      "lon": "8.6633471",
+      "street": "An der Alten Ziegelei",
+      "houseNumber": "10",
+      "zip": "60437",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 257,
+         "publicUrl": "fileadmin/_processed_/f/c/csm_Grundriss_82eda18d1f.png",
+         "title": "Grundriss",
+         "altText": "Grundriss",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/f/c/csm_Grundriss_82eda18d1f.png"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/9/6/csm_Wohn-_und_Kuechenbereich_mit_angrenzendem_Garten_28c1bd884f.jpg",
+         "title": "Wohn- und Küchenbereich mit angrenzendem Garten",
+         "altText": "Wohn- und Küchenbereich mit angrenzendem Garten",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/9/6/csm_Wohn-_und_Kuechenbereich_mit_angrenzendem_Garten_28c1bd884f.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/c/2/csm_Flur_44b697d1b2.jpg",
+         "title": "Flur",
+         "altText": "Flur",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/c/2/csm_Flur_44b697d1b2.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13508-3"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13508-30",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71912,
+      "title": "Neubau-Zweitbezug! Große 4-Zimmer-Wohnung mit Balkon!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "2024",
+      "availableFromDate": "01.11.2026",
+      "overallSpace": "100,0",
+      "externalId": "MO 1600/13508/30",
+      "overalRent": "1.851,00",
+      "numberOfRooms": "4",
+      "lat": "50.1900866",
+      "lon": "8.6638358",
+      "street": "An der Alten Ziegelei",
+      "houseNumber": "14",
+      "zip": "60437",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 257,
+         "publicUrl": "fileadmin/_processed_/9/b/csm_Unbenannt_ff3d79dd56.png",
+         "title": "Unbenannt",
+         "altText": "Unbenannt",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/9/b/csm_Unbenannt_ff3d79dd56.png"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/d/e/csm_Wohn-_und_Essbereich_5027923262.jpg",
+         "title": "Wohn- und Essbereich",
+         "altText": "Wohn- und Essbereich",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/d/e/csm_Wohn-_und_Essbereich_5027923262.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/4/8/csm_Wohnzimmer_0cce901c4e.jpg",
+         "title": "Wohnzimmer",
+         "altText": "Wohnzimmer",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/4/8/csm_Wohnzimmer_0cce901c4e.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13508-30"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13301-61",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71915,
+      "title": "Gut geschnittene 2-Zimmer-Wohnung mit Balkon zu vermieten!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1969",
+      "availableFromDate": "nach Absprache",
+      "overallSpace": "61,0",
+      "externalId": "MO 1600/13301/61",
+      "overalRent": "1.025,00",
+      "numberOfRooms": "2",
+      "lat": "50.1684364",
+      "lon": "8.6804916",
+      "street": "Julius-Brecht-Straße",
+      "houseNumber": "1",
+      "zip": "60433",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 276,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/9/f/csm_Aussenansicht_eines_19.stoeckigen_Mehrfamilienhaus_f6b82ae874.jpg",
+         "title": "Außenansicht eines 19.stöckigen Mehrfamilienhauses umgeben von Bäumen und Sträuchern.",
+         "altText": "Außenansicht eines 19.stöckigen Mehrfamilienhauses umgeben von Bäumen und Sträuchern.",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/9/f/csm_Aussenansicht_eines_19.stoeckigen_Mehrfamilienhaus_f6b82ae874.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/3/8/csm_Musterfoto_Badezimmer_mit_weissen_Wand_und_grauen_87bb30c16b.jpg",
+         "title": "Musterfoto Badezimmer mit weißen Wand und grauen Bodenfliesen, Badewanne, Hänge WC, Handtuchheizkörper und Handwaschbecken. ",
+         "altText": "Musterfoto Badezimmer mit weißen Wand und grauen Bodenfliesen, Badewanne, Hänge WC, Handtuchheizkörper und Handwaschbecken. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/3/8/csm_Musterfoto_Badezimmer_mit_weissen_Wand_und_grauen_87bb30c16b.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/e/b/csm_Flur_mit_weissen_Waenden__PVC-Boden_in_Laminatopti_80fcc9113c.jpg",
+         "title": "Flur mit weißen Wänden, PVC-Boden in Laminatoptik und Zugang zu weiteren Zimmern. ",
+         "altText": "Flur mit weißen Wänden, PVC-Boden in Laminatoptik und Zugang zu weiteren Zimmern. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/e/b/csm_Flur_mit_weissen_Waenden__PVC-Boden_in_Laminatopti_80fcc9113c.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13301-61"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13301-5",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71914,
+      "title": "Modernisierte 3-Zimmer-Wohnung mit Balkon zu vermieten!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1969",
+      "availableFromDate": "nach Absprache",
+      "overallSpace": "73,1",
+      "externalId": "MO 1600/13301/5",
+      "overalRent": "1.238,00",
+      "numberOfRooms": "3",
+      "lat": "50.1684364",
+      "lon": "8.6804916",
+      "street": "Julius-Brecht-Straße",
+      "houseNumber": "1",
+      "zip": "60433",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 276,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/b/0/csm_Aussenansicht_eines_19.stoeckigen_Mehrfamilienhaus_296405106f.jpg",
+         "title": "Außenansicht eines 19.stöckigen Mehrfamilienhauses umgeben von Bäumen und Sträuchern.",
+         "altText": "Außenansicht eines 19.stöckigen Mehrfamilienhauses umgeben von Bäumen und Sträuchern.",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/b/0/csm_Aussenansicht_eines_19.stoeckigen_Mehrfamilienhaus_296405106f.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/c/3/csm_Flur_mit_weissen_Waenden__Design-Vinylboden_in_Hol_ec4dfc72f7.jpg",
+         "title": "Flur mit weißen Wänden, Design-Vinylboden in Holzoptik und Zugang zu weiteren Zimmern. ",
+         "altText": "Flur mit weißen Wänden, Design-Vinylboden in Holzoptik und Zugang zu weiteren Zimmern. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/c/3/csm_Flur_mit_weissen_Waenden__Design-Vinylboden_in_Hol_ec4dfc72f7.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/a/b/csm_Schlafzimmer_mit_weissen_Waenden__Design-Vinylbode_3489093342.jpg",
+         "title": "Schlafzimmer mit weißen Wänden, Design-Vinylboden in Holzoptik Zugang zum Balkon. ",
+         "altText": "Schlafzimmer mit weißen Wänden, Design-Vinylboden in Holzoptik Zugang zum Balkon. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/a/b/csm_Schlafzimmer_mit_weissen_Waenden__Design-Vinylbode_3489093342.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13301-5"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-14420-38",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71928,
+      "title": "Großzügige 2-Zimmer-Wohnung zentral gelegen mit Balkon!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1985",
+      "availableFromDate": "16.09.2026",
+      "overallSpace": "72,0",
+      "externalId": "MO 1600/14420/38",
+      "overalRent": "1.305,00",
+      "numberOfRooms": "2",
+      "lat": "50.1459384",
+      "lon": "8.66989255",
+      "street": "Walter-Leiske-Straße",
+      "houseNumber": "11",
+      "zip": "60320",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/d/4/csm_Vorderansicht_eines_mehrstoeckigen_Wohngebaeudes_m_9da6822b5d.jpg",
+         "title": "Vorderansicht eines mehrstöckigen Wohngebäudes mit Balkonen umgeben von Bäumen und grünen Sträuchern. ",
+         "altText": "Vorderansicht eines mehrstöckigen Wohngebäudes mit Balkonen umgeben von Bäumen und grünen Sträuchern. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/d/4/csm_Vorderansicht_eines_mehrstoeckigen_Wohngebaeudes_m_9da6822b5d.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/b/8/csm_Rueckansicht_eines_mehrstoeckigen_Wohngebaeudes_mi_6d65a3c653.jpg",
+         "title": "Rückansicht eines mehrstöckigen Wohngebäudes mit Garagen und Stellplätzen, umgeben von Bäumen. ",
+         "altText": "Rückansicht eines mehrstöckigen Wohngebäudes mit Garagen und Stellplätzen, umgeben von Bäumen. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/b/8/csm_Rueckansicht_eines_mehrstoeckigen_Wohngebaeudes_mi_6d65a3c653.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 253,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/e/1/csm_14420.0038_Grundriss.PNG_5dce33d87b.png",
+         "title": "14420.0038 Grundriss",
+         "altText": "14420.0038 Grundriss",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/e/1/csm_14420.0038_Grundriss.PNG_5dce33d87b.png"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-14420-38"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-13804-12",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71945,
+      "title": "Helle 3,5-Zimmer-Wohnung mit Loggia in Eckenheim zu vermieten",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1953",
+      "availableFromDate": "01.10.2026",
+      "overallSpace": "67,4",
+      "externalId": "MO 1600/13804/12",
+      "overalRent": "1.099,00",
+      "numberOfRooms": "3,5",
+      "lat": "50.1527227",
+      "lon": "8.6785612",
+      "street": "Sigmund-Freud-Straße",
+      "houseNumber": "65",
+      "zip": "60435",
+      "city": "Frankfurt am Main",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 272,
+         "publicUrl": "fileadmin/_processed_/a/4/csm_Hausansicht_eines_mehrstoeckigen_Wohngebaeudes__um_74dd64baf5.jpg",
+         "title": "Hausansicht eines mehrstöckigen Wohngebäudes, umgeben von einer Wiese und Bäumen",
+         "altText": "Hausansicht eines mehrstöckigen Wohngebäudes, umgeben von einer Wiese und Bäumen",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/a/4/csm_Hausansicht_eines_mehrstoeckigen_Wohngebaeudes__um_74dd64baf5.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/9/2/csm_Heller_Wohnungsflur_mit_Fussboden_in_Holzoptik__vo_0b907321c5.jpg",
+         "title": "Heller Wohnungsflur mit Fußboden in Holzoptik, von dem mehrere offene Türen in weitere Zimmer abgehen, tapetenlos",
+         "altText": "Heller Wohnungsflur mit Fußboden in Holzoptik, von dem mehrere offene Türen in weitere Zimmer abgehen, tapetenlos",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/9/2/csm_Heller_Wohnungsflur_mit_Fussboden_in_Holzoptik__vo_0b907321c5.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/9/6/csm_Helles_Wohnzimmer_mit_tapetenlosen_Waenden_und_Fu__bf63cbffd0.jpg",
+         "title": "Helles Wohnzimmer mit tapetenlosen Wänden und Fußboden in Holzoptik, Doppelfenster mit Blick ins Grüne und Heizkörper darunter",
+         "altText": "Helles Wohnzimmer mit tapetenlosen Wänden und Fußboden in Holzoptik, Doppelfenster mit Blick ins Grüne und Heizkörper darunter",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/9/6/csm_Helles_Wohnzimmer_mit_tapetenlosen_Waenden_und_Fu__bf63cbffd0.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-13804-12"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1760-5014-2",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71599,
+      "title": "Tolle Familienwohnung sucht neue Mieter!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1965",
+      "availableFromDate": "nach Absprache",
+      "overallSpace": "72,5",
+      "externalId": "MO 1760/5014/2",
+      "overalRent": "1.080,00",
+      "numberOfRooms": "4",
+      "lat": "50.2898673",
+      "lon": "8.9387095128833",
+      "street": "Am Weihergarten",
+      "houseNumber": "29",
+      "zip": "63674",
+      "city": "Altenstadt",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/8/d/csm_Rueckansicht_des_mehrstoeckigen_Wohngebaeudes_mit_255dd027d1.jpg",
+         "title": "Rückansicht des mehrstöckigen Wohngebäudes mit Loggien, umgeben von Grünanlagen ",
+         "altText": "Rückansicht des mehrstöckigen Wohngebäudes mit Loggien, umgeben von Grünanlagen ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/8/d/csm_Rueckansicht_des_mehrstoeckigen_Wohngebaeudes_mit_255dd027d1.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/1/3/csm_BEISPIELBILD__Wohnzimmer_mit_Zugang_zur_Loggia_und_2fd94d6e36.jpg",
+         "title": "BEISPIELBILD: Wohnzimmer mit Zugang zur Loggia und PVC-Bodenbelag in Holzoptik",
+         "altText": "BEISPIELBILD: Wohnzimmer mit Zugang zur Loggia und PVC-Bodenbelag in Holzoptik",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/1/3/csm_BEISPIELBILD__Wohnzimmer_mit_Zugang_zur_Loggia_und_2fd94d6e36.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/3/4/csm_BEISPIELBILD__Zimmer_mit_PVC-Bodenbelag_in_Holzopt_0c5ba44d8a.jpg",
+         "title": "BEISPIELBILD: Zimmer mit PVC-Bodenbelag in Holzoptik",
+         "altText": "BEISPIELBILD: Zimmer mit PVC-Bodenbelag in Holzoptik",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/3/4/csm_BEISPIELBILD__Zimmer_mit_PVC-Bodenbelag_in_Holzopt_0c5ba44d8a.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1760-5014-2"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-20101-8",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71916,
+      "title": "Helle 1,5- Zimmer-Wohnung mit Loggia sucht Nachmieter!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1971",
+      "availableFromDate": "nach Absprache",
+      "overallSpace": "39,6",
+      "externalId": "MO 1600/20101/8",
+      "overalRent": "798,00",
+      "numberOfRooms": "1,5",
+      "lat": "50.23598705",
+      "lon": "8.5898090592601",
+      "street": "Heuchelheimer Strasse",
+      "houseNumber": "220",
+      "zip": "61350",
+      "city": "Bad Homburg vor der Höhe",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 344,
+         "publicUrl": "fileadmin/_processed_/4/6/csm_Aussenansicht_des_vierstoeckigen_Wohngebaeudes_1f8c469f1c.jpg",
+         "title": "Außenansicht des vierstöckigen Wohngebäudes.",
+         "altText": "Außenansicht des vierstöckigen Wohngebäudes.",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/4/6/csm_Aussenansicht_des_vierstoeckigen_Wohngebaeudes_1f8c469f1c.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/1/7/csm_Wohnzimmer_mit_hellbraunem_Holzboden__weissen_Waen_dce45c4a39.jpg",
+         "title": "Wohnzimmer mit hellbraunem Holzboden, weißen Wänden und einer Tür, die zur Küche führt.",
+         "altText": "Wohnzimmer mit hellbraunem Holzboden, weißen Wänden und einer Tür, die zur Küche führt.",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/1/7/csm_Wohnzimmer_mit_hellbraunem_Holzboden__weissen_Waen_dce45c4a39.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/0/e/csm_Wohnzimmer_mit_hellbraunem_Holzboden__weissen_Waen_01_2107da5970.jpg",
+         "title": "Wohnzimmer mit hellbraunem Holzboden, weißen Wänden und einer Glastüre, die zur Loggia führt.",
+         "altText": "Wohnzimmer mit hellbraunem Holzboden, weißen Wänden und einer Glastüre, die zur Loggia führt.",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/0/e/csm_Wohnzimmer_mit_hellbraunem_Holzboden__weissen_Waen_01_2107da5970.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-20101-8"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-20211-18",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71948,
+      "title": "Modernisierte 2-Zimmer-Wohnung mit Balkon zu vermieten!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1970",
+      "availableFromDate": "01.08.2026",
+      "overallSpace": "63,9",
+      "externalId": "MO 1600/20211/18",
+      "overalRent": "1.062,00",
+      "numberOfRooms": "2",
+      "lat": "50.23591755",
+      "lon": "8.5911351911078",
+      "street": "Gartenfeldstrasse",
+      "houseNumber": "121",
+      "zip": "61350",
+      "city": "Bad Homburg vor der Höhe",
+      "media": [
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/2/9/csm_Aussenansicht_eines_modernisierten_Hochhauses__umg_45a2bacd9d.jpg",
+         "title": "Aussenansicht eines modernisierten Hochhauses, umgeben von Bäumen und Parkplätzen.",
+         "altText": "Aussenansicht eines modernisierten Hochhauses, umgeben von Bäumen und Parkplätzen.",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/2/9/csm_Aussenansicht_eines_modernisierten_Hochhauses__umg_45a2bacd9d.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/9/e/csm_Kueche_mit_weissen__tapetenlosen_Waenden__weissem_bd8bdb70f9.jpg",
+         "title": "Küche mit weißen, tapetenlosen Wänden, weißem Fliesenspiegel und Design-Vinylboden in Holzoptik. ",
+         "altText": "Küche mit weißen, tapetenlosen Wänden, weißem Fliesenspiegel und Design-Vinylboden in Holzoptik. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/9/e/csm_Kueche_mit_weissen__tapetenlosen_Waenden__weissem_bd8bdb70f9.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/0/1/csm_Schlafzimmer_mit_weissen_tapetenlosen_Waenden__Des_adcde5f0a8.jpg",
+         "title": "Schlafzimmer mit weißen,tapetenlosen Wänden, Design-Vinylboden in Holzoptik und Fenster. ",
+         "altText": "Schlafzimmer mit weißen,tapetenlosen Wänden, Design-Vinylboden in Holzoptik und Fenster. ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/0/1/csm_Schlafzimmer_mit_weissen_tapetenlosen_Waenden__Des_adcde5f0a8.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-20211-18"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-20205-35",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71947,
+      "title": "1. Monat mietfrei! Gut geschnittene 2,5-Zimmer-Wohnung mit Balkon zu vermieten!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1964",
+      "availableFromDate": "01.08.2026",
+      "overallSpace": "64,4",
+      "externalId": "MO 1600/20205/35",
+      "overalRent": "1.023,00",
+      "numberOfRooms": "2,5",
+      "lat": "50.2352133",
+      "lon": "8.5957190451852",
+      "street": "Gartenfeldstrasse",
+      "houseNumber": "20",
+      "zip": "61350",
+      "city": "Bad Homburg vor der Höhe",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/9/5/csm_Frontansicht_a3f4ea7bdf.jpg",
+         "title": "Frontansicht",
+         "altText": "Frontansicht",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/9/5/csm_Frontansicht_a3f4ea7bdf.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/b/0/csm_Flur_mit_weissen__tapetenlosen_Waenden__Boden_ohne_626ddc60e0.jpg",
+         "title": "Flur mit weißen, tapetenlosen Wänden, Boden ohne Fußbodenbelag und Zugang zu weiteren Zimmern.",
+         "altText": "Flur mit weißen, tapetenlosen Wänden, Boden ohne Fußbodenbelag und Zugang zu weiteren Zimmern.",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/b/0/csm_Flur_mit_weissen__tapetenlosen_Waenden__Boden_ohne_626ddc60e0.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/d/b/csm_Badezimmer_mit_grauen_Boden-_und_weissen_Wandflies_f6c6ba63af.jpg",
+         "title": "Badezimmer mit grauen Boden- und weißen Wandfliesen, Badewanne und Waschbecken.",
+         "altText": "Badezimmer mit grauen Boden- und weißen Wandfliesen, Badewanne und Waschbecken.",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/d/b/csm_Badezimmer_mit_grauen_Boden-_und_weissen_Wandflies_f6c6ba63af.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-20205-35"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1760-5022-31",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71926,
+      "title": "Nachmieter für 3-Zimmerwohnung in zentraler Lage und \"Weitblick\" gesucht!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1967",
+      "availableFromDate": "01.09.2026",
+      "overallSpace": "68,6",
+      "externalId": "MO 1760/5022/31",
+      "overalRent": "1.100,00",
+      "numberOfRooms": "3",
+      "lat": "50.3739242",
+      "lon": "8.7469905361111",
+      "street": "Bodestraße",
+      "houseNumber": "15",
+      "zip": "61231",
+      "city": "Bad Nauheim",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/d/e/csm_Gebaeudeansicht_des_mehrstoeckigen_Wohngebaeudes_m_5c9ce71ca6.jpg",
+         "title": "Gebäudeansicht des mehrstöckigen Wohngebäudes mit Balkonen, umgeben von Grünanlagen mit Bäumen und grünen Sträuchern",
+         "altText": "Gebäudeansicht des mehrstöckigen Wohngebäudes mit Balkonen, umgeben von Grünanlagen mit Bäumen und grünen Sträuchern",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/d/e/csm_Gebaeudeansicht_des_mehrstoeckigen_Wohngebaeudes_m_5c9ce71ca6.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/6/f/csm_BEISPIELBILD__Aussicht_von_der_Loggia_a129293746.jpg",
+         "title": "BEISPIELBILD: Aussicht von der Loggia",
+         "altText": "BEISPIELBILD: Aussicht von der Loggia",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/6/f/csm_BEISPIELBILD__Aussicht_von_der_Loggia_a129293746.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/2/0/csm_BEISPIELBILD__Wohnzimmer_mit_PVC-Bodenbelag_in_Hol_588cad9c14.jpg",
+         "title": "BEISPIELBILD: Wohnzimmer mit PVC-Bodenbelag in Holzoptik und Zugang zur Loggia",
+         "altText": "BEISPIELBILD: Wohnzimmer mit PVC-Bodenbelag in Holzoptik und Zugang zur Loggia",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/2/0/csm_BEISPIELBILD__Wohnzimmer_mit_PVC-Bodenbelag_in_Hol_588cad9c14.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1760-5022-31"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1760-527-9",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71819,
+      "title": "Für Dachgeschosswohnung mit Wohnküche wird ein neuer Singlehaushalt gesucht!",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1954",
+      "availableFromDate": "01.11.2026",
+      "overallSpace": "44,7",
+      "externalId": "MO 1760/527/9",
+      "overalRent": "796,00",
+      "numberOfRooms": "2",
+      "lat": "50.1716446",
+      "lon": "8.7207297",
+      "street": "Pommernweg",
+      "houseNumber": "5",
+      "zip": "61118",
+      "city": "Bad Vilbel",
+      "media": [
+       {
+        "small": {
+         "width": 250,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/d/b/csm_Eingangsbereich_des_mehrstoeckigen_Wohngebaeudes_u_f7c136672a.jpg",
+         "title": "Eingangsbereich des mehrstöckigen Wohngebäudes umgeben von Grünanlagen mit Bäumen und Sträuchern",
+         "altText": "Eingangsbereich des mehrstöckigen Wohngebäudes umgeben von Grünanlagen mit Bäumen und Sträuchern",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/d/b/csm_Eingangsbereich_des_mehrstoeckigen_Wohngebaeudes_u_f7c136672a.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 320,
+         "height": 240,
+         "publicUrl": "fileadmin/immomio/MO_1760_527_9/BEISPIELBILD__Wohnkueche.jpg",
+         "title": "BEISPIELBILD: Wohnküche",
+         "altText": "BEISPIELBILD: Wohnküche",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/immomio/MO_1760_527_9/BEISPIELBILD__Wohnkueche.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 320,
+         "height": 240,
+         "publicUrl": "fileadmin/immomio/MO_1760_527_9/BEISPIELBILD__Schlafzimmer.jpg",
+         "title": "BEISPIELBILD: Schlafzimmer",
+         "altText": "BEISPIELBILD: Schlafzimmer",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/immomio/MO_1760_527_9/BEISPIELBILD__Schlafzimmer.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1760-527-9"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-4200-99004-24",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71619,
+      "title": "Zentral gelegene 2-Zimmerwohnung in Baunatal-Altenbauna sucht Nachmieter",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1990",
+      "availableFromDate": "01.10.2026",
+      "overallSpace": "59,4",
+      "externalId": "MO 4200/99004/24",
+      "overalRent": "807,00",
+      "numberOfRooms": "2",
+      "lat": "51.252095",
+      "lon": "9.4105739",
+      "street": "Carl-Bantzer-Straße",
+      "houseNumber": "34",
+      "zip": "34225",
+      "city": "Baunatal",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 296,
+         "publicUrl": "fileadmin/_processed_/c/9/csm_Grundriss_2ZKB_a8c72e3522.jpg",
+         "title": "Grundriss 2ZKB",
+         "altText": "Grundriss 2ZKB",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/c/9/csm_Grundriss_2ZKB_a8c72e3522.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/e/b/csm_Flur_9c2ffa4f53.jpg",
+         "title": "Flur",
+         "altText": "Flur",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/e/b/csm_Flur_9c2ffa4f53.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/4/0/csm_Badezimmer_fe8f79b993.jpg",
+         "title": "Badezimmer",
+         "altText": "Badezimmer",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/4/0/csm_Badezimmer_fe8f79b993.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-4200-99004-24"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-44016-7",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71847,
+      "title": "3-Zimmerwohnung mit praktischen Grundriss am Baunsberg",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1994",
+      "availableFromDate": "01.10.2026",
+      "overallSpace": "74,9",
+      "externalId": "MO 1600/44016/7",
+      "overalRent": "920,00",
+      "numberOfRooms": "3",
+      "lat": "51.26615115",
+      "lon": "9.4249340820031",
+      "street": "Birkenallee",
+      "houseNumber": "101",
+      "zip": "34225",
+      "city": "Baunatal",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/3/6/csm_Birkenallee_101_-_103__Aussenansicht__ueber_die_Gr_2270418522.jpg",
+         "title": "Birkenallee 101 - 103, Außenansicht  über die Grünanlage mit altem Baumbestand auf die Balkone",
+         "altText": "Birkenallee 101 - 103, Außenansicht  über die Grünanlage mit altem Baumbestand auf die Balkone",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/3/6/csm_Birkenallee_101_-_103__Aussenansicht__ueber_die_Gr_2270418522.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 243,
+         "publicUrl": "fileadmin/_processed_/f/a/csm_Birkenallee_101__Aussenansicht_ueber_die_Gruenanla_dc4cecb16f.jpg",
+         "title": "Birkenallee 101, Außenansicht über die Grünanlage auf ein mehrgeschossiges Wohngebäude mit heller Fassade und Pultdach",
+         "altText": "Birkenallee 101, Außenansicht über die Grünanlage auf ein mehrgeschossiges Wohngebäude mit heller Fassade und Pultdach",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/f/a/csm_Birkenallee_101__Aussenansicht_ueber_die_Gruenanla_dc4cecb16f.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 243,
+         "publicUrl": "fileadmin/_processed_/8/d/csm_Birkenallee_101_Aussenansicht_auf_den_Eingangsbere_00a6b1f837.jpg",
+         "title": "Birkenallee 101 Außenansicht auf den Eingangsbereich eines Wohngebäudes in Reihenbauweise (Eckgebäude)",
+         "altText": "Birkenallee 101 Außenansicht auf den Eingangsbereich eines Wohngebäudes in Reihenbauweise (Eckgebäude)",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/8/d/csm_Birkenallee_101_Aussenansicht_auf_den_Eingangsbere_00a6b1f837.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-44016-7"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-44010-23",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71846,
+      "title": "Gemütliche 3-Zimmerwohnung in zentraler Lage von Altenbauna",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1985",
+      "availableFromDate": "01.10.2026",
+      "overallSpace": "74,4",
+      "externalId": "MO 1600/44010/23",
+      "overalRent": "1.040,00",
+      "numberOfRooms": "3",
+      "lat": "51.250731",
+      "lon": "9.4107353",
+      "street": "Theodor-Heuss-Allee",
+      "houseNumber": "21",
+      "zip": "34225",
+      "city": "Baunatal",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 260,
+         "publicUrl": "fileadmin/_processed_/6/c/csm_Theodor-Heuss-Allee_17_-_21__Aussenansicht_auf_die_2eabce8beb.jpg",
+         "title": "Theodor-Heuss-Allee 17 - 21, Außenansicht auf die Eingangebereiche mehrerer mehrgeschossiger Wohngebäude mit heller Fassade und Satteldach in Reihenbebauung .",
+         "altText": "Theodor-Heuss-Allee 17 - 21, Außenansicht auf die Eingangebereiche mehrerer mehrgeschossiger Wohngebäude mit heller Fassade und Satteldach in Reihenbebauung .",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/6/c/csm_Theodor-Heuss-Allee_17_-_21__Aussenansicht_auf_die_2eabce8beb.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/8/a/csm_AiBATROS-1600-44010-Theodor-Heuss-Allee_21__Aussen_4484c00231.jpg",
+         "title": "AiBATROS-1600-44010-Theodor-Heuss-Allee 21: Außenansicht auf die Balkone eines Wohngebäudes mit heller Fassade ",
+         "altText": "AiBATROS-1600-44010-Theodor-Heuss-Allee 21: Außenansicht auf die Balkone eines Wohngebäudes mit heller Fassade ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/8/a/csm_AiBATROS-1600-44010-Theodor-Heuss-Allee_21__Aussen_4484c00231.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 194,
+         "publicUrl": "fileadmin/_processed_/e/b/csm_Ihre_Vorteile_bei_der_GWH__zuverlaessiger_Vermiete_dfd0d13fbd.jpg",
+         "title": "Ihre Vorteile bei der GWH: zuverlässiger Vermieter, unbefristeter Mietvertrag, keine Eigenbedarfskündigung, faire Mieten",
+         "altText": "Ihre Vorteile bei der GWH: zuverlässiger Vermieter, unbefristeter Mietvertrag, keine Eigenbedarfskündigung, faire Mieten",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/e/b/csm_Ihre_Vorteile_bei_der_GWH__zuverlaessiger_Vermiete_dfd0d13fbd.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-44010-23"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-44001-42",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71900,
+      "title": "Fernblick inklusive: Großzügige 3-Zimmerwohnung im 7. Obergeschoss",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "1971",
+      "availableFromDate": "16.12.2026",
+      "overallSpace": "86,6",
+      "externalId": "MO 1600/44001/42",
+      "overalRent": "1.085,00",
+      "numberOfRooms": "3",
+      "lat": "51.2560419",
+      "lon": "9.4161895899055",
+      "street": "Heinrich-Nordhoff-Straße",
+      "houseNumber": "8",
+      "zip": "34225",
+      "city": "Baunatal",
+      "media": [
+       {
+        "small": {
+         "width": 272,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/d/a/csm_Heinrich-Nordhoff-Str._8_-_Aussenansicht_auf_ein_H_208e8b1b8f.jpg",
+         "title": "Heinrich-Nordhoff-Str. 8 - Außenansicht auf ein Hochhaus mit heller Fassade und farbig abgesetzten Balkonen",
+         "altText": "Heinrich-Nordhoff-Str. 8 - Außenansicht auf ein Hochhaus mit heller Fassade und farbig abgesetzten Balkonen",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/d/a/csm_Heinrich-Nordhoff-Str._8_-_Aussenansicht_auf_ein_H_208e8b1b8f.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 243,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/9/8/csm_Heinrich-Nordhoff-Str._8__Aussenansicht_auf_den_Ei_5b594967e4.jpg",
+         "title": "Heinrich-Nordhoff-Str. 8, Außenansicht auf den Eingangsbereich eines Hochhauses mit heller Fassadet ",
+         "altText": "Heinrich-Nordhoff-Str. 8, Außenansicht auf den Eingangsbereich eines Hochhauses mit heller Fassadet ",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/9/8/csm_Heinrich-Nordhoff-Str._8__Aussenansicht_auf_den_Ei_5b594967e4.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 257,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/2/7/csm_Grundriss_3_Zimmer_bestehend_aus_zwei_Schlafraeume_6435662c6b.jpg",
+         "title": "Grundriss 3 Zimmer bestehend aus zwei Schlafräumen, einem Wohnraum mit Zugang zum Hauptbalkon, einem innenliegendem Bad mit Wanne o. Dusche, einem WC, einer Küche und einer großzügigen Flurfläche mit Zugang zum zweiten Balkon",
+         "altText": "Grundriss 3 Zimmer bestehend aus zwei Schlafräumen, einem Wohnraum mit Zugang zum Hauptbalkon, einem innenliegendem Bad mit Wanne o. Dusche, einem WC, einer Küche und einer großzügigen Flurfläche mit Zugang zum zweiten Balkon",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/2/7/csm_Grundriss_3_Zimmer_bestehend_aus_zwei_Schlafraeume_6435662c6b.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-44001-42"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-6020-98006-16",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 70413,
+      "title": "Charmante Wohnung in Braunschweig",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "2023",
+      "availableFromDate": "01.05.2026",
+      "overallSpace": "66,7",
+      "externalId": "MO 6020/98006/16",
+      "overalRent": "1.129,66",
+      "numberOfRooms": "3",
+      "lat": "52.24974965",
+      "lon": "10.574326800568",
+      "street": "Vincent-van-Gogh-Ring",
+      "houseNumber": "61",
+      "zip": "38126",
+      "city": "Braunschweig",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 258,
+         "publicUrl": "fileadmin/_processed_/1/8/csm_Grundriss_2d7dd7f6e8.jpg",
+         "title": "Grundriss",
+         "altText": "Grundriss",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1787904770306/public/fileadmin/_processed_/1/8/csm_Grundriss_2d7dd7f6e8.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/b/2/csm_Laubengaenge_c2ff788d29.jpg",
+         "title": "Laubengänge",
+         "altText": "Laubengänge",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1787904770306/public/fileadmin/_processed_/b/2/csm_Laubengaenge_c2ff788d29.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/a/c/csm_Die_Haeuser_Vincent-van-Gogh-Ring_61-71_sind_ueber_b10dd56e7b.jpg",
+         "title": "Die Häuser Vincent-van-Gogh-Ring 61-71 sind über eine Fußgängerzone erreichbar",
+         "altText": "Die Häuser Vincent-van-Gogh-Ring 61-71 sind über eine Fußgängerzone erreichbar",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1787904770306/public/fileadmin/_processed_/a/c/csm_Die_Haeuser_Vincent-van-Gogh-Ring_61-71_sind_ueber_b10dd56e7b.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-6020-98006-16"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-6020-98006-36",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71078,
+      "title": "Großzügige 3 Zi.-Whg. in Braunschweig",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "2023",
+      "availableFromDate": "01.08.2026",
+      "overallSpace": "94,1",
+      "externalId": "MO 6020/98006/36",
+      "overalRent": "1.516,58",
+      "numberOfRooms": "3",
+      "lat": "52.24947575",
+      "lon": "10.574494524301",
+      "street": "Vincent-van Gogh-Ring",
+      "houseNumber": "63",
+      "zip": "38126",
+      "city": "Braunschweig",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 258,
+         "publicUrl": "fileadmin/_processed_/7/2/csm_Grundriss_05a15852b4.jpg",
+         "title": "Grundriss",
+         "altText": "Grundriss",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/7/2/csm_Grundriss_05a15852b4.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/8/4/csm_Rueckansicht_des_Gebaeudes_Vincent-van-Gogh-Ring_6_cc480bc65e.jpg",
+         "title": "Rückansicht des Gebäudes Vincent-van-Gogh-Ring 63 mit Balkonen, weiße Fassade, 5 Geschosse + Staffelgeschoss",
+         "altText": "Rückansicht des Gebäudes Vincent-van-Gogh-Ring 63 mit Balkonen, weiße Fassade, 5 Geschosse + Staffelgeschoss",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/8/4/csm_Rueckansicht_des_Gebaeudes_Vincent-van-Gogh-Ring_6_cc480bc65e.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 273,
+         "height": 364,
+         "publicUrl": "fileadmin/_processed_/c/2/csm_Die_Haeuser_Vincent-van-Gogh-Ring_61-71_sind_ueber_1b0ce40edf.jpg",
+         "title": "Die Häuser Vincent-van-Gogh-Ring 61-71 sind über eine Fußgängerzone erreichbar",
+         "altText": "Die Häuser Vincent-van-Gogh-Ring 61-71 sind über eine Fußgängerzone erreichbar",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/c/2/csm_Die_Haeuser_Vincent-van-Gogh-Ring_61-71_sind_ueber_1b0ce40edf.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-6020-98006-36"
+     }
+    },
+    {
+     "id": "75e652fd1fc6bbd5e1282412b1a19ba363dfed59/tx_gwhimmomio_domain_model_rentalentity/MO-1600-30802-33",
+     "type": "o-09-03-RentalEntitySearch",
+     "content": {
+      "uid": 71174,
+      "title": "Gemütliche 2-Zimmer-Wohnung in Darmstadt-Kranichstein",
+      "estateType": "APARTMENT",
+      "yearOfConstruction": "2018",
+      "availableFromDate": "01.10.2026",
+      "overallSpace": "56,6",
+      "externalId": "MO 1600/30802/33",
+      "overalRent": "1.174,00",
+      "numberOfRooms": "2",
+      "lat": "49.89634615",
+      "lon": "8.6864127816306",
+      "street": "Wickopweg",
+      "houseNumber": "26",
+      "zip": "64289",
+      "city": "Darmstadt",
+      "media": [
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/e/6/csm_Vorderansicht_des_Wohnhauses_7c0a05504d.jpg",
+         "title": "Vorderansicht des Wohnhauses",
+         "altText": "Vorderansicht des Wohnhauses",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/e/6/csm_Vorderansicht_des_Wohnhauses_7c0a05504d.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/c/6/csm_Weitere_Vorderansicht_der_Wohnanlage_54bcb96831.jpg",
+         "title": "Weitere Vorderansicht der Wohnanlage",
+         "altText": "Weitere Vorderansicht der Wohnanlage",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/c/6/csm_Weitere_Vorderansicht_der_Wohnanlage_54bcb96831.jpg"
+        }
+       },
+       {
+        "small": {
+         "width": 364,
+         "height": 273,
+         "publicUrl": "fileadmin/_processed_/6/5/csm_Seitliche_Ansicht_des_Wohngebaeudes_75ef36b5da.jpg",
+         "title": "Seitliche Ansicht des Wohngebäudes",
+         "altText": "Seitliche Ansicht des Wohngebäudes",
+         "origFile": "/home/gwh-corporate-typo3/webapps/gwh-corporate-typo3-prod/releases/1788876157188/public/fileadmin/_processed_/6/5/csm_Seitliche_Ansicht_des_Wohngebaeudes_75ef36b5da.jpg"
+        }
+       }
+      ],
+      "url": "/mietangebote/detail/MO-1600-30802-33"
+     }
+    }
+   ]
+  }
+ },
+ "resultPerPage": [
+  {
+   "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5BresultsPerPage%5D=300",
+   "usedResultsPerPage": 300,
+   "availablePerPage": 300
+  }
+ ],
+ "allResultCount": 123,
+ "currentSearch": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT",
+ "arguments": null,
+ "facets": [
+  {
+   "label": "Content Type",
+   "name": "type",
+   "options": [
+    {
+     "value": "tx_gwhimmomio_domain_model_rentalentity",
+     "label": "",
+     "documentCount": 123,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=type%3Atx_gwhimmomio_domain_model_rentalentity",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    }
+   ]
+  },
+  {
+   "label": "Estate Type",
+   "name": "estate_type",
+   "options": [
+    {
+     "value": "APARTMENT",
+     "label": "APARTMENT",
+     "documentCount": 123,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117"
+    },
+    {
+     "value": "PARKING",
+     "label": "PARKING",
+     "documentCount": 266,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3APARKING",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "OFFICE",
+     "label": "OFFICE",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AOFFICE",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    }
+   ]
+  },
+  {
+   "label": "City",
+   "name": "city",
+   "options": [
+    {
+     "value": "Altenstadt",
+     "label": "Altenstadt",
+     "lat": "50.2848855",
+     "lon": "8.9568155",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AAltenstadt",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bad Hersfeld",
+     "label": "Bad Hersfeld",
+     "lat": "50.8604177",
+     "lon": "9.6767709",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABad+Hersfeld",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bad Homburg vor der Höhe",
+     "label": "Bad Homburg vor der Höhe",
+     "lat": "50.2363508",
+     "lon": "8.5980265",
+     "documentCount": 3,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABad+Homburg+vor+der+H%C3%B6he",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bad Nauheim",
+     "label": "Bad Nauheim",
+     "lat": "50.3681107",
+     "lon": "8.7473608",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABad+Nauheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bad Schwalbach",
+     "label": "Bad Schwalbach",
+     "lat": "50.141688",
+     "lon": "8.071992",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABad+Schwalbach",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bad Soden",
+     "label": "Bad Soden",
+     "lat": "50.1517006",
+     "lon": "8.4899671",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABad+Soden",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bad Vilbel",
+     "label": "Bad Vilbel",
+     "lat": "50.19339",
+     "lon": "8.74918",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABad+Vilbel",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Baunatal",
+     "label": "Baunatal",
+     "lat": "51.2550775",
+     "lon": "9.4119007",
+     "documentCount": 4,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABaunatal",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bensheim",
+     "label": "Bensheim",
+     "lat": "49.6977",
+     "lon": "8.6288",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABensheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bischofsheim",
+     "label": "Bischofsheim",
+     "lat": "49.989925",
+     "lon": "8.3548176",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABischofsheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bonn",
+     "label": "Bonn",
+     "lat": "50.7352621",
+     "lon": "7.1024635",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABonn",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Bornheim",
+     "label": "Bornheim",
+     "lat": "50.7627913",
+     "lon": "6.9890508",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABornheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Braunschweig",
+     "label": "Braunschweig",
+     "lat": "52.2646577",
+     "lon": "10.5236066",
+     "documentCount": 2,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ABraunschweig",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Darmstadt",
+     "label": "Darmstadt",
+     "lat": "49.872775",
+     "lon": "8.651177",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ADarmstadt",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Dietzenbach",
+     "label": "Dietzenbach",
+     "lat": "50.0171926",
+     "lon": "8.784277",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ADietzenbach",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Dreieich",
+     "label": "Dreieich",
+     "lat": "50.011974",
+     "lon": "8.7123912",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ADreieich",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Dresden",
+     "label": "Dresden",
+     "lat": "51.0493286",
+     "lon": "13.7381437",
+     "documentCount": 2,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ADresden",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Düsseldorf",
+     "label": "Düsseldorf",
+     "lat": "51.2254018",
+     "lon": "6.7763137",
+     "documentCount": 4,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AD%C3%BCsseldorf",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Eltville am Rhein",
+     "label": "Eltville am Rhein",
+     "lat": "50.0275441",
+     "lon": "8.1189741",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AEltville+am+Rhein",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Eppstein",
+     "label": "Eppstein",
+     "lat": "50.155",
+     "lon": "8.3803",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AEppstein",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Erfurt",
+     "label": "Erfurt",
+     "lat": "50.9777974",
+     "lon": "11.0287364",
+     "documentCount": 2,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AErfurt",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Erkrath",
+     "label": "Erkrath",
+     "lat": "51.2209866",
+     "lon": "6.9056079",
+     "documentCount": 2,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AErkrath",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Erzhausen",
+     "label": "Erzhausen",
+     "lat": "49.9524332",
+     "lon": "8.6389953",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AErzhausen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Eschborn",
+     "label": "Eschborn",
+     "lat": "50.1504737",
+     "lon": "8.5607767",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AEschborn",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Flörsheim",
+     "label": "Flörsheim",
+     "lat": "50.0296",
+     "lon": "8.4265",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AFl%C3%B6rsheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Frankfurt am Main",
+     "label": "Frankfurt am Main",
+     "lat": "50.1106444",
+     "lon": "8.6820917",
+     "documentCount": 12,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AFrankfurt+am+Main",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Friedberg",
+     "label": "Friedberg",
+     "lat": "50.3352682",
+     "lon": "8.7539306",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AFriedberg",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Friedrichsdorf",
+     "label": "Friedrichsdorf",
+     "lat": "50.2620906",
+     "lon": "8.6248898",
+     "documentCount": 2,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AFriedrichsdorf",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Fritzlar",
+     "label": "Fritzlar",
+     "lat": "51.1537071",
+     "lon": "9.2645106",
+     "documentCount": 5,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AFritzlar",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Fulda",
+     "label": "Fulda",
+     "lat": "50.5542328",
+     "lon": "9.6770448",
+     "documentCount": 2,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AFulda",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Garbsen",
+     "label": "Garbsen",
+     "lat": "52.4276606",
+     "lon": "9.6005102",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AGarbsen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Geisenheim",
+     "label": "Geisenheim",
+     "lat": "49.9863945",
+     "lon": "7.96852",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AGeisenheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Gelnhausen",
+     "label": "Gelnhausen",
+     "lat": "50.2043672",
+     "lon": "9.1997516",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AGelnhausen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Gernsheim",
+     "label": "Gernsheim",
+     "lat": "49.7466",
+     "lon": "8.5112",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AGernsheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Gießen",
+     "label": "Gießen",
+     "lat": "50.5808795",
+     "lon": "8.69381607080086",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AGie%C3%9Fen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Ginsheim-Gustavsburg",
+     "label": "Ginsheim-Gustavsburg",
+     "lat": "49.9845346",
+     "lon": "8.3254964",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AGinsheim-Gustavsburg",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Haiger",
+     "label": "Haiger",
+     "lat": "50.7752801",
+     "lon": "8.2129059",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AHaiger",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Hanau",
+     "label": "Hanau",
+     "lat": "50.132881",
+     "lon": "8.9169797",
+     "documentCount": 4,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AHanau",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Hannover",
+     "label": "Hannover",
+     "lat": "52.3744779",
+     "lon": "9.7385532",
+     "documentCount": 13,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AHannover",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Hemmingen",
+     "label": "Hemmingen",
+     "lat": "52.3212183",
+     "lon": "9.7454815",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AHemmingen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Heppenheim",
+     "label": "Heppenheim",
+     "lat": "49.64999",
+     "lon": "8.66768",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AHeppenheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Heusenstamm",
+     "label": "Heusenstamm",
+     "lat": "50.0537652",
+     "lon": "8.8236013",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AHeusenstamm",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Hochheim am Main",
+     "label": "Hochheim am Main",
+     "lat": "50.0277",
+     "lon": "8.3587",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AHochheim+am+Main",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Idstein",
+     "label": "Idstein",
+     "lat": "50.2212764",
+     "lon": "8.269554",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AIdstein",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Karlsruhe",
+     "label": "Karlsruhe",
+     "lat": "49.0068705",
+     "lon": "8.4034195",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AKarlsruhe",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Kassel",
+     "label": "Kassel",
+     "lat": "51.3157833",
+     "lon": "9.4978479",
+     "documentCount": 17,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AKassel",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Kelsterbach",
+     "label": "Kelsterbach",
+     "lat": "50.065151",
+     "lon": "8.5296632",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AKelsterbach",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Korbach",
+     "label": "Korbach",
+     "lat": "51.2559045",
+     "lon": "8.8426963",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AKorbach",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Kronberg",
+     "label": "Kronberg",
+     "lat": "50.1907415",
+     "lon": "8.518277904791713",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AKronberg",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Köln",
+     "label": "Köln",
+     "lat": "50.938361",
+     "lon": "6.959974",
+     "documentCount": 4,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AK%C3%B6ln",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Königstein",
+     "label": "Königstein",
+     "lat": "50.195133",
+     "lon": "8.4628165",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AK%C3%B6nigstein",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Laatzen",
+     "label": "Laatzen",
+     "lat": "52.3077423",
+     "lon": "9.8132829",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ALaatzen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Lampertheim",
+     "label": "Lampertheim",
+     "lat": "49.6239449",
+     "lon": "8.4093474",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ALampertheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Langen",
+     "label": "Langen",
+     "lat": "49.9927036",
+     "lon": "8.6671682",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ALangen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Leipzig",
+     "label": "Leipzig",
+     "lat": "51.3406321",
+     "lon": "12.3747329",
+     "documentCount": 3,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ALeipzig",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Lohfelden",
+     "label": "Lohfelden",
+     "lat": "51.2723244",
+     "lon": "9.5535427",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ALohfelden",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Lohmar",
+     "label": "Lohmar",
+     "lat": "50.8402243",
+     "lon": "7.2127276",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ALohmar",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Maintal",
+     "label": "Maintal",
+     "lat": "50.1438711",
+     "lon": "8.8371266",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AMaintal",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Mainz",
+     "label": "Mainz",
+     "lat": "49.9995205",
+     "lon": "8.2736253",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AMainz",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Mainz-Kastel",
+     "label": "Mainz-Kastel",
+     "lat": "50.0083449",
+     "lon": "8.2844378",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AMainz-Kastel",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Mannheim",
+     "label": "Mannheim",
+     "lat": "49.4892913",
+     "lon": "8.4673098",
+     "documentCount": 9,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AMannheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Marburg",
+     "label": "Marburg",
+     "lat": "50.8090106",
+     "lon": "8.7704695",
+     "documentCount": 5,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AMarburg",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Meerbusch",
+     "label": "Meerbusch",
+     "lat": "51.2652237",
+     "lon": "6.6760958",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AMeerbusch",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Melsungen",
+     "label": "Melsungen",
+     "lat": "51.1425944",
+     "lon": "9.5833158",
+     "documentCount": 1,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AMelsungen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Messel",
+     "label": "Messel",
+     "lat": "49.9369643",
+     "lon": "8.7449232",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AMessel",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Monheim",
+     "label": "Monheim",
+     "lat": "51.0909476",
+     "lon": "6.8812387",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AMonheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Neu-Anspach",
+     "label": "Neu-Anspach",
+     "lat": "50.2971783",
+     "lon": "8.4988614",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ANeu-Anspach",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Neu-Isenburg",
+     "label": "Neu-Isenburg",
+     "lat": "8.754582111763057",
+     "lon": "50.05925978041304",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ANeu-Isenburg",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Neunkirchen-Seelscheid",
+     "label": "Neunkirchen-Seelscheid",
+     "lat": "50.8545062",
+     "lon": "7.3294965",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ANeunkirchen-Seelscheid",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Neuss",
+     "label": "Neuss",
+     "lat": "51.1981778",
+     "lon": "6.6916476",
+     "documentCount": 2,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ANeuss",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Oberursel",
+     "label": "Oberursel",
+     "lat": "50.2062948",
+     "lon": "8.5461079",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AOberursel",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Offenbach am Main",
+     "label": "Offenbach am Main",
+     "lat": "50.1055002",
+     "lon": "8.7610698",
+     "documentCount": 2,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AOffenbach+am+Main",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Pfungstadt",
+     "label": "Pfungstadt",
+     "lat": "49.7943",
+     "lon": "8.5877",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3APfungstadt",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Raunheim",
+     "label": "Raunheim",
+     "lat": "50.0097685",
+     "lon": "8.4499439",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ARaunheim",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Rodgau",
+     "label": "Rodgau",
+     "lat": "50.0176771",
+     "lon": "8.8853392",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ARodgau",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Roßdorf",
+     "label": "Roßdorf",
+     "lat": "49.8665",
+     "lon": "8.7643",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ARo%C3%9Fdorf",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Schlüchtern",
+     "label": "Schlüchtern",
+     "lat": "50.3517",
+     "lon": "9.5613",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ASchl%C3%BCchtern",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Solingen",
+     "label": "Solingen",
+     "lat": "51.1721629",
+     "lon": "7.0845893",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ASolingen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Stadtallendorf",
+     "label": "Stadtallendorf",
+     "lat": "50.8251982",
+     "lon": "9.0292315",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AStadtallendorf",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Sulzbach",
+     "label": "Sulzbach",
+     "lat": "50.1326128",
+     "lon": "8.5279513",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ASulzbach",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Troisdorf",
+     "label": "Troisdorf",
+     "lat": "50.8153071",
+     "lon": "7.1593271",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3ATroisdorf",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Usingen",
+     "label": "Usingen",
+     "lat": "50.350795",
+     "lon": "8.5231684",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AUsingen",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Vellmar",
+     "label": "Vellmar",
+     "lat": "51.3622487",
+     "lon": "9.4692331",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AVellmar",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Weiterstadt",
+     "label": "Weiterstadt",
+     "lat": "49.9178",
+     "lon": "8.5924",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AWeiterstadt",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Wettenberg",
+     "label": "Wettenberg",
+     "lat": "50.6372722",
+     "lon": "8.648955",
+     "documentCount": 0,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AWettenberg",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Wetzlar",
+     "label": "Wetzlar",
+     "lat": "50.570561",
+     "lon": "8.531245",
+     "documentCount": 4,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AWetzlar",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Wiesbaden",
+     "label": "Wiesbaden",
+     "lat": "50.0820384",
+     "lon": "8.2416556",
+     "documentCount": 3,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AWiesbaden",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    },
+    {
+     "value": "Wolfsburg",
+     "label": "Wolfsburg",
+     "lat": "52.4205588",
+     "lon": "10.7861682",
+     "documentCount": 5,
+     "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=city%3AWolfsburg",
+     "resetLink": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+    }
+   ]
+  },
+  {
+   "label": "Total Rent",
+   "name": "rent",
+   "range-min": 393,
+   "range-max": 3435,
+   "range-min-selected": 0,
+   "range-max-selected": 0,
+   "range-gap": "1",
+   "range-url": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=rent%3A___FROM___-___TO___"
+  },
+  {
+   "label": "Total Space",
+   "name": "space",
+   "range-min": 25,
+   "range-max": 183,
+   "range-min-selected": 0,
+   "range-max-selected": 0,
+   "range-gap": "1",
+   "range-url": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=space%3A___FROM___-___TO___"
+  },
+  {
+   "label": "Number of Rooms",
+   "name": "rooms",
+   "range-min": 1,
+   "range-max": 5,
+   "range-min-selected": 0,
+   "range-max-selected": 0,
+   "range-gap": "1",
+   "range-url": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bfilter%5D%5B11%5D=rooms%3A___FROM___-___TO___"
+  },
+  {
+   "id": "spatial",
+   "label": "Standort",
+   "type": "spatial",
+   "requestParams": {
+    "llat": {
+     "type": "float",
+     "label": "Latitude",
+     "required": 0
+    },
+    "llon": {
+     "type": "float",
+     "label": "Longitude",
+     "required": 0
+    },
+    "ldist": {
+     "type": "int",
+     "label": "Umkreis",
+     "required": 0
+    }
+   },
+   "formFields": {
+    "distance": {
+     "id": "distance",
+     "type": "input",
+     "label": "Umkreis",
+     "sublabel": null,
+     "options": [
+      {
+       "label": "10 km",
+       "value": 10
+      },
+      {
+       "label": "25 km",
+       "value": 25
+      },
+      {
+       "label": "50 km",
+       "value": 50
+      },
+      {
+       "label": "100 km",
+       "value": 100
+      },
+      {
+       "label": "150 km",
+       "value": 150
+      },
+      {
+       "label": "250 km",
+       "value": 250
+      }
+     ]
+    }
+   },
+   "links": {
+    "set": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&llat=%23llat%23&llon=%23llon%23&ldist=%23ldist%23",
+    "unset": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT"
+   }
+  }
+ ],
+ "sortings": {
+  "name": "Sort by",
+  "selected": {
+   "name": "relevance",
+   "field": "relevance",
+   "direction": "asc",
+   "label": "Relevance",
+   "selected": true,
+   "isResetOption": true
+  },
+  "options": [
+   {
+    "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bsort%5D=relevance+asc",
+    "label": "Relevance"
+   },
+   {
+    "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bsort%5D=title+asc",
+    "label": "Title"
+   },
+   {
+    "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bsort%5D=type+asc",
+    "label": "Type"
+   },
+   {
+    "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bsort%5D=author+asc",
+    "label": "Author"
+   },
+   {
+    "link": "https://cms.gwh.de/rentalentities.json?tx_solr%5Bfilter%5D%5B9%5D=pid%3A117&tx_solr%5Bfilter%5D%5B10%5D=estate_type%3AAPARTMENT&tx_solr%5Bsort%5D=created+desc",
+    "label": "Creation Date"
+   }
+  ]
+ }
+}

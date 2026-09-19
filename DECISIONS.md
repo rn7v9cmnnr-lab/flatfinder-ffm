@@ -22,9 +22,12 @@ will: Eintrag ergänzen, nicht überschreiben.
 | 2026-09-19 | **Zuschnitt auf Alarm-Tool** (`NOTIFY_ONLY=true`), stündlich | Davids Entscheidung; Breite schlägt Automatik |
 | 2026-09-19 | **Bewerbungs-Strecke bleibt im Repo, abgeschaltet** statt gelöscht | getesteter Code, jederzeit per Flag zurück |
 | 2026-09-19 | **Nach Quellen aufteilen, nicht nach Schichten** | im Alarm-Modus ist Breite das Produkt; Adapter sind voneinander unabhängig |
+| 2026-09-19 | **Weboberfläche statt Handy-Nachricht** (`MESSENGER=web`) | Davids Entscheidung; spart Token, Meta-Konto und laufende Kosten |
+| 2026-09-19 | **GWH: Kaltmiete per Detail-Request nachladen** | `overalRent` der Liste ist die WARMmiete; Scoring auf Warmmiete filtert jede bezahlbare Wohnung weg |
+| 2026-09-19 | **HTTP-Client legt sich selbst an** statt `async with` zu erzwingen | der Webdienst baut Adapter beim Start und betritt nie einen async-Kontext |
 
 ## Offen
 
 - [ ] Auf [flathunter](https://github.com/flathunters/flathunter) aufsetzen statt eigene Adapter für IS24/Kleinanzeigen/Immowelt/wg-gesucht? Spart die Adapter-Pflege, die dieses Projekt sonst tötet. Entscheidung fällt, bevor der erste dieser vier Adapter gebaut wird.
 - [ ] ABG Frankfurt Holding: von außen TLS-Fehler, lokal gegenprüfen.
-- [ ] GWH: Angebote kommen per XHR, Endpunkt per Browser-Devtools ermitteln (Rezept im README).
+

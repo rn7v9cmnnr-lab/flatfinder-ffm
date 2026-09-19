@@ -59,7 +59,10 @@ class Settings(BaseSettings):
     anthropic_api_key: str = ""
     anthropic_model: str = "claude-opus-5"
 
-    messenger: str = "telegram"    # "telegram" | "whatsapp"
+    # "web"      = Dashboard ist der Kanal, kein Token noetig (Standard)
+    # "telegram" = zusaetzlich aufs Handy, kostenlos
+    # "whatsapp" = zusaetzlich aufs Handy, Meta-Freigabe + Kosten
+    messenger: str = "web"
     telegram_bot_token: str = ""
     telegram_chat_id: str = ""
 

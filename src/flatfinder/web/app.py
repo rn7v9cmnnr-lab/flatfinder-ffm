@@ -9,15 +9,18 @@ Drei Aufgaben:
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from contextlib import asynccontextmanager
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
-from fastapi.responses import HTMLResponse, PlainTextResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 
+from ..adapters.gwh import GwhAdapter
 from ..adapters.nhw import NhwAdapter
 from ..adapters.vonovia import VonoviaAdapter
 from ..config import Criteria, Profile, Settings
@@ -40,6 +43,7 @@ pipeline = Pipeline(store, messenger, settings, criteria, profile,
                     adapters=[
                         VonoviaAdapter(criteria.city),
                         NhwAdapter(criteria.city),
+                        GwhAdapter(criteria.city),
                     ])
 
 
@@ -50,24 +54,44 @@ async def lifespan(app: FastAPI):
                   max_instances=1, coalesce=True)
     sched.add_job(pipeline.sweep, "interval", minutes=1, max_instances=1)
     sched.start()
-    log.info("Scheduler laeuft, Intervall %ss, DRY_RUN=%s",
-             settings.poll_interval_seconds, settings.dry_run)
+    log.info("Scheduler laeuft, Intervall %ss, Quellen: %s",
+             settings.poll_interval_seconds,
+             ", ".join(a.source for a in pipeline.adapters))
+    # Erster Durchlauf sofort, damit das Dashboard nicht leer startet.
+    asyncio.create_task(_tick())
     yield
     sched.shutdown(wait=False)
+    for adapter in pipeline.adapters:
+        if hasattr(adapter, "aclose"):
+            await adapter.aclose()
+
+
+#: Zustand des letzten Durchlaufs, fuer die Anzeige im Dashboard.
+LAUF: dict[str, object] = {"zeit": None, "neu": 0, "fehler": None, "laeuft": False}
+_lock = asyncio.Lock()
 
 
 async def _tick() -> None:
-    for adapter in pipeline.adapters:
-        # Adapter, die eine private IP brauchen, laufen auf dem Heim-Node
-        # und liefern ueber /ingest an. Hier waeren sie nur ein 401.
-        if adapter.requires_residential_ip:
-            continue
-    try:
-        neu = await pipeline.collect()
-        if neu:
-            log.info("%d neue Objekte", neu)
-    except Exception:
-        log.exception("Durchlauf fehlgeschlagen")
+    """Ein Durchlauf ueber alle Quellen. Laeuft stuendlich und auf Knopfdruck.
+
+    Das Lock verhindert, dass ein Klick auf "Jetzt suchen" parallel zum
+    Zeitplan laeuft - sonst holen beide dieselben Objekte und melden doppelt.
+    """
+    if _lock.locked():
+        log.info("Durchlauf laeuft bereits, uebersprungen")
+        return
+    async with _lock:
+        LAUF["laeuft"] = True
+        try:
+            LAUF["neu"] = await pipeline.collect()
+            LAUF["fehler"] = None
+            log.info("Durchlauf fertig: %s neue Objekte", LAUF["neu"])
+        except Exception as e:
+            LAUF["fehler"] = str(e)
+            log.exception("Durchlauf fehlgeschlagen")
+        finally:
+            LAUF["zeit"] = datetime.now(timezone.utc)
+            LAUF["laeuft"] = False
 
 
 app = FastAPI(title="flatfinder-ffm", lifespan=lifespan)
@@ -76,23 +100,40 @@ app = FastAPI(title="flatfinder-ffm", lifespan=lifespan)
 # ---------------- Dashboard ----------------
 
 @app.get("/", response_class=HTMLResponse)
-async def dashboard(request: Request):
-    listings = store.recent(limit=100)
-    apps = store.applications(limit=100)
-    by_key = {a.listing_key: a for a in apps}
+async def dashboard(request: Request, alle: int = 0):
+    """alle=1 zeigt auch die aussortierten Objekte - zum Nachjustieren
+    der Kriterien, wenn zu wenig durchkommt."""
+    listings = store.recent(limit=300)
+    if not alle:
+        listings = [l for l in listings if (l.score or 0) >= criteria.notify_threshold]
+    listings.sort(key=lambda l: (-(l.score or 0), l.price_per_sqm or 999))
+
+    apps = store.applications(limit=200)
+    frisch = datetime.now(timezone.utc) - timedelta(hours=24)
+
     return TEMPLATES.TemplateResponse(request, "dashboard.html", {
         "listings": listings,
-        "apps": by_key,
+        "apps": {a.listing_key: a for a in apps},
         "settings": settings,
         "criteria": criteria,
+        "lauf": LAUF,
+        "alle": bool(alle),
+        "frisch_ab": frisch,
+        "quellen": [a.source for a in pipeline.adapters if a.enabled],
+        "quellen_aus": [a.source for a in pipeline.adapters if not a.enabled],
         "stats": {
-            "gefunden": len(listings),
-            "gemeldet": sum(1 for l in listings if l.score
-                            and l.score >= criteria.notify_threshold),
-            "beworben": sum(1 for a in apps if a.sent_at),
-            "offen": sum(1 for a in apps if a.status == "pending"),
+            "treffer": len(listings),
+            "gesamt": len(store.recent(limit=1000)),
+            "quellen": sum(1 for a in pipeline.adapters if a.enabled),
         },
     })
+
+
+@app.post("/suchen")
+async def suchen_jetzt():
+    """Durchlauf sofort ausloesen, statt auf die naechste Stunde zu warten."""
+    asyncio.create_task(_tick())
+    return RedirectResponse("/", status_code=303)
 
 
 @app.get("/bewerbung/{app_id}", response_class=HTMLResponse)

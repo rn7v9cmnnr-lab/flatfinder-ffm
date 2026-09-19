@@ -1,17 +1,18 @@
 # flatfinder-ffm
 
 Durchsucht stündlich alle Wohnungsportale nach passenden Angeboten in
-Frankfurt und meldet Treffer aufs Handy.
+Frankfurt und zeigt die Treffer in einer Weboberfläche.
 
 ```
-Adapter → Dedupe → Scoring → Nachricht aufs Handy
+Adapter → Dedupe → Scoring → Dashboard im Browser
 ```
 
-**Status:** Vonovia und NHW laufen gegen echte Daten — beim letzten Lauf
-28 Objekte, 13 über der Meldeschwelle. Pipeline, Scoring, Speicher,
-Telegram/WhatsApp und Weboberfläche stehen. 33 Tests, alle ohne Netz.
+**Status: läuft.** Drei Quellen live — beim letzten Durchlauf 40 Objekte,
+22 über der Schwelle. 55 Tests, alle ohne Netz.
 
-Der Modus ist **`NOTIFY_ONLY=true`**: finden und melden, sonst nichts.
+Kein Token, kein Konto, keine laufenden Kosten: `MESSENGER=web` heißt, das
+Dashboard ist der Kanal. Telegram oder WhatsApp lassen sich per `.env`
+dazuschalten, ohne dass sich am übrigen Code etwas ändert.
 
 <details>
 <summary>Automatische Bewerbungen (gebaut, aber abgeschaltet)</summary>
@@ -110,8 +111,8 @@ Dazu `tests/fixtures/meinequelle_*.json` (echte Antwort einfrieren) und
 | Quelle | Zugang | Wo es läuft |
 |---|---|---|
 | **Vonovia** ✅ | offene JSON-API, `X-VON-Search-Token`, Paging über `offset` | VPS |
-| **NHW** ✅ | server-gerendertes HTML, kein Bot-Schutz, 15 FFM-Angebote | VPS |
-| **GWH** ⏳ | Angebote werden per XHR nachgeladen, Endpunkt noch unbekannt | VPS |
+| **NHW** ✅ | server-gerendertes HTML, kein Bot-Schutz | VPS |
+| **GWH** ✅ | TYPO3/Solr-JSON auf `cms.gwh.de`, Kaltmiete aus dem Detail | VPS |
 | wg-gesucht | HTML offen — Kontaktstrecke aber in robots.txt gesperrt | VPS, nur melden |
 | Kleinanzeigen | sperrt Rechenzentrums-IPs pauschal | **Heim-Node** |
 | ImmoScout24 | 401 vom Rechenzentrum, starke Bot-Erkennung | **Heim-Node**, eingeloggt |
@@ -152,19 +153,17 @@ Ausführlich in [DECISIONS.md](DECISIONS.md).
 
 ## Was noch fehlt
 
-### GWH-Adapter — braucht 2 Minuten am eigenen Rechner
+### Rezept für eine neue Quelle, die nicht server-gerendert ist
 
-Die Angebote stehen nicht im HTML, GWH lädt sie per XHR nach. Den Endpunkt
-habe ich von außen nicht gefunden; im Browser ist er in zwei Minuten da:
+So wurde der GWH-Endpunkt gefunden — dauert zwei Minuten:
 
-1. https://www.gwh.de/immobiliensuche/ öffnen
-2. F12 → Tab **Netzwerk** → Filter **Fetch/XHR**
-3. Seite neu laden, nach Frankfurt filtern
-4. Den Request suchen, dessen Antwort die Wohnungen enthält
-   (Rechtsklick → *Copy as cURL*)
+1. Suchseite im Browser öffnen, F12 → **Netzwerk** → Filter **Fetch/XHR**
+2. Seite neu laden und filtern
+3. Den Request suchen, dessen Antwort die Wohnungen enthält
+4. Rechtsklick → *Copy as cURL* → nachbauen
 
-Diese cURL hier reinpasten, dann baue ich den Adapter. Das gleiche Rezept
-funktioniert für jede weitere Quelle, die nicht server-gerendert ist.
+Bei GWH war das `cms.gwh.de/rentalentities.json`. Wichtig: die Suchseite war
+`/mietangebote`, nicht `/immobiliensuche` — letztere ist nur eine Landingpage.
 
 ### Weitere Quellen
 

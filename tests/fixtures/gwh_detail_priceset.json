@@ -1,0 +1,30 @@
+{
+ "content": [
+  {
+   "content": {
+    "rentalEntity": {
+     "data": {
+      "priceSet": {
+       "baseRentAmount": "736,00",
+       "baseRentVatIncluded": false,
+       "totalRentAmount": "1.016,00",
+       "totalRentVatIncluded": false,
+       "operatingCostsAmount": "185,00",
+       "operatingCostsVatIncluded": false,
+       "heatingCostAmount": "95,00",
+       "heatingCostVatIncluded": false,
+       "isHeatingIncludedInOC": false,
+       "pricePerSqUnitAmount": "0,00",
+       "pricePerSqUnitVatIncluded": "",
+       "isParkingPriceIncluded": false,
+       "parkingRentAmount": "0,00",
+       "parkingRentVatIncluded": false,
+       "parkingStyle": "",
+       "depositNoteDe": "2.208,00"
+      }
+     }
+    }
+   }
+  }
+ ]
+}

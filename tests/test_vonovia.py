@@ -93,3 +93,32 @@ def test_gewerbe_beispiel_wird_geblockt():
         "vermarktungsart_miete": "1", "groesse": "73.3", "anzahl_zimmer": "3",
         "titel": "3-Zimmer-Maisonette-Wohnung",
     })
+
+
+async def test_adapter_funktioniert_ohne_async_with():
+    """Der Webdienst baut Adapter beim Start und betritt nie einen
+    async-Kontext. Frueher scheiterte dort jeder Durchlauf mit
+    'Client fehlt'. Der Client muss sich selbst anlegen."""
+    from flatfinder.adapters.vonovia import VonoviaAdapter
+
+    a = VonoviaAdapter()
+    try:
+        assert a.client is not None          # kein AdapterError mehr
+        c1 = a.client
+        assert a.client is c1, "Client darf nicht bei jedem Zugriff neu entstehen"
+    finally:
+        await a.aclose()
+
+
+async def test_adapter_erholt_sich_nach_aclose():
+    """Nach einem Neustart des Schedulers darf ein geschlossener Client den
+    Adapter nicht dauerhaft lahmlegen."""
+    from flatfinder.adapters.vonovia import VonoviaAdapter
+
+    a = VonoviaAdapter()
+    _ = a.client
+    await a.aclose()
+    try:
+        assert a.client is not None and not a.client.is_closed
+    finally:
+        await a.aclose()

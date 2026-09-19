@@ -132,8 +132,14 @@ class WhatsAppMessenger(Messenger):
 
 
 def build(settings: Settings) -> Messenger:
-    """Factory - liest MESSENGER aus .env."""
-    from .telegram import TelegramMessenger
+    """Factory - liest MESSENGER aus .env.
+
+    Standard ist "web": die Oberflaeche ist der Kanal, kein Token noetig.
+    """
     if settings.messenger == "whatsapp":
         return WhatsAppMessenger(settings)
-    return TelegramMessenger(settings)
+    if settings.messenger == "telegram":
+        from .telegram import TelegramMessenger
+        return TelegramMessenger(settings)
+    from .web import WebMessenger
+    return WebMessenger()
