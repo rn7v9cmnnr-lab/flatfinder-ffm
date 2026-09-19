@@ -86,8 +86,38 @@ fi
 
 # --- los -------------------------------------------------------------------
 PORT="${PORT:-8000}"
-echo
-echo "==> flatfinder laeuft gleich auf http://localhost:$PORT"
-echo "    Beenden mit Strg+C."
-echo
+
+# Belegten Port frueh und verstaendlich melden, statt uvicorn stolpern zu
+# lassen - meist laeuft flatfinder schon in einem anderen Fenster.
+if ./.venv/bin/python - "$PORT" <<'EOP' 2>/dev/null
+import socket, sys
+s = socket.socket()
+try:
+    s.bind(("127.0.0.1", int(sys.argv[1]))); sys.exit(1)
+except OSError:
+    sys.exit(0)
+finally:
+    s.close()
+EOP
+then
+  cat >&2 <<EOF
+
+  Port $PORT ist schon belegt - vermutlich laeuft flatfinder bereits
+  in einem anderen Terminal-Fenster. Schau mal unter
+  http://localhost:$PORT nach.
+
+  Anderer Port:  PORT=8080 ./start.sh
+
+EOF
+  exit 1
+fi
+
+cat <<EOF
+
+  ────────────────────────────────────────────────
+   flatfinder laeuft:  http://localhost:$PORT
+   Beenden mit Strg+C. Das Fenster muss offen bleiben.
+  ────────────────────────────────────────────────
+
+EOF
 exec ./.venv/bin/uvicorn flatfinder.web.app:app --host 127.0.0.1 --port "$PORT"
