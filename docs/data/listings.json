@@ -1870,8 +1870,8 @@
     "110 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-20T02:30:19.041266+00:00",
-   "last_seen": "2026-09-20T14:29:11.573602+00:00",
-   "gone": true
+   "last_seen": "2026-09-20T16:31:44.777367+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281356",
@@ -2056,8 +2056,8 @@
     "104 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-20T04:30:59.337143+00:00",
-   "last_seen": "2026-09-20T13:29:18.020115+00:00",
-   "gone": true
+   "last_seen": "2026-09-20T16:31:44.777367+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12896807",
@@ -3228,8 +3228,8 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-20T05:29:16.792721+00:00",
-   "last_seen": "2026-09-20T09:29:10.564124+00:00",
-   "gone": true
+   "last_seen": "2026-09-20T16:31:44.777367+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13973967",
@@ -4938,8 +4938,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-20T00:38:27.034331+00:00",
-   "last_seen": "2026-09-20T14:29:11.573602+00:00",
-   "gone": true
+   "last_seen": "2026-09-20T16:31:44.777367+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281321",
@@ -5418,8 +5418,8 @@
     "30 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-09-20T11:28:55.727260+00:00",
-   "gone": true
+   "last_seen": "2026-09-20T16:31:44.777367+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281375",
@@ -5778,8 +5778,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-20T04:30:59.337143+00:00",
-   "last_seen": "2026-09-20T14:29:11.573602+00:00",
-   "gone": true
+   "last_seen": "2026-09-20T16:31:44.777367+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13647144",
@@ -5826,9 +5826,9 @@
    "zip": null,
    "city": "Frankfurt am Main",
    "district": "Dornbusch",
-   "lat": null,
-   "lng": null,
-   "position_approx": false,
+   "lat": 50.13905,
+   "lng": 8.67527,
+   "position_approx": true,
    "available_from": "20.09.2026",
    "image_url": "https://img.wg-gesucht.de/media/up/2026/24/d38650d010c1bbb9c7080e03b9fcbff5176c73106a77708d4f4135dfad663679_88a07aeb_644c_40ac_831e_b0a6f9245cdd.small.jpg",
    "wbs_required": null,
@@ -5838,8 +5838,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-20T04:30:59.337143+00:00",
-   "last_seen": "2026-09-20T12:34:41.037974+00:00",
-   "gone": true
+   "last_seen": "2026-09-20T16:31:44.777367+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13647203",

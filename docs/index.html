@@ -357,7 +357,7 @@ function istNeu(l){
   return (Date.now() - new Date(l.first_seen).getTime()) < 36e5*24;
 }
 
-function passt(l, f){
+function passt(l, f, hatMitte){
   if(l.gone && !f.zeigWeg) return false;
   if(f.pmax){
     // Gegen die Kaltmiete pruefen, wo sie bekannt ist. Kennt die Quelle nur
@@ -375,10 +375,11 @@ function passt(l, f){
   if(f.quellen.length && !f.quellen.includes(l.source)) return false;
   if(f.bezirke.length && !f.bezirke.includes(l.district || l.city || "?")) return false;
   if(f.nurNeu && !istNeu(l)) return false;
-  if(f.umkreis && f.mitte){
-    // Ohne Koordinaten koennen wir nichts ausschliessen - solche Angebote
-    // bleiben sichtbar und werden in der Liste als "?" gekennzeichnet,
-    // statt stillschweigend zu verschwinden.
+  if(f.umkreis && hatMitte){
+    // Der Mittelpunkt kann aus Kartenklick, PLZ ODER Auswahlliste kommen -
+    // deshalb wird er uebergeben und hier nicht neu geraten. Genau daran
+    // ist der PLZ-Umkreis zuerst gescheitert: die Pruefung fragte nur die
+    // Auswahlliste ab, die bei PLZ-Eingabe leer ist.
     if(l._dist!=null && l._dist > f.umkreis) return false;
   }
   if(f.suche){
@@ -408,7 +409,7 @@ function zeichnen(){
     const m = miete(l);
     l._preis = m.wert;
   }
-  let liste = ALLE.filter(l => passt(l,f));
+  let liste = ALLE.filter(l => passt(l, f, mitte != null));
   const rv = SORT.ab ? -1 : 1;
   liste.sort((a,b)=>{
     const x=a[SORT.feld], y=b[SORT.feld];
