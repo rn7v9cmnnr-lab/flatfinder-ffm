@@ -32,6 +32,7 @@ from .adapters.nhw import NhwAdapter
 from .adapters.vonovia import VonoviaAdapter
 from .adapters.wggesucht import WgGesuchtAdapter
 from .bezirke import finde as bezirk_finden
+from .bezirke import finde_plz, stadtteil_zu_plz
 from .config import Criteria
 from .models import Listing
 from .scoring import score as score_listing
@@ -80,14 +81,22 @@ async def collect(criteria: Criteria) -> tuple[List[Listing], Dict[str, str]]:
                 await close()
 
         for l in listings:
-            # Portale liefern keine Koordinaten. Ohne Naeherung waere der
-            # Umkreisfilter fuer sie wirkungslos - also den Stadtteilmittel-
-            # punkt nehmen und das ehrlich kennzeichnen.
+            # Portale liefern keine Koordinaten, manche nicht einmal einen
+            # Stadtteil. Ohne Naeherung waere der Umkreisfilter fuer sie
+            # wirkungslos. Reihenfolge: Stadtteil (genauer) vor PLZ.
             if l.lat is None or l.lng is None:
-                pos = bezirk_finden(l.district)
+                pos = bezirk_finden(l.district) or finde_plz(l.zip)
                 if pos:
                     l.lat, l.lng = pos
                     l.position_approx = True
+
+            # Kein Stadtteil, aber eine PLZ? Dann den naechstgelegenen
+            # eintragen - sonst faellt das Angebot durch jeden
+            # Stadtteilfilter, obwohl es passen wuerde.
+            if not l.district or l.district.strip().lower() == criteria.city.lower():
+                abgeleitet = stadtteil_zu_plz(l.zip)
+                if abgeleitet:
+                    l.district = abgeleitet
             l.score, l.score_reasons = score_listing(l, criteria)
         gefunden.extend(listings)
         status[adapter.source] = f"{len(listings)} Angebote"
@@ -168,9 +177,14 @@ async def run(ziel: Path, criteria: Criteria) -> Dict[str, Any]:
     gefunden, status = await collect(criteria)
     listings = merge(gefunden, ziel)
 
+    from .bezirke import PLZ as PLZ_TABELLE
+
     daten = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "city": criteria.city,
+        # Damit die Oberflaeche eine eingegebene PLZ verorten kann, ohne
+        # eine zweite Tabelle zu pflegen, die auseinanderlaeuft.
+        "plz": PLZ_TABELLE,
         "sources": status,
         "count": len(listings),
         "listings": listings,

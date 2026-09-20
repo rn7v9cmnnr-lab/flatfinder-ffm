@@ -123,6 +123,7 @@ def _schreibe_daten() -> None:
     DATEN.write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "city": criteria.city,
+        "plz": __import__("flatfinder.bezirke", fromlist=["PLZ"]).PLZ,
         "sources": {a.source: ("aus" if not a.enabled else "aktiv")
                     for a in pipeline.adapters},
         "count": len(eintraege),

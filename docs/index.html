@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>flatfinder</title>
 <meta name="description" content="Wohnungsangebote Frankfurt, stündlich aktualisiert.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+      integrity="sha512-Zcn6bjR/8RZbLEpLIeOwNtzREBAJnUKESxces60Mpoj+2okopSAcSUIUOseddDm0cxnGQzxIR7vJgsLZbdLE3w=="
+      crossorigin="" referrerpolicy="no-referrer">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
 <style>
   :root{
@@ -29,8 +32,8 @@
   .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:5px}
 
   /* --- Filter --- */
-  .filters{background:var(--card);border:1px solid var(--line);border-radius:12px;
-           padding:14px 16px;margin-bottom:16px;box-shadow:var(--shadow)}
+  .filters{background:var(--card);border:1px solid var(--line);border-radius:14px;
+           padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow)}
   .frow{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:flex-end}
   .f{display:flex;flex-direction:column;gap:4px;min-width:0}
   .f label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
@@ -40,6 +43,14 @@
   .f.wide{flex:1 1 200px}
   .f.wide input{width:100%}
   .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .frow.gruppe{margin-top:12px;padding:10px 12px 12px;border-radius:10px;
+               background:color-mix(in srgb,var(--fg) 3%,transparent);
+               align-items:flex-end;gap:12px 16px}
+  .gruppenlabel{font-size:11px;text-transform:uppercase;letter-spacing:.05em;
+                color:var(--muted);font-weight:600;align-self:center;
+                padding-right:4px;border-right:1px solid var(--line);
+                margin-right:2px;line-height:2.4}
+  .tipp{font-size:12px;color:var(--muted);align-self:center;font-style:italic}
   .chip{font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);
         background:var(--bg);color:var(--muted);cursor:pointer;user-select:none}
   .chip[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);
@@ -60,11 +71,11 @@
   th[aria-sort]{color:var(--fg)}
   th[aria-sort]::after{content:" ↓";opacity:.6}
   th[aria-sort="ascending"]::after{content:" ↑"}
-  td{padding:11px 10px;border-top:1px solid var(--line);vertical-align:top}
+  td{padding:12px 10px;border-top:1px solid var(--line);vertical-align:middle}
   tbody tr{cursor:pointer}
   tbody tr:hover td{background:var(--card)}
-  .title{font-weight:500}
-  .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .title{font-weight:500;line-height:1.35}
+  .meta{color:var(--muted);font-size:12.5px;margin-top:3px}
   .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
   .score{display:inline-block;min-width:34px;text-align:center;padding:2px 7px;border-radius:5px;
          font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
@@ -102,6 +113,20 @@
   .legende{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;
            color:var(--muted);margin:-4px 0 14px}
   .preis b{font-variant-numeric:tabular-nums}
+  .viewbtn{margin-left:12px;font-size:13px;padding:4px 12px}
+  #karte{height:460px;border:1px solid var(--line);border-radius:12px;
+         margin-bottom:10px;background:var(--card);z-index:0}
+  #kartehinweis{font-size:12.5px;margin-bottom:16px}
+  .leaflet-container{background:var(--card);font:inherit}
+  .marker{width:13px;height:13px;border-radius:50%;border:2px solid #fff;
+          box-shadow:0 1px 3px rgba(0,0,0,.4);background:var(--k-other)}
+  .marker.k-grossvermieter{background:var(--k-landlord)}
+  .marker.k-portal{background:var(--k-portal)}
+  .marker.k-genossenschaft{background:var(--k-coop)}
+  .marker.approx{opacity:.55;border-style:dashed}
+  .leaflet-popup-content{margin:10px 12px;font:inherit;font-size:13px}
+  .leaflet-popup-content b{display:block;margin-bottom:3px}
+  .leaflet-popup-content a{color:var(--accent)}
   .preis small{display:block;font-size:10.5px;text-transform:uppercase;
                letter-spacing:.04em;color:var(--muted);font-weight:600}
   .warmonly b{color:var(--muted)}
@@ -126,8 +151,36 @@
   .d-actions a.primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
   .d-close{position:absolute;top:14px;right:16px;border:none;background:none;font-size:22px;
            line-height:1;color:var(--muted);cursor:pointer;padding:2px 6px}
+
+  /* ---------- Vorschaubilder ---------- */
+  .thumbcol{width:88px;padding-right:0}
+  .thumb{width:76px;height:58px;object-fit:cover;border-radius:8px;display:block;
+         background:var(--line);border:1px solid var(--line)}
+  .thumb.leer{background:linear-gradient(135deg,var(--line) 0%,transparent 60%)}
+
+  /* ---------- Einklappbare Filtergruppe ---------- */
+  .ausklapp{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+  .ausklapp summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:baseline;
+                    font-size:11px;text-transform:uppercase;letter-spacing:.05em;
+                    color:var(--muted);font-weight:600;user-select:none}
+  .ausklapp summary::-webkit-details-marker{display:none}
+  .ausklapp summary::before{content:"▸";display:inline-block;transition:transform .15s;
+                            font-size:13px;line-height:1}
+  .ausklapp[open] summary::before{transform:rotate(90deg)}
+  .ausklapp .zaehler{text-transform:none;letter-spacing:0;font-weight:400;
+                     font-size:12px;color:var(--muted)}
+  .ausklapp .chips{margin-top:10px;max-height:150px;overflow-y:auto;padding:2px}
+
+  /* ---------- Feinschliff ---------- */
+  .meta .kind{margin-right:8px}
+  .meta .src{opacity:.75}
+  .preis b{font-size:15px}
+  th.thumbcol{width:88px}
+
   @media (max-width:640px){
     .hide-s{display:none}
+    .thumbcol,th.thumbcol{width:60px}
+    .thumb{width:52px;height:44px}
     td,th{padding-left:6px;padding-right:6px}
     .f input[type=number]{width:74px}
   }
@@ -153,7 +206,13 @@
       <input type="number" id="rmax" step="1" min="1" placeholder="–"></div>
     <div class="f"><label for="smin">Score ab</label>
       <input type="number" id="smin" step="5" min="0" max="100" placeholder="0"></div>
-    <div class="f"><label for="mitte">Umkreis um</label>
+  </div>
+
+  <div class="frow gruppe">
+    <span class="gruppenlabel">Umkreis</span>
+    <div class="f"><label for="plz">PLZ</label>
+      <input type="text" id="plz" inputmode="numeric" maxlength="5" placeholder="60311"></div>
+    <div class="f"><label for="mitte">oder Ort</label>
       <select id="mitte">
         <option value="">— egal —</option>
         <option value="50.1136,8.6797">Hauptwache</option>
@@ -165,17 +224,19 @@
       </select></div>
     <div class="f"><label for="umkreis">max. km</label>
       <input type="number" id="umkreis" step="0.5" min="0.5" placeholder="km"
-             title="Luftlinie. Ein ~ vor der Entfernung heißt: Position nur über den Stadtteil geschätzt."></div>
+             title="Luftlinie. Ein ~ vor der Entfernung heißt: Position geschätzt."></div>
+    <span class="tipp">oder in der Karte klicken</span>
+  </div>
+
+  <div class="frow">
     <div class="f wide"><label for="suche">Suchbegriff</label>
       <input type="text" id="suche" placeholder="Balkon, Stadtteil, Straße…"
              style="font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)"></div>
   </div>
-  <div class="frow" style="margin-top:12px">
-    <div class="f" style="flex:1 1 100%">
-      <label>Stadtteil</label>
-      <div class="chips" id="bezirke"></div>
-    </div>
-  </div>
+  <details class="ausklapp" id="bezirkeBox">
+    <summary><span>Stadtteil</span><span class="zaehler" id="bezirkeZaehler"></span></summary>
+    <div class="chips" id="bezirke"></div>
+  </details>
   <div class="frow" style="margin-top:12px">
     <div class="f"><label>Quelle</label><div class="chips" id="quellen"></div></div>
     <div class="f"><label>Sonstiges</label><div class="chips">
@@ -190,17 +251,22 @@
 
 <div class="bar">
   <b id="anzahl">–</b><span class="muted" id="vonwie"></span>
+  <button type="button" id="ansicht" class="viewbtn">Karte</button>
   <span class="muted" style="margin-left:auto" id="quellenstand"></span>
 </div>
 
+<div id="karte" hidden></div>
+<div id="kartehinweis" class="muted" hidden></div>
+
 <table id="tabelle">
   <thead><tr>
-    <th data-sort="score" aria-sort="descending">Score</th>
+    <th class="thumbcol"></th>
     <th data-sort="title">Objekt</th>
     <th class="num" data-sort="_preis">Miete</th>
     <th class="num hide-s" data-sort="sqm">m²</th>
     <th class="num hide-s" data-sort="price_per_sqm">€/m²</th>
     <th class="num hide-s" data-sort="_dist">Entf.</th>
+    <th class="num" data-sort="score" aria-sort="descending">Score</th>
   </tr></thead>
   <tbody id="zeilen"></tbody>
 </table>
@@ -222,9 +288,12 @@
   </div>
 </dialog>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"
+        integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg=="
+        crossorigin="" referrerpolicy="no-referrer"></script>
 <script>
 const LS = "flatfinder.filter.v1";
-let ALLE = [], SORT = {feld:"score", ab:true};
+let ALLE = [], SORT = {feld:"score", ab:true}, PLZ_POS = {};
 
 const el = id => document.getElementById(id);
 const eur = n => n == null ? "—" : n.toLocaleString("de-DE") + " €";
@@ -237,6 +306,7 @@ function filterLesen(){
     rmin:+el("rmin").value||null, rmax:+el("rmax").value||null,
     smin:+el("smin").value||null, suche:el("suche").value.trim().toLowerCase(),
     mitte:el("mitte").value, umkreis:+el("umkreis").value||null,
+    plz:el("plz").value.trim(), karte:KARTE_AN, klick:KLICK_MITTE,
     bezirke:[...document.querySelectorAll('#bezirke .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
     quellen:[...document.querySelectorAll('#quellen .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
     nurNeu:el("chipNeu").getAttribute("aria-pressed")==="true",
@@ -245,8 +315,10 @@ function filterLesen(){
 }
 function filterSchreiben(f){
   if(!f) return;
-  for(const k of ["pmax","qmin","rmin","rmax","smin","suche","mitte","umkreis"])
+  for(const k of ["pmax","qmin","rmin","rmax","smin","suche","mitte","umkreis","plz"])
     if(f[k]!=null) el(k).value=f[k];
+  if(f.klick) KLICK_MITTE = f.klick;
+  if(f.karte) KARTE_AN = f.karte;
   el("chipNeu").setAttribute("aria-pressed", !!f.nurNeu);
   el("chipWeg").setAttribute("aria-pressed", !!f.zeigWeg);
 }
@@ -317,9 +389,19 @@ function passt(l, f){
   return true;
 }
 
+// Reihenfolge des Vorrangs: was du auf der Karte angeklickt hast, schlaegt
+// die PLZ, und die schlaegt die Auswahlliste. So gewinnt immer die zuletzt
+// bewusst gesetzte Angabe.
+function mittelpunkt(f){
+  if(f.klick) return f.klick;
+  if(f.plz && /^\d{5}$/.test(f.plz) && PLZ_POS[f.plz]) return PLZ_POS[f.plz];
+  if(f.mitte) return f.mitte.split(",").map(Number);
+  return null;
+}
+
 function zeichnen(){
   const f = filterLesen();
-  const mitte = f.mitte ? f.mitte.split(",").map(Number) : null;
+  const mitte = mittelpunkt(f);
   for(const l of ALLE){
     l._dist = (mitte && l.lat!=null && l.lng!=null)
       ? distanz(mitte[0],mitte[1],l.lat,l.lng) : null;
@@ -349,25 +431,97 @@ function zeichnen(){
     const m = miete(l);
     tr.className = "k-" + art;
     tr.innerHTML = `
-      <td class="num artcell"><span class="score ${sc>=85?'s-hi':sc>=60?'s-mid':'s-lo'}">${sc}</span></td>
+      <td class="artcell thumbcol">${l.image_url
+        ? `<img class="thumb" src="${esc(l.image_url)}" alt="" loading="lazy" onerror="this.replaceWith(leerBild())">`
+        : `<div class="thumb leer"></div>`}</td>
       <td>
         <div class="title">${esc(l.title).slice(0,78)}${istNeu(l)?'<span class="neu">neu</span>':''}${l.gone?'<span class="weg">weg</span>':''}</div>
-        <div class="meta">${l.rooms?num(l.rooms)+" Zi · ":""}${l.sqm?num(l.sqm)+" m² · ":""}${esc(l.zip||"")} ${esc(l.district||l.city||"")}</div>
-        <div class="meta"><span class="kind k-${esc(art)}">${esc(ART[art]||art)}</span> · <span class="src">${esc(l.source)}</span></div>
+        <div class="meta">${l.rooms?num(l.rooms)+" Zimmer · ":""}${l.sqm?num(l.sqm)+" m² · ":""}${esc(l.zip||"")} ${esc(l.district||l.city||"")}</div>
+        <div class="meta"><span class="kind k-${esc(art)}">${esc(ART[art]||art)}</span><span class="src">${esc(l.source)}</span></div>
       </td>
       <td class="num preis ${m.warm?'warmonly':''}"><b>${eur(m.wert)}</b><small>${m.art}</small></td>
       <td class="num hide-s">${num(l.sqm)}</td>
       <td class="num hide-s">${num(l.price_per_sqm,2)}</td>
-      <td class="num hide-s dist" title="${l.position_approx?'Position über den Stadtteil geschätzt':''}">${
-        l._dist!=null ? (l.position_approx?"~":"")+num(l._dist,1)+" km" : "–"}</td>`;
+      <td class="num hide-s dist" title="${l.position_approx?'Position über den Stadtteil oder die PLZ geschätzt':''}">${
+        l._dist!=null ? (l.position_approx?"~":"")+num(l._dist,1)+" km" : "–"}</td>
+      <td class="num"><span class="score ${sc>=85?'s-hi':sc>=60?'s-mid':'s-lo'}">${sc}</span></td>`;
     tb.appendChild(tr);
   }
+  el("karte").hidden = !KARTE_AN;
+  el("kartehinweis").hidden = !KARTE_AN;
+  el("tabelle").hidden = KARTE_AN;
+  if(KARTE_AN){
+    karteZeichnen(liste, mitte, f.umkreis);
+    setTimeout(()=>MAP && MAP.invalidateSize(), 60);
+  }
+
   const leer = el("leer");
-  leer.hidden = liste.length > 0;
+  leer.hidden = liste.length > 0 || KARTE_AN;
   leer.textContent = ALLE.length
     ? "Nichts passt zu diesen Filtern. Probier weniger streng — oder „Filter zurücksetzen“."
     : "Noch keine Daten.";
   speichern();
+}
+
+let MAP=null, MARKER=null, KREIS=null, KARTE_AN=false, KLICK_MITTE=null;
+
+function karteAufbauen(){
+  if(MAP) return MAP;
+  MAP = L.map("karte", {scrollWheelZoom:false}).setView([50.1136,8.6797], 12);
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18, attribution: '&copy; OpenStreetMap'
+  }).addTo(MAP);
+  MARKER = L.layerGroup().addTo(MAP);
+  // Klick auf die Karte setzt den Suchmittelpunkt. Das ist der ganze Sinn
+  // der Ansicht: zeigen statt tippen.
+  MAP.on("click", e => {
+    KLICK_MITTE = [e.latlng.lat, e.latlng.lng];
+    el("plz").value = "";
+    el("mitte").value = "";
+    if(!el("umkreis").value) el("umkreis").value = 3;
+    zeichnen();
+  });
+  return MAP;
+}
+
+function karteZeichnen(liste, mitte, radius){
+  const map = karteAufbauen();
+  MARKER.clearLayers();
+
+  const mitPos = liste.filter(l => l.lat!=null && l.lng!=null);
+  for(const l of mitPos){
+    const art = l.kind || "sonstige";
+    const icon = L.divIcon({
+      className: "",
+      html: `<div class="marker k-${art}${l.position_approx?" approx":""}"></div>`,
+      iconSize: [13,13], iconAnchor: [6,6],
+    });
+    const m = L.marker([l.lat, l.lng], {icon}).addTo(MARKER);
+    const p = miete(l);
+    m.bindPopup(
+      `<b>${esc(l.title).slice(0,70)}</b>`
+      + `${l.rooms?num(l.rooms)+" Zi · ":""}${l.sqm?num(l.sqm)+" m² · ":""}`
+      + `${eur(p.wert)} ${p.art}<br>`
+      + `<span class="kind k-${art}">${esc(ART[art]||art)}</span> · ${esc(l.source)}<br>`
+      + `<a href="${esc(l.url)}" target="_blank" rel="noopener">Zum Angebot →</a>`
+    );
+  }
+
+  if(KREIS){ KREIS.remove(); KREIS = null; }
+  if(mitte && radius){
+    KREIS = L.circle(mitte, {radius: radius*1000, color:"var(--accent)",
+                             weight:2, fillOpacity:.06}).addTo(map);
+    map.fitBounds(KREIS.getBounds(), {padding:[20,20]});
+  } else if(mitPos.length){
+    map.fitBounds(L.latLngBounds(mitPos.map(l=>[l.lat,l.lng])), {padding:[25,25]});
+  }
+
+  const ohne = liste.length - mitPos.length;
+  el("kartehinweis").textContent =
+    `${mitPos.length} Angebote auf der Karte`
+    + (ohne ? ` · ${ohne} ohne bekannte Lage (nur in der Liste)` : "")
+    + ` · Klick auf die Karte setzt den Mittelpunkt`
+    + ` · gestrichelter Rand = Lage über Stadtteil/PLZ geschätzt`;
 }
 
 function zeigeDetail(l){
@@ -399,7 +553,16 @@ function zeigeDetail(l){
   el("detail").showModal();
 }
 
+function leerBild(){
+  const d=document.createElement("div"); d.className="thumb leer"; return d;
+}
+
 function esc(s){ return String(s??"").replace(/[<>&"]/g, c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c])); }
+
+function zaehlerAuffrischen(){
+  const n = document.querySelectorAll('#bezirke .chip[aria-pressed="true"]').length;
+  el("bezirkeZaehler").textContent = n ? `${n} gewählt` : "alle";
+}
 
 function chips(ziel, werte, gespeichert){
   const box = el(ziel);
@@ -407,7 +570,10 @@ function chips(ziel, werte, gespeichert){
     const b=document.createElement("button");
     b.type="button"; b.className="chip"; b.dataset.v=v; b.textContent=v;
     b.setAttribute("aria-pressed", (gespeichert||[]).includes(v));
-    b.onclick=()=>{ b.setAttribute("aria-pressed", b.getAttribute("aria-pressed")!=="true"); zeichnen(); };
+    b.onclick=()=>{
+      b.setAttribute("aria-pressed", b.getAttribute("aria-pressed")!=="true");
+      zaehlerAuffrischen(); zeichnen();
+    };
     return b;
   }));
 }
@@ -423,6 +589,7 @@ async function start(){
     return;
   }
   ALLE = d.listings || [];
+  PLZ_POS = d.plz || {};
   el("ort").textContent = (d.city||"").replace(" am Main","");
   const alter = Math.round((Date.now()-new Date(d.generated_at).getTime())/6e4);
   el("stand").textContent = alter < 90
@@ -446,14 +613,27 @@ async function start(){
     return sp;
   }));
 
-  el("filters").addEventListener("input", zeichnen);
-  el("mitte").addEventListener("change", zeichnen);
+  zaehlerAuffrischen();
+  el("filters").addEventListener("input", () => {
+    // Eine getippte PLZ oder eine gewaehlte Marke hebt den Kartenklick auf.
+    if(document.activeElement===el("plz") || document.activeElement===el("mitte"))
+      KLICK_MITTE = null;
+    zeichnen();
+  });
+  el("mitte").addEventListener("change", () => { KLICK_MITTE=null; zeichnen(); });
+  el("ansicht").onclick = () => {
+    KARTE_AN = !KARTE_AN;
+    el("ansicht").textContent = KARTE_AN ? "Liste" : "Karte";
+    zeichnen();
+  };
+  el("ansicht").textContent = KARTE_AN ? "Liste" : "Karte";
   el("chipNeu").onclick = el("chipWeg").onclick = e => {
     e.target.setAttribute("aria-pressed", e.target.getAttribute("aria-pressed")!=="true"); zeichnen();
   };
   el("reset").onclick = () => {
     try{ localStorage.removeItem(LS); }catch(e){}
     el("filters").reset();
+    KLICK_MITTE = null;
     document.querySelectorAll('.chip').forEach(c=>c.setAttribute("aria-pressed","false"));
     zeichnen();
   };
