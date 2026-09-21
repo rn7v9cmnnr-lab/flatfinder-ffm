@@ -207,3 +207,50 @@ async def test_alarmmodus_meldet_nur_ueber_der_schwelle(tmp_path, listings):
     assert all((l.score or 0) >= 85 for l in gemeldet)
     assert all((l.score or 0) < 85 for l in verworfen)
     assert len(msg.notes) == len(gemeldet)
+
+
+# ---------------- Aussetzer einer Quelle ----------------
+
+def test_aussetzer_markiert_angebote_nicht_als_verschwunden(tmp_path):
+    """Am 2026-09-21 lieferte Vonovia einmal nichts. Die 15 vorhandenen
+    Wohnungen standen danach als "weg" in der Liste, obwohl sie noch da
+    waren. Eine Quelle, die nicht geantwortet hat, darf ueber ihre
+    Angebote nichts aussagen."""
+    import json
+    from datetime import datetime, timezone
+
+    from flatfinder.export import merge
+
+    datei = tmp_path / "listings.json"
+    datei.write_text(json.dumps({"listings": [
+        {"key": "vonovia:1", "source": "vonovia", "title": "Wohnung A",
+         "first_seen": "2026-09-20T10:00:00+00:00",
+         "last_seen": datetime.now(timezone.utc).isoformat(), "gone": False},
+        {"key": "nhw:9", "source": "nhw", "title": "Wohnung B",
+         "first_seen": "2026-09-20T10:00:00+00:00",
+         "last_seen": datetime.now(timezone.utc).isoformat(), "gone": False},
+    ]}))
+
+    # nhw hat geantwortet (und dieses Objekt nicht mehr gemeldet),
+    # vonovia gar nicht.
+    raus = {e["key"]: e for e in merge([], datei, erfolgreich={"nhw"})}
+
+    assert raus["vonovia:1"]["gone"] is False, "Aussetzer darf nicht als weg gelten"
+    assert raus["nhw:9"]["gone"] is True, "Echt verschwunden muss weiterhin auffallen"
+
+
+def test_ohne_angabe_gilt_alles_als_erfolgreich(tmp_path):
+    """Rueckwaertskompatibel: ohne die Erfolgsliste verhaelt sich merge wie
+    vorher."""
+    import json
+    from datetime import datetime, timezone
+
+    from flatfinder.export import merge
+
+    datei = tmp_path / "listings.json"
+    datei.write_text(json.dumps({"listings": [
+        {"key": "vonovia:1", "source": "vonovia", "first_seen": "2026-09-20T10:00:00+00:00",
+         "last_seen": datetime.now(timezone.utc).isoformat(), "gone": False},
+    ]}))
+    raus = {e["key"]: e for e in merge([], datei)}
+    assert raus["vonovia:1"]["gone"] is True

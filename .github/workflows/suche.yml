@@ -4,8 +4,15 @@ name: Wohnungen suchen
 # GitHub Pages liefert docs/ aus - dadurch laeuft nirgends ein Server.
 on:
   schedule:
-    - cron: "17 * * * *"      # stuendlich zur Minute 17; volle Stunden sind
-                              # bei GitHub am staerksten belastet und oft verzoegert
+    # GitHub fuehrt geplante Ablaeufe nur nach Verfuegbarkeit aus und laesst
+    # sie unter Last aus. Gemessen am 2026-09-20/21: trotz stuendlichem
+    # Plan kamen die Laeufe nur etwa alle drei Stunden. Zwei Termine je
+    # Stunde zu krummen Minuten erhoehen die Chance, ohne mehr zu kosten -
+    # oeffentliche Repos haben unbegrenzte Action-Minuten, und ein Lauf
+    # dauert etwa eine Minute. Aendert sich nichts am Datenstand, wird auch
+    # nichts committet.
+    - cron: "17 * * * *"
+    - cron: "43 * * * *"
   workflow_dispatch:           # Knopf "Run workflow" fuer sofort
   push:
     paths:

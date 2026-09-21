@@ -85,6 +85,14 @@ class VonoviaAdapter(HttpAdapter):
             payload = await self._page(offset)
             batch = payload.get("results") or []
             if not batch:
+                if offset == 0:
+                    # Frankfurt hat immer Objekte. Eine leere erste Seite
+                    # heisst: die API hat gehustet, nicht "nichts da". Das
+                    # als Ergebnis durchzureichen hat am 2026-09-21 dazu
+                    # gefuehrt, dass 15 vorhandene Wohnungen als
+                    # verschwunden in der Liste standen.
+                    raise AdapterError(
+                        f"vonovia: erste Seite leer (Antwort: {str(payload)[:120]})")
                 break
             info = (payload.get("paging") or {}).get("info") or {}
             total = total or _to_int(info.get("count"))

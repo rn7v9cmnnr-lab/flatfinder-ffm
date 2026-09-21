@@ -23,7 +23,7 @@ import logging
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from .adapters.base import Adapter, Blocked
 from .adapters.gwh import GwhAdapter
@@ -99,18 +99,34 @@ async def collect(criteria: Criteria) -> tuple[List[Listing], Dict[str, str]]:
                     l.district = abgeleitet
             l.score, l.score_reasons = score_listing(l, criteria)
         gefunden.extend(listings)
-        status[adapter.source] = f"{len(listings)} Angebote"
-        log.info("%s: %d Angebote", adapter.source, len(listings))
+        if listings:
+            status[adapter.source] = f"{len(listings)} Angebote"
+            log.info("%s: %d Angebote", adapter.source, len(listings))
+        else:
+            # Null Treffer fuer eine ganze Stadt ist praktisch immer ein
+            # Defekt, kein Ergebnis. Als solcher gemeldet, damit es in der
+            # Oberflaeche auffaellt und merge() die bisherigen Angebote
+            # dieser Quelle nicht als verschwunden markiert.
+            status[adapter.source] = "keine Angebote (vermutlich gestört)"
+            log.warning("%s: 0 Angebote - verdaechtig", adapter.source)
 
     return gefunden, status
 
 
-def merge(neu: List[Listing], alt_pfad: Path) -> List[Dict[str, Any]]:
+def merge(neu: List[Listing], alt_pfad: Path,
+          erfolgreich: Optional[set] = None) -> List[Dict[str, Any]]:
     """Neue Funde mit dem letzten Stand zusammenfuehren.
 
     Erhaelt `first_seen` (sonst waere nach jedem Lauf alles "neu") und
     behaelt kurzzeitig verschwundene Angebote, damit ein Aussetzer einer
     Quelle die Liste nicht leerraeumt.
+
+    `erfolgreich` nennt die Quellen, die in diesem Lauf geantwortet haben.
+    Angebote aus einer Quelle, die NICHT geantwortet hat, bleiben unberuehrt
+    stehen - sonst faerbt ein Aussetzer sie als "weg", obwohl sie noch da
+    sind. Genau das ist am 2026-09-21 passiert: Vonovia lieferte einmal
+    nichts, und 15 vorhandene Wohnungen standen als verschwunden in der
+    Liste. Ohne Angabe gilt wie bisher alles als erfolgreich.
     """
     jetzt = datetime.now(timezone.utc)
     vorher: Dict[str, Dict[str, Any]] = {}
@@ -138,9 +154,16 @@ def merge(neu: List[Listing], alt_pfad: Path) -> List[Dict[str, Any]]:
             zuletzt = datetime.fromisoformat(alt.get("last_seen", ""))
         except ValueError:
             continue
-        if zuletzt > grenze:
-            alt["gone"] = True
+        if zuletzt <= grenze:
+            continue
+        # Quelle hat diesmal gar nicht geantwortet? Dann wissen wir nichts
+        # ueber dieses Angebot - unveraendert stehen lassen.
+        quelle = alt.get("source")
+        if erfolgreich is not None and quelle not in erfolgreich:
             raus[key] = alt
+            continue
+        alt["gone"] = True
+        raus[key] = alt
 
     return sorted(raus.values(), key=lambda e: (-(e.get("score") or 0), e.get("key", "")))
 
@@ -175,7 +198,8 @@ def _to_dict(l: Listing) -> Dict[str, Any]:
 
 async def run(ziel: Path, criteria: Criteria) -> Dict[str, Any]:
     gefunden, status = await collect(criteria)
-    listings = merge(gefunden, ziel)
+    erfolgreich = {q for q, stand in status.items() if stand.endswith("Angebote")}
+    listings = merge(gefunden, ziel, erfolgreich)
 
     from .bezirke import PLZ as PLZ_TABELLE
 

@@ -51,6 +51,7 @@
                 padding-right:4px;border-right:1px solid var(--line);
                 margin-right:2px;line-height:2.4}
   .tipp{font-size:12px;color:var(--muted);align-self:center;font-style:italic}
+  .quelle-defekt{color:var(--bad);font-weight:600}
   .chip{font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);
         background:var(--bg);color:var(--muted);cursor:pointer;user-select:none}
   .chip[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);
@@ -596,7 +597,18 @@ async function start(){
   el("stand").textContent = alter < 90
     ? `aktualisiert vor ${alter} Min.`
     : `aktualisiert ${new Date(d.generated_at).toLocaleString("de-DE",{dateStyle:"short",timeStyle:"short"})}`;
-  el("quellenstand").textContent = Object.entries(d.sources||{}).map(([k,v])=>`${k}: ${v}`).join(" · ");
+  // Eine Quelle, die nichts geliefert hat, darf nicht wie ein normales
+  // Ergebnis aussehen - sonst haelt man eine Stoerung fuer Marktlage.
+  const qs = el("quellenstand");
+  qs.replaceChildren(...Object.entries(d.sources||{}).flatMap(([k,v],i)=>{
+    const sp=document.createElement("span");
+    const defekt = !/^\d+ Angebote/.test(v);
+    sp.className = defekt ? "quelle-defekt" : "";
+    sp.textContent = `${k}: ${v}`;
+    if(defekt) sp.title = "Diese Quelle hat beim letzten Lauf nichts geliefert. "
+                        + "Ihre bisherigen Angebote bleiben stehen, bis sie wieder antwortet.";
+    return i ? [document.createTextNode(" · "), sp] : [sp];
+  }));
 
   const gesp = geladen();
   if(gesp) filterSchreiben(gesp);
