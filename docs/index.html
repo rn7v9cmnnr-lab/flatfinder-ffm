@@ -52,6 +52,11 @@
                 margin-right:2px;line-height:2.4}
   .tipp{font-size:12px;color:var(--muted);align-self:center;font-style:italic}
   .quelle-defekt{color:var(--bad);font-weight:600}
+  .lagehinweis{font-size:12.5px;color:var(--muted);margin:-4px 0 12px;
+               padding:7px 11px;border-radius:8px;
+               background:color-mix(in srgb,var(--warn) 10%,transparent)}
+  html.ohne-entfernung th[data-sort="_dist"],
+  html.ohne-entfernung td.dist{display:none}
   .chip{font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);
         background:var(--bg);color:var(--muted);cursor:pointer;user-select:none}
   .chip[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);
@@ -243,6 +248,8 @@
     <div class="f"><label>Sonstiges</label><div class="chips">
       <button type="button" class="chip" id="chipNeu" aria-pressed="false">nur neue</button>
       <button type="button" class="chip" id="chipWeg" aria-pressed="false">verschwundene zeigen</button>
+      <button type="button" class="chip" id="chipOhneLage" aria-pressed="false"
+              title="Beim Umkreisfilter auch Angebote zeigen, deren Lage unbekannt ist">ohne bekannte Lage</button>
     </div></div>
     <button type="button" class="reset" id="reset" style="margin-left:auto">Filter zurücksetzen</button>
   </div>
@@ -256,6 +263,7 @@
   <span class="muted" style="margin-left:auto" id="quellenstand"></span>
 </div>
 
+<div id="lagehinweis" class="lagehinweis" hidden></div>
 <div id="karte" hidden></div>
 <div id="kartehinweis" class="muted" hidden></div>
 
@@ -311,6 +319,7 @@ function filterLesen(){
     bezirke:[...document.querySelectorAll('#bezirke .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
     quellen:[...document.querySelectorAll('#quellen .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
     nurNeu:el("chipNeu").getAttribute("aria-pressed")==="true",
+    ohneLage:el("chipOhneLage").getAttribute("aria-pressed")==="true",
     zeigWeg:el("chipWeg").getAttribute("aria-pressed")==="true",
   };
 }
@@ -321,6 +330,7 @@ function filterSchreiben(f){
   if(f.klick) KLICK_MITTE = f.klick;
   if(f.karte) KARTE_AN = f.karte;
   el("chipNeu").setAttribute("aria-pressed", !!f.nurNeu);
+  el("chipOhneLage").setAttribute("aria-pressed", !!f.ohneLage);
   el("chipWeg").setAttribute("aria-pressed", !!f.zeigWeg);
 }
 function speichern(){
@@ -381,7 +391,13 @@ function passt(l, f, hatMitte){
     // deshalb wird er uebergeben und hier nicht neu geraten. Genau daran
     // ist der PLZ-Umkreis zuerst gescheitert: die Pruefung fragte nur die
     // Auswahlliste ab, die bei PLZ-Eingabe leer ist.
-    if(l._dist!=null && l._dist > f.umkreis) return false;
+    if(l._dist == null){
+      // Ohne bekannte Lage laesst sich die Entfernung nicht pruefen. Wer
+      // "2 km" einstellt, will keine Angebote sehen, die ueberall liegen
+      // koennen - also raus, aber sichtbar zaehlbar und zuschaltbar.
+      return f.ohneLage;
+    }
+    if(l._dist > f.umkreis) return false;
   }
   if(f.suche){
     const heu = [l.title,l.street,l.district,l.city,l.zip,(l.score_reasons||[]).join(" ")]
@@ -422,6 +438,23 @@ function zeichnen(){
 
   el("anzahl").textContent = liste.length;
   el("vonwie").textContent = `von ${ALLE.filter(l=>!l.gone).length} Angeboten`;
+
+  // Eine Spalte voller "–" sieht aus wie ein Defekt. Ohne Mittelpunkt gibt
+  // es schlicht keine Entfernung - dann weg damit.
+  document.documentElement.classList.toggle("ohne-entfernung", mitte == null);
+
+  // Ehrlich ausweisen, was der Umkreis verschluckt.
+  const hinweis = el("lagehinweis");
+  if(f.umkreis && mitte && !f.ohneLage){
+    const verdeckt = ALLE.filter(l => !l.gone && l._dist == null
+                                 && passt(l, {...f, umkreis:null}, false)).length;
+    hinweis.hidden = verdeckt === 0;
+    hinweis.textContent = verdeckt
+      ? `${verdeckt} Angebote ohne bekannte Lage sind ausgeblendet — „ohne bekannte Lage“ zeigt sie.`
+      : "";
+  } else {
+    hinweis.hidden = true;
+  }
 
   const tb = el("zeilen");
   tb.replaceChildren();
@@ -640,7 +673,7 @@ async function start(){
     zeichnen();
   };
   el("ansicht").textContent = KARTE_AN ? "Liste" : "Karte";
-  el("chipNeu").onclick = el("chipWeg").onclick = e => {
+  el("chipNeu").onclick = el("chipWeg").onclick = el("chipOhneLage").onclick = e => {
     e.target.setAttribute("aria-pressed", e.target.getAttribute("aria-pressed")!=="true"); zeichnen();
   };
   el("reset").onclick = () => {
