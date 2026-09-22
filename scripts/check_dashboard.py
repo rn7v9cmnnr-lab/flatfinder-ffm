@@ -186,6 +186,21 @@ with sync_playwright() as p:
     assert page.locator('.merkmal:checked').count()==2
     page.locator('#reset').click()
     assert page.locator('.merkmal:checked').count()==0
+    page.locator('.merkmal[value="balkon"]').check()
+    page.evaluate('MAP.setView([50.12,8.68],15,{animate:false})')
+    stamp=page.locator('#stand').inner_text()
+    assert 'Letzter Suchlauf:' in stamp and 'Uhr' in stamp
+    page.locator('#aktualisieren').click()
+    page.wait_for_function('document.getElementById("aktualisieren").getAttribute("aria-busy")==="false"')
+    assert page.locator('.merkmal[value="balkon"]').is_checked()
+    assert page.evaluate('MAP.getZoom()')==15
+    assert 'neuesten verfügbaren Stand' in page.locator('#refreshstatus').inner_text()
+    page.route('**/data/listings.json?*',lambda route:route.fulfill(status=503,body='unavailable'))
+    page.locator('#aktualisieren').click()
+    page.wait_for_function('document.getElementById("refreshstatus").textContent.includes("fehlgeschlagen")')
+    assert page.locator('#stand').inner_text()==stamp
+    assert page.evaluate('ALLE.length>0')
+    assert page.locator('#aktualisieren').is_enabled()
     assert not errors, errors
     browser.close()
 print('PASS: PLZ, radius, place precedence, map click, pan preservation, zero results, no radius, invalid PLZ, reload, mobile, reset; no JS errors')
