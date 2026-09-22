@@ -302,6 +302,36 @@
   @keyframes drehen{to{transform:rotate(360deg)}}
   @media(prefers-reduced-motion:reduce){#aktualisieren[aria-busy="true"] svg{animation:none}}
   @media(max-width:620px){.refreshgruppe{width:100%;justify-content:space-between}.refreshtext{text-align:left}}
+
+  [hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .app-tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin:0 0 24px;overflow-x:auto}
+  .app-tabs button{border:0;border-bottom:3px solid transparent;border-radius:0;padding:13px 18px;background:none;color:var(--muted);white-space:nowrap;font-size:14px}
+  .app-tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:650}
+  .suche-speichern{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+  .suche-speichern b{font-size:13px}.suche-speichern small{display:block;color:var(--muted);font-size:11px}
+  .suche-speichern input{flex:1;min-width:190px}.suche-speichern input,.studio-card input:not([type=checkbox]),.studio-card textarea,.studio-card select{font:inherit;font-size:13px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:10px 12px;max-width:100%;width:100%}
+  .suche-speichern input{width:auto}.studio-card textarea{resize:vertical;line-height:1.6}
+  #suche-speichern,.studio-primary{background:var(--accent);color:var(--card);border-color:var(--accent);border-radius:9px;padding:10px 16px}
+  .studio-intro{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:30px 0}
+  .studio-intro h2{font-size:clamp(24px,3vw,34px);font-weight:650;letter-spacing:-.035em;margin:5px 0 9px;line-height:1.2}
+  .studio-intro p{color:var(--muted);font-size:14px;margin:0}.eyebrow{font-size:10px!important;letter-spacing:.12em;font-weight:700;color:var(--accent)!important;margin:0 0 12px!important}
+  .status-pill{font-size:11px;border:1px solid var(--line);padding:7px 12px;border-radius:99px;white-space:nowrap;color:var(--muted)}
+  .studio-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:start}
+  .studio-main{display:grid;gap:20px}.studio-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow);min-width:0}
+  .card-heading,.card-heading>div{display:flex;align-items:center;gap:10px}.card-heading{justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
+  .studio-card h3{font-size:18px;letter-spacing:-.02em;margin:0}.step-number{font-size:11px;color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--card));padding:6px;border-radius:7px}
+  .studio-help,.quiet-label{font-size:12px;color:var(--muted);line-height:1.6}.studio-label{display:block;font-size:12px;font-weight:600;margin:17px 0 6px}.studio-label span{font-weight:400;color:var(--muted);font-size:11px}
+  .kanalwahl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.kanalwahl button{padding:12px 6px;border-radius:10px}.kanalwahl small{display:block;font-size:10px;color:var(--muted)}.kanalwahl [aria-pressed=true]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 5%,var(--card))}.kanalwahl :disabled{opacity:.6;cursor:default}
+  .profil-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.profil-grid label{font-size:12px;font-weight:600}.profil-grid input{margin-top:6px}
+  .auftrag{border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:12px}.auftrag-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.auftrag-head b{font-size:14px;overflow-wrap:anywhere}.auftrag p{margin:8px 0;font-size:12px;color:var(--muted)}.auftrag-actions{display:flex;flex-wrap:wrap;gap:8px}.auftrag-actions button{font-size:11px;padding:5px 9px}.auftrag label{display:flex;gap:7px;font-size:12px;margin:10px 0}.auftrag input{accent-color:var(--accent)}
+  .studio-empty{padding:25px 14px;text-align:center;background:var(--bg);border-radius:10px;color:var(--muted);font-size:13px}
+  .mail-preview{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px;margin:18px 0;overflow-wrap:anywhere}.mail-preview p{font-size:12px;margin:8px 0;color:var(--muted)}.mail-preview b{font-size:14px}
+  .entwurf-preview summary,.setup-details summary{cursor:pointer;font-size:12px;font-weight:600}.entwurf-preview b{display:block;font-size:13px;margin-top:14px}.entwurf-preview pre{white-space:pre-wrap;overflow-wrap:anywhere;font-family:inherit;font-size:13px;line-height:1.8}
+  .studio-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:16px 0 8px}.studio-actions a{font-size:12px;color:var(--accent)}.studio-actions button:disabled{opacity:.5;cursor:default}
+  .setup-details{font-size:12px;color:var(--muted);margin-top:16px}.next-step{padding:20px;color:var(--muted);font-size:12px}.next-step b{color:var(--fg);font-size:14px}
+  .studio-privacy{border-top:1px solid var(--line);padding-top:18px;font-size:11px;color:var(--muted);margin-top:20px}.studio-privacy button{font-size:11px;background:none;border:0;text-decoration:underline;padding:0;margin-left:8px}.studio-status{font-size:13px;color:var(--accent)}
+  @media(max-width:900px){.studio-layout{grid-template-columns:1fr}.studio-intro{align-items:flex-start;flex-direction:column}.studio-preview{min-width:0}}
+  @media(max-width:620px){.studio-card{padding:18px}.app-tabs button{font-size:12px;padding:12px 9px}.profil-grid{grid-template-columns:1fr}.suche-speichern input{flex-basis:100%}.studio-intro{margin:20px 0}.studio-actions{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
 <body>
@@ -312,7 +342,8 @@
   <div class="refreshgruppe"><div class="refreshtext"><b>Daten aktualisieren</b><div class="sub" id="stand">Datenstand wird geladen…</div><span id="refreshstatus" role="status" aria-live="polite"></span><a href="https://github.com/rn7v9cmnnr-lab/flatfinder-ffm/actions/workflows/suche.yml" target="_blank" rel="noopener" title="Mit GitHub-Zugang über Run workflow eine neue Suche starten">Neue Wohnungssuche starten ↗</a></div>
   <button type="button" id="aktualisieren" aria-label="Aktuellsten Datenstand laden" title="Aktuellsten verfügbaren Datenstand laden"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 7a7 7 0 0 1 11.5-1L20 9M4 15l2.4 3A7 7 0 0 0 18 17"/></svg></button></div>
 </header>
-
+<nav class="app-tabs" role="tablist" aria-label="Bereiche"><button type="button" id="tab-suche" aria-selected="true" aria-controls="bereich-suche" role="tab">Wohnungssuche</button><button type="button" id="tab-studio" aria-selected="false" aria-controls="bereich-studio" role="tab">Benachrichtigungen &amp; Bewerbung</button></nav>
+<section id="bereich-suche" role="tabpanel" aria-labelledby="tab-suche">
 <form class="filters" id="filters" onsubmit="return false">
   <div class="filterkopf"><div><h2>Deine Wohnungssuche</h2><p>Ein Suchgebiet. Dieselben Treffer in Liste und Karte.</p></div><button type="button" class="reset" id="reset">Alle Filter zurücksetzen</button></div>
   <div class="filtergruppen">
@@ -379,6 +410,7 @@
   </fieldset>
   </div>
   <div class="aktuellzeile"><div><b>Aktualität</b><small>Erstmals bei uns gefunden</small></div><div id="aktualitaet" class="segmentwahl" role="radiogroup" aria-label="Aktualität"><label><input type="radio" name="aktualitaet" value="" checked><span>Alle</span></label><label><input type="radio" name="aktualitaet" value="24"><span>24 Stunden</span></label><label><input type="radio" name="aktualitaet" value="72"><span>3 Tage</span></label><label><input type="radio" name="aktualitaet" value="168"><span>7 Tage</span></label></div></div>
+<div class="suche-speichern"><div><b>Diese Suche merken</b><small>Filter übernehmen und einen Suchauftrag vorbereiten.</small></div><label class="sr-only" for="suchname">Name der Suche</label><input id="suchname" maxlength="60" placeholder="Zum Beispiel: Zuhause im Nordend"><button type="button" id="suche-speichern">Suche speichern →</button></div>
 </form>
 
 <details class="weitere-quellen"><summary>Weitere Anbieter &amp; Genossenschaften · 11 direkte Zugänge</summary><p>Diese Seiten werden nicht automatisch in die Trefferliste übernommen. Viele vergeben Wohnungen über Bewerbungen oder Interessentenlisten. Stand der Prüfung: 22.09.2026.</p><ul><li><a href="https://www.immobilienscout24.de/Suche/de/hessen/frankfurt-am-main/wohnung-mieten" target="_blank" rel="noopener">ImmoScout24 ↗</a><small>Portal · automatischer Zugriff durch Roboterprüfung gesperrt</small></li><li><a href="https://www.abg.de/mieten/faire-wohnungsvergabe/interessentenformular/" target="_blank" rel="noopener">ABG Frankfurt Holding ↗</a><small>Wohnungsunternehmen · Interessentenliste</small></li><li><a href="https://www.vbs-frankfurt.de/wohnen/" target="_blank" rel="noopener">VBS Frankfurt eG ↗</a><small>Genossenschaft · Angebote über ImmoScout24</small></li><li><a href="https://www.bwv-frankfurt.de/angebote/" target="_blank" rel="noopener">Bau- und Wohnungsverein Frankfurt eG ↗</a><small>Genossenschaft · zuletzt nur Stellplätze</small></li><li><a href="https://www.wbg-ffm.de/mietinteressenten/" target="_blank" rel="noopener">Wohnungsbaugenossenschaft Frankfurt eG ↗</a><small>Genossenschaft · Informationen für Mietinteressenten</small></li><li><a href="https://fesv.de/" target="_blank" rel="noopener">Frankfurter Eisenbahn-Siedlungsverein eG ↗</a><small>Genossenschaft · Bestände und Kontakt</small></li><li><a href="https://fwg-eg.de/" target="_blank" rel="noopener">Frankfurter Wohnungs-Genossenschaft eG ↗</a><small>Genossenschaft · direkt nach freien Wohnungen fragen</small></li><li><a href="https://bg-bergen-enkheim.de/" target="_blank" rel="noopener">Baugenossenschaft Bergen-Enkheim eG ↗</a><small>Genossenschaft · Kontakt und Sprechzeiten</small></li><li><a href="https://www.juba-wohnen.de/bewerberbogen/" target="_blank" rel="noopener">JuBa ↗</a><small>Wohnungsunternehmen · Bewerberbogen</small></li><li><a href="https://www.gsw-ffm.de/de/mieten/" target="_blank" rel="noopener">GSW Frankfurt ↗</a><small>Wohnungsunternehmen · öffentliche Angebote, zuletzt außerhalb Frankfurts</small></li><li><a href="https://www.sahle-wohnen.de/immobilien/" target="_blank" rel="noopener">Sahle Wohnen ↗</a><small>Wohnungsunternehmen · bundesweite Suche, zuletzt keine Frankfurt-Treffer</small></li></ul></details>
@@ -426,6 +458,26 @@
 </section>
 </div>
 
+
+</section>
+<section id="bereich-studio" role="tabpanel" aria-labelledby="tab-studio" hidden>
+  <div class="studio-intro"><div><p class="eyebrow">DEIN SUCHASSISTENT</p><h2>Dein nächstes Zuhause. Gut vorbereitet.</h2><p>Suche speichern. Passende Wohnungen entdecken. Persönlich bewerben.</p></div><span class="status-pill">Entwurf · Versand nicht eingerichtet</span></div>
+  <div class="studio-layout"><div class="studio-main">
+    <section class="studio-card"><div class="card-heading"><div><span class="step-number">01</span><h3>Deine Suchaufträge</h3></div><button type="button" id="zur-suche">+ Suche hinzufügen</button></div><p class="studio-help">Jeder Auftrag übernimmt genau die Filter aus der Wohnungssuche. Spätere Filteränderungen verändern ihn nicht.</p><div id="suchauftraege"></div></section>
+    <section class="studio-card"><div class="card-heading"><div><span class="step-number">02</span><h3>Deine Benachrichtigungen</h3></div></div><div class="kanalwahl" role="group" aria-label="Benachrichtigungskanal"><button type="button" aria-pressed="true">E-Mail <small>Vorbereitung</small></button><button type="button" disabled>Telegram <small>Später verbinden</small></button><button type="button" disabled>WhatsApp <small>Später verbinden</small></button></div><p class="studio-help">Geplant: eine Mail mit neuen Treffern nach jedem erfolgreichen Suchlauf. Bereits gemeldete Wohnungen sollen nicht erneut erscheinen.</p><label class="studio-label" for="alarm-email">Empfängeradresse <span>optional, lokal gespeichert</span></label><input id="alarm-email" type="email" autocomplete="email" placeholder="du@beispiel.de"><details class="setup-details"><summary>Gmail später verbinden</summary><p>Eine eigene Gmail-Adresse kann später als Absender dienen. Die Empfängeradresse oben bleibt deine persönliche Adresse. Aktuell wird nichts versendet.</p><p>Die Suchaufträge kannst du bereits als Konfiguration exportieren. Die Datei enthält Filter, aber keine Empfängeradresse, kein Profil und keine Zugangsdaten.</p><p>Einrichtung danach: Gmail-Konto erstellen, Zwei-Faktor-Anmeldung aktivieren und – sofern für das Konto verfügbar – ein App-Passwort erzeugen. Zugangsdaten werden ausschließlich als GitHub-Secrets hinterlegt. <a href="https://support.google.com/accounts/answer/185833?hl=de" target="_blank" rel="noopener">Google-Anleitung ↗</a></p><button type="button" id="auftraege-export">Suchaufträge exportieren</button></details></section>
+    <section class="studio-card"><div class="card-heading"><div><span class="step-number">03</span><h3>Deine Bewerbung</h3></div><span class="quiet-label">Du gibst den Ton vor</span></div>
+      <p class="studio-help">Nur deine eigenen Angaben. Der Entwurf wird für die ausgewählte Wohnung eingesetzt und lässt sich anschließend kopieren.</p>
+      <div class="profil-grid"><label>Name<input id="profil-name" autocomplete="name" maxlength="120" placeholder="Vor- und Nachname"></label><label>Gewünschter Einzug<input id="profil-einzug" maxlength="120" placeholder="Zum Beispiel: ab November"></label></div>
+      <label class="studio-label" for="profil-vorstellung">Ein paar Worte über dich</label><textarea id="profil-vorstellung" rows="3" maxlength="1800" placeholder="Wer zieht ein? Was möchtest du über dich erzählen? Formuliere so, wie du selbst schreiben würdest."></textarea>
+      <label class="studio-label" for="bewerbung-betreff">Betreff</label><input id="bewerbung-betreff" maxlength="200">
+      <label class="studio-label" for="bewerbung-text">Deine Vorlage</label><textarea id="bewerbung-text" rows="10" maxlength="6000"></textarea>
+      <p class="studio-help">Platzhalter: <code>{{wohnung}}</code>, <code>{{ort}}</code>, <code>{{name}}</code>, <code>{{vorstellung}}</code>, <code>{{einzug}}</code>. Leere Profilfelder werden weggelassen.</p>
+      <div class="studio-actions"><button type="button" id="vorlage-standard">Standardvorlage einsetzen</button><span class="studio-help">Änderungen werden in diesem Browser gespeichert.</span></div>
+    </section>
+  </div><aside class="studio-preview"><section class="studio-card"><p class="eyebrow">VORSCHAU</p><h3>So sieht dein nächster Schritt aus</h3><label class="studio-label" for="vorschau-suche">Suchauftrag</label><select id="vorschau-suche"></select><label class="studio-label" for="vorschau-angebot">Passende Wohnung</label><select id="vorschau-angebot"></select><div id="mail-vorschau" class="mail-preview"></div><details class="entwurf-preview" open><summary>Bewerbungsentwurf prüfen</summary><b id="entwurf-betreff"></b><pre id="entwurf-text"></pre></details><div class="studio-actions"><button type="button" class="studio-primary" id="entwurf-kopieren">Bewerbung kopieren</button><a id="entwurf-original" target="_blank" rel="noopener">Originalangebot öffnen ↗</a></div><p class="studio-help">Es wird keine Bewerbung verschickt. Du kannst den Text selbst im Originalangebot verwenden.</p></section><div class="next-step"><b>Später: dein „Ja“ reicht.</b><p>Benachrichtigung öffnen, konkreten Text prüfen und freigeben. Automatischer Versand wird erst mit bestätigtem Empfänger und einem unterstützten Kontaktweg verbunden.</p></div></aside></div>
+  <p id="studio-status" class="studio-status" role="status" aria-live="polite"></p>
+  <p class="studio-privacy">Nur auf diesem Gerät: Suchaufträge, Empfängeradresse und Bewerbungsvorlage werden in diesem Browser gespeichert. Noch keine Synchronisation und kein Versanddienst verbunden. <button type="button" id="studio-loeschen">Lokale Entwürfe löschen</button></p>
+</section>
 </div>
 
 
@@ -433,6 +485,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"
         integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg=="
         crossorigin="" referrerpolicy="no-referrer"></script>
+<script src="search.js"></script>
 <script>
 const LS = "flatfinder.filter.v1";
 let ALLE = [], SORT = {feld:"score", ab:true}, PLZ_POS = {};
@@ -512,93 +565,7 @@ const ART = {
 
 // Luftlinie in km. Reicht voellig - fuer "ist das noch in meiner Ecke"
 // braucht niemand Routing, und es geht ohne jeden fremden Dienst.
-function distanz(aLat,aLng,bLat,bLng){
-  const R=6371, r=Math.PI/180;
-  const dLat=(bLat-aLat)*r, dLng=(bLng-aLng)*r;
-  const h=Math.sin(dLat/2)**2 + Math.cos(aLat*r)*Math.cos(bLat*r)*Math.sin(dLng/2)**2;
-  return 2*R*Math.asin(Math.sqrt(h));
-}
-
-// Die Quellen liefern mal Kalt-, mal nur Warmmiete. Das darf die
-// Oberflaeche nicht verwischen - sonst vergleicht man Aepfel mit Birnen.
-function miete(l){
-  if(l.price_cold!=null) return {wert:l.price_cold, art:"kalt", warm:false};
-  if(l.price_warm!=null) return {wert:l.price_warm, art:"warm", warm:true};
-  return {wert:null, art:"", warm:false};
-}
-
-function istNeu(l){
-  return (Date.now() - new Date(l.first_seen).getTime()) < 36e5*24;
-}
-
-// Originaltitel und vorhandene Beschreibung prüfen, keine Score-Begründungen.
-// Untermiete kann unbefristet sein und ist deshalb ein eigener Filter.
-function ausschlussTreffer(l){
-  const titel=String((l.title||"")+" "+(l.description||"")).normalize("NFKC").toLowerCase();
-  const regeln={
-    zeit:/\b(?:zwischenmiete|zwischenvermietung|befristet(?:e[rmns]?)?|zeitmiete|wohnen auf zeit|temporary rental|short[ -]term)\b/g,
-    untermiete:/\b(?:untermiete|untervermietung|untermieter(?:in)?|sublet)\b/g,
-    tausch:/\b(?:wohnungstausch|tauschwohnung|tauschangebot|wohnungstauschangebot|tausch gegen|nur (?:im )?tausch)\b/g
-  };
-  return Object.entries(regeln).filter(([,regex])=>[...titel.matchAll(regex)].some(m=>{
-    const davor=titel.slice(0,m.index);
-    // „Keine Zwischenmiete“, „nicht befristet“ und „ohne Wohnungstausch“ sind keine Treffer.
-    return !/\b(?:kein(?:e[rmns]?)?|nicht|ohne)\s+(?:eine?\s+)?$/.test(davor);
-  })).map(([key])=>key);
-}
-
-function merkmalTreffer(l){
-  const text=[l.title,l.description].filter(Boolean).join(". ").normalize("NFKC").toLowerCase();
-  const regeln={balkon:/\b(?:balkon\w*|terrasse\w*|loggia)\b/g,
-    ebk:/\b(?:einbauküche\w*|ebk)\b/g,aufzug:/\b(?:aufzug\w*|aufzüge\w*|fahrstuhl\w*|personenaufzug\w*|lift)\b/g,
-    garten:/\b(?:garten|gartennutzung|gartenanteil|gemeinschaftsgarten|privatgarten)\b/g,
-    stellplatz:/\b(?:stellplatz\w*|stellplätze\w*|garage\w*|tiefgarage\w*|parkplatz\w*)\b/g,
-    barrierefrei:/\bbarrierefrei\w*\b/g};
-  return Object.entries(regeln).filter(([,r])=>[...text.matchAll(r)].some(m=>{
-    const davor=text.slice(0,m.index), danach=text.slice(m.index+m[0].length);
-    return !/\b(?:kein(?:e[rmns]?)?|ohne|nicht)\s+(?:(?:eigen\w*|privat\w*|groß\w*|klein\w*)\s+)?$/.test(davor)
-      && !/^\s*(?::|ist)?\s*(?:nein|nicht vorhanden|nicht verfügbar)\b/.test(danach);
-  })).map(([k])=>k);
-}
-
-function passt(l, f, hatMitte){
-  if(l.gone) return false;
-  if((f.merkmale||[]).some(k=>!merkmalTreffer(l).includes(k))) return false;
-  if((f.ausschluss||[]).some(k=>ausschlussTreffer(l).includes(k))) return false;
-  if(f.pmax){
-    // Gegen die Kaltmiete pruefen, wo sie bekannt ist. Kennt die Quelle nur
-    // die Warmmiete, waere ein direkter Vergleich unfair - dann grosszuegig
-    // mit Aufschlag pruefen und das Angebot lieber zeigen als verstecken.
-    const m = miete(l);
-    if(m.wert==null) return false;
-    const grenze = m.warm ? f.pmax*1.35 : f.pmax;
-    if(m.wert > grenze) return false;
-  }
-  if(f.qmin && (l.sqm==null || l.sqm < f.qmin)) return false;
-  if(f.rmin && (l.rooms==null || l.rooms < f.rmin)) return false;
-  if(f.rmax && (l.rooms==null || l.rooms > f.rmax)) return false;
-  if(f.anbieter && (l.kind||"sonstige") !== f.anbieter) return false;
-  if(!f.quellen.includes(l.source)) return false;
-  if(f.bezirke.length && !f.bezirke.includes(l.district || l.city || "?")) return false;
-  if(f.aktualitaet){
-    const alter=Date.now()-new Date(l.first_seen).getTime();
-    if(!Number.isFinite(alter) || alter<0 || alter>f.aktualitaet*36e5) return false;
-  }
-  if(f.umkreis && hatMitte){
-    // Der Mittelpunkt kann aus Kartenklick, PLZ ODER Auswahlliste kommen -
-    // deshalb wird er uebergeben und hier nicht neu geraten. Genau daran
-    // ist der PLZ-Umkreis zuerst gescheitert: die Pruefung fragte nur die
-    // Auswahlliste ab, die bei PLZ-Eingabe leer ist.
-    if(l._dist == null){
-      // Ohne bekannte Lage laesst sich die Entfernung nicht pruefen. Wer
-      // "2 km" einstellt, will keine Angebote sehen, die ueberall liegen
-      // koennen - also raus, aber sichtbar zaehlbar und zuschaltbar.
-      return false;
-    }
-    if(l._dist > f.umkreis) return false;
-  }
-  return true;
-}
+const {distanz,miete,istNeu,ausschlussTreffer,merkmalTreffer,passt}=FFSearch;
 
 // Reihenfolge des Vorrangs: was du auf der Karte angeklickt hast, schlaegt
 // die PLZ, und die schlaegt die Auswahlliste. So gewinnt immer die zuletzt
@@ -900,6 +867,7 @@ async function start(manuell=false){
   el("refreshstatus").textContent=manuell ? (d.generated_at===LETZTER_STAND ? "Du hast bereits den neuesten verfügbaren Stand." : "Neuer Datenstand geladen.") : "";
   LETZTER_STAND=d.generated_at;
   ALLE = d.listings || [];
+  window.studioRender?.();
   PLZ_POS = d.plz || {};
   document.querySelectorAll("[data-treffer]").forEach(sp=>{
     sp.textContent="("+ALLE.filter(l=>!l.gone && ausschlussTreffer(l).includes(sp.dataset.treffer)).length+")";
@@ -985,5 +953,6 @@ async function start(manuell=false){
 }
 start();
 </script>
+<script src="studio.js"></script>
 </body>
 </html>
