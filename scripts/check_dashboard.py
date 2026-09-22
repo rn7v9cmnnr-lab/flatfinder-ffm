@@ -136,6 +136,26 @@ with sync_playwright() as p:
     page.locator('.auf-karte').click()
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
     page.screenshot(path=str(root/'selected-mobile.jpg'),quality=55)
+    # Keyword exclusions: separate subletting from time-limited rent; respect negation.
+    cases=[('Zwischenmiete ab Oktober',['zeit']),('Befristete Wohnung',['zeit']),
+           ('Wohnen auf Zeit',['zeit']),('Unbefristete Wohnung',[]),('Nicht befristet',[]),
+           ('Keine Zwischenmiete',[]),('Keine befristete Untermiete',['untermiete']),
+           ('Untermiete unbefristet',['untermiete']),('Wohnungstausch',['tausch']),
+           ('Kein Wohnungstausch',[]),('Keine Zwischenmiete, aber befristet',['zeit'])]
+    for title,wanted in cases:
+        assert page.evaluate('(title)=>ausschlussTreffer({title})',title)==wanted, title
+    page.locator('#reset').click()
+    page.evaluate('ALLE.unshift({key:"test-temporary",title:"Zwischenmiete Test",source:"test",kind:"portal",score:50});zeichnen()')
+    check=page.locator('.ausschluss[value="zeit"]')
+    check.check()
+    assert page.locator('#angebot-test-temporary').count()==0
+    assert page.evaluate('filterLesen().ausschluss.includes("zeit")')
+    page.reload()
+    page.wait_for_function('ALLE.length > 0')
+    assert check.is_checked()
+    assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),!!mittelpunkt(filterLesen()))).every(l=>!ausschlussTreffer(l).includes("zeit"))')
+    page.locator('#reset').click()
+    assert not check.is_checked()
     assert not errors, errors
     browser.close()
 print('PASS: PLZ, radius, place precedence, map click, pan preservation, zero results, no radius, invalid PLZ, reload, mobile, reset; no JS errors')
