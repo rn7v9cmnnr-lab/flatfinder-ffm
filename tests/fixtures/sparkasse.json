@@ -1,0 +1,168 @@
+{
+  "firstPageEstates": [
+    {
+      "id": "FID-F12-318-680",
+      "estateSubTypeId": 111,
+      "estateTypeGroupingId": 403,
+      "objectType": "flat",
+      "marketingType": "rent",
+      "usageType": "residential",
+      "offererCategory": 4,
+      "title": "Viel Raum für Stil und Struktur – Wohnung mit Dachterrasse in Neu-Isenburg",
+      "subtitle": "Neu-Isenburg",
+      "images": [
+        "https://portal.fio.de/cdn/media/apiv1?token=V5m5mbMRlTcUqpuAbFcBB8VbBmP9wM-2fS3AoqSw0pGa7grdJcOaA4khGEOA4eMMlc"
+      ],
+      "media": [
+        {
+          "url": "https://portal.fio.de/cdn/media/apiv1?token=V5m5mbMRlTcUqpuAbFcBB8VbBmP9wM-2fS3AoqSw0pGa7grdJcOaA4khGEOA4eMMlc",
+          "isModifiedByAi": false
+        }
+      ],
+      "priceData": {
+        "name": "rentCold",
+        "label": "Kaltmiete",
+        "value": "1.600 €",
+        "numeric": 1600,
+        "category": "AREA"
+      },
+      "price": "1.600 €",
+      "eyeCatcher": [
+        {
+          "type": "highlighted",
+          "label": "Sparkassenangebot"
+        }
+      ],
+      "mainFacts": [
+        {
+          "name": "livingSpace",
+          "label": "Wohnfläche",
+          "value": "175 m²",
+          "numeric": 175,
+          "category": "AREA"
+        },
+        {
+          "name": "roomNumber",
+          "label": "Zimmer",
+          "value": "5",
+          "numeric": 5,
+          "category": "ROOMS"
+        }
+      ],
+      "partnerLogo": null,
+      "lat": 50.04222,
+      "lng": 8.679219,
+      "isUserEstate": false
+    },
+    {
+      "id": "FID-F13-296-681",
+      "estateSubTypeId": 112,
+      "estateTypeGroupingId": 403,
+      "objectType": "flat",
+      "marketingType": "rent",
+      "usageType": "residential",
+      "offererCategory": 4,
+      "title": "Geräumige 2,5 Zi.- Wohnung - Gesuchte Wohnlage - OF-Bürgel",
+      "subtitle": "Offenbach",
+      "images": [
+        "https://portal.fio.de/cdn/media/apiv1?token=aZ3Y95hU4klN2IEeVP6-2bCk4ZE1Cx5gH8zo8Z20wyJYBgcagGNu6-2fqpmc52VE4hQn"
+      ],
+      "media": [
+        {
+          "url": "https://portal.fio.de/cdn/media/apiv1?token=aZ3Y95hU4klN2IEeVP6-2bCk4ZE1Cx5gH8zo8Z20wyJYBgcagGNu6-2fqpmc52VE4hQn",
+          "isModifiedByAi": false
+        }
+      ],
+      "priceData": {
+        "name": "rentCold",
+        "label": "Kaltmiete",
+        "value": "1.300 €",
+        "numeric": 1300,
+        "category": "AREA"
+      },
+      "price": "1.300 €",
+      "eyeCatcher": [
+        {
+          "type": "highlighted",
+          "label": "Sparkassenangebot"
+        }
+      ],
+      "mainFacts": [
+        {
+          "name": "livingSpace",
+          "label": "Wohnfläche",
+          "value": "95 m²",
+          "numeric": 95,
+          "category": "AREA"
+        },
+        {
+          "name": "roomNumber",
+          "label": "Zimmer",
+          "value": "2.5",
+          "numeric": 25,
+          "category": "ROOMS"
+        }
+      ],
+      "partnerLogo": null,
+      "lat": 50.1250763,
+      "lng": 8.786677,
+      "isUserEstate": false
+    },
+    {
+      "id": "FID-F13-339-896",
+      "estateSubTypeId": 111,
+      "estateTypeGroupingId": 403,
+      "objectType": "flat",
+      "marketingType": "rent",
+      "usageType": "residential",
+      "offererCategory": 4,
+      "title": "Neubau-Erstbezug! Moderne 4 Zi.-Wohnung in Offenbach-Bieber!",
+      "subtitle": "Offenbach",
+      "images": [
+        "https://portal.fio.de/cdn/media/apiv1?token=aZ3Y95hU4klN2IEeVP6-2bCu2YWkDhULjfYd7U4og5b6i0-2bv8wKir2xgdmRsOTChkC"
+      ],
+      "media": [
+        {
+          "url": "https://portal.fio.de/cdn/media/apiv1?token=aZ3Y95hU4klN2IEeVP6-2bCu2YWkDhULjfYd7U4og5b6i0-2bv8wKir2xgdmRsOTChkC",
+          "isModifiedByAi": false
+        }
+      ],
+      "priceData": {
+        "name": "rentCold",
+        "label": "Kaltmiete",
+        "value": "1.500 €",
+        "numeric": 1500,
+        "category": "AREA"
+      },
+      "price": "1.500 €",
+      "eyeCatcher": [
+        {
+          "type": "highlighted",
+          "label": "Sparkassenangebot"
+        }
+      ],
+      "mainFacts": [
+        {
+          "name": "livingSpace",
+          "label": "Wohnfläche",
+          "value": "103,85 m²",
+          "numeric": 10385,
+          "category": "AREA"
+        },
+        {
+          "name": "roomNumber",
+          "label": "Zimmer",
+          "value": "4",
+          "numeric": 4,
+          "category": "ROOMS"
+        }
+      ],
+      "partnerLogo": null,
+      "lat": 50.0889854,
+      "lng": 8.806255,
+      "isUserEstate": false
+    }
+  ],
+  "pageCount": 1,
+  "totalItems": 3
+}
