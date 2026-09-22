@@ -80,6 +80,12 @@
   .filtergruppen .wohnungswerte{display:grid;grid-template-columns:1fr 1fr}
   .filtergruppen .f input,.filtergruppen .f select{width:100%;max-width:none;min-width:0;min-height:38px}
   .filtergruppen .f label{font-size:11px;letter-spacing:.02em}
+  .ausschlussfilter{padding:12px;border:1px solid var(--line);border-radius:9px;margin:12px 0;font-size:12px}
+  .ausschlussfilter>b{display:block;margin-bottom:8px}
+  .ausschlussfilter label{display:flex;align-items:center;gap:7px;margin:8px 0;cursor:pointer}
+  .ausschlussfilter input{accent-color:var(--accent);width:16px;height:16px;flex:none}
+  .ausschlussfilter [data-treffer]{color:var(--muted);margin-left:auto}
+  .ausschlussfilter .feldhilfe{margin:10px 0 0;font-size:11px}
   .anbieterinfo{font-size:12px;color:var(--muted);line-height:1.5;margin:12px 0}
   .anbieterinfo p{margin:8px 0}
   .anbieterinfo .kind{color:var(--fg);font-weight:600}
@@ -303,7 +309,13 @@
       <input type="text" id="suche" placeholder="Balkon, Stadtteil, Straße…"
              style="font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)"></div>
   </div>
-<p class="feldhilfe">Nur Warmmiete bekannt? Der Preisfilter erlaubt dafür 35 % Aufschlag.</p>
+<div class="ausschlussfilter"><b>Unerwünschte Angebote ausblenden</b>
+      <label><input type="checkbox" class="ausschluss" value="zeit"> Zwischenmiete / befristetes Wohnen <span data-treffer="zeit"></span></label>
+      <label><input type="checkbox" class="ausschluss" value="untermiete"> Untermiete <span data-treffer="untermiete"></span></label>
+      <label><input type="checkbox" class="ausschluss" value="tausch"> Wohnungstausch <span data-treffer="tausch"></span></label>
+      <p class="feldhilfe">Erkennung anhand des Anzeigentitels. Zahlen: aktive Angebote insgesamt. Nicht jede Befristung steht im Titel.</p>
+    </div>
+    <p class="feldhilfe">Nur Warmmiete bekannt? Der Preisfilter erlaubt dafür 35 % Aufschlag.</p>
   </fieldset>
   <fieldset><legend><span>3</span> Anbieter &amp; Quellen</legend>
     <div class="f"><label for="anbieter">Anbieterart</label><select id="anbieter">
@@ -391,6 +403,7 @@ function filterLesen(){
     plz:el("plz").value.trim(), karte:KARTE_AN, klick:KLICK_MITTE,
     bezirke:[...document.querySelectorAll('#bezirke .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
     quellen:[...document.querySelectorAll('#quellen .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
+    ausschluss:[...document.querySelectorAll(".ausschluss:checked")].map(c=>c.value),
     nurNeu:el("chipNeu").getAttribute("aria-pressed")==="true",
     ohneLage:el("chipOhneLage").getAttribute("aria-pressed")==="true",
     zeigWeg:el("chipWeg").getAttribute("aria-pressed")==="true",
@@ -398,6 +411,7 @@ function filterLesen(){
 }
 function filterSchreiben(f){
   if(!f) return;
+  document.querySelectorAll(".ausschluss").forEach(c=>c.checked=(f.ausschluss||[]).includes(c.value));
   for(const k of ["pmax","qmin","rmin","rmax","smin","suche","mitte","umkreis","plz","anbieter"])
     if(f[k]!=null) el(k).value=f[k];
   if(f.klick) KLICK_MITTE = f.klick;
@@ -441,8 +455,25 @@ function istNeu(l){
   return (Date.now() - new Date(l.first_seen).getTime()) < 36e5*24;
 }
 
+// Nur tatsächliche Angebotstitel prüfen, keine abgeleiteten Score-Begründungen.
+// Untermiete kann unbefristet sein und ist deshalb ein eigener Filter.
+function ausschlussTreffer(l){
+  const titel=String(l.title||"").normalize("NFKC").toLowerCase();
+  const regeln={
+    zeit:/\b(?:zwischenmiete|zwischenvermietung|befristet(?:e[rmns]?)?|zeitmiete|wohnen auf zeit|temporary rental|short[ -]term)\b/g,
+    untermiete:/\b(?:untermiete|untervermietung|untermieter(?:in)?|sublet)\b/g,
+    tausch:/\b(?:wohnungstausch|tauschwohnung|tauschangebot|wohnungstauschangebot|tausch gegen|nur (?:im )?tausch)\b/g
+  };
+  return Object.entries(regeln).filter(([,regex])=>[...titel.matchAll(regex)].some(m=>{
+    const davor=titel.slice(0,m.index);
+    // „Keine Zwischenmiete“, „nicht befristet“ und „ohne Wohnungstausch“ sind keine Treffer.
+    return !/\b(?:kein(?:e[rmns]?)?|nicht|ohne)\s+(?:eine?\s+)?$/.test(davor);
+  })).map(([key])=>key);
+}
+
 function passt(l, f, hatMitte){
   if(l.gone && !f.zeigWeg) return false;
+  if((f.ausschluss||[]).some(k=>ausschlussTreffer(l).includes(k))) return false;
   if(f.pmax){
     // Gegen die Kaltmiete pruefen, wo sie bekannt ist. Kennt die Quelle nur
     // die Warmmiete, waere ein direkter Vergleich unfair - dann grosszuegig
@@ -771,6 +802,9 @@ async function start(){
   }
   ALLE = d.listings || [];
   PLZ_POS = d.plz || {};
+  document.querySelectorAll("[data-treffer]").forEach(sp=>{
+    sp.textContent="("+ALLE.filter(l=>!l.gone && ausschlussTreffer(l).includes(sp.dataset.treffer)).length+")";
+  });
   const coopAnzahl=ALLE.filter(l=>!l.gone && l.kind==="genossenschaft").length;
   el("coopstand").textContent=coopAnzahl ? `${coopAnzahl} aktive Angebote.` : "Aktuell keine Angebote erfasst.";
   el("ort").textContent = (d.city||"").replace(" am Main","");
