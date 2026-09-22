@@ -34,6 +34,8 @@ will: Eintrag ergänzen, nicht überschreiben.
 | 2026-09-19 | **Eine Oberfläche für lokal und online** (`docs/index.html`) | zwei UIs zu pflegen wäre der sichere Weg, dass eine davon verrottet |
 | 2026-09-19 | **Commit-Mails auf GitHub-Noreply umgeschrieben** | vor dem Öffentlichmachen; Davids private Adresse stand in jedem Commit |
 
+| 2026-09-22 | **Karte folgt PLZ, Ort und Radius** | Neue Mittelpunkte öffnen die Karte mit zunächst 3 km; Preis-/Textfilter erhalten den Kartenausschnitt. Suchläufe bei Push nur auf main. |
+
 ## Offen
 
 - [ ] Auf [flathunter](https://github.com/flathunters/flathunter) aufsetzen statt eigene Adapter für IS24/Kleinanzeigen/Immowelt/wg-gesucht? Spart die Adapter-Pflege, die dieses Projekt sonst tötet. Entscheidung fällt, bevor der erste dieser vier Adapter gebaut wird.

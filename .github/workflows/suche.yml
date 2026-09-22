@@ -15,6 +15,7 @@ on:
     - cron: "43 * * * *"
   workflow_dispatch:           # Knopf "Run workflow" fuer sofort
   push:
+    branches: [main]          # Suchlaeufe nur auf dem veroeffentlichten Stand
     paths:
       - "src/flatfinder/**"    # Adapter geaendert -> gleich neu einlesen
       - ".github/workflows/suche.yml"

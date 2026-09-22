@@ -37,7 +37,7 @@
   .frow{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:flex-end}
   .f{display:flex;flex-direction:column;gap:4px;min-width:0}
   .f label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
-  .f input[type=number],.f select{font:inherit;font-size:14px;padding:6px 8px;width:92px;
+  .f input[type=number],.f input#plz,.f select{font:inherit;font-size:14px;padding:6px 8px;width:92px;
       border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)}
   .f select{width:auto;min-width:130px;max-width:200px}
   .f.wide{flex:1 1 200px}
@@ -231,7 +231,8 @@
     <div class="f"><label for="umkreis">max. km</label>
       <input type="number" id="umkreis" step="0.5" min="0.5" placeholder="km"
              title="Luftlinie. Ein ~ vor der Entfernung heißt: Position geschätzt."></div>
-    <span class="tipp">oder in der Karte klicken</span>
+    <span class="tipp">oder in der Karte klicken · ohne Radius zunächst 3 km</span>
+    <span id="umkreishinweis" class="muted" role="status" aria-live="polite"></span>
   </div>
 
   <div class="frow">
@@ -264,6 +265,7 @@
 </div>
 
 <div id="lagehinweis" class="lagehinweis" hidden></div>
+<div id="kartenwerkzeuge" hidden><button type="button" id="suchgebiet">Suchgebiet anzeigen</button></div>
 <div id="karte" hidden></div>
 <div id="kartehinweis" class="muted" hidden></div>
 
@@ -314,7 +316,7 @@ function filterLesen(){
     pmax:+el("pmax").value||null, qmin:+el("qmin").value||null,
     rmin:+el("rmin").value||null, rmax:+el("rmax").value||null,
     smin:+el("smin").value||null, suche:el("suche").value.trim().toLowerCase(),
-    mitte:el("mitte").value, umkreis:+el("umkreis").value||null,
+    mitte:el("mitte").value, umkreis:Math.max(0,+el("umkreis").value)||null,
     plz:el("plz").value.trim(), karte:KARTE_AN, klick:KLICK_MITTE,
     bezirke:[...document.querySelectorAll('#bezirke .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
     quellen:[...document.querySelectorAll('#quellen .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
@@ -412,7 +414,7 @@ function passt(l, f, hatMitte){
 // bewusst gesetzte Angabe.
 function mittelpunkt(f){
   if(f.klick) return f.klick;
-  if(f.plz && /^\d{5}$/.test(f.plz) && PLZ_POS[f.plz]) return PLZ_POS[f.plz];
+  if(f.plz) return /^\d{5}$/.test(f.plz) ? PLZ_POS[f.plz] || null : null;
   if(f.mitte) return f.mitte.split(",").map(Number);
   return null;
 }
@@ -420,6 +422,13 @@ function mittelpunkt(f){
 function zeichnen(){
   const f = filterLesen();
   const mitte = mittelpunkt(f);
+  const status = el("umkreishinweis");
+  const unbekannt = f.plz && !mitte;
+  el("plz").setAttribute("aria-invalid", !!unbekannt);
+  status.textContent = unbekannt
+    ? (f.plz.length === 5 ? "Diese PLZ ist nicht hinterlegt. Bitte einen Ort oder Kartenpunkt wählen; kein Umkreisfilter aktiv." : "Bitte eine vollständige Frankfurter PLZ eingeben; kein Umkreisfilter aktiv.")
+    : mitte ? `${f.plz ? "PLZ " + f.plz : f.klick ? "Kartenpunkt" : el("mitte").selectedOptions[0].textContent} · ${f.umkreis ? num(f.umkreis,1) + " km Luftlinie" : "ohne Radiusbegrenzung"}`
+    : f.umkreis ? "Bitte PLZ, Ort oder Kartenpunkt als Mittelpunkt wählen." : "";
   for(const l of ALLE){
     l._dist = (mitte && l.lat!=null && l.lng!=null)
       ? distanz(mitte[0],mitte[1],l.lat,l.lng) : null;
@@ -483,6 +492,8 @@ function zeichnen(){
     tb.appendChild(tr);
   }
   el("karte").hidden = !KARTE_AN;
+  el("kartenwerkzeuge").hidden = !KARTE_AN;
+  el("ansicht").textContent = KARTE_AN ? "Liste" : "Karte";
   el("kartehinweis").hidden = !KARTE_AN;
   el("tabelle").hidden = KARTE_AN;
   if(KARTE_AN){
@@ -498,7 +509,8 @@ function zeichnen(){
   speichern();
 }
 
-let MAP=null, MARKER=null, KREIS=null, KARTE_AN=false, KLICK_MITTE=null;
+let MAP=null, MARKER=null, KREIS=null, MITTENMARKER=null, KARTE_AN=false, KLICK_MITTE=null;
+let KARTENBEREICH=null;
 
 function karteAufbauen(){
   if(MAP) return MAP;
@@ -507,6 +519,7 @@ function karteAufbauen(){
     maxZoom: 18, attribution: '&copy; OpenStreetMap'
   }).addTo(MAP);
   MARKER = L.layerGroup().addTo(MAP);
+  L.control.scale({imperial:false}).addTo(MAP);
   // Klick auf die Karte setzt den Suchmittelpunkt. Das ist der ganze Sinn
   // der Ansicht: zeigen statt tippen.
   MAP.on("click", e => {
@@ -521,6 +534,7 @@ function karteAufbauen(){
 
 function karteZeichnen(liste, mitte, radius){
   const map = karteAufbauen();
+  map.invalidateSize();
   MARKER.clearLayers();
 
   const mitPos = liste.filter(l => l.lat!=null && l.lng!=null);
@@ -543,12 +557,22 @@ function karteZeichnen(liste, mitte, radius){
   }
 
   if(KREIS){ KREIS.remove(); KREIS = null; }
-  if(mitte && radius){
-    KREIS = L.circle(mitte, {radius: radius*1000, color:"var(--accent)",
-                             weight:2, fillOpacity:.06}).addTo(map);
-    map.fitBounds(KREIS.getBounds(), {padding:[20,20]});
-  } else if(mitPos.length){
-    map.fitBounds(L.latLngBounds(mitPos.map(l=>[l.lat,l.lng])), {padding:[25,25]});
+  if(MITTENMARKER){ MITTENMARKER.remove(); MITTENMARKER = null; }
+  if(mitte){
+    MITTENMARKER = L.marker(mitte, {title:"Suchmittelpunkt", zIndexOffset:1000,
+      icon:L.divIcon({className:"", html:'<span style="display:block;width:20px;height:20px;background:var(--accent);border:3px solid white;border-radius:50%;box-shadow:0 0 0 3px var(--accent)"></span>', iconSize:[20,20],iconAnchor:[10,10]})
+    }).bindTooltip("Suchmittelpunkt").addTo(map);
+    if(radius > 0) KREIS = L.circle(mitte, {radius:radius*1000,
+      color:"var(--accent)",weight:2,fillOpacity:.08,interactive:false}).addTo(map);
+  }
+  // Preis-/Textfilter sollen einen selbst verschobenen Kartenausschnitt behalten.
+  const bereich = JSON.stringify([mitte, radius]);
+  if(KARTENBEREICH !== bereich){
+    if(KREIS) map.fitBounds(KREIS.getBounds(), {padding:[30,30],maxZoom:15,animate:false});
+    else if(mitte) map.setView(mitte, 14, {animate:false});
+    else if(mitPos.length) map.fitBounds(L.latLngBounds(mitPos.map(l=>[l.lat,l.lng])), {padding:[25,25],maxZoom:14,animate:false});
+    else map.setView([50.1136,8.6797], 12);
+    KARTENBEREICH = bereich;
   }
 
   const ohne = liste.length - mitPos.length;
@@ -660,13 +684,20 @@ async function start(){
   }));
 
   zaehlerAuffrischen();
-  el("filters").addEventListener("input", () => {
-    // Eine getippte PLZ oder eine gewaehlte Marke hebt den Kartenklick auf.
-    if(document.activeElement===el("plz") || document.activeElement===el("mitte"))
+  el("filters").addEventListener("submit", e => e.preventDefault());
+  el("filters").addEventListener("input", e => {
+    if(e.target.id === "plz" || e.target.id === "mitte"){
       KLICK_MITTE = null;
+      if(e.target.id === "plz") el("mitte").value = "";
+      else el("plz").value = "";
+      if(mittelpunkt(filterLesen())){
+        if(!el("umkreis").value) el("umkreis").value = 3;
+        KARTE_AN = true;
+      }
+    }
     zeichnen();
   });
-  el("mitte").addEventListener("change", () => { KLICK_MITTE=null; zeichnen(); });
+  el("suchgebiet").onclick = () => { KARTENBEREICH=null; zeichnen(); };
   el("ansicht").onclick = () => {
     KARTE_AN = !KARTE_AN;
     el("ansicht").textContent = KARTE_AN ? "Liste" : "Karte";
@@ -678,7 +709,7 @@ async function start(){
   };
   el("reset").onclick = () => {
     try{ localStorage.removeItem(LS); }catch(e){}
-    el("filters").reset();
+    HTMLFormElement.prototype.reset.call(el("filters"));
     KLICK_MITTE = null;
     document.querySelectorAll('.chip').forEach(c=>c.setAttribute("aria-pressed","false"));
     zeichnen();
