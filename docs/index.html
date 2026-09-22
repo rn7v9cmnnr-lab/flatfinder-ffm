@@ -25,7 +25,7 @@
   *{box-sizing:border-box}
   body{margin:0;padding:0 16px 80px;background:var(--bg);color:var(--fg);
        font:15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;}
-  .wrap{max-width:1000px;margin:0 auto}
+  .wrap{max-width:1440px;margin:0 auto}
   header{padding:26px 0 16px;border-bottom:1px solid var(--line);margin-bottom:18px}
   h1{margin:0;font-size:21px;letter-spacing:-.01em}
   .sub{color:var(--muted);font-size:12.5px;margin-top:5px}
@@ -65,6 +65,31 @@
          border:1px solid var(--line);background:var(--bg);color:var(--fg)}
   button:hover{border-color:var(--accent);color:var(--accent)}
   .reset{font-size:12.5px;color:var(--muted);background:none;border:none;padding:4px;text-decoration:underline}
+
+  .filterkopf{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:22px}
+  .filterkopf h2{font-size:19px;margin:0}
+  .filterkopf p{margin:3px 0 0;color:var(--muted);font-size:13px}
+  .filtergruppen{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:24px}
+  .filtergruppen fieldset{min-width:0;margin:0;padding:0 20px 0 0;border:0;border-right:1px solid var(--line)}
+  .filtergruppen fieldset:last-child{border:0;padding-right:0}
+  .filtergruppen legend{font-weight:650;font-size:15px;margin-bottom:10px;padding:0}
+  .filtergruppen legend span{display:inline-grid;place-items:center;width:24px;height:24px;margin-right:5px;border-radius:8px;background:color-mix(in srgb,var(--accent) 12%,var(--card));color:var(--accent);font-size:12px}
+  .feldhilfe{font-size:12px;color:var(--muted);margin:0 0 14px;line-height:1.5}
+  .filtergruppen .frow{gap:12px;margin-bottom:14px}
+  .filtergruppen .f{flex:1 1 90px}
+  .filtergruppen .wohnungswerte{display:grid;grid-template-columns:1fr 1fr}
+  .filtergruppen .f input,.filtergruppen .f select{width:100%;max-width:none;min-width:0;min-height:38px}
+  .filtergruppen .f label{font-size:11px;letter-spacing:.02em}
+  .anbieterinfo{font-size:12px;color:var(--muted);line-height:1.5;margin:12px 0}
+  .anbieterinfo p{margin:8px 0}
+  .anbieterinfo .kind{color:var(--fg);font-weight:600}
+  .feinfilter{border-top:1px solid var(--line);padding-top:14px;margin-top:20px}
+  .feinfilter summary{cursor:pointer;font-size:13px;font-weight:600}
+  .feinfilter .frow{margin:14px 0}
+  .feinfilter .feldhilfe{margin-bottom:0}
+  #umkreishinweis{font-size:12px;flex-basis:100%}
+  @media(max-width:1000px){.filtergruppen{grid-template-columns:1fr 1fr}.filtergruppen fieldset:nth-child(2){border:0;padding:0}.filtergruppen fieldset:last-child{grid-column:1/-1;border-top:1px solid var(--line);padding-top:16px}}
+  @media(max-width:620px){.filtergruppen{grid-template-columns:1fr}.filtergruppen fieldset{border:0;border-bottom:1px solid var(--line);padding:0 0 18px}.filtergruppen fieldset:last-child{border-top:0;padding-top:0}.filterkopf{align-items:flex-start}.filterkopf .reset{max-width:100px}.filters{padding:16px}}
 
   /* --- Liste --- */
   .bar{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin:0 0 12px}
@@ -120,7 +145,20 @@
            color:var(--muted);margin:-4px 0 14px}
   .preis b{font-variant-numeric:tabular-nums}
   .viewbtn{margin-left:12px;font-size:13px;padding:4px 12px}
-  #karte{height:460px;border:1px solid var(--line);border-radius:12px;
+  .ergebnisse{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(360px,1fr);gap:22px;align-items:start}
+  .kartenbereich{grid-column:2;grid-row:1;position:sticky;top:16px;min-width:0}
+  .listenbereich{grid-column:1;grid-row:1;min-width:0;overflow-x:auto}
+  #kartenwerkzeuge{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+  .ergebnisse.nur-liste{grid-template-columns:minmax(0,1fr)}
+  .ergebnisse.nur-liste .kartenbereich{display:none}
+  @media(max-width:1050px){.ergebnisse .hide-s{display:none}}
+  @media(max-width:760px){
+    .ergebnisse{display:flex;flex-direction:column}
+    .kartenbereich{position:static;width:100%}
+    .listenbereich{width:100%}
+    #karte{height:360px!important}
+  }
+  #karte{height:560px;border:1px solid var(--line);border-radius:12px;
          margin-bottom:10px;background:var(--card);z-index:0}
   #kartehinweis{font-size:12.5px;margin-bottom:16px}
   .leaflet-container{background:var(--card);font:inherit}
@@ -201,22 +239,12 @@
 </header>
 
 <form class="filters" id="filters" onsubmit="return false">
+  <div class="filterkopf"><div><h2>Deine Wohnungssuche</h2><p>Ein Suchgebiet. Dieselben Treffer in Liste und Karte.</p></div><button type="button" class="reset" id="reset">Alle Filter zurücksetzen</button></div>
+  <div class="filtergruppen">
+  <fieldset><legend><span>1</span> Suchgebiet</legend><p class="feldhilfe">Frankfurter PLZ oder Ort wählen und den Radius festlegen.</p>
   <div class="frow">
-    <div class="f"><label for="pmax">Kaltmiete bis</label>
-      <input type="number" id="pmax" step="50" placeholder="€"></div>
-    <div class="f"><label for="qmin">Fläche ab</label>
-      <input type="number" id="qmin" step="5" placeholder="m²"></div>
-    <div class="f"><label for="rmin">Zimmer ab</label>
-      <input type="number" id="rmin" step="1" min="1" placeholder="–"></div>
-    <div class="f"><label for="rmax">Zimmer bis</label>
-      <input type="number" id="rmax" step="1" min="1" placeholder="–"></div>
-    <div class="f"><label for="smin">Score ab</label>
-      <input type="number" id="smin" step="5" min="0" max="100" placeholder="0"></div>
-  </div>
 
-  <div class="frow gruppe">
-    <span class="gruppenlabel">Umkreis</span>
-    <div class="f"><label for="plz">PLZ</label>
+    <div class="f"><label for="plz">Postleitzahl</label>
       <input type="text" id="plz" inputmode="numeric" maxlength="5" placeholder="60311"></div>
     <div class="f"><label for="mitte">oder Ort</label>
       <select id="mitte">
@@ -228,11 +256,29 @@
         <option value="50.1250,8.6800">Nordend</option>
         <option value="50.1020,8.6830">Sachsenhausen</option>
       </select></div>
-    <div class="f"><label for="umkreis">max. km</label>
+    <div class="f"><label for="umkreis">Radius (km)</label>
       <input type="number" id="umkreis" step="0.5" min="0.5" placeholder="km"
              title="Luftlinie. Ein ~ vor der Entfernung heißt: Position geschätzt."></div>
     <span class="tipp">oder „Mittelpunkt setzen“ in der Karte · zunächst 3 km</span>
     <span id="umkreishinweis" class="muted" role="status" aria-live="polite"></span>
+  </div>
+
+  <details class="ausklapp" id="bezirkeBox">
+    <summary><span>Stadtteil</span><span class="zaehler" id="bezirkeZaehler"></span></summary>
+    <div class="chips" id="bezirke"></div>
+  </details>
+  </fieldset>
+  <fieldset><legend><span>2</span> Wohnung</legend><p class="feldhilfe">Budget, Größe und Zimmer nach deinen Wünschen.</p>
+  <div class="frow wohnungswerte">
+    <div class="f"><label for="pmax">Kaltmiete bis</label>
+      <input type="number" id="pmax" step="50" placeholder="€"></div>
+    <div class="f"><label for="qmin">Fläche ab</label>
+      <input type="number" id="qmin" step="5" placeholder="m²"></div>
+    <div class="f"><label for="rmin">Zimmer ab</label>
+      <input type="number" id="rmin" step="1" min="1" placeholder="–"></div>
+    <div class="f"><label for="rmax">Zimmer bis</label>
+      <input type="number" id="rmax" step="1" min="1" placeholder="–"></div>
+
   </div>
 
   <div class="frow">
@@ -240,35 +286,51 @@
       <input type="text" id="suche" placeholder="Balkon, Stadtteil, Straße…"
              style="font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)"></div>
   </div>
-  <details class="ausklapp" id="bezirkeBox">
-    <summary><span>Stadtteil</span><span class="zaehler" id="bezirkeZaehler"></span></summary>
-    <div class="chips" id="bezirke"></div>
-  </details>
-  <div class="frow" style="margin-top:12px">
-    <div class="f"><label>Quelle</label><div class="chips" id="quellen"></div></div>
-    <div class="f"><label>Sonstiges</label><div class="chips">
-      <button type="button" class="chip" id="chipNeu" aria-pressed="false">nur neue</button>
-      <button type="button" class="chip" id="chipWeg" aria-pressed="false">verschwundene zeigen</button>
-      <button type="button" class="chip" id="chipOhneLage" aria-pressed="false"
-              title="Beim Umkreisfilter auch Angebote zeigen, deren Lage unbekannt ist">ohne bekannte Lage</button>
-    </div></div>
-    <button type="button" class="reset" id="reset" style="margin-left:auto">Filter zurücksetzen</button>
+<p class="feldhilfe">Nur Warmmiete bekannt? Der Preisfilter erlaubt dafür 35 % Aufschlag.</p>
+  </fieldset>
+  <fieldset><legend><span>3</span> Anbieter &amp; Quellen</legend>
+    <div class="f"><label for="anbieter">Anbieterart</label><select id="anbieter">
+      <option value="">Alle Anbieterarten</option><option value="grossvermieter">Großvermieter</option>
+      <option value="genossenschaft">Genossenschaften</option><option value="portal">Portale · Anbieter ungeklärt</option>
+      <option value="sonstige">Sonstige</option>
+    </select></div>
+    <div id="anbietererklaerung" class="anbieterinfo">
+      <p><span class="kind k-grossvermieter">Großvermieter</span> Wohnungsunternehmen wie Vonovia, NHW und GWH.</p>
+      <p><span class="kind k-genossenschaft">Genossenschaften</span> Vermieten an Mitglieder; häufig sind Genossenschaftsanteile nötig. <span id="coopstand"></span></p>
+      <p><span class="kind k-portal">Portale</span> wg-gesucht und Immowelt vermitteln Anzeigen. Privatperson, Unternehmen oder Makler ist in unseren Daten nicht verlässlich ausgewiesen.</p>
+      <p><b>Private Anbieter:</b> derzeit nicht gesondert erfasst. Bitte im Originalangebot prüfen.</p>
+    </div>
+    <div class="f"><label>Einzelne Quellen · mehrere wählbar</label><div class="chips" id="quellen"></div></div>
+  </fieldset>
   </div>
+  <details class="feinfilter"><summary>Weitere Filter · Bewertung &amp; Aktualität <span id="filterstatus" class="muted"></span></summary>
+    <div class="frow">    <div class="f"><label for="smin">Bewertung ab (0–100)</label>
+      <input type="number" id="smin" step="5" min="0" max="100" placeholder="0"></div>
+    <div class="chips">
+      <button type="button" class="chip" id="chipNeu" aria-pressed="false">Neu in den letzten 24 Stunden</button>
+      <button type="button" class="chip" id="chipWeg" aria-pressed="false">Verschwundene Angebote zeigen</button>
+      <button type="button" class="chip" id="chipOhneLage" aria-pressed="false">Auch ohne bekannte Lage</button>
+    </div></div><p class="feldhilfe">Die Bewertung nutzt die hinterlegten Suchkriterien. 0 zeigt auch Angebote mit niedriger Bewertung. Unbekannte Lagen können außerhalb deines Umkreises liegen.</p>
+  </details>
 </form>
 
 <div class="legende" id="legende"></div>
 
 <div class="bar">
   <b id="anzahl">–</b><span class="muted" id="vonwie"></span>
-  <button type="button" id="ansicht" class="viewbtn">Karte</button>
+  <button type="button" id="ansicht" class="viewbtn">Karte ausblenden</button>
   <span class="muted" style="margin-left:auto" id="quellenstand"></span>
 </div>
 
 <div id="lagehinweis" class="lagehinweis" hidden></div>
-<div id="kartenwerkzeuge" hidden><button type="button" id="suchgebiet">Suchgebiet anzeigen</button> <button type="button" id="mittelpunktSetzen" aria-pressed="false">Mittelpunkt setzen</button></div>
+<div id="ergebnisse" class="ergebnisse">
+<section class="kartenbereich" aria-label="Karte der Wohnungen">
+<div id="kartenwerkzeuge"><button type="button" id="suchgebiet">Suchgebiet anzeigen</button> <button type="button" id="mittelpunktSetzen" aria-pressed="false">Mittelpunkt setzen</button></div>
 <div id="karte" hidden></div>
 <div id="kartehinweis" class="muted" hidden></div>
 
+</section>
+<section class="listenbereich" aria-label="Wohnungsliste">
 <table id="tabelle">
   <thead><tr>
     <th class="thumbcol"></th>
@@ -282,6 +344,8 @@
   <tbody id="zeilen"></tbody>
 </table>
 <div class="empty" id="leer" hidden></div>
+</section>
+</div>
 
 </div>
 
@@ -316,6 +380,7 @@ function filterLesen(){
     pmax:+el("pmax").value||null, qmin:+el("qmin").value||null,
     rmin:+el("rmin").value||null, rmax:+el("rmax").value||null,
     smin:+el("smin").value||null, suche:el("suche").value.trim().toLowerCase(),
+    anbieter:el("anbieter").value,
     mitte:el("mitte").value, umkreis:Math.max(0,+el("umkreis").value)||null,
     plz:el("plz").value.trim(), karte:KARTE_AN, klick:KLICK_MITTE,
     bezirke:[...document.querySelectorAll('#bezirke .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
@@ -327,10 +392,10 @@ function filterLesen(){
 }
 function filterSchreiben(f){
   if(!f) return;
-  for(const k of ["pmax","qmin","rmin","rmax","smin","suche","mitte","umkreis","plz"])
+  for(const k of ["pmax","qmin","rmin","rmax","smin","suche","mitte","umkreis","plz","anbieter"])
     if(f[k]!=null) el(k).value=f[k];
   if(f.klick) KLICK_MITTE = f.klick;
-  if(f.karte) KARTE_AN = f.karte;
+  // Liste und Karte beim Öffnen gemeinsam zeigen, auch bei alten Filterständen.
   el("chipNeu").setAttribute("aria-pressed", !!f.nurNeu);
   el("chipOhneLage").setAttribute("aria-pressed", !!f.ohneLage);
   el("chipWeg").setAttribute("aria-pressed", !!f.zeigWeg);
@@ -345,7 +410,7 @@ function geladen(){
 const ART = {
   grossvermieter: "Großvermieter",
   genossenschaft: "Genossenschaft",
-  portal: "Portal",
+  portal: "Portal · Anbieter ungeklärt",
   sonstige: "Sonstige",
 };
 
@@ -385,6 +450,7 @@ function passt(l, f, hatMitte){
   if(f.rmin && (l.rooms==null || l.rooms < f.rmin)) return false;
   if(f.rmax && (l.rooms==null || l.rooms > f.rmax)) return false;
   if(f.smin && (l.score||0) < f.smin) return false;
+  if(f.anbieter && (l.kind||"sonstige") !== f.anbieter) return false;
   if(f.quellen.length && !f.quellen.includes(l.source)) return false;
   if(f.bezirke.length && !f.bezirke.includes(l.district || l.city || "?")) return false;
   if(f.nurNeu && !istNeu(l)) return false;
@@ -422,6 +488,7 @@ function mittelpunkt(f){
 function zeichnen(){
   const f = filterLesen();
   const mitte = mittelpunkt(f);
+  el("filterstatus").textContent = [f.smin ? `Bewertung ab ${f.smin}` : "", f.nurNeu ? "nur neue" : "", f.zeigWeg ? "inkl. verschwundener" : "", f.ohneLage ? "inkl. unbekannter Lage" : ""].filter(Boolean).join(" · ");
   const status = el("umkreishinweis");
   const unbekannt = f.plz && !mitte;
   el("plz").setAttribute("aria-invalid", !!unbekannt);
@@ -459,7 +526,7 @@ function zeichnen(){
                                  && passt(l, {...f, umkreis:null}, false)).length;
     hinweis.hidden = verdeckt === 0;
     hinweis.textContent = verdeckt
-      ? `${verdeckt} Angebote ohne bekannte Lage sind ausgeblendet — „ohne bekannte Lage“ zeigt sie.`
+      ? `${verdeckt} Angebote ohne bekannte Lage sind ausgeblendet — „Auch ohne bekannte Lage“ unter „Weitere Filter“ zeigt sie.`
       : "";
   } else {
     hinweis.hidden = true;
@@ -491,26 +558,27 @@ function zeichnen(){
       <td class="num"><span class="score ${sc>=85?'s-hi':sc>=60?'s-mid':'s-lo'}">${sc}</span></td>`;
     tb.appendChild(tr);
   }
+  el("ergebnisse").classList.toggle("nur-liste", !KARTE_AN);
   el("karte").hidden = !KARTE_AN;
   el("kartenwerkzeuge").hidden = !KARTE_AN;
-  el("ansicht").textContent = KARTE_AN ? "Liste" : "Karte";
+  el("ansicht").textContent = KARTE_AN ? "Karte ausblenden" : "Karte einblenden";
   el("kartehinweis").hidden = !KARTE_AN;
-  el("tabelle").hidden = KARTE_AN;
+  el("tabelle").hidden = false;
   if(KARTE_AN){
     karteZeichnen(liste, mitte, f.umkreis);
-    setTimeout(()=>MAP && MAP.invalidateSize(), 60);
+
   }
 
   const leer = el("leer");
-  leer.hidden = liste.length > 0 || KARTE_AN;
+  leer.hidden = liste.length > 0;
   leer.textContent = ALLE.length
     ? "Nichts passt zu diesen Filtern. Probier weniger streng — oder „Filter zurücksetzen“."
     : "Noch keine Daten.";
   speichern();
 }
 
-let MAP=null, MARKER=null, KREIS=null, MITTENMARKER=null, KARTE_AN=false, KLICK_MITTE=null;
-let KARTENBEREICH=null, MITTE_SETZEN=false;
+let MAP=null, MARKER=null, KREIS=null, MITTENMARKER=null, KARTE_AN=true, KLICK_MITTE=null;
+let KARTENBEREICH=null, MITTE_SETZEN=false, KARTE_AUSRICHTEN=true;
 
 function mitteSetzenModus(aktiv){
   MITTE_SETZEN=aktiv;
@@ -544,7 +612,7 @@ function karteAufbauen(){
 
 function karteZeichnen(liste, mitte, radius){
   const map = karteAufbauen();
-  map.invalidateSize();
+  map.invalidateSize({pan:false});
   MARKER.clearLayers();
 
   const mitPos = liste.filter(l => l.lat!=null && l.lng!=null);
@@ -577,12 +645,14 @@ function karteZeichnen(liste, mitte, radius){
   }
   // Preis-/Textfilter sollen einen selbst verschobenen Kartenausschnitt behalten.
   const bereich = JSON.stringify([mitte, radius]);
-  if(KARTENBEREICH !== bereich){
+  // Nur bewusste Suchgebietsänderungen dürfen zoomen, niemals Neuzeichnen/Klicks.
+  if(KARTE_AUSRICHTEN){
     if(KREIS) map.fitBounds(KREIS.getBounds(), {padding:[30,30],maxZoom:15,animate:false});
     else if(mitte) map.setView(mitte, 14, {animate:false});
     else if(mitPos.length) map.fitBounds(L.latLngBounds(mitPos.map(l=>[l.lat,l.lng])), {padding:[25,25],maxZoom:14,animate:false});
     else map.setView([50.1136,8.6797], 12);
     KARTENBEREICH = bereich;
+    KARTE_AUSRICHTEN = false;
   }
 
   const ohne = liste.length - mitPos.length;
@@ -659,6 +729,8 @@ async function start(){
   }
   ALLE = d.listings || [];
   PLZ_POS = d.plz || {};
+  const coopAnzahl=ALLE.filter(l=>!l.gone && l.kind==="genossenschaft").length;
+  el("coopstand").textContent=coopAnzahl ? `${coopAnzahl} aktive Angebote.` : "Aktuell keine Angebote erfasst.";
   el("ort").textContent = (d.city||"").replace(" am Main","");
   const alter = Math.round((Date.now()-new Date(d.generated_at).getTime())/6e4);
   el("stand").textContent = alter < 90
@@ -687,7 +759,7 @@ async function start(){
   const arten = [...new Set(ALLE.map(l=>l.kind||"sonstige"))]
     .sort((a,b)=>Object.keys(ART).indexOf(a)-Object.keys(ART).indexOf(b));
   el("legende").replaceChildren(...arten.map(a=>{
-    const n = ALLE.filter(l=>(l.kind||"sonstige")===a).length;
+    const n = ALLE.filter(l=>!l.gone && (l.kind||"sonstige")===a).length;
     const sp=document.createElement("span");
     sp.className="kind k-"+a; sp.textContent=`${ART[a]||a} (${n})`;
     return sp;
@@ -698,6 +770,7 @@ async function start(){
   el("filters").addEventListener("input", e => {
     if(e.target.id === "plz" || e.target.id === "mitte"){
       mitteSetzenModus(false);
+      KARTE_AUSRICHTEN = true;
       KLICK_MITTE = null;
       if(e.target.id === "plz") el("mitte").value = "";
       else el("plz").value = "";
@@ -706,22 +779,24 @@ async function start(){
         KARTE_AN = true;
       }
     }
+    if(e.target.id === "umkreis") KARTE_AUSRICHTEN = true;
     zeichnen();
   });
   el("mittelpunktSetzen").onclick = () => mitteSetzenModus(!MITTE_SETZEN);
-  el("suchgebiet").onclick = () => { KARTENBEREICH=null; zeichnen(); };
+  el("suchgebiet").onclick = () => { KARTE_AUSRICHTEN=true; zeichnen(); };
   el("ansicht").onclick = () => {
     KARTE_AN = !KARTE_AN;
-    el("ansicht").textContent = KARTE_AN ? "Liste" : "Karte";
+    el("ansicht").textContent = KARTE_AN ? "Karte ausblenden" : "Karte einblenden";
     zeichnen();
   };
-  el("ansicht").textContent = KARTE_AN ? "Liste" : "Karte";
+  el("ansicht").textContent = KARTE_AN ? "Karte ausblenden" : "Karte einblenden";
   el("chipNeu").onclick = el("chipWeg").onclick = el("chipOhneLage").onclick = e => {
     e.target.setAttribute("aria-pressed", e.target.getAttribute("aria-pressed")!=="true"); zeichnen();
   };
   el("reset").onclick = () => {
     try{ localStorage.removeItem(LS); }catch(e){}
     HTMLFormElement.prototype.reset.call(el("filters"));
+    KARTE_AUSRICHTEN=true;
     mitteSetzenModus(false);
     KLICK_MITTE = null;
     document.querySelectorAll('.chip').forEach(c=>c.setAttribute("aria-pressed","false"));
