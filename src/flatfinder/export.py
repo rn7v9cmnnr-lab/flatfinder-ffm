@@ -27,6 +27,7 @@ from typing import Any, Dict, List, Optional
 
 from .adapters.base import Adapter, Blocked
 from .adapters.gwh import GwhAdapter
+from .adapters.sparkasse import SparkasseAdapter
 from .adapters.kleinanzeigen import KleinanzeigenAdapter
 from .adapters.ohnemakler import OhneMaklerAdapter
 from .adapters.immowelt import ImmoweltAdapter
@@ -57,6 +58,7 @@ def adapters_for(criteria: Criteria) -> List[Adapter]:
         WgGesuchtAdapter(criteria.city),
         KleinanzeigenAdapter(),
         OhneMaklerAdapter(),
+        SparkasseAdapter(),
         # Braucht einen Browser und faellt bei Bot-Schutz sauber aus
         ImmoweltAdapter(criteria.city),
     ]

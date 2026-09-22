@@ -50,6 +50,32 @@ function merkmalTreffer(l){
   })).map(([k])=>k);
 }
 
+// Only explicit requirements: suitability ("ideal for students") is not a condition.
+function voraussetzungen(l){
+  const text=[l.title,l.description].filter(Boolean).join('. ').normalize('NFKC');
+  const found=[];
+  const add=(label,detail)=>found.push({label,detail});
+  if(l.wbs_required===true)add('WBS nötig','Laut Angebotsdaten ist ein Wohnberechtigungsschein erforderlich. Einzelheiten und Einkommensgrenzen im Originalangebot prüfen.');
+  const rules=[
+    ['WBS nötig',/\b(?:WBS|Wohnberechtigungsschein)\s+(?:ist\s+)?(?:zwingend\s+)?(?:erforderlich|notwendig|Pflicht)|\bnur\s+mit\s+(?:einem\s+)?(?:WBS|Wohnberechtigungsschein)/gi],
+    ['Nur Studierende',/\b(?:nur|ausschließlich)\s+(?:(?:an|für)\s+)?(?:Student(?:en|innen)?|Studierende[n]?)\b|\bImmatrikulationsbescheinigung\s+(?:ist\s+)?erforderlich/gi],
+    ['Genossenschaftsanteile',/\b(?:Genossenschaftsanteile|Pflichtanteile)\s+(?:(?:sind|werden)\s+)?(?:zu\s+zeichnen|erforderlich|notwendig)|\b(?:Erwerb|Zeichnung)\s+von\s+Genossenschaftsanteilen\s+(?:ist\s+)?erforderlich/gi],
+    ['Wohnungstausch',/\b(?:nur|ausschließlich)\s+(?:im\s+)?(?:Tausch|Wohnungstausch)\b|\bTauschwohnung\b/gi],
+    ['Haustiere ausgeschlossen',/\b(?:keine\s+Haustiere|Haustiere\s+(?:sind\s+)?(?:nicht\s+(?:erlaubt|gestattet)|ausgeschlossen))/gi],
+    ['Mindestmietdauer',/\bMindestmiet(?:dauer|zeit)\s*(?::|von)?\s*\d+\s*(?:Monate?[n]?|Jahre?[n]?)/gi]
+  ];
+  for(const [label,regex] of rules){
+    if(found.some(x=>x.label===label)||(label==='WBS nötig'&&l.wbs_required===false))continue;
+    for(const m of text.matchAll(regex)){
+      const before=text.slice(0,m.index);
+      if(/\b(?:kein(?:e[rmns]?)?|nicht|ohne)\s*$/.test(before.toLowerCase()))continue;
+      const detail=text.slice(Math.max(0,m.index-45),Math.min(text.length,m.index+m[0].length+95)).replace(/\s+/g,' ').trim();
+      add(label,'Hinweis im Angebot: „'+detail+'“');break;
+    }
+  }
+  return found;
+}
+
 function passt(l, f, hatMitte){
   if(l.gone) return false;
   if((f.merkmale||[]).some(k=>!merkmalTreffer(l).includes(k))) return false;
@@ -95,5 +121,5 @@ function matchesSaved(listing, search){
   const l={...listing,_dist:center&&listing.lat!=null&&listing.lng!=null?distanz(center[0],center[1],listing.lat,listing.lng):null};
   return passt(l,f,!!center);
 }
-return {distanz,miete,istNeu,ausschlussTreffer,merkmalTreffer,passt,matchesSaved};
+return {voraussetzungen,distanz,miete,istNeu,ausschlussTreffer,merkmalTreffer,passt,matchesSaved};
 });

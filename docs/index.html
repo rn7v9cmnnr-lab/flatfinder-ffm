@@ -332,6 +332,10 @@
   .studio-privacy{border-top:1px solid var(--line);padding-top:18px;font-size:11px;color:var(--muted);margin-top:20px}.studio-privacy button{font-size:11px;background:none;border:0;text-decoration:underline;padding:0;margin-left:8px}.studio-status{font-size:13px;color:var(--accent)}
   @media(max-width:900px){.studio-layout{grid-template-columns:1fr}.studio-intro{align-items:flex-start;flex-direction:column}.studio-preview{min-width:0}}
   @media(max-width:620px){.studio-card{padding:18px}.app-tabs button{font-size:12px;padding:12px 9px}.profil-grid{grid-template-columns:1fr}.suche-speichern input{flex-basis:100%}.studio-intro{margin:20px 0}.studio-actions{align-items:flex-start;flex-direction:column}}
+  .voraussetzungen{display:inline-block;vertical-align:top;margin:4px 5px 0 0;max-width:100%}
+  .voraussetzung{font-size:10.5px;font-weight:400;line-height:1.5;padding:2px 6px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--muted);cursor:help}
+  .voraussetzung:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .voraussetzung-info{display:block;max-width:320px;font-size:11px;color:var(--muted);line-height:1.5;padding:7px 0;white-space:normal;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -413,7 +417,7 @@
 <div class="suche-speichern"><div><b>Diese Suche merken</b><small>Filter übernehmen und einen Suchauftrag vorbereiten.</small></div><label class="sr-only" for="suchname">Name der Suche</label><input id="suchname" maxlength="60" placeholder="Zum Beispiel: Zuhause im Nordend"><button type="button" id="suche-speichern">Suche speichern →</button></div>
 </form>
 
-<details class="weitere-quellen"><summary>Weitere Anbieter &amp; Genossenschaften · 11 direkte Zugänge</summary><p>Diese Seiten werden nicht automatisch in die Trefferliste übernommen. Viele vergeben Wohnungen über Bewerbungen oder Interessentenlisten. Stand der Prüfung: 22.09.2026.</p><ul><li><a href="https://www.immobilienscout24.de/Suche/de/hessen/frankfurt-am-main/wohnung-mieten" target="_blank" rel="noopener">ImmoScout24 ↗</a><small>Portal · automatischer Zugriff durch Roboterprüfung gesperrt</small></li><li><a href="https://www.abg.de/mieten/faire-wohnungsvergabe/interessentenformular/" target="_blank" rel="noopener">ABG Frankfurt Holding ↗</a><small>Wohnungsunternehmen · Interessentenliste</small></li><li><a href="https://www.vbs-frankfurt.de/wohnen/" target="_blank" rel="noopener">VBS Frankfurt eG ↗</a><small>Genossenschaft · Angebote über ImmoScout24</small></li><li><a href="https://www.bwv-frankfurt.de/angebote/" target="_blank" rel="noopener">Bau- und Wohnungsverein Frankfurt eG ↗</a><small>Genossenschaft · zuletzt nur Stellplätze</small></li><li><a href="https://www.wbg-ffm.de/mietinteressenten/" target="_blank" rel="noopener">Wohnungsbaugenossenschaft Frankfurt eG ↗</a><small>Genossenschaft · Informationen für Mietinteressenten</small></li><li><a href="https://fesv.de/" target="_blank" rel="noopener">Frankfurter Eisenbahn-Siedlungsverein eG ↗</a><small>Genossenschaft · Bestände und Kontakt</small></li><li><a href="https://fwg-eg.de/" target="_blank" rel="noopener">Frankfurter Wohnungs-Genossenschaft eG ↗</a><small>Genossenschaft · direkt nach freien Wohnungen fragen</small></li><li><a href="https://bg-bergen-enkheim.de/" target="_blank" rel="noopener">Baugenossenschaft Bergen-Enkheim eG ↗</a><small>Genossenschaft · Kontakt und Sprechzeiten</small></li><li><a href="https://www.juba-wohnen.de/bewerberbogen/" target="_blank" rel="noopener">JuBa ↗</a><small>Wohnungsunternehmen · Bewerberbogen</small></li><li><a href="https://www.gsw-ffm.de/de/mieten/" target="_blank" rel="noopener">GSW Frankfurt ↗</a><small>Wohnungsunternehmen · öffentliche Angebote, zuletzt außerhalb Frankfurts</small></li><li><a href="https://www.sahle-wohnen.de/immobilien/" target="_blank" rel="noopener">Sahle Wohnen ↗</a><small>Wohnungsunternehmen · bundesweite Suche, zuletzt keine Frankfurt-Treffer</small></li></ul></details>
+<details class="weitere-quellen"><summary>Weitere Anbieter &amp; Genossenschaften · 18 direkte Zugänge</summary><p>Diese Seiten werden nicht automatisch in die Trefferliste übernommen. Viele vergeben Wohnungen über Bewerbungen oder Interessentenlisten. Stand der Prüfung: 22.09.2026.</p><ul><li><a href="https://www.immobilienscout24.de/Suche/de/hessen/frankfurt-am-main/wohnung-mieten" target="_blank" rel="noopener">ImmoScout24 ↗</a><small>Portal · automatischer Zugriff durch Roboterprüfung gesperrt</small></li><li><a href="https://www.abg.de/mieten/faire-wohnungsvergabe/interessentenformular/" target="_blank" rel="noopener">ABG Frankfurt Holding ↗</a><small>Wohnungsunternehmen · Interessentenliste</small></li><li><a href="https://www.vbs-frankfurt.de/wohnen/" target="_blank" rel="noopener">VBS Frankfurt eG ↗</a><small>Genossenschaft · Angebote über ImmoScout24</small></li><li><a href="https://www.bwv-frankfurt.de/angebote/" target="_blank" rel="noopener">Beamten-Wohnungs-Verein Frankfurt eG ↗</a><small>Genossenschaft · zuletzt nur Stellplätze</small></li><li><a href="https://www.wbg-ffm.de/mietinteressenten/" target="_blank" rel="noopener">Wohnungsbaugenossenschaft Frankfurt eG ↗</a><small>Genossenschaft · Informationen für Mietinteressenten</small></li><li><a href="https://fesv.de/" target="_blank" rel="noopener">Frankfurter Eisenbahn-Siedlungsverein eG ↗</a><small>Genossenschaft · Bestände und Kontakt</small></li><li><a href="https://fwg-eg.de/" target="_blank" rel="noopener">Frankfurter Wohnungs-Genossenschaft eG ↗</a><small>Genossenschaft · direkt nach freien Wohnungen fragen</small></li><li><a href="https://bg-bergen-enkheim.de/" target="_blank" rel="noopener">Baugenossenschaft Bergen-Enkheim eG ↗</a><small>Genossenschaft · Kontakt und Sprechzeiten</small></li><li><a href="https://www.juba-wohnen.de/bewerberbogen/" target="_blank" rel="noopener">JuBa ↗</a><small>Genossenschaft · Bewerberbogen</small></li><li><a href="https://www.gsw-ffm.de/de/mieten/" target="_blank" rel="noopener">GSW Frankfurt ↗</a><small>Wohnungsunternehmen · öffentliche Angebote, zuletzt außerhalb Frankfurts</small></li><li><a href="https://www.sahle-wohnen.de/immobilien/" target="_blank" rel="noopener">Sahle Wohnen ↗</a><small>Wohnungsunternehmen · bundesweite Suche, zuletzt keine Frankfurt-Treffer</small></li><li><a href="https://www.heimatfriede.de/" target="_blank" rel="noopener">Wohnbau-Genossenschaft Heimatfriede eG ↗</a><small>Genossenschaft · Kontakt und Informationen</small></li><li><a href="https://www.gwh-frankfurt.de/" target="_blank" rel="noopener">Genossenschaft der Heimatvertriebenen ↗</a><small>Genossenschaft · eigene Seite derzeit mit Zugriffssperre; nicht GWH GmbH</small></li><li><a href="https://www.polizeisiedlung.de/" target="_blank" rel="noopener">Polizeisiedlung Frankfurt eG ↗</a><small>Genossenschaft · Kontakt und Informationen</small></li><li><a href="https://www.bauvereinhoechst.de/mieter-und-genossenschafts-mitglied-werden.html" target="_blank" rel="noopener">Bauverein Höchst eG ↗</a><small>Genossenschaft · Bewerbung und Mitgliedschaft</small></li><li><a href="https://www.kooperation-frankfurt.de/kooperationspartner/gsb-ffm" target="_blank" rel="noopener">Straßenbahner-Baugenossenschaft Frankfurt eG ↗</a><small>Genossenschaft · Kontakt über die Kooperation</small></li><li><a href="https://sonara-frankfurt.de/" target="_blank" rel="noopener">sonara eG ↗</a><small>Gemeinschaftliches Wohnprojekt in Höchst · keine freien Wohnungen bestätigt</small></li><li><a href="https://www.meinestadt.de/frankfurt-am-main/immobilien/wohnungen" target="_blank" rel="noopener">meinestadt.de ↗</a><small>Portal · Überschneidung mit Immowelt; automatischer Zugriff gesperrt</small></li></ul><p>Verzeichnis: 13 nachgewiesene Frankfurter Wohnungsgenossenschaften einschließlich sonara; keine amtliche Vollzählung. <a href="https://www.kooperation-frankfurt.de/kooperationspartner" target="_blank" rel="noopener">Kooperation Frankfurt ↗</a></p></details>
 <div class="legendenzeile" aria-label="Legende der Anbieterarten">
 <div class="legende" id="legende"></div>
 <details class="legendendetails"><summary>Anbieterarten erklärt</summary>
@@ -535,7 +539,8 @@ const QUELLEN={
   vonovia:["Vonovia","Wohnungsunternehmen"],nhw:["NHW · Nassauische Heimstätte","Wohnungsunternehmen"],
   gwh:["GWH","Wohnungsunternehmen"],wggesucht:["WG-Gesucht.de","Immobilienportal"],immowelt:["Immowelt","Immobilienportal"],
   immoscout:["ImmoScout24","Derzeit blockiert · keine Suche"],kleinanzeigen:["Kleinanzeigen","Immobilienportal"],
-  ohnemakler:["ohne-makler.net","Provisionsfreie Angebote · Portal"]
+  ohnemakler:["ohne-makler.net","Provisionsfreie Angebote · Portal"],
+  sparkasse:["Sparkassen-Immobilien","Sparkassenangebote · Frankfurt + 10 km"]
 };
 function quellenName(key){return QUELLEN[key]?.[0]||key;}
 function quellenAufbauen(gespeichert){
@@ -630,7 +635,7 @@ function zeichnen(){
   tb.replaceChildren();
   for(const l of liste){
     const tr = document.createElement("tr");
-    tr.onclick = () => angebotWaehlen(l);
+    tr.onclick = (e) => {if(!e.target.closest(".voraussetzungen"))angebotWaehlen(l);};
     tr.id = "angebot-" + encodeURIComponent(l.key);
     ZEILEN.set(l.key,tr);
     const sc = l.score||0;
@@ -645,6 +650,7 @@ function zeichnen(){
         <div class="title"><button type="button" class="listing-toggle" aria-expanded="false" aria-controls="details-${esc(encodeURIComponent(l.key))}">${esc(l.title)}</button>${istNeu(l)?'<span class="neu">neu</span>':''}${l.gone?'<span class="weg">weg</span>':''}</div>
         <div class="meta">${l.rooms?num(l.rooms)+" Zimmer · ":""}${l.sqm?num(l.sqm)+" m² · ":""}${esc(l.zip||"")} ${esc(l.district||l.city||"")}</div>
         <div class="meta"><span class="kind k-${esc(art)}">${esc(ART[art]||art)}</span><span class="src">${esc(quellenName(l.source))}</span></div>
+        ${voraussetzungenHtml(l)}
       </td>
       <td class="num preis ${m.warm?'warmonly':''}"><b>${eur(m.wert)}</b><small>${m.art}</small></td>
       <td class="num hide-s">${num(l.sqm)}</td>
@@ -652,6 +658,10 @@ function zeichnen(){
       <td class="num hide-s dist" title="${l.position_approx?'Position über den Stadtteil oder die PLZ geschätzt':''}">${
         l._dist!=null ? (l.position_approx?"~":"")+num(l._dist,1)+" km" : "–"}</td>
       <td class="num"><span class="score ${sc>=85?'s-hi':sc>=60?'s-mid':'s-lo'}">${sc}</span></td>`;
+    tr.querySelectorAll('.voraussetzung').forEach(button=>button.onclick=()=>{
+      const panel=button.parentElement.querySelector('.voraussetzung-info'),open=button.getAttribute('aria-expanded')==='true';
+      button.setAttribute('aria-expanded',String(!open));panel.hidden=open;
+    });
     tb.appendChild(tr);
   }
   el("ergebnisse").classList.toggle("nur-liste", !KARTE_AN);
@@ -819,6 +829,10 @@ function auswahlZeichnen(){
     el("karte").scrollIntoView({block:"center",behavior:"auto"});
   };
   row.after(detail);
+}
+
+function voraussetzungenHtml(l){
+  return FFSearch.voraussetzungen(l).map((r,i)=>`<span class="voraussetzungen"><button type="button" class="voraussetzung" aria-expanded="false" aria-controls="voraussetzung-${esc(encodeURIComponent(l.key))}-${i}" title="${esc(r.detail)}">ⓘ ${esc(r.label)}</button><span class="voraussetzung-info" id="voraussetzung-${esc(encodeURIComponent(l.key))}-${i}" hidden>${esc(r.detail)}</span></span>`).join('');
 }
 
 function leerBild(){

@@ -45,3 +45,5 @@ will: Eintrag ergänzen, nicht überschreiben.
 - 2026-09-22: Kleinanzeigen und ohne-makler mit echten HTML-Fixtures ergänzen; unbekannte Mietart nicht raten. Genossenschaften mit Bewerbungszugang separat verlinken, nicht als automatisch erfasste Treffer ausgeben.
 
 - 2026-09-22: Benachrichtigungs-/Bewerbungsstudio zunächst als lokale Schablone mit gespeicherten Suchen und echter Treffer-/Textvorschau; Gmail als geplanter Erstkanal. Kein aktiver Versand ohne private Konfiguration. Suchlogik zwischen Suche und Vorschau teilen.
+
+- 2026-09-22: Voraussetzungen nur aus expliziten Angebotsangaben dezent markieren. Reddit ausschließlich zur Quellenentdeckung. Bei Sparkasse nur eigene Mietangebote übernehmen, keine Immowelt-Kooperationskarten; Umland mit tatsächlichem Ort kennzeichnen.
