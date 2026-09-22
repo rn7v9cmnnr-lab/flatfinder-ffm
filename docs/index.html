@@ -177,6 +177,23 @@
   .dist{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
   .empty{padding:56px 16px;text-align:center;color:var(--muted)}
 
+  .listing-toggle{border:0;background:none;padding:0;color:inherit;text-align:left;font:inherit;font-weight:600;cursor:pointer}
+  .listing-toggle::before{content:"▸";display:inline-block;width:16px;color:var(--accent)}
+  .listing-toggle[aria-expanded="true"]::before{content:"▾"}
+  .listing-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+  tr.ausgewaehlt td{background:color-mix(in srgb,var(--accent) 8%,var(--card))}
+  tr.ausgewaehlt .title{font-size:15px}
+  tr.listing-details{cursor:default}
+  tr.listing-details td{padding:0 12px 18px;background:var(--card)}
+  .inline-details{border-left:3px solid var(--accent);padding:16px;border-radius:0 0 10px 10px;overflow-wrap:anywhere}
+  .inline-details .facts{margin:12px 0;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .inline-details .detail-image{width:100%;max-height:240px;object-fit:contain;border-radius:8px;background:var(--bg)}
+  .inline-details .why{font-size:13px;margin:12px 0}
+  .inline-details .lage{font-size:13px;color:var(--muted)}
+  .inline-details .d-actions{padding:0;flex-wrap:wrap}
+  .marker.selected{transform:scale(1.8);opacity:1;box-shadow:0 0 0 3px var(--accent),0 2px 8px #3338}
+  #auswahlhinweis{font-size:13px;margin:8px 0;padding:8px 10px;border-left:3px solid var(--accent);background:var(--card)}
+
   /* --- Detail --- */
   dialog{border:none;border-radius:14px;padding:0;background:var(--card);color:var(--fg);
          max-width:560px;width:calc(100% - 32px);box-shadow:0 12px 40px rgba(0,0,0,.25)}
@@ -326,6 +343,7 @@
 <div id="ergebnisse" class="ergebnisse">
 <section class="kartenbereich" aria-label="Karte der Wohnungen">
 <div id="kartenwerkzeuge"><button type="button" id="suchgebiet">Suchgebiet anzeigen</button> <button type="button" id="mittelpunktSetzen" aria-pressed="false">Mittelpunkt setzen</button></div>
+<div id="auswahlhinweis" role="status" aria-live="polite" hidden></div>
 <div id="karte" hidden></div>
 <div id="kartehinweis" class="muted" hidden></div>
 
@@ -349,19 +367,7 @@
 
 </div>
 
-<dialog id="detail">
-  <button class="d-close" onclick="document.getElementById('detail').close()" aria-label="Schließen">×</button>
-  <div class="d-head"><h2 id="dTitel"></h2></div>
-  <img id="dBild" class="d-img" alt="" hidden onerror="this.hidden=true">
-  <div class="d-body">
-    <div class="facts" id="dFacts"></div>
-    <div class="why" id="dWhy"></div>
-    <div class="d-actions">
-      <a id="dLink" class="primary" target="_blank" rel="noopener">Zum Angebot</a>
-      <a id="dKarte" target="_blank" rel="noopener">Auf der Karte</a>
-    </div>
-  </div>
-</dialog>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"
         integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg=="
@@ -532,11 +538,15 @@ function zeichnen(){
     hinweis.hidden = true;
   }
 
+  if(AUSWAHL && !liste.some(l=>l.key===AUSWAHL)) AUSWAHL=null;
   const tb = el("zeilen");
+  ZEILEN.clear();
   tb.replaceChildren();
   for(const l of liste){
     const tr = document.createElement("tr");
-    tr.onclick = () => zeigeDetail(l);
+    tr.onclick = () => angebotWaehlen(l);
+    tr.id = "angebot-" + encodeURIComponent(l.key);
+    ZEILEN.set(l.key,tr);
     const sc = l.score||0;
     const art = l.kind || "sonstige";
     const m = miete(l);
@@ -546,7 +556,7 @@ function zeichnen(){
         ? `<img class="thumb" src="${esc(l.image_url)}" alt="" loading="lazy" onerror="this.replaceWith(leerBild())">`
         : `<div class="thumb leer"></div>`}</td>
       <td>
-        <div class="title">${esc(l.title).slice(0,78)}${istNeu(l)?'<span class="neu">neu</span>':''}${l.gone?'<span class="weg">weg</span>':''}</div>
+        <div class="title"><button type="button" class="listing-toggle" aria-expanded="false" aria-controls="details-${esc(encodeURIComponent(l.key))}">${esc(l.title)}</button>${istNeu(l)?'<span class="neu">neu</span>':''}${l.gone?'<span class="weg">weg</span>':''}</div>
         <div class="meta">${l.rooms?num(l.rooms)+" Zimmer · ":""}${l.sqm?num(l.sqm)+" m² · ":""}${esc(l.zip||"")} ${esc(l.district||l.city||"")}</div>
         <div class="meta"><span class="kind k-${esc(art)}">${esc(ART[art]||art)}</span><span class="src">${esc(l.source)}</span></div>
       </td>
@@ -574,9 +584,12 @@ function zeichnen(){
   leer.textContent = ALLE.length
     ? "Nichts passt zu diesen Filtern. Probier weniger streng — oder „Filter zurücksetzen“."
     : "Noch keine Daten.";
+  auswahlZeichnen();
   speichern();
 }
 
+let AUSWAHL=null;
+const ZEILEN=new Map(), ANGEBOT_MARKER=new Map();
 let MAP=null, MARKER=null, KREIS=null, MITTENMARKER=null, KARTE_AN=true, KLICK_MITTE=null;
 let KARTENBEREICH=null, MITTE_SETZEN=false, KARTE_AUSRICHTEN=true;
 
@@ -614,6 +627,7 @@ function karteZeichnen(liste, mitte, radius){
   const map = karteAufbauen();
   map.invalidateSize({pan:false});
   MARKER.clearLayers();
+  ANGEBOT_MARKER.clear();
 
   const mitPos = liste.filter(l => l.lat!=null && l.lng!=null);
   for(const l of mitPos){
@@ -623,15 +637,12 @@ function karteZeichnen(liste, mitte, radius){
       html: `<div class="marker k-${art}${l.position_approx?" approx":""}"></div>`,
       iconSize: [13,13], iconAnchor: [6,6],
     });
-    const m = L.marker([l.lat, l.lng], {icon}).addTo(MARKER);
-    const p = miete(l);
-    m.bindPopup(
-      `<b>${esc(l.title).slice(0,70)}</b>`
-      + `${l.rooms?num(l.rooms)+" Zi · ":""}${l.sqm?num(l.sqm)+" m² · ":""}`
-      + `${eur(p.wert)} ${p.art}<br>`
-      + `<span class="kind k-${art}">${esc(ART[art]||art)}</span> · ${esc(l.source)}<br>`
-      + `<a href="${esc(l.url)}" target="_blank" rel="noopener">Zum Angebot →</a>`
-    );
+    const m = L.marker([l.lat, l.lng], {icon, title:l.title, bubblingMouseEvents:false}).addTo(MARKER);
+    ANGEBOT_MARKER.set(l.key,m);
+    const tooltip=document.createElement("span");
+    tooltip.textContent=l.title + " · " + eur(miete(l).wert);
+    m.bindTooltip(tooltip);
+    m.on("click", () => angebotWaehlen(l,true));
   }
 
   if(KREIS){ KREIS.remove(); KREIS = null; }
@@ -663,33 +674,64 @@ function karteZeichnen(liste, mitte, radius){
     + ` · gestrichelter Rand = Lage über Stadtteil/PLZ geschätzt`;
 }
 
-function zeigeDetail(l){
-  el("dTitel").textContent = l.title;
-  const bild = el("dBild");
-  bild.hidden = true;
-  if(l.image_url){ bild.src = l.image_url; bild.hidden = false; }
+function angebotWaehlen(l, vonKarte=false){
+  AUSWAHL = AUSWAHL===l.key ? null : l.key;
+  mitteSetzenModus(false);
+  if(AUSWAHL && !KARTE_AN){ KARTE_AN=true; zeichnen(); }
+  else auswahlZeichnen();
+  if(AUSWAHL && l.lat!=null && l.lng!=null){
+    // Nur die gewählte Wohnung fokussieren, niemals auf den Suchradius zurückzoomen.
+    MAP.setView([l.lat,l.lng], Math.max(MAP.getZoom(),l.position_approx ? 13 : 15), {animate:false});
+  }
+  if(vonKarte && AUSWAHL) ZEILEN.get(l.key)?.scrollIntoView({block:"nearest",behavior:"auto"});
+}
 
-  const facts = [
-    ["Kaltmiete", eur(l.price_cold)], ["Warmmiete", eur(l.price_warm)],
-    ["Anbieterart", ART[l.kind||"sonstige"]||"—"],
-    ["Entfernung", l._dist!=null
-        ? (l.position_approx ? "~" : "") + num(l._dist,1) + " km"
-          + (l.position_approx ? " (Stadtteilmitte)" : "") : "—"],
-    ["Fläche", l.sqm?num(l.sqm)+" m²":"—"], ["Zimmer", l.rooms?num(l.rooms):"—"],
-    ["€/m²", num(l.price_per_sqm,2)], ["Score", String(l.score??"—")],
-    ["Frei ab", l.available_from || "—"],
-    ["Adresse", [l.street, [l.zip,l.district||l.city].filter(Boolean).join(" ")].filter(Boolean).join(", ") || "—"],
+function auswahlZeichnen(){
+  document.querySelectorAll(".listing-details").forEach(e=>e.remove());
+  for(const [key,row] of ZEILEN){
+    row.classList.toggle("ausgewaehlt",key===AUSWAHL);
+    row.querySelector(".listing-toggle").setAttribute("aria-expanded",key===AUSWAHL);
+  }
+  for(const [key,marker] of ANGEBOT_MARKER){
+    marker.getElement()?.querySelector(".marker")?.classList.toggle("selected",key===AUSWAHL);
+    marker.setZIndexOffset(key===AUSWAHL ? 2000 : 0);
+  }
+  const l=ALLE.find(l=>l.key===AUSWAHL);
+  const hinweis=el("auswahlhinweis");
+  hinweis.hidden=!l;
+  if(!l) return;
+  const hatLage=l.lat!=null && l.lng!=null;
+  const lage=hatLage ? (l.position_approx ? "Lage geschätzt anhand von Stadtteil/PLZ – keine genaue Hausadresse." : "Lage laut Anbieter.") : "Keine Lage bekannt – dieses Angebot kann nicht auf der Karte markiert werden.";
+  hinweis.textContent=l.title + " · " + lage;
+  const row=ZEILEN.get(l.key);
+  if(!row) return;
+  const detail=document.createElement("tr");
+  detail.className="listing-details";
+  const facts=[
+    ["Kaltmiete",eur(l.price_cold)],["Warmmiete",eur(l.price_warm)],
+    ["Fläche",num(l.sqm)+" m²"],["Zimmer",num(l.rooms)],
+    ["Anbieterart",ART[l.kind||"sonstige"]||"—"],["Quelle",l.source],
+    ["Frei ab",l.available_from||"Nicht angegeben"],
+    ["Entfernung",l._dist!=null ? (l.position_approx?"~":"")+num(l._dist,1)+" km" : "—"]
   ];
-  el("dFacts").replaceChildren(...facts.map(([k,v])=>{
-    const d=document.createElement("div"); d.className="fact";
-    d.innerHTML=`<b>${esc(v)}</b><span>${esc(k)}</span>`; return d;
-  }));
-  el("dWhy").textContent = (l.score_reasons||[]).join(" · ");
-  el("dLink").href = l.url;
-  const karte = el("dKarte");
-  if(l.lat && l.lng){ karte.href = `https://www.openstreetmap.org/?mlat=${l.lat}&mlon=${l.lng}#map=17/${l.lat}/${l.lng}`; karte.hidden=false; }
-  else { karte.hidden = true; }
-  el("detail").showModal();
+  detail.innerHTML=`<td colspan="7"><section class="inline-details" id="details-${esc(encodeURIComponent(l.key))}" aria-label="Details zu ${esc(l.title)}">
+    ${l.image_url ? `<img class="detail-image" src="${esc(l.image_url)}" alt="Bild zum Angebot" loading="lazy" onerror="this.hidden=true">` : ""}
+    <div class="facts">${facts.map(([k,v])=>`<div class="fact"><b>${esc(v)}</b><span>${esc(k)}</span></div>`).join("")}</div>
+    <p>${esc([l.street,l.zip,l.district||l.city].filter(Boolean).join(", ")||"Adresse nicht angegeben")}</p>
+    <p class="lage">${esc(lage)}</p>
+    <div class="why"><b>Bewertung: ${esc(l.score??0)}/100</b><br>${esc((l.score_reasons||[]).join(" · "))}</div>
+    <div class="d-actions"><a class="primary" href="${esc(l.url)}" target="_blank" rel="noopener">Originalangebot öffnen ↗</a>
+    ${hatLage ? '<button type="button" class="auf-karte">Auf Karte zeigen</button>' : ""}
+    <button type="button" class="details-schliessen">Weniger anzeigen</button></div>
+  </section></td>`;
+  detail.querySelector(".details-schliessen").onclick=()=>{ angebotWaehlen(l);row.querySelector("button").focus({preventScroll:true}); };
+  const karteButton=detail.querySelector(".auf-karte");
+  if(karteButton) karteButton.onclick=()=>{
+    if(!KARTE_AN){ KARTE_AN=true;zeichnen(); }
+    MAP.setView([l.lat,l.lng],Math.max(MAP.getZoom(),l.position_approx?13:15),{animate:false});
+    el("karte").scrollIntoView({block:"center",behavior:"auto"});
+  };
+  row.after(detail);
 }
 
 function leerBild(){
