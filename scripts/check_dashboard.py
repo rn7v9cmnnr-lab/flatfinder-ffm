@@ -90,6 +90,52 @@ with sync_playwright() as p:
     page.screenshot(path=str(root / 'map-mobile.jpg'), quality=55)
     page.locator('#reset').click()
     assert page.evaluate('KREIS === null && MITTENMARKER === null')
+    # List/marker selection is one shared accordion, without changing the search centre.
+    page.set_viewport_size({'width':1280,'height':1200})
+    page.locator('#suchgebiet').click()
+    first=page.evaluate('ALLE.find(l=>ANGEBOT_MARKER.has(l.key))')
+    row_id=page.evaluate('(key)=>ZEILEN.get(key).id',first['key'])
+    toggle=page.locator('[id="'+row_id+'"]').locator('.listing-toggle')
+    before=page.evaluate('JSON.stringify(mittelpunkt(filterLesen()))')
+    toggle.click()
+    assert toggle.get_attribute('aria-expanded') == 'true'
+    assert page.locator('.listing-details').count() == 1
+    assert page.locator('.marker.selected').count() == 1
+    assert page.evaluate('(l)=>MAP.getCenter().distanceTo(L.latLng(l.lat,l.lng))<30',first)
+    zoom=page.evaluate('MAP.getZoom()')
+    toggle.click()
+    assert page.locator('.listing-details').count() == 0
+    assert page.evaluate('MAP.getZoom()') == zoom
+    toggle.press('Enter')
+    assert page.locator('.listing-details').count() == 1
+    second=page.evaluate('(key)=>ALLE.find(l=>l.key!==key && ANGEBOT_MARKER.has(l.key) && ALLE.filter(o=>ANGEBOT_MARKER.has(o.key) && Math.abs(o.lat-l.lat)+Math.abs(o.lng-l.lng)<0.001).length===1)',first['key'])
+    page.evaluate('(l)=>MAP.setView([l.lat,l.lng],15,{animate:false})',second)
+    marker_id=page.evaluate('(key)=>{const e=ANGEBOT_MARKER.get(key).getElement();e.id="test-marker";return e.id}',second['key'])
+    page.locator('#test-marker').click()
+    assert page.evaluate('AUSWAHL') == second['key']
+    assert page.locator('.listing-details').count() == 1
+    assert page.evaluate('JSON.stringify(mittelpunkt(filterLesen()))') == before
+    page.locator('.auf-karte').click()
+    page.screenshot(path=str(root/'selected-desktop.jpg'),quality=55)
+    page.locator('.details-schliessen').click()
+    assert page.locator('.listing-details').count() == 0
+    toggle.click()
+    page.locator('#suche').fill('no-matching-listing-test')
+    assert page.evaluate('AUSWAHL === null')
+    assert page.locator('.marker.selected').count() == 0
+    page.locator('#suche').fill('')
+    # Unknown positions must never point to an unrelated apartment.
+    page.evaluate('ALLE.unshift({key:"test-unknown",title:"Test ohne Lage",source:"test",kind:"portal",score:50});zeichnen()')
+    page.locator('#angebot-test-unknown .listing-toggle').click()
+    assert 'Keine Lage bekannt' in page.locator('.listing-details').inner_text()
+    assert page.locator('.marker.selected').count() == 0
+    assert page.locator('.auf-karte').count() == 0
+    page.locator('.details-schliessen').click()
+    toggle.click()
+    page.set_viewport_size({'width':390,'height':844})
+    page.locator('.auf-karte').click()
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.screenshot(path=str(root/'selected-mobile.jpg'),quality=55)
     assert not errors, errors
     browser.close()
 print('PASS: PLZ, radius, place precedence, map click, pan preservation, zero results, no radius, invalid PLZ, reload, mobile, reset; no JS errors')
