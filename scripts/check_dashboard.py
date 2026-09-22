@@ -125,7 +125,7 @@ with sync_playwright() as p:
     assert page.locator('.marker.selected').count() == 0
     page.locator('#suche').fill('')
     # Unknown positions must never point to an unrelated apartment.
-    page.evaluate('ALLE.unshift({key:"test-unknown",title:"Test ohne Lage",source:"test",kind:"portal",score:50});zeichnen()')
+    page.evaluate('ALLE.unshift({key:"test-unknown",title:"Test ohne Lage",source:ALLE[0].source,kind:"portal",score:50});zeichnen()')
     page.locator('#angebot-test-unknown .listing-toggle').click()
     assert 'Keine Lage bekannt' in page.locator('.listing-details').inner_text()
     assert page.locator('.marker.selected').count() == 0
@@ -145,7 +145,7 @@ with sync_playwright() as p:
     for title,wanted in cases:
         assert page.evaluate('(title)=>ausschlussTreffer({title})',title)==wanted, title
     page.locator('#reset').click()
-    page.evaluate('ALLE.unshift({key:"test-temporary",title:"Zwischenmiete Test",source:"test",kind:"portal",score:50});zeichnen()')
+    page.evaluate('ALLE.unshift({key:"test-temporary",title:"Zwischenmiete Test",source:ALLE[0].source,kind:"portal",score:50});zeichnen()')
     check=page.locator('.ausschluss[value="zeit"]')
     check.check()
     assert page.locator('#angebot-test-temporary').count()==0
@@ -156,6 +156,23 @@ with sync_playwright() as p:
     assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),!!mittelpunkt(filterLesen()))).every(l=>!ausschlussTreffer(l).includes("zeit"))')
     page.locator('#reset').click()
     assert not check.is_checked()
+    assert page.locator('.feinfilter').count()==0
+    assert page.locator('#aktualitaet').is_visible()
+    sources=page.locator('#quellen input:not(:disabled)')
+    assert sources.count()>=5
+    for checkbox in sources.all(): checkbox.uncheck()
+    assert page.locator('#anzahl').inner_text()=='0'
+    page.reload()
+    page.wait_for_function('ALLE.length>0')
+    assert page.locator('#quellen input:checked').count()==0
+    page.locator('#quellen input[value="vonovia"]').check()
+    assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),false)).every(l=>l.source==="vonovia")')
+    assert page.locator('#quellen input[value="immoscout"]').is_disabled()
+    page.locator('#aktualitaet').select_option('24')
+    assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),false)).every(l=>Date.now()-new Date(l.first_seen).getTime()<=86400000)')
+    page.locator('#reset').click()
+    assert page.locator('#quellen input:checked').count()==sources.count()
+    assert page.locator('#aktualitaet').input_value()==''
     assert not errors, errors
     browser.close()
 print('PASS: PLZ, radius, place precedence, map click, pan preservation, zero results, no radius, invalid PLZ, reload, mobile, reset; no JS errors')
