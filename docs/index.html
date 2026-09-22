@@ -86,6 +86,15 @@
   .ausschlussfilter input{accent-color:var(--accent);width:16px;height:16px;flex:none}
   .ausschlussfilter [data-treffer]{color:var(--muted);margin-left:auto}
   .ausschlussfilter .feldhilfe{margin:10px 0 0;font-size:11px}
+  .quellenliste{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
+  .quellenwahl{display:flex;gap:8px;align-items:flex-start;font-size:13px;padding:9px;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+  .quellenwahl input{width:16px!important;min-height:16px!important;margin:3px 0;accent-color:var(--accent);flex:none}
+  .quellenwahl{min-width:0}
+  .filtergruppen .f label.quellenwahl{text-transform:none;font-size:13px;font-weight:400;letter-spacing:normal;color:var(--fg)}
+  .quellenwahl span{min-width:0;overflow-wrap:anywhere}
+  .quellenwahl small{display:block;color:var(--muted);font-size:11px}
+  .quellenwahl:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 6%,var(--card))}
+  .quellenwahl:has(input:disabled){opacity:.65;cursor:default}
   .anbieterinfo{font-size:12px;color:var(--muted);line-height:1.5;margin:12px 0}
   .anbieterinfo p{margin:8px 0}
   .anbieterinfo .kind{color:var(--fg);font-weight:600}
@@ -309,7 +318,11 @@
       <input type="text" id="suche" placeholder="Balkon, Stadtteil, Straße…"
              style="font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)"></div>
   </div>
-<div class="ausschlussfilter"><b>Unerwünschte Angebote ausblenden</b>
+<div class="f"><label for="aktualitaet">Aktualität</label><select id="aktualitaet">
+      <option value="">Alle aktiven Angebote</option><option value="24">Neu in den letzten 24 Stunden</option>
+      <option value="72">Neu in den letzten 3 Tagen</option><option value="168">Neu in den letzten 7 Tagen</option>
+    </select><p class="feldhilfe">Zeitpunkt, zu dem unsere Suche das Angebot erstmals gefunden hat.</p></div>
+    <div class="ausschlussfilter"><b>Unerwünschte Angebote ausblenden</b>
       <label><input type="checkbox" class="ausschluss" value="zeit"> Zwischenmiete / befristetes Wohnen <span data-treffer="zeit"></span></label>
       <label><input type="checkbox" class="ausschluss" value="untermiete"> Untermiete <span data-treffer="untermiete"></span></label>
       <label><input type="checkbox" class="ausschluss" value="tausch"> Wohnungstausch <span data-treffer="tausch"></span></label>
@@ -329,18 +342,9 @@
       <p><span class="kind k-portal">Portale</span> wg-gesucht und Immowelt vermitteln Anzeigen. Privatperson, Unternehmen oder Makler ist in unseren Daten nicht verlässlich ausgewiesen.</p>
       <p><b>Private Anbieter:</b> derzeit nicht gesondert erfasst. Bitte im Originalangebot prüfen.</p>
     </div>
-    <div class="f"><label>Einzelne Quellen · mehrere wählbar</label><div class="chips" id="quellen"></div></div>
+    <div class="f"><label>Diese Seiten durchsuchen · Häkchen = dabei</label><div class="quellenliste" id="quellen"></div></div>
   </fieldset>
   </div>
-  <details class="feinfilter"><summary>Weitere Filter · Bewertung &amp; Aktualität <span id="filterstatus" class="muted"></span></summary>
-    <div class="frow">    <div class="f"><label for="smin">Bewertung ab (0–100)</label>
-      <input type="number" id="smin" step="5" min="0" max="100" placeholder="0"></div>
-    <div class="chips">
-      <button type="button" class="chip" id="chipNeu" aria-pressed="false">Neu in den letzten 24 Stunden</button>
-      <button type="button" class="chip" id="chipWeg" aria-pressed="false">Verschwundene Angebote zeigen</button>
-      <button type="button" class="chip" id="chipOhneLage" aria-pressed="false">Auch ohne bekannte Lage</button>
-    </div></div><p class="feldhilfe">Die Bewertung nutzt die hinterlegten Suchkriterien. 0 zeigt auch Angebote mit niedriger Bewertung. Unbekannte Lagen können außerhalb deines Umkreises liegen.</p>
-  </details>
 </form>
 
 <div class="legende" id="legende"></div>
@@ -397,34 +401,52 @@ function filterLesen(){
   return {
     pmax:+el("pmax").value||null, qmin:+el("qmin").value||null,
     rmin:+el("rmin").value||null, rmax:+el("rmax").value||null,
-    smin:+el("smin").value||null, suche:el("suche").value.trim().toLowerCase(),
+    aktualitaet:+el("aktualitaet").value||null, suche:el("suche").value.trim().toLowerCase(),
     anbieter:el("anbieter").value,
     mitte:el("mitte").value, umkreis:Math.max(0,+el("umkreis").value)||null,
     plz:el("plz").value.trim(), karte:KARTE_AN, klick:KLICK_MITTE,
     bezirke:[...document.querySelectorAll('#bezirke .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
-    quellen:[...document.querySelectorAll('#quellen .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
+    quellenVersion:2,
+    quellen:[...document.querySelectorAll("#quellen input:checked")].map(c=>c.value),
     ausschluss:[...document.querySelectorAll(".ausschluss:checked")].map(c=>c.value),
-    nurNeu:el("chipNeu").getAttribute("aria-pressed")==="true",
-    ohneLage:el("chipOhneLage").getAttribute("aria-pressed")==="true",
-    zeigWeg:el("chipWeg").getAttribute("aria-pressed")==="true",
+
   };
 }
 function filterSchreiben(f){
   if(!f) return;
   document.querySelectorAll(".ausschluss").forEach(c=>c.checked=(f.ausschluss||[]).includes(c.value));
-  for(const k of ["pmax","qmin","rmin","rmax","smin","suche","mitte","umkreis","plz","anbieter"])
+  for(const k of ["pmax","qmin","rmin","rmax","aktualitaet","suche","mitte","umkreis","plz","anbieter"])
     if(f[k]!=null) el(k).value=f[k];
   if(f.klick) KLICK_MITTE = f.klick;
   // Liste und Karte beim Öffnen gemeinsam zeigen, auch bei alten Filterständen.
-  el("chipNeu").setAttribute("aria-pressed", !!f.nurNeu);
-  el("chipOhneLage").setAttribute("aria-pressed", !!f.ohneLage);
-  el("chipWeg").setAttribute("aria-pressed", !!f.zeigWeg);
+  if(f.aktualitaet==null && f.nurNeu) el("aktualitaet").value="24";
 }
 function speichern(){
   try{ localStorage.setItem(LS, JSON.stringify(filterLesen())); }catch(e){}
 }
 function geladen(){
   try{ return JSON.parse(localStorage.getItem(LS)||"null"); }catch(e){ return null; }
+}
+
+const QUELLEN={
+  vonovia:["Vonovia","Wohnungsunternehmen"],nhw:["NHW · Nassauische Heimstätte","Wohnungsunternehmen"],
+  gwh:["GWH","Wohnungsunternehmen"],wggesucht:["WG-Gesucht.de","Immobilienportal"],immowelt:["Immowelt","Immobilienportal"],
+  immoscout:["ImmoScout24","Derzeit blockiert · keine Suche"],kleinanzeigen:["Kleinanzeigen","Derzeit blockiert · keine Suche"]
+};
+function quellenName(key){return QUELLEN[key]?.[0]||key;}
+function quellenAufbauen(gespeichert){
+  const vorhanden=[...new Set(ALLE.map(l=>l.source))];
+  const keys=[...new Set([...Object.keys(QUELLEN),...vorhanden])];
+  const ausgewaehlt=gespeichert?.quellenVersion===2 ? gespeichert.quellen : gespeichert?.quellen?.length ? gespeichert.quellen : vorhanden;
+  el("quellen").replaceChildren(...keys.map(key=>{
+    const label=document.createElement("label");label.className="quellenwahl";
+    const input=document.createElement("input");input.type="checkbox";input.value=key;
+    input.disabled=!vorhanden.includes(key);input.defaultChecked=!input.disabled;
+    input.checked=!input.disabled && (ausgewaehlt||[]).includes(key);
+    const text=document.createElement("span");text.textContent=quellenName(key);
+    const sub=document.createElement("small");sub.textContent=QUELLEN[key]?.[1]||"Weitere Quelle";
+    text.appendChild(sub);label.append(input,text);return label;
+  }));
 }
 
 const ART = {
@@ -472,7 +494,7 @@ function ausschlussTreffer(l){
 }
 
 function passt(l, f, hatMitte){
-  if(l.gone && !f.zeigWeg) return false;
+  if(l.gone) return false;
   if((f.ausschluss||[]).some(k=>ausschlussTreffer(l).includes(k))) return false;
   if(f.pmax){
     // Gegen die Kaltmiete pruefen, wo sie bekannt ist. Kennt die Quelle nur
@@ -486,11 +508,13 @@ function passt(l, f, hatMitte){
   if(f.qmin && (l.sqm==null || l.sqm < f.qmin)) return false;
   if(f.rmin && (l.rooms==null || l.rooms < f.rmin)) return false;
   if(f.rmax && (l.rooms==null || l.rooms > f.rmax)) return false;
-  if(f.smin && (l.score||0) < f.smin) return false;
   if(f.anbieter && (l.kind||"sonstige") !== f.anbieter) return false;
-  if(f.quellen.length && !f.quellen.includes(l.source)) return false;
+  if(!f.quellen.includes(l.source)) return false;
   if(f.bezirke.length && !f.bezirke.includes(l.district || l.city || "?")) return false;
-  if(f.nurNeu && !istNeu(l)) return false;
+  if(f.aktualitaet){
+    const alter=Date.now()-new Date(l.first_seen).getTime();
+    if(!Number.isFinite(alter) || alter<0 || alter>f.aktualitaet*36e5) return false;
+  }
   if(f.umkreis && hatMitte){
     // Der Mittelpunkt kann aus Kartenklick, PLZ ODER Auswahlliste kommen -
     // deshalb wird er uebergeben und hier nicht neu geraten. Genau daran
@@ -500,7 +524,7 @@ function passt(l, f, hatMitte){
       // Ohne bekannte Lage laesst sich die Entfernung nicht pruefen. Wer
       // "2 km" einstellt, will keine Angebote sehen, die ueberall liegen
       // koennen - also raus, aber sichtbar zaehlbar und zuschaltbar.
-      return f.ohneLage;
+      return false;
     }
     if(l._dist > f.umkreis) return false;
   }
@@ -525,7 +549,7 @@ function mittelpunkt(f){
 function zeichnen(){
   const f = filterLesen();
   const mitte = mittelpunkt(f);
-  el("filterstatus").textContent = [f.smin ? `Bewertung ab ${f.smin}` : "", f.nurNeu ? "nur neue" : "", f.zeigWeg ? "inkl. verschwundener" : "", f.ohneLage ? "inkl. unbekannter Lage" : ""].filter(Boolean).join(" · ");
+
   const status = el("umkreishinweis");
   const unbekannt = f.plz && !mitte;
   el("plz").setAttribute("aria-invalid", !!unbekannt);
@@ -558,12 +582,12 @@ function zeichnen(){
 
   // Ehrlich ausweisen, was der Umkreis verschluckt.
   const hinweis = el("lagehinweis");
-  if(f.umkreis && mitte && !f.ohneLage){
+  if(f.umkreis && mitte){
     const verdeckt = ALLE.filter(l => !l.gone && l._dist == null
                                  && passt(l, {...f, umkreis:null}, false)).length;
     hinweis.hidden = verdeckt === 0;
     hinweis.textContent = verdeckt
-      ? `${verdeckt} Angebote ohne bekannte Lage sind ausgeblendet — „Auch ohne bekannte Lage“ unter „Weitere Filter“ zeigt sie.`
+      ? `${verdeckt} Angebote ohne bekannte Lage sind ausgeblendet — ohne Umkreisfilter werden sie wieder angezeigt.`
       : "";
   } else {
     hinweis.hidden = true;
@@ -589,7 +613,7 @@ function zeichnen(){
       <td>
         <div class="title"><button type="button" class="listing-toggle" aria-expanded="false" aria-controls="details-${esc(encodeURIComponent(l.key))}">${esc(l.title)}</button>${istNeu(l)?'<span class="neu">neu</span>':''}${l.gone?'<span class="weg">weg</span>':''}</div>
         <div class="meta">${l.rooms?num(l.rooms)+" Zimmer · ":""}${l.sqm?num(l.sqm)+" m² · ":""}${esc(l.zip||"")} ${esc(l.district||l.city||"")}</div>
-        <div class="meta"><span class="kind k-${esc(art)}">${esc(ART[art]||art)}</span><span class="src">${esc(l.source)}</span></div>
+        <div class="meta"><span class="kind k-${esc(art)}">${esc(ART[art]||art)}</span><span class="src">${esc(quellenName(l.source))}</span></div>
       </td>
       <td class="num preis ${m.warm?'warmonly':''}"><b>${eur(m.wert)}</b><small>${m.art}</small></td>
       <td class="num hide-s">${num(l.sqm)}</td>
@@ -741,7 +765,7 @@ function auswahlZeichnen(){
   const facts=[
     ["Kaltmiete",eur(l.price_cold)],["Warmmiete",eur(l.price_warm)],
     ["Fläche",num(l.sqm)+" m²"],["Zimmer",num(l.rooms)],
-    ["Anbieterart",ART[l.kind||"sonstige"]||"—"],["Quelle",l.source],
+    ["Anbieterart",ART[l.kind||"sonstige"]||"—"],["Quelle",quellenName(l.source)],
     ["Frei ab",l.available_from||"Nicht angegeben"],
     ["Entfernung",l._dist!=null ? (l.position_approx?"~":"")+num(l._dist,1)+" km" : "—"]
   ];
@@ -819,7 +843,7 @@ async function start(){
     const sp=document.createElement("span");
     const defekt = !/^\d+ Angebote/.test(v);
     sp.className = defekt ? "quelle-defekt" : "";
-    sp.textContent = `${k}: ${v}`;
+    sp.textContent = `${quellenName(k)}: ${v}`;
     if(defekt) sp.title = "Diese Quelle hat beim letzten Lauf nichts geliefert. "
                         + "Ihre bisherigen Angebote bleiben stehen, bis sie wieder antwortet.";
     return i ? [document.createTextNode(" · "), sp] : [sp];
@@ -827,9 +851,8 @@ async function start(){
 
   const gesp = geladen();
   if(gesp) filterSchreiben(gesp);
-  else el("smin").value = 50;   // Erstbesuch: Ausschusskriterien ausblenden
   chips("bezirke", [...new Set(ALLE.map(l=>l.district||l.city||"?"))].sort((a,b)=>a.localeCompare(b,"de")), gesp?.bezirke);
-  chips("quellen", [...new Set(ALLE.map(l=>l.source))].sort(), gesp?.quellen);
+  quellenAufbauen(gesp);
 
   // Legende nur fuer die Arten, die auch vorkommen.
   const arten = [...new Set(ALLE.map(l=>l.kind||"sonstige"))]
@@ -866,9 +889,6 @@ async function start(){
     zeichnen();
   };
   el("ansicht").textContent = KARTE_AN ? "Karte ausblenden" : "Karte einblenden";
-  el("chipNeu").onclick = el("chipWeg").onclick = el("chipOhneLage").onclick = e => {
-    e.target.setAttribute("aria-pressed", e.target.getAttribute("aria-pressed")!=="true"); zeichnen();
-  };
   el("reset").onclick = () => {
     try{ localStorage.removeItem(LS); }catch(e){}
     HTMLFormElement.prototype.reset.call(el("filters"));
