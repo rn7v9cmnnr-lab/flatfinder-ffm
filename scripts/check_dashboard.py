@@ -1,23 +1,35 @@
 """Browser regression checks for the static dashboard (local data, real Leaflet)."""
-import json
+import sys
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 root = Path(__file__).resolve().parents[1]
 with sync_playwright() as p:
     browser = p.chromium.launch(channel='msedge', headless=True)
-    page = browser.new_page(viewport={'width':1280,'height':1000})
+    page = browser.new_page(viewport={'width':1280,'height':1200})
     errors = []
     page.on('pageerror', lambda e: errors.append(str(e)))
     def serve(route):
         path = route.request.url.split('flatfinder.test/',1)[1].split('?',1)[0]
         file = root / 'docs' / (path or 'index.html')
         route.fulfill(path=str(file))
-    page.route('https://flatfinder.test/**', serve)
-    page.goto('https://flatfinder.test/')
+    if '--live' not in sys.argv:
+        page.route('https://flatfinder.test/**', serve)
+    page.goto('https://rn7v9cmnnr-lab.github.io/flatfinder-ffm/?view=split' if '--live' in sys.argv else 'https://flatfinder.test/')
     page.wait_for_function('ALLE.length > 0 && typeof L !== "undefined"')
     page.locator('#plz').fill('60311')
     assert page.locator('#karte').is_visible()
+    assert page.locator('#tabelle').is_visible()
+    table_box = page.locator('.listenbereich').bounding_box()
+    map_box = page.locator('.kartenbereich').bounding_box()
+    assert table_box['x'] < map_box['x'] and abs(table_box['y']-map_box['y']) < 2
+    page.locator('#anbieter').select_option('grossvermieter')
+    assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),true)).every(l=>l.kind === "grossvermieter")')
+    page.locator('#anbieter').select_option('genossenschaft')
+    assert page.locator('#leer').is_visible()
+    assert page.locator('#karte').is_visible()
+    assert 'keine Angebote' in page.locator('#coopstand').inner_text()
+    page.locator('#anbieter').select_option('')
     assert page.locator('#umkreis').input_value() == '3'
     assert page.evaluate('MAP.getCenter().distanceTo(L.latLng(PLZ_POS["60311"])) < 100')
     assert page.evaluate('KREIS.getRadius()') == 3000
@@ -35,6 +47,14 @@ with sync_playwright() as p:
     page.wait_for_function('MAP.getZoom() === 17')
     page.wait_for_timeout(300)
     assert page.evaluate('KLICK_MITTE === null')
+    page.evaluate('zeichnen()')
+    assert page.evaluate('MAP.getZoom()') == 17
+    page.locator('#ansicht').click()
+    page.locator('#ansicht').click()
+    assert page.evaluate('MAP.getZoom()') == 17
+    page.locator('#pmax').fill('1500')
+    assert page.evaluate('MAP.getZoom()') == 17
+    page.locator('#pmax').fill('')
     page.locator('#mittelpunktSetzen').click()
     page.evaluate('MAP.fire("click", {latlng:L.latLng(50.1,8.7)})')
     assert page.evaluate('MAP.getZoom()') == 17
@@ -45,7 +65,7 @@ with sync_playwright() as p:
     page.wait_for_timeout(150)
     center = page.evaluate('MAP.getCenter()')
     page.locator('#suche').fill('unlikely-no-results-xyz')
-    assert page.evaluate('(c) => MAP.getCenter().distanceTo(L.latLng(c.lat,c.lng)) < 1', center), (center, page.evaluate('MAP.getCenter()'), page.evaluate('KARTENBEREICH'))
+    assert page.evaluate('(c) => MAP.project(MAP.getCenter()).distanceTo(MAP.project(L.latLng(c.lat,c.lng))) <= 1', center), (center, page.evaluate('MAP.getCenter()'), page.evaluate('KARTENBEREICH'))
     page.locator('#suchgebiet').click()
     assert page.evaluate('MAP.getCenter().distanceTo(L.latLng(PLZ_POS["60311"])) < 100')
     assert page.evaluate('KREIS.getRadius()') == 1000
@@ -61,11 +81,13 @@ with sync_playwright() as p:
     page.wait_for_function('MAP !== null && KREIS !== null')
     assert page.locator('#plz').input_value() == '60311'
     page.wait_for_function('Array.from(document.querySelectorAll(".leaflet-tile")).some(t=>t.complete && t.naturalWidth > 0)', timeout=30000)
-    page.screenshot(path=str(root / 'map-desktop.png'), full_page=True)
+    page.evaluate('window.scrollTo(0,0)')
+    page.screenshot(path=str(root / 'map-desktop.jpg'), quality=55)
     page.set_viewport_size({'width':390,'height':844})
     page.locator('#suchgebiet').click()
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
-    page.screenshot(path=str(root / 'map-mobile.png'), full_page=True)
+    assert page.locator('#tabelle').is_visible()
+    page.screenshot(path=str(root / 'map-mobile.jpg'), quality=55)
     page.locator('#reset').click()
     assert page.evaluate('KREIS === null && MITTENMARKER === null')
     assert not errors, errors
