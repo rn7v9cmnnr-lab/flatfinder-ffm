@@ -272,6 +272,24 @@
     td,th{padding-left:6px;padding-right:6px}
     .f input[type=number]{width:74px}
   }
+
+  .ausstattung{border:1px solid var(--line);border-radius:12px;margin:18px 0 12px;padding:12px}
+  .ausstattung summary{font-size:13px;font-weight:650;cursor:pointer}
+  .ausstattung summary>span{font-size:11px;color:var(--muted);font-weight:400;margin-left:6px}
+  .merkmalliste{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+  .merkmalliste label{display:flex;gap:7px;align-items:center;min-height:36px;padding:6px;border:1px solid var(--line);border-radius:7px;font-size:12px;cursor:pointer}
+  .merkmalliste input{accent-color:var(--accent);width:15px;height:15px;flex:none;margin:0}
+  .merkmalliste label:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,var(--card))}
+  .ausstattung .feldhilfe{font-size:11px;margin:0}
+  .aktuellzeile{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;border-top:1px solid var(--line);margin-top:20px;padding-top:16px}
+  .aktuellzeile b{font-size:13px}.aktuellzeile small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+  .segmentwahl{display:flex;gap:4px;padding:4px;border:1px solid var(--line);background:var(--bg);border-radius:10px}
+  .segmentwahl label{position:relative;cursor:pointer;flex:1;text-align:center}
+  .segmentwahl input{position:absolute;opacity:0;width:1px;height:1px}
+  .segmentwahl span{display:block;white-space:nowrap;padding:8px 14px;font-size:12px;border:1px solid transparent;border-radius:7px;color:var(--muted)}
+  .segmentwahl input:checked+span{background:var(--card);border-color:var(--line);color:var(--accent);font-weight:650;box-shadow:0 1px 3px #0000000d}
+  .segmentwahl input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+  @media(max-width:620px){.segmentwahl{width:100%}.segmentwahl span{padding:9px 8px}.aktuellzeile{margin-top:4px}}
 </style>
 </head>
 <body>
@@ -311,6 +329,12 @@
     <summary><span>Stadtteil</span><span class="zaehler" id="bezirkeZaehler"></span></summary>
     <div class="chips" id="bezirke"></div>
   </details>
+    <div class="ausschlussfilter"><b>Unerwünschte Angebote ausblenden</b>
+      <label><input type="checkbox" class="ausschluss" value="zeit"> Zwischenmiete / befristetes Wohnen <span data-treffer="zeit"></span></label>
+      <label><input type="checkbox" class="ausschluss" value="untermiete"> Untermiete <span data-treffer="untermiete"></span></label>
+      <label><input type="checkbox" class="ausschluss" value="tausch"> Wohnungstausch <span data-treffer="tausch"></span></label>
+      <p class="feldhilfe">Rotes × = ausblenden. Erkennung anhand von Titel und vorhandener Beschreibung. Zahlen: aktive Angebote insgesamt. Die Erkennung kann Angaben übersehen.</p>
+    </div>
   </fieldset>
   <fieldset><legend><span>2</span> Wohnung</legend><p class="feldhilfe">Budget, Größe und Zimmer nach deinen Wünschen.</p>
   <div class="frow wohnungswerte">
@@ -325,21 +349,10 @@
 
   </div>
 
-  <div class="frow">
-    <div class="f wide"><label for="suche">Suchbegriff</label>
-      <input type="text" id="suche" placeholder="Balkon, Stadtteil, Straße…"
-             style="font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)"></div>
-  </div>
-<div class="f"><label for="aktualitaet">Aktualität</label><select id="aktualitaet">
-      <option value="">Alle aktiven Angebote</option><option value="24">Neu in den letzten 24 Stunden</option>
-      <option value="72">Neu in den letzten 3 Tagen</option><option value="168">Neu in den letzten 7 Tagen</option>
-    </select><p class="feldhilfe">Zeitpunkt, zu dem unsere Suche das Angebot erstmals gefunden hat.</p></div>
-    <div class="ausschlussfilter"><b>Unerwünschte Angebote ausblenden</b>
-      <label><input type="checkbox" class="ausschluss" value="zeit"> Zwischenmiete / befristetes Wohnen <span data-treffer="zeit"></span></label>
-      <label><input type="checkbox" class="ausschluss" value="untermiete"> Untermiete <span data-treffer="untermiete"></span></label>
-      <label><input type="checkbox" class="ausschluss" value="tausch"> Wohnungstausch <span data-treffer="tausch"></span></label>
-      <p class="feldhilfe">Rotes × = ausblenden. Erkennung anhand von Titel und vorhandener Beschreibung. Zahlen: aktive Angebote insgesamt. Die Erkennung kann Angaben übersehen.</p>
-    </div>
+  <details class="ausstattung" open><summary>Ausstattung <span>Wünsche auswählen</span></summary>
+    <div class="merkmalliste"><label><input type="checkbox" class="merkmal" value="balkon"><span>Balkon / Terrasse</span></label><label><input type="checkbox" class="merkmal" value="ebk"><span>Einbauküche</span></label><label><input type="checkbox" class="merkmal" value="aufzug"><span>Aufzug</span></label><label><input type="checkbox" class="merkmal" value="garten"><span>Garten</span></label><label><input type="checkbox" class="merkmal" value="stellplatz"><span>Stellplatz / Garage</span></label><label><input type="checkbox" class="merkmal" value="barrierefrei"><span>Barrierefrei</span></label></div>
+    <p class="feldhilfe">Alle ausgewählten Merkmale müssen im Titel oder in der Beschreibung genannt sein. Fehlende Angaben werden nicht als Treffer gewertet.</p>
+  </details>
     <p class="feldhilfe">Nur Warmmiete bekannt? Der Preisfilter erlaubt dafür 35 % Aufschlag.</p>
   </fieldset>
   <fieldset><legend><span>3</span> Anbieter &amp; Quellen</legend>
@@ -352,6 +365,7 @@
     <div class="f"><label>Diese Seiten durchsuchen · Häkchen = dabei</label><div class="quellenliste" id="quellen"></div></div>
   </fieldset>
   </div>
+  <div class="aktuellzeile"><div><b>Aktualität</b><small>Erstmals bei uns gefunden</small></div><div id="aktualitaet" class="segmentwahl" role="radiogroup" aria-label="Aktualität"><label><input type="radio" name="aktualitaet" value="" checked><span>Alle</span></label><label><input type="radio" name="aktualitaet" value="24"><span>24 Stunden</span></label><label><input type="radio" name="aktualitaet" value="72"><span>3 Tage</span></label><label><input type="radio" name="aktualitaet" value="168"><span>7 Tage</span></label></div></div>
 </form>
 
 <details class="weitere-quellen"><summary>Weitere Anbieter &amp; Genossenschaften · 11 direkte Zugänge</summary><p>Diese Seiten werden nicht automatisch in die Trefferliste übernommen. Viele vergeben Wohnungen über Bewerbungen oder Interessentenlisten. Stand der Prüfung: 22.09.2026.</p><ul><li><a href="https://www.immobilienscout24.de/Suche/de/hessen/frankfurt-am-main/wohnung-mieten" target="_blank" rel="noopener">ImmoScout24 ↗</a><small>Portal · automatischer Zugriff durch Roboterprüfung gesperrt</small></li><li><a href="https://www.abg.de/mieten/faire-wohnungsvergabe/interessentenformular/" target="_blank" rel="noopener">ABG Frankfurt Holding ↗</a><small>Wohnungsunternehmen · Interessentenliste</small></li><li><a href="https://www.vbs-frankfurt.de/wohnen/" target="_blank" rel="noopener">VBS Frankfurt eG ↗</a><small>Genossenschaft · Angebote über ImmoScout24</small></li><li><a href="https://www.bwv-frankfurt.de/angebote/" target="_blank" rel="noopener">Bau- und Wohnungsverein Frankfurt eG ↗</a><small>Genossenschaft · zuletzt nur Stellplätze</small></li><li><a href="https://www.wbg-ffm.de/mietinteressenten/" target="_blank" rel="noopener">Wohnungsbaugenossenschaft Frankfurt eG ↗</a><small>Genossenschaft · Informationen für Mietinteressenten</small></li><li><a href="https://fesv.de/" target="_blank" rel="noopener">Frankfurter Eisenbahn-Siedlungsverein eG ↗</a><small>Genossenschaft · Bestände und Kontakt</small></li><li><a href="https://fwg-eg.de/" target="_blank" rel="noopener">Frankfurter Wohnungs-Genossenschaft eG ↗</a><small>Genossenschaft · direkt nach freien Wohnungen fragen</small></li><li><a href="https://bg-bergen-enkheim.de/" target="_blank" rel="noopener">Baugenossenschaft Bergen-Enkheim eG ↗</a><small>Genossenschaft · Kontakt und Sprechzeiten</small></li><li><a href="https://www.juba-wohnen.de/bewerberbogen/" target="_blank" rel="noopener">JuBa ↗</a><small>Wohnungsunternehmen · Bewerberbogen</small></li><li><a href="https://www.gsw-ffm.de/de/mieten/" target="_blank" rel="noopener">GSW Frankfurt ↗</a><small>Wohnungsunternehmen · öffentliche Angebote, zuletzt außerhalb Frankfurts</small></li><li><a href="https://www.sahle-wohnen.de/immobilien/" target="_blank" rel="noopener">Sahle Wohnen ↗</a><small>Wohnungsunternehmen · bundesweite Suche, zuletzt keine Frankfurt-Treffer</small></li></ul></details>
@@ -419,7 +433,8 @@ function filterLesen(){
   return {
     pmax:+el("pmax").value||null, qmin:+el("qmin").value||null,
     rmin:+el("rmin").value||null, rmax:+el("rmax").value||null,
-    aktualitaet:+el("aktualitaet").value||null, suche:el("suche").value.trim().toLowerCase(),
+    aktualitaet:+document.querySelector('[name="aktualitaet"]:checked').value||null,
+    merkmale:[...document.querySelectorAll(".merkmal:checked")].map(c=>c.value),
     anbieter:el("anbieter").value,
     mitte:el("mitte").value, umkreis:Math.max(0,+el("umkreis").value)||null,
     plz:el("plz").value.trim(), karte:KARTE_AN, klick:KLICK_MITTE,
@@ -434,11 +449,14 @@ function filterLesen(){
 function filterSchreiben(f){
   if(!f) return;
   document.querySelectorAll(".ausschluss").forEach(c=>c.checked=(f.ausschluss||[]).includes(c.value));
-  for(const k of ["pmax","qmin","rmin","rmax","aktualitaet","suche","mitte","umkreis","plz","anbieter"])
+  for(const k of ["pmax","qmin","rmin","rmax","mitte","umkreis","plz","anbieter"])
     if(f[k]!=null) el(k).value=f[k];
   if(f.klick) KLICK_MITTE = f.klick;
   // Liste und Karte beim Öffnen gemeinsam zeigen, auch bei alten Filterständen.
-  if(f.aktualitaet==null && f.nurNeu) el("aktualitaet").value="24";
+  const alter=String(f.aktualitaet??(f.nurNeu?24:""));
+  document.querySelectorAll('[name="aktualitaet"]').forEach(c=>c.checked=c.value===alter);
+  if(!document.querySelector('[name="aktualitaet"]:checked')) document.querySelector('[name="aktualitaet"][value=""]').checked=true;
+  document.querySelectorAll('.merkmal').forEach(c=>c.checked=(f.merkmale||[]).includes(c.value));
 }
 function speichern(){
   try{ localStorage.setItem(LS, JSON.stringify(filterLesen())); }catch(e){}
@@ -516,8 +534,23 @@ function ausschlussTreffer(l){
   })).map(([key])=>key);
 }
 
+function merkmalTreffer(l){
+  const text=[l.title,l.description].filter(Boolean).join(". ").normalize("NFKC").toLowerCase();
+  const regeln={balkon:/\b(?:balkon\w*|terrasse\w*|loggia)\b/g,
+    ebk:/\b(?:einbauküche\w*|ebk)\b/g,aufzug:/\b(?:aufzug\w*|aufzüge\w*|fahrstuhl\w*|personenaufzug\w*|lift)\b/g,
+    garten:/\b(?:garten|gartennutzung|gartenanteil|gemeinschaftsgarten|privatgarten)\b/g,
+    stellplatz:/\b(?:stellplatz\w*|stellplätze\w*|garage\w*|tiefgarage\w*|parkplatz\w*)\b/g,
+    barrierefrei:/\bbarrierefrei\w*\b/g};
+  return Object.entries(regeln).filter(([,r])=>[...text.matchAll(r)].some(m=>{
+    const davor=text.slice(0,m.index), danach=text.slice(m.index+m[0].length);
+    return !/\b(?:kein(?:e[rmns]?)?|ohne|nicht)\s+(?:(?:eigen\w*|privat\w*|groß\w*|klein\w*)\s+)?$/.test(davor)
+      && !/^\s*(?::|ist)?\s*(?:nein|nicht vorhanden|nicht verfügbar)\b/.test(danach);
+  })).map(([k])=>k);
+}
+
 function passt(l, f, hatMitte){
   if(l.gone) return false;
+  if((f.merkmale||[]).some(k=>!merkmalTreffer(l).includes(k))) return false;
   if((f.ausschluss||[]).some(k=>ausschlussTreffer(l).includes(k))) return false;
   if(f.pmax){
     // Gegen die Kaltmiete pruefen, wo sie bekannt ist. Kennt die Quelle nur
@@ -550,11 +583,6 @@ function passt(l, f, hatMitte){
       return false;
     }
     if(l._dist > f.umkreis) return false;
-  }
-  if(f.suche){
-    const heu = [l.title,l.street,l.district,l.city,l.zip,(l.score_reasons||[]).join(" ")]
-      .filter(Boolean).join(" ").toLowerCase();
-    if(!heu.includes(f.suche)) return false;
   }
   return true;
 }

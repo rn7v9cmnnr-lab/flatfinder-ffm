@@ -64,12 +64,12 @@ with sync_playwright() as p:
     page.evaluate('MAP.panTo([50.15,8.75], {animate:false})')
     page.wait_for_timeout(150)
     center = page.evaluate('MAP.getCenter()')
-    page.locator('#suche').fill('unlikely-no-results-xyz')
+    page.locator('#qmin').fill('100000')
     assert page.evaluate('(c) => MAP.project(MAP.getCenter()).distanceTo(MAP.project(L.latLng(c.lat,c.lng))) <= 1', center), (center, page.evaluate('MAP.getCenter()'), page.evaluate('KARTENBEREICH'))
     page.locator('#suchgebiet').click()
     assert page.evaluate('MAP.getCenter().distanceTo(L.latLng(PLZ_POS["60311"])) < 100')
     assert page.evaluate('KREIS.getRadius()') == 1000
-    page.locator('#suche').fill('')
+    page.locator('#qmin').fill('')
     page.locator('#umkreis').fill('')
     assert page.evaluate('KREIS === null')
     assert page.evaluate('MAP.getCenter().distanceTo(L.latLng(PLZ_POS["60311"])) < 100')
@@ -120,10 +120,10 @@ with sync_playwright() as p:
     page.locator('.details-schliessen').click()
     assert page.locator('.listing-details').count() == 0
     toggle.click()
-    page.locator('#suche').fill('no-matching-listing-test')
+    page.locator('#qmin').fill('100000')
     assert page.evaluate('AUSWAHL === null')
     assert page.locator('.marker.selected').count() == 0
-    page.locator('#suche').fill('')
+    page.locator('#qmin').fill('')
     # Unknown positions must never point to an unrelated apartment.
     page.evaluate('ALLE.unshift({key:"test-unknown",title:"Test ohne Lage",source:ALLE[0].source,kind:"portal",score:50});zeichnen()')
     page.locator('#angebot-test-unknown .listing-toggle').click()
@@ -170,11 +170,22 @@ with sync_playwright() as p:
     page.locator('#quellen input[value="vonovia"]').check()
     assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),false)).every(l=>l.source==="vonovia")')
     assert page.locator('#quellen input[value="immoscout"]').is_disabled()
-    page.locator('#aktualitaet').select_option('24')
+    page.locator('[name=aktualitaet][value="24"]').check()
     assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),false)).every(l=>Date.now()-new Date(l.first_seen).getTime()<=86400000)')
     page.locator('#reset').click()
     assert page.locator('#quellen input:checked').count()==sources.count()
-    assert page.locator('#aktualitaet').input_value()==''
+    assert page.locator('[name=aktualitaet][value=""]').is_checked()
+    assert page.locator('#suche').count()==0
+    for title,wanted in [('Mit Balkon und EBK',['balkon','ebk']),('Ohne Balkon',[]),('Kein eigener Garten',[]),('Balkon: nein',[]),('Nicht barrierefrei',[]),('Gartenwohnung',[])]:
+        assert page.evaluate('(title)=>merkmalTreffer({title})',title)==wanted,title
+    assert page.evaluate('merkmalTreffer({description:"Terrasse und Aufzug"})')==['balkon','aufzug']
+    page.locator('.merkmal[value="balkon"]').check()
+    page.locator('.merkmal[value="ebk"]').check()
+    assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),false)).every(l=>["balkon","ebk"].every(k=>merkmalTreffer(l).includes(k)))')
+    page.reload();page.wait_for_function('ALLE.length>0')
+    assert page.locator('.merkmal:checked').count()==2
+    page.locator('#reset').click()
+    assert page.locator('.merkmal:checked').count()==0
     assert not errors, errors
     browser.close()
 print('PASS: PLZ, radius, place precedence, map click, pan preservation, zero results, no radius, invalid PLZ, reload, mobile, reset; no JS errors')
