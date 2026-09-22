@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-22T15:28:53+00:00",
+ "generated_at": "2026-09-22T19:02:47+00:00",
  "city": "Frankfurt am Main",
  "plz": {
   "60306": [
@@ -172,15 +172,16 @@
   ]
  },
  "sources": {
-  "vonovia": "Fehler: HTTPStatusError",
+  "vonovia": "17 Angebote",
   "nhw": "15 Angebote",
-  "gwh": "11 Angebote",
+  "gwh": "13 Angebote",
   "wggesucht": "80 Angebote",
   "kleinanzeigen": "54 Angebote",
-  "ohnemakler": "31 Angebote",
+  "ohnemakler": "30 Angebote",
+  "sparkasse": "3 Angebote",
   "immowelt": "21 Angebote"
  },
- "count": 317,
+ "count": 329,
  "listings": [
   {
    "key": "vonovia:0888170005",
@@ -214,7 +215,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -249,7 +250,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -318,7 +319,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -352,7 +353,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -386,7 +387,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -420,7 +421,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -454,7 +455,7 @@
     "71 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -488,7 +489,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-21T06:27:06.491296+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -522,7 +523,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-21T11:07:52.487515+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -578,7 +579,7 @@
    "lng": 8.61888,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzk0NTM4L29hcG91NXB4?sig=blYjBfWFVLUMyteiQlL9ondgDGcBRCPYQpozOSqrCuo&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzk0NTM4L29hcG91NXB4?sig=vY3LfVWwSlHXgvlf1dLPeKm26bYJ2Xaz0lR9XrnkXbo&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 88,
@@ -589,7 +590,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -622,7 +623,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -687,7 +688,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -710,7 +711,7 @@
    "lng": 8.61888,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkyMzQxL3dsN3IwbWtp?sig=FnCMG8l9d0cXQ3ofg6sEyYhspl7-lDSpBeEgyc5OvSg&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkyMzQxL3dsN3IwbWtp?sig=RMHIGZV151quvRmitkch2J0CxYjnR4-aOY93jHbAJ2w&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 85,
@@ -720,7 +721,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -743,7 +744,7 @@
    "lng": 8.66815,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk0NTQ2LzhxNDlrdDds?sig=6o1MZvwlpmPpxVvWSTMuzS0giL7dQB4FuUyMQOZMKsU&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk0NTQ2LzhxNDlrdDds?sig=a75RYuYjCeHhvjMS_wmxU12J-c-VyzXPZfpLunUhsaM&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 83,
@@ -753,7 +754,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -776,7 +777,7 @@
    "lng": 8.62436,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk1NjExL3B5emZyaW1q?sig=7lg0itlM_dyELwRnHl_tfgD3EbGOyOQSCO8p5J9zJ8Y&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk1NjExL3B5emZyaW1q?sig=uI1hdy2GukYF6PswPpTjmkGa1X88_QBJWgwwzLKoauk&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 83,
@@ -786,7 +787,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -819,7 +820,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -852,7 +853,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -885,7 +886,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -918,7 +919,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -951,7 +952,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1015,7 +1016,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1048,7 +1049,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1082,7 +1083,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1116,7 +1117,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1139,7 +1140,7 @@
    "lng": 8.6836,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg4OTY3Lzhna2p5eWo4?sig=nGOx6KCrgYo1pdhq1LU4zL0Qtl6Nd-SbYLwJ9Kc44Vo&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg4OTY3Lzhna2p5eWo4?sig=4iJ_Wd_7z-ZV-XT7uYDAHxPn6aoUcM9ApexEhgcEC4A&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 77,
@@ -1150,7 +1151,40 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "gwh:MO-1600-10210-29",
+   "source": "gwh",
+   "kind": "grossvermieter",
+   "url": "https://www.gwh.de/mietangebote/detail/MO-1600-10210-29",
+   "title": "Klasse Wohnung in sehr schönem Wohnkomplex!",
+   "description": null,
+   "price_cold": 1229,
+   "price_warm": 1559,
+   "price_per_sqm": 15.1,
+   "sqm": 81.4,
+   "rooms": 3.0,
+   "street": "Sodener Straße 4",
+   "zip": "60326",
+   "city": "Frankfurt am Main",
+   "district": "Gallus",
+   "lat": 50.1019704,
+   "lng": 8.6301812,
+   "position_approx": false,
+   "available_from": "01.12.2026",
+   "image_url": "https://cms.gwh.de/fileadmin/_processed_/5/d/csm_Grundriss_d168ce9a60.png",
+   "wbs_required": null,
+   "commission": false,
+   "score": 76,
+   "score_reasons": [
+    "Grundkriterien erfuellt",
+    "81 m2 - grosszuegig",
+    "provisionsfrei"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1186,6 +1220,39 @@
    "gone": true
   },
   {
+   "key": "gwh:MO-1600-10210-179",
+   "source": "gwh",
+   "kind": "grossvermieter",
+   "url": "https://www.gwh.de/mietangebote/detail/MO-1600-10210-179",
+   "title": "Tolle, moderne Wohnung im Gallusviertel!",
+   "description": null,
+   "price_cold": 1268,
+   "price_warm": 1611,
+   "price_per_sqm": 14.41,
+   "sqm": 88.0,
+   "rooms": 3.0,
+   "street": "Mainzer Landstraße 332",
+   "zip": "60326",
+   "city": "Frankfurt am Main",
+   "district": "Gallus",
+   "lat": 50.1021596,
+   "lng": 8.6329196,
+   "position_approx": false,
+   "available_from": "01.12.2026",
+   "image_url": "https://cms.gwh.de/fileadmin/_processed_/2/0/csm_Innenhof_8a8affee6e.jpg",
+   "wbs_required": null,
+   "commission": false,
+   "score": 74,
+   "score_reasons": [
+    "Grundkriterien erfuellt",
+    "88 m2 - grosszuegig",
+    "provisionsfrei"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
    "key": "ohnemakler:321175",
    "source": "ohnemakler",
    "kind": "portal",
@@ -1205,7 +1272,7 @@
    "lng": 8.76189,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzIxMTc1L3o5NzJyZzZl?sig=bEO9oTRv_H1pD-fNCVT1cU4UA5XeuDLVl-xU6_V1OOo&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzIxMTc1L3o5NzJyZzZl?sig=eQAtpboPb2FzN8UZ_yqddYRnhat_uah83RwsUKtc0Os&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 73,
@@ -1214,7 +1281,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1247,7 +1314,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1280,7 +1347,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1312,7 +1379,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1376,7 +1443,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1385,7 +1452,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/helle-drei-zimmer-wohnung-in-sachsenhausen-mit-schoenem-garten/3476912311-203-4316",
    "title": "Helle Drei-Zimmer-Wohnung in Sachsenhausen mit schönem Garten",
-   "description": null,
+   "description": "Diese großzügige Drei-Zimmer-Wohnung befindet sich im Erdgeschoss eines gepflegten Mehrfamilienhauses aus dem Jahr 2002, das im Jahr 2019 umfassend saniert wurde. Die Wohnung überzeugt durch ihre schlichte, geschmackvolle Einrichtung sowie ihren durchdachten Grundriss. Vom großzügigen Flur aus sind alle Räume bequem erreichbar. Direkt neben dem Eingangsbereich befindet sich ein praktischer Hauswirtschaftsraum, der zusätzlichen Stauraum bietet. Das Herzstück der Wohnung ist der weitläufige Wohn- und Essbereich mit offener Einbauküche. Bodentiefe Fenster sorgen für eine helle, freundliche Atmosphäre und gewähren direkten Zugang zur großzügigen Terrasse, die zum Verweilen im Freien einlädt. Die beiden Schlafzimmer bieten viel Platz und Komfort. Das Master-Schlafzimmer verfügt über ein modernes en-suite Badezimmer mit Badewanne und separater Dusche. Ein zusätzliches Gäste-WC ergänzt das Raumangebot. Hochwertiges Stäbchenparkett sowie elektrische Rollläden in allen Wohnräumen unterstreichen den gehobenen Wohnkomfort. Ein Kellerraum sowie eine gemeinschaftliche Waschküche stehen ebenfalls zur Verfügung. Ein Tiefgaragenstellplatz kann für 50,00 € monatlich angemietet werden. Ein Internetanschluss ist für 40,00 € monatlich verfügbar und rundet das attraktive Angebot ab. # Ausstattung Einbauküche, Abstellkammer # Weitere Angaben - Garagen/Stellplätze: 1 - Verfügbar ab: 01/10/2026 - Objektzustand: gepflegt - Bodenbelag: Fliesen, Parkett - Garagen/Stellplatzmiete: 50,00 € # Lagebeschrei",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -1409,7 +1476,7 @@
     "105 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1418,7 +1485,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/smart-stylish-erstbezug-apartments-mit-gym-lounge-und-community-spirit/3494492637-203-14056",
    "title": "Smart & stylish: Erstbezug-Apartments mit Gym, Lounge und Community-Spirit",
-   "description": null,
+   "description": "Ganz gleich, ob Sie für einen neuen Job nach Frankfurt ziehen, gerade ein neues Kapitel beginnen oder einfach Wert auf flexibles Wohnen legen: HAVENS LIVING ist Ihr Zuhause auf Zeit – unkompliziert, vollmöbliert und sofort bezugsbereit. Das durchdachte Wohnkonzept verbindet stilvolles Design in zentraler Lage mit entspanntem Arbeiten und dem unkomplizierten Austausch mit Gleichgesinnten. In der Warmmiete ist dabei bereits alles für einen reibungslosen Start enthalten: Von der voll ausgestatteten Küche inklusive Besteck und Geschirr über Highspeed-Internet bis hin zu kostenfreien Getränken im Communitybereich ist für alles gesorgt. Ob bei einem Kaffee in der Lounge, beim gemeinsamen Kochen, im hauseigenen Gym oder auf der Dachterrasse mit weitem Blick über die Frankfurter Skyline: Hier finden Sie schnell Anschluss. So wird aus einem bloßen Wohnort ein echtes, lebendiges Zuhause. In diesem exklusiven Rahmen erwartet Sie ein Apartment der Extraklasse im Neubau-Standard von 2024. Auf einer großzügigen Wohnfläche von rund 104 m² entfaltet sich ein modernes, repräsentatives Ambiente, das durch eine klare Linienführung und lichtdurchflutete Räume besticht. Drei Zimmer, darunter zwei einladende Schlafzimmer sowie ein stilvolles Badezimmer und ein separates Gäste-WC, bieten ausreichend Raum für Individualität und Rückzug. Die hochwertigen Böden verleihen dem Domizil dabei eine besondere Wärme und zeitlose Eleganz. Der Komfort setzt sich weit über die eigenen vier Wände hinaus fort: Ei",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -1442,7 +1509,7 @@
     "104 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1451,7 +1518,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/stilvoll-wohnen-in-sachsenhausen-hochwertig-modernisierte-drei-zimmer-wohnung-mit-zwei-balkonen/3494513938-203-4315",
    "title": "Stilvoll wohnen in Sachsenhausen – hochwertig modernisierte Drei-Zimmer-Wohnung mit zwei Balkonen",
-   "description": null,
+   "description": "Willkommen in Ihrem neuen Zuhause in Frankfurt-Sachsenhausen. Diese hochwertig modernisierte Drei-Zimmer-Wohnung im 2. Obergeschoss überzeugt mit einem durchdachten Grundriss, einer modernen Ausstattung und einem stilvollen Wohnambiente. Das Objekt wurde im Jahr 2017 umfassend kernsaniert und präsentiert sich in einem hervorragenden Zustand. Auf rund 85 m² Wohnfläche erwarten Sie ein großzügiger Wohnbereich, ein geräumiges Schlafzimmer sowie ein weiteres Zimmer, das sich ideal als Arbeits-, Gäste- oder Ankleidezimmer eignet. Herzstück der Wohnung ist die hochwertige, neuwertige Einbauküche mit modernen Elektrogeräten, die zum gemeinsamen Kochen und Verweilen einlädt. Das moderne Tageslichtbad wurde zeitgemäß gestaltet und verfügt über eine großzügige Walk-in-Dusche sowie einen Waschmaschinenanschluss. Einbauschränke im Schlafzimmer bieten viel Stauraum und unterstreichen den hochwertigen Gesamteindruck der Wohnung. Ein besonderes Highlight sind die zwei Balkone – einer direkt von der Küche und einer vom Wohnzimmer aus erreichbar –, die zusätzlichen Wohnkomfort und schöne Plätze im Freien bieten. Abgerundet wird das attraktive Angebot durch einen Kellerraum sowie einen zur Wohnung gehörenden Stellplatz. # Ausstattung verbaute Sicht # Weitere Angaben - Garagen/Stellplätze: 1 - Verfügbar ab: nach Vereinbarung - Objektzustand: gepflegt - Bodenbelag: Laminat - Garagen/Stellplatzmiete: 150,00 € # Lagebeschreibung Die Wohnung befindet sich im beliebten Frankfurter Stadtteil Sachsenh",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -1475,7 +1542,7 @@
     "85 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1484,7 +1551,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/stilvoll-wohnen-in-sachsenhausen-voll-moeblierte-hochwertig-modernisierte-drei-zimmer-wohnung-mit-zwei-balkonen/3495218940-203-4315",
    "title": "Stilvoll wohnen in Sachsenhausen – voll möblierte, hochwertig modernisierte Drei-Zimmer-Wohnung mit zwei Balkonen",
-   "description": null,
+   "description": "Willkommen in Ihrem neuen Zuhause in Frankfurt-Sachsenhausen. Diese hochwertig modernisierte und voll möblierte Drei-Zimmer-Wohnung im 2. Obergeschoss überzeugt mit einem durchdachten Grundriss, einer modernen Ausstattung und einem stilvollen Wohnambiente. Das Objekt wurde im Jahr 2017 umfassend kernsaniert und präsentiert sich in einem hervorragenden Zustand. Auf rund 85 m² Wohnfläche erwarten Sie ein großzügiger Wohnbereich, ein geräumiges Schlafzimmer sowie ein weiteres Zimmer, das sich ideal als Arbeits-, Gäste- oder Ankleidezimmer eignet. Die Wohnung wird voll möbliert angeboten und ermöglicht somit einen komfortablen und unkomplizierten Einzug. Herzstück der Wohnung ist die hochwertige, neuwertige Einbauküche mit modernen Elektrogeräten, die zum gemeinsamen Kochen und Verweilen einlädt. Das moderne Tageslichtbad wurde zeitgemäß gestaltet und verfügt über eine großzügige Walk-in-Dusche sowie einen Waschmaschinenanschluss. Einbauschränke im Schlafzimmer bieten viel Stauraum und unterstreichen den hochwertigen Gesamteindruck der Wohnung. Ein besonderes Highlight sind die zwei Balkone – einer direkt von der Küche und einer vom Wohnzimmer aus erreichbar –, die zusätzlichen Wohnkomfort und schöne Plätze im Freien bieten. Abgerundet wird das attraktive Angebot durch einen Kellerraum sowie einen zur Wohnung gehörenden Stellplatz. # Ausstattung Möbiliert, verbaute Sicht # Weitere Angaben - Garagen/Stellplätze: 1 - Verfügbar ab: nach Vereinbarung - Objektzustand: gepflegt - Boden",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -1508,7 +1575,7 @@
     "85 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1517,7 +1584,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/lichtdurchflutete-maisonette-im-ostend-mit-dachterrasse-skyline/3510252488-203-4298",
    "title": "Lichtdurchflutete Maisonette im Ostend mit Dachterrasse & Skyline",
-   "description": null,
+   "description": "Lichtdurchflutete Maisonette mit Skylineblick, Dachterrasse & 2 optionalen Kfz Stellplätzen – Nähe EZB Wer großzügiges und individuelles Wohnen mitten in Frankfurt liebt, findet hier eine besondere Kombination aus Raum, Lage und Außenfläche. Die ca. 163 m² große Maisonettewohnung erstreckt sich über zwei Ebenen und zeichnet sich durch ihren offenen, lichtdurchfluteten Grundriss und die Galerie aus. Die offene Architektur schafft viel Raum für Wohnen, Essen und Arbeiten und eignet sich besonders für ein Paar mit hohem Platzbedarf. Ein Highlight ist die ca. 35 m² große Dachterrasse mit Blick auf die Frankfurter Skyline und die EZB. Der vorhandene Baumbestand schafft dabei einen grünen Rahmen sowie Schatten und Privatsphäre – mitten in Frankfurt. Die großzügige Raumaufteilung bietet vielfältige Möglichkeiten für ein Paar, das Wohnen und Arbeiten miteinander verbinden möchte. Durch die offene Gestaltung lässt sich Wohnen mit Homeoffice kombinieren. Die Wohnung ist nicht als klassische WG-Wohnung konzipiert, sondern richtet sich insbesondere an Menschen, die großzügiges, offenes Wohnen zu zweit schätzen. Ausstattung & Modernisierungen •\tca. 163 m² Wohnfläche, KM Euro 2150,- NK Euro 390,- •\tgroßzügige Maisonette-/Galeriegestaltung •\tca. 35 m² private Dachterrasse •\tBlick auf die Frankfurter Skyline und die EZB •\tgroßzügiges Marmorbad mit Dusche und Badewanne •\tseparates Gäste-WC •\tneue Fenster •\tfrisch saniertes Dach •\tEinbauküche wird aktuell eingebaut •\t2 Kfz-Stellplätze im Hof, ",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -1541,7 +1608,7 @@
     "163 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1550,7 +1617,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-4-zimmer-wohnung-mit-bad-en-suite/3516192870-203-4315",
    "title": "Schöne 4-Zimmer-Wohnung mit Bad-en-Suite",
-   "description": null,
+   "description": "Die hier angebotene 4-Zimmer-Wohnung befindet sich im Gebäudeensemble \"Main Arkaden\" in Sachsenhausen, Frankfurt. Die Wohnung verfügt über einen großzügigen Flur, ein geräumiges Schlafzimmer mit Ankleide und Ensuite Duschbad, zwei Kinder-/Gäste-/Arbeitszimmer und ein zweites Bad mit Badewanne. Des Weiteren bietet ein Abstellraum mit Waschmaschienenanschluss zusätzlichen Stauraum. Über den hellen Wohn-, Ess-, Kochbereich mit moderner Einbauküche gelangt man auf den Balkon mit seiner abgerundeten Form. Alle Wohnräume sind mit Echtholzparkett und Fußbodenheizung ausgestattet. In den Bädern sind moderne Fliesen vorzufinden. Zwei Tiefgaragenplätze sind in der Wohnung zugeteilt, die Sie bequem per Fahrstuhl erreichen. # Ausstattung Ausstattung in den Main-Arkaden: - moderne Architektur - Großzügige moderne Bäder mit bodengleichen Duschen - Hochwertige Einbauküchen - Echtholzparkett in den Wohnräumen - Fußbodenheizung - Video-Gegensprechanlage - Abstellräume in den Wohnungen - Kontrollierte Be- und Entlüftung aller Wohnräume # Weitere Angaben - Garagen/Stellplätze: 1 - Verfügbar ab: 01.12.2026 - Objektzustand: neuwertig - Garagen/Stellplatzmiete: 135,00 € - Hinweis zur Kaution: 6150 # Lagebeschreibung Das Gebäudenensemble \"Main Arkaden\" liegt im \"Deutschherrnviertel\" (ehemals \"Alter Schlachthof\") des Stadtteils Sachsenhausen-Nord. Aufgrund der Nähe zum Main und der zentralen Lage, handelt es sich hierbei um ein sehr beliebtes Wohngebiet. Die Wohnung liegt zentral und verkehrsgünstig",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -1574,7 +1641,7 @@
     "120 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1608,7 +1675,7 @@
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "ohnemakler:429994",
@@ -1630,7 +1697,7 @@
    "lng": 8.68713,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI5OTk0LzUyanpxamx0?sig=yKOVLSHQo5rbQK7AXLP7WiXly39Uz15z7trkaxNMmNQ&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI5OTk0LzUyanpxamx0?sig=SVMcJFbIsLjfYRvhnu0TZZrvt4O7i7bJSKXn64DG_io&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 67,
@@ -1641,7 +1708,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1674,7 +1741,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -1708,7 +1775,7 @@
    ],
    "first_seen": "2026-09-20T13:29:18.020115+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12902236",
@@ -1716,7 +1783,7 @@
    "kind": "portal",
    "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main-Sachsenhausen.12902236.html",
    "title": "Tucholskystraße, Frankfurt am Main",
-   "description": null,
+   "description": "Tucholskystraße, Frankfurt am Main",
    "price_cold": null,
    "price_warm": 2650,
    "price_per_sqm": null,
@@ -1740,8 +1807,8 @@
     "93 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-20T06:35:21.687110+00:00",
-   "last_seen": "2026-09-22T14:08:58.428601+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13643527",
@@ -1999,7 +2066,7 @@
     "80 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2032,7 +2099,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2065,7 +2132,7 @@
     "80 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2098,7 +2165,7 @@
     "77 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-21T11:07:52.487515+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2107,7 +2174,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/wg-neugruendung-in-frankfurt-bockenheim-3-zimmer-ab-1-dezember/3519618009-203-4322",
    "title": "WG-Neugründung in Frankfurt-Bockenheim: 3 Zimmer ab 1. Dezember",
-   "description": null,
+   "description": "### Einleitung In einer ca. 64 m² großen Altbauwohnung im 1. Obergeschoss in Frankfurt-Bockenheim vermieten wir ab dem 1. Dezember 2026 drei Zimmer einzeln - eine WG-Neugründung, alle Zimmer sind frei. Küche, Tageslichtbad mit Dusche und Flur teilen sich die Bewohner. Heizung, Wasser, Strom und Internet sind in der Nebenkostenpauschale enthalten. ### Die Highlights - WG-Neugründung: alle drei Zimmer frei, einzeln anmietbar - Warmmiete 580 EUR je Zimmer, Heizung, Wasser, Strom und Internet inklusive - Altbau von 1905 - Einbauküche mit Gasherd und Spülmaschine - Tageslichtbad mit Dusche - Mitten in Bockenheim, Einkaufsstraße vor der Tür ### Daten des WG-Zimmers - Angeboten werden: drei Zimmer, einzeln vermietet, je an eine Person - Wohnfläche der Wohnung: ca. 64 m² - Geschoss: gelegen im 1. Obergeschoss - Gemeinschaftlich genutzt: Küche, Bad mit Dusche, Flur - Heizung: Gasetagenheizung - Übergabe: unmöbliert, Einbauküche mit Geräten bleibt - Bezugsfrei ab: 01.12.2026 ### Miete pro Zimmer - Kaltmiete je Zimmer: 520 EUR - Nebenkostenpauschale je Zimmer: 60 EUR (Heizung, Wasser, Strom, Internet) - Gesamt je Zimmer: 580 EUR monatlich - Kaution je Zimmer: 1.560 EUR (drei Kaltmieten), vor Schlüsselübergabe zu entrichten - Frei ab dem 1. Dezember 2026 ### Energieausweis - Energiebedarfsausweis, Endenergiebedarf 139,54 kWh/(m²a), Energieeffizienzklasse E - Wesentlicher Energieträger Erdgas, Baujahr Gebäude 1905 ### Lage Die Wohnung liegt an der Leipziger Straße in Frankfurt-Bockenheim.",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2130,7 +2197,7 @@
     "Wunschlage Bockenheim"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2163,7 +2230,7 @@
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:11783584",
@@ -2194,7 +2261,7 @@
     "Wunschlage Bockenheim"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2226,7 +2293,7 @@
     "Wunschlage Sachsenhausen"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2258,7 +2325,7 @@
     "Wunschlage Bockenheim"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2290,7 +2357,7 @@
     "Wunschlage Bockenheim"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2322,7 +2389,7 @@
     "Wunschlage Sachsenhausen"
    ],
    "first_seen": "2026-09-22T10:04:02.120004+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2355,7 +2422,7 @@
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:14076153",
@@ -2386,7 +2453,7 @@
     "Wunschlage Ostend"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2418,7 +2485,7 @@
     "Wunschlage Bornheim"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2450,7 +2517,7 @@
     "Wunschlage Sachsenhausen"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2513,7 +2580,7 @@
     "Wunschlage Sachsenhausen"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2545,7 +2612,7 @@
     "72 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2568,7 +2635,7 @@
    "lng": 8.64271,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk2NDA1L3QzejkzOHFi?sig=K7kQlZ50G0qg5mtWrVGk50drem1JUMabkc0j_pLkEng&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk2NDA1L3QzejkzOHFi?sig=FYpPfUotQG_2gU285xB_9ywRZFbuHicVCc5VtShZ4_4&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 60,
@@ -2578,7 +2645,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2610,7 +2677,7 @@
     "67 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T10:04:02.120004+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2619,7 +2686,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/urbanes-wohnen-2-zimmer-mit-loggia-in-toller-lage/3349394383-203-18709",
    "title": "Urbanes Wohnen: 2 Zimmer mit Loggia in toller Lage",
-   "description": null,
+   "description": "Singles und Paare aufgepasst! Diese helle 2-Zimmer-Wohnung liegt in einem modernen Wohnhaus mitten in der Frankfurter Altstadt. Das Gebäude besticht durch seine solide Bauweise, ein einladendes Entrée und den insgesamt sehr gepflegten Eindruck. Hier verbindet sich City-Lage mit einem wohnlichen, wertigen Umfeld – perfekt für alle, die das urbane Leben lieben. Die Wohnung bietet einen offenen Wohn- und Essbereich, der viel Tageslicht hereinlässt und direkt in die offene Küche übergeht. Das großzügige Schlafzimmer bietet ausreichend Platz zur individuellen Gestaltung. Für zusätzlichen Komfort sorgt das modern ausgestattete Badezimmer. Besonders praktisch: Ein separater Abstellraum mit Waschmaschinenanschluss bietet zusätzlichen Stauraum und erleichtert den Alltag erheblich. Ein Highlight der Wohnung ist die großzügige Loggia, die zum Entspannen einlädt – ideal für gemütliche Frühstücke, entspannte Lesestunden oder den Feierabend mit Blick auf die urbane Nachbarschaft. # Ausstattung Die Wohnung liegt im begehrten MainTor-Quartier, einem mehrfach ausgezeichneten Stadtentwicklungsprojekt am nördlichen Mainufer. Das Gebäude besticht durch zeitgemäße Stahlbetonbauweise, eine elegante Natursteinfassade und ein einladendes Entrée. Die Wohnungen überzeugen mit hellen, offenen Grundrissen, bodentiefen Fenstern mit Dreifach-Isolierglas, elektrischen Rollläden und hochwertigem Echtholzparkett. Die Bäder sind modern ausgestattet und verfügen über bodengleiche Duschen und hochwertige Armatu",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2642,7 +2709,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2651,7 +2718,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/exklusive-3-5-zimmer-wohnung-mit-wintergarten-designerbad-und-idyllischem-gartenparadies/3460249089-203-9585",
    "title": "Exklusive 3,5-Zimmer-Wohnung mit Wintergarten, Designerbad und idyllischem Gartenparadies",
-   "description": null,
+   "description": "Diese außergewöhnlich hochwertige, kernsanierte 3,5-Zimmer-Wohnung befindet sich im 1. Obergeschoss eines gepflegten Mehrfamilienhauses mit lediglich vier Wohneinheiten und bietet auf ca. 92 m² Wohnfläche ein stilvolles Wohnambiente auf höchstem Niveau. Bereits beim Betreten der Wohnung überzeugt die gelungene Kombination aus zeitloser Eleganz und modernem Wohnkomfort. Hochwertiges Fischgrätparkett verleiht sämtlichen Wohnräumen eine besondere Atmosphäre und unterstreicht den exklusiven Charakter der Immobilie. Das durchdachte Raumkonzept umfasst ein großzügiges Schlafzimmer, ein weiteres Zimmer, das sich ideal als Arbeits- oder Gästezimmer nutzen lässt, sowie einen lichtdurchfluteten Wohn- und Essbereich. Von hier aus gelangen Sie in den großzügigen Wintergarten mit attraktiver Süd-West-Ausrichtung. Dank der Fußbodenheizung und der vollständig zu öffnenden Fensterelemente lässt sich dieser Bereich ganzjährig nutzen und verwandelt sich in den Sommermonaten in eine offene Terrasse mit besonderem Flair. Ein weiteres Highlight ist die brandneue Einbauküche im charmanten Landhausstil. Sie ist mit hochwertigen Bosch-Elektrogeräten ausgestattet und verfügt über eine elegante Kücheninsel sowie einen praktischen Hauswirtschaftsraum mit Anschlüssen für Waschmaschine und Trockner. Das geschmackvoll gestaltete Tageslichtbad erfüllt höchste Ansprüche. Edle Natursteinoberflächen, eine komfortable Badewanne, eine großzügige Dusche, Fußbodenheizung sowie exklusive Armaturen des italienische",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2674,7 +2741,7 @@
     "92 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2683,7 +2750,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/stilvolles-vier-zimmer-penthouse-mit-dachterrasse-und-besonderem-wohnkomfort/3489793016-203-4324",
    "title": "Stilvolles Vier-Zimmer-Penthouse mit Dachterrasse und besonderem Wohnkomfort",
-   "description": null,
+   "description": "Dieses außergewöhnliche Vier-Zimmer-Penthouse in Rödelheim bietet auf ca. 139 m² Wohnfläche ein modernes und großzügiges Wohnkonzept mit hochwertigem Komfort. Bereits der Zugang zur Wohnung unterstreicht den besonderen Charakter: Der Aufzug führt direkt in das Penthouse und ermöglicht einen komfortablen sowie privaten Eintritt in die eigenen vier Wände. Im Mittelpunkt steht der weitläufige Wohn- und Essbereich mit offenem Raumgefühl und Kamin. Von hier aus gelangen Sie direkt auf die großzügige Dachterrasse, die den Wohnraum nach außen erweitert und viel Platz für entspannte Stunden bietet. Eine neue, moderne Einbauküche wird noch eingebaut und ergänzt künftig den offenen Wohnbereich. Die insgesamt vier Zimmer bieten vielseitige Möglichkeiten für Wohnen, Arbeiten und Familie. Das Schlafzimmer verfügt über einen integrierten Ankleidebereich, während sich die weiteren Räume ideal als Kinder-, Gäste- oder Arbeitszimmer nutzen lassen. Für ein angenehmes Wohngefühl zu jeder Jahreszeit sorgen die Fußbodenheizung sowie Klimaanlagen in sämtlichen Räumen, die insbesondere an warmen Sommertagen ein komfortables Raumklima gewährleisten. Zusätzlich bietet das Penthouse ein modernes Smart-Home-System, über das zahlreiche Funktionen der Wohnung komfortabel elektronisch gesteuert werden können. Eine Alarmanlage ist ebenfalls vorhanden. Das 2019 errichtete Gebäude verbindet zeitgemäße Architektur mit modernem Wohnkomfort. Die Kombination aus großzügigem Raumangebot, Dachterrasse, Kamin, Klim",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2706,39 +2773,7 @@
     "139 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
-  },
-  {
-   "key": "kleinanzeigen:3501146062",
-   "source": "kleinanzeigen",
-   "kind": "portal",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-3-5-zimmer-wohnung-in-frankfurt-kueche-balkon-tg/3501146062-203-4294",
-   "title": "Moderne 3,5-Zimmer-Wohnung in Frankfurt | Küche | Balkon | TG",
-   "description": null,
-   "price_cold": null,
-   "price_warm": null,
-   "price_per_sqm": null,
-   "sqm": 109.0,
-   "rooms": 3.5,
-   "street": null,
-   "zip": "60389",
-   "city": "Frankfurt am Main",
-   "district": "Seckbach",
-   "lat": 50.14343,
-   "lng": 8.72589,
-   "position_approx": true,
-   "available_from": null,
-   "image_url": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/21/212c5f95-34e4-44dc-960f-3e1fef7cba71?rule=$_1.AUTO",
-   "wbs_required": null,
-   "commission": null,
-   "score": 55,
-   "score_reasons": [
-    "Grundkriterien erfuellt",
-    "109 m2 - grosszuegig"
-   ],
-   "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2747,7 +2782,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/urbanes-wohnen-mittendrin-stilvoll-moebliertes-2-zimmer-appartement/3502678538-203-4300",
    "title": "Urbanes Wohnen mittendrin: Stilvoll möbliertes 2-Zimmer-Appartement",
-   "description": null,
+   "description": "In begehrter und zentraler Innenstadtlage präsentiert sich diese stilvoll und vollständig möblierte Zwei-Zimmer-Etagenwohnung im 6. Obergeschoss eines im Jahr 2002 erbauten, repräsentativen Wohngebäudes. Auf ca. 75 m² Wohnfläche erwartet Sie ein durchdachtes Raumkonzept, das höchste Ansprüche an urbanes Wohnen, Design und Komfort erfüllt. Für ein rundum sorgloses Wohnen sind in der Warmmiete bereits die Kosten für Gas, Strom und Internet enthalten. Das Gebäude überzeugt durch seine moderne Architektur mit Metall-Glas-Fassade sowie praktische Annehmlichkeiten wie einen Aufzug und Hausmeisterservice. Ein besonderes Highlight der Wohnung ist der lichtdurchflutete, offen gestaltete Wohn- und Essbereich. Die breite Fensterfront gewährt einen spektakulären, unvergleichlichen Panoramablick auf die Frankfurter Skyline und das historische Zentrum – inklusive direktem Blick auf die Kirchturmspitze. Hochwertiger Parkettboden, stilvolle Design-Leuchten und die stufenlos regulierbare Fußbodenheizung schaffen ein exklusives und behagliches Wohnambiente. Die nahtlos in den Wohnraum integrierte, voll ausgestattete Einbauküche präsentiert sich im hellen Design mit edlen Holzarbeitsflächen und einer zentralen Kücheninsel inklusive Barhockern – ideal für gesellige Abende. Das Schlafzimmer bietet ruhigen Rückzugskomfort und besticht ebenfalls durch große Fensterbänder mit Ausblick über die Dächer der Stadt. Es verfügt über ein elegantes Bad en Suite, welches klassisch gefliest und mit einer Bade",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2770,7 +2805,7 @@
     "75 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2779,7 +2814,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/neubau-zweitbezug-grosse-4-zimmer-wohnung-mit-balkon-/3509441035-203-9584",
    "title": "Neubau-Zweitbezug! Große 4-Zimmer-Wohnung mit Balkon!",
-   "description": null,
+   "description": "Objektreferenz: MO 1600/13508/30 Diese großzügig geschnittene 4-Zimmer-Wohnung mit ca. 100 m² Wohnfläche überzeugt durch eine moderne Raumaufteilung und ein besonderes Wohnambiente. Das Herzstück der Wohnung bildet der großzügige, offen gestaltete Wohn-/Essbereich mit rund 27 m². Hier bieten sich vielfältige Möglichkeiten für eine individuelle Einrichtung und ein harmonisches Zusammenspiel von Kochen, Essen und Wohnen. Von diesem Bereich aus gelangen Sie auf den Balkon, der zusätzlichen Raum zum Entspannen und Verweilen im Freien bietet. Die abgeschlossene Küche ist derzeit mit einer Einbauküche versehen, die vom Vormieter gegen Abschlagszahlung optional erworben werden kann. Neben dem Wohnbereich stehen Ihnen drei weitere Zimmer zur Verfügung, die sich flexibel als Schlaf-, Kinder-, Arbeits- oder Gästezimmer nutzen lassen. Das Schlafzimmer bietet mit ca. 16 m² ausreichend Platz für eine komfortable Einrichtung, während die beiden weiteren Zimmer jeweils etwa 10 m² groß sind. Besonders komfortabel ist die Ausstattung mit einem Badezimmer und einem Gäste-WC. Das Badezimmer ist mit Badewanne und Dusche ausgestattet. Ein zusätzlicher Abstellraum innerhalb der Wohnung sorgt für praktischen Stauraum. Der großzügige Eingangsbereich rundet das durchdachte Raumkonzept ab. Ein Tiefgaragenstellplatz ist obligatorisch zu 80,00 EUR / Monat anzumieten. # Ausstattung offener und großzügiger Wohn-/Ess-/Kochbereich - Balkon - Badezimmer mit Badewanne und Dusche - Gäste-WC - TG-Stellplatz zu ",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2802,7 +2837,7 @@
     "100 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2811,7 +2846,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/modernisierte-3-zimmer-wohnung-mit-balkon-zu-vermieten-/3512944229-203-16319",
    "title": "Modernisierte 3-Zimmer-Wohnung mit Balkon zu vermieten!",
-   "description": null,
+   "description": "Objektreferenz: MO 1600/13301/5 Die gut geschnittene 3-Zimmer-Wohnung befindet sich im 1 OG des Hauses, verfügt über ein weiß gefliestes Bad mit Badewanne, sowie über einen Balkon. Bei dem Fußboden handelt es sich um einen neuen Design-Vinylboden in Holzoptik. Ausreichend Stauraum ist vorhanden, denn zur Wohnung gehört ein Keller, sowie ein Abstellraum direkt neben der Wohnung. Bitte beachten Sie, dass es sich bei den Fotos um Musterfotos handelt und es daher zu leichten Abweichungen kommen kann. # Ausstattung Zentrale Warmwasserbereitung 1. Loggia Vinylboden Waschmaschinenanschluss Bad Gegensprechanlage Hausreinigung Dienstleister # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: modernisiert - Bodenbelag: Kunststoff # Lagebeschreibung Frankfurter Berg Zentral gelegen. Einkaufsmöglichkeiten, Grundschule und Kindergärten in unmittelbarer Nähe. Regelmäßige Bus- und S-Bahnverbindungen, inklusive einer Nachtbusverbindung sorgen für eine gute Erreichbarkeit. Direkte Anbindung an die A661. # Sonstiges Bitte beachten Sie, dass Sie zur Anmietung dieses Objekts über eigenes ausreichendes Arbeits- oder Renteneinkommen, sowie über eine positive Schufa-Auskunft verfügen müssen. Zudem weisen wir vorab darauf hin, dass in unseren Mietverträgen ein Kündigungsausschluss von 36 Monaten besteht HINWEIS ZUR BEWERBUNG: Um Ihnen den bestmöglichen Service zu bieten, können Sie sich bei uns digital bewerben. Kopieren Sie den untenstehenden Link in die Adresszeile Ihres Browsers und folg",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2834,7 +2869,7 @@
     "73 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2843,7 +2878,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/gemuetliches-apartment-ideal-fuer-singles/3516071508-203-16296",
    "title": "Gemütliches Apartment – ideal für Singles",
-   "description": null,
+   "description": "Das Mainwald befindet sich im Stadtteil Niederrad in Frankfurt am Main. Das Objekt bietet voll möblierte Studios und auch Suiten mit funktionalen Grundrissen. Jede Einheit verfügt über eine eigene Küchenzeile und eine zeitgemäße Ausstattung. # Ausstattung Highlights: - Servicedesk mit persönlichem Ansprechpartner vor Ort - Einbauküche mit Elektrogeräten - teilweise Balkon oder Terrasse - Lichtdurchflutete Räume dank bodentiefer Fenster - Stellplätze in der Tiefgarage - TV-Anschluss in jedem Apartment # Weitere Angaben - Garagen/Stellplätze: 1 - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Garagen/Stellplatzmiete: 110,00 € - Hinweis zur Kaution: 4680 # Lagebeschreibung Die Mainwald Studios and Suites befinden sich im Lyoner Quartier im Stadtteil Niederrad in Frankfurt am Main. Die Lage zeichnet sich durch eine hervorragende Anbindung zwischen Innenstadt und Flughafen aus und verbindet urbanes Umfeld mit naturnaher Umgebung. Geschäfte des täglichen Bedarfs, Gastronomie sowie verschiedene Dienstleistungsangebote sind fußläufig erreichbar. Gleichzeitig sorgen nahegelegene Haltestellen des öffentlichen Nahverkehrs für eine schnelle Verbindung in die Innenstadt, zum Hauptbahnhof und zum Flughafen. Darüber hinaus bietet die unmittelbare Nähe zum Frankfurter Stadtwald einen hohen Freizeit- und Erholungswert. Insgesamt vereint der Standort eine zentrale, gut vernetzte Lage mit einer angenehmen, grünen Umgebung und bietet damit eine attraktive Wohnqualität. # Sonstiges Wir bitt",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2866,7 +2901,7 @@
     "76 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2875,7 +2910,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/renovierte-2-zimmerwohnung/3518517789-203-4312",
    "title": "Renovierte 2-Zimmerwohnung",
-   "description": null,
+   "description": "**Objektinformationen** Zur Vermietung steht eine helle und gut geschnittene 2-Zimmer-Wohnung in Frankfurt-Sossenheim. Die Wohnung befindet sich im 1. Obergeschoss und wurde vollständig saniert. Eine Küche ist bereits vorhanden und gehört zur Ausstattung der Wohnung. Das Gebäude liegt direkt an einer Bushaltestelle und bietet somit eine gute Anbindung an den öffentlichen Nahverkehr. **Wichtig!** Bei Interesse an der Wohnung senden Sie uns bitte eine Nachricht über Kleinanzeigen. Damit wir Ihre Anfrage schnellstmöglich bearbeiten können, teilen Sie uns bitte bereits bei der ersten Kontaktaufnahme kurz mit, wie viele Personen einziehen möchten, welcher beruflichen Tätigkeit Sie nachgehen bzw. wie hoch das monatliche Nettoeinkommen ist und ob Haustiere vorhanden sind.",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2898,7 +2933,7 @@
     "75 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2939,7 +2974,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/nachmieter-fuer-ca-65-m-wohnung-in-frankfurt-niederrad-gesucht-/3520147737-203-4321",
    "title": "Nachmieter für ca. 65 m² Wohnung in Frankfurt-Niederrad gesucht.",
-   "description": null,
+   "description": "Nachmieter gesucht – Neu renovierte 2-Zimmer-Wohnung in Frankfurt-Niederrad Für eine neu renovierte 2-Zimmer-Wohnung in Frankfurt-Niederrad wird ein zuverlässiger Nachmieter gesucht. Details zur Wohnung: - Wohnfläche: 65 m² - 2 helle und gut geschnittene Zimmer - Neu renoviert - Ruhige und attraktive Wohnlage - Ideal für Singles oder Paare - Gute Anbindung an öffentliche Verkehrsmittel sowie Einkaufsmöglichkeiten in unmittelbarer Nähe Einzug: Nach Absprache. Bei Interesse senden Sie bitte eine kurze Vorstellung mit Ihrem Namen, Beruf, der Anzahl der einziehenden Personen und dem gewünschten Einzugstermin. Besichtigungstermine können gerne vereinbart werden.",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -2962,7 +2997,71 @@
     "65 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "kleinanzeigen:3520536302",
+   "source": "kleinanzeigen",
+   "kind": "portal",
+   "url": "https://www.kleinanzeigen.de/s-anzeige/alltagstaugliche-3-zimmer-wohnung-mit-zwei-balkonen/3520536302-203-16331",
+   "title": "Alltagstaugliche 3-Zimmer-Wohnung mit zwei Balkonen",
+   "description": "Helle 3-Zimmer-Wohnung mit 2 Balkonen, Einbauküche und Tiefgaragenstellplatz in Frankfurt-Unterliederbach Diese gepflegte 3-Zimmer-Wohnung befindet sich im 3. Obergeschoss eines Mehrfamilienhauses mit Aufzug. Sie verfügt über eine Einbauküche, zwei Balkone sowie einen Kellerraum und bietet somit hohen Wohnkomfort. Die Wohnung liegt in Frankfurt-Unterliederbach und überzeugt durch ihre gute Verkehrsanbindung. Die S-Bahn-Linie S1 sowie die Buslinien 55 und 58 sind in kurzer Zeit erreichbar. Mietkonditionen: Kaltmiete: 1.400 EUR Nebenkosten: 300 EUR Tiefgaragenstellplatz: 50 EUR Gesamtmiete: 1.750 EUR pro Monat Die Wohnung eignet sich ideal für Paare, kleine Familien oder Berufstätige, die eine gut angebundene und komfortable Wohnlage in Frankfurt suchen.",
+   "price_cold": null,
+   "price_warm": null,
+   "price_per_sqm": null,
+   "sqm": 75.0,
+   "rooms": 3.0,
+   "street": null,
+   "zip": "65929",
+   "city": "Frankfurt am Main",
+   "district": "Unterliederbach",
+   "lat": 50.11041,
+   "lng": 8.53225,
+   "position_approx": true,
+   "available_from": null,
+   "image_url": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7a/7a49fc97-d103-43a6-b57c-bf636099c477?rule=$_1.AUTO",
+   "wbs_required": null,
+   "commission": null,
+   "score": 55,
+   "score_reasons": [
+    "Grundkriterien erfuellt",
+    "75 m2 - grosszuegig"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "kleinanzeigen:3520547504",
+   "source": "kleinanzeigen",
+   "kind": "portal",
+   "url": "https://www.kleinanzeigen.de/s-anzeige/stilvolle-3-zimmer-wohnung-mit-terrasse/3520547504-203-16327",
+   "title": "Stilvolle 3 Zimmer Wohnung mit Terrasse",
+   "description": "Lichtdurchflutete 3 Zimmer Wohnung im zweiten Obergeschoss eines Neubaus. Der offene Wohn und Essbereich führt direkt auf die 12 m² große Terrasse mit Blick ins Grüne. Zwei Schlafzimmer bieten Flexibilität. Die exklusive Küche ist mit Backofen, Dampfgarer, Geschirrspüler, Kühlschrank und Weintemperierschrank ausgestattet. Das Badezimmer verfügt über eine Walk in Dusche und Anschlüsse für Waschmaschine und Trockner, ein separates Gäste WC ergänzt den Sanitärbereich. Ein Abstellraum und ein Kellerabteil schaffen Stauraum. Echtholzparkett, Fußbodenheizung und ein Lift sorgen für Komfort. Die Wohnung ist teilweise möbliert und ab sofort für drei Jahre verfügbar.",
+   "price_cold": null,
+   "price_warm": null,
+   "price_per_sqm": null,
+   "sqm": 67.0,
+   "rooms": 3.0,
+   "street": null,
+   "zip": "60439",
+   "city": "Frankfurt am Main",
+   "district": "Heddernheim",
+   "lat": 50.16295,
+   "lng": 8.62346,
+   "position_approx": true,
+   "available_from": null,
+   "image_url": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7f/7f1cffa8-6fa0-44bb-ba31-441b8932ef94?rule=$_1.AUTO",
+   "wbs_required": null,
+   "commission": null,
+   "score": 55,
+   "score_reasons": [
+    "Grundkriterien erfuellt",
+    "67 m2 - grosszuegig"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -2994,7 +3093,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -3026,7 +3125,7 @@
     "80 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -3058,7 +3157,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -3129,6 +3228,7 @@
    "kind": "portal",
    "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main-Westend-Nord.12282637.html",
    "title": "Wiesenau, Frankfurt am Main",
+   "description": "Wiesenau, Frankfurt am Main",
    "price_cold": null,
    "price_warm": 2490,
    "price_per_sqm": null,
@@ -3141,7 +3241,7 @@
    "lat": 50.12636,
    "lng": 8.66792,
    "position_approx": true,
-   "available_from": "21.09.2026",
+   "available_from": "22.09.2026",
    "image_url": "https://img.wg-gesucht.de/media/up/2025/34/0cfddab5922a3b84e12491a55862792c057ac58b2e545f6858d31f3adc6de692_cc9e3c33_24f8_4603_9210_258752c67a3d.small.jpg",
    "wbs_required": null,
    "commission": null,
@@ -3151,8 +3251,8 @@
     "76 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T22:28:48.100779+00:00",
-   "last_seen": "2026-09-21T21:15:56.616556+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12282640",
@@ -3247,8 +3347,8 @@
     "101 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-09-22T15:04:09.324883+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12310163",
@@ -3565,7 +3665,7 @@
    ],
    "first_seen": "2026-09-20T02:30:19.041266+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13740493",
@@ -3596,7 +3696,7 @@
     "75 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -3605,6 +3705,7 @@
    "kind": "portal",
    "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main-Nordend-Ost.13750092.html",
    "title": "Unterer Atzemer, Frankfurt am Main",
+   "description": "Unterer Atzemer, Frankfurt am Main",
    "price_cold": null,
    "price_warm": 2850,
    "price_per_sqm": null,
@@ -3627,8 +3728,8 @@
     "130 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-09-22T10:04:02.120004+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13775517",
@@ -3690,8 +3791,8 @@
     "120 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13871584",
@@ -3722,7 +3823,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -3754,7 +3855,7 @@
     "75 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -3849,7 +3950,7 @@
    ],
    "first_seen": "2026-09-20T00:38:27.034331+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13990389",
@@ -3880,7 +3981,7 @@
     "80 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -3974,7 +4075,7 @@
     "93 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4006,7 +4107,7 @@
     "85 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4038,7 +4139,7 @@
     "86 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4070,7 +4171,7 @@
     "65 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4133,7 +4234,7 @@
     "65 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4165,7 +4266,7 @@
     "65 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4197,7 +4298,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-20T07:29:02.702144+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4229,7 +4330,7 @@
     "85 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T08:53:16.980131+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4261,7 +4362,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4293,7 +4394,7 @@
     "85 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4326,7 +4427,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4335,7 +4436,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/luxurioes-und-unkompliziert-vollausgestattete-wohnung-in-frankfurt/3463889404-203-16315",
    "title": "Luxuriös und unkompliziert – Vollausgestattete Wohnung in Frankfurt",
-   "description": null,
+   "description": "THE PULSE - Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung, z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Fliesen, Parkett # Lagebesc",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -4357,7 +4458,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4366,7 +4467,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/zweizimmerwohnung-in-frankfurt-am-main/3510604977-203-16314",
    "title": "Zweizimmerwohnung in Frankfurt am Main",
-   "description": null,
+   "description": "Diese moderne Zweizimmerwohnung mit einer Wohnfläche von 55 Quadratmetern befindet sich in einem Neubau mit Baujahr 2026. Der durchdachte Grundriss bietet eine klare Raumaufteilung, die sich ideal für verschiedene Wohnbedürfnisse eignet. Die Immobilie überzeugt durch ihren zeitgemäßen Standard und eine hochwertige Ausführung, die ein angenehmes Raumgefühl vermittelt. Ergänzend dazu bietet das Gebäude eine moderne Infrastruktur, die den aktuellen Anforderungen an zeitgemäßes Wohnen vollumfänglich gerecht wird.",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -4388,7 +4489,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4397,7 +4498,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/gut-geschnittene-2-zimmer-wohnung-mit-balkon-zu-vermieten-/3512983932-203-16319",
    "title": "Gut geschnittene 2-Zimmer-Wohnung mit Balkon zu vermieten!",
-   "description": null,
+   "description": "Objektreferenz: MO 1600/13301/61 Die gut geschnittene 2-Zimmer-Wohnung befindet sich im 7.OG des Hauses und verfügt neben einem Balkon über ein modernisiertes Badezimmer. Bei dem Fußboden handelt es sich um einen PVC-Boden in Laminatoptik. Ausreichend Stauraum ist vorhanden, denn zur Wohnung gehört ein Keller, sowie ein Abstellraum direkt neben der Wohnung. Bitte beachten Sie, dass es sich bei den Fotos um Musterfotos handelt und es daher zu leichten Abweichungen kommen kann. # Ausstattung Zentrale Warmwasserbereitung 1. Loggia Vinylboden Waschmaschinenanschluss Bad Gegensprechanlage Hausreinigung Dienstleister # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: gepflegt - Bodenbelag: Kunststoff # Lagebeschreibung Frankfurter Berg Zentral gelegen. Einkaufsmöglichkeiten, Grundschule und Kindergärten in unmittelbarer Nähe. Regelmäßige Bus- und S-Bahnverbindungen, inklusive einer Nachtbusverbindung sorgen für eine gute Erreichbarkeit. Direkte Anbindung an die A661. # Sonstiges Bitte beachten Sie, dass Sie zur Anmietung dieses Objekts über eigenes ausreichendes Arbeits- oder Renteneinkommen, sowie über eine positive Schufa-Auskunft verfügen müssen. Zudem weisen wir vorab darauf hin, dass in unseren Mietverträgen ein Kündigungsausschluss von 36 Monaten besteht HINWEIS ZUR BEWERBUNG: Um Ihnen den bestmöglichen Service zu bieten, können Sie sich bei uns digital bewerben. Kopieren Sie den untenstehenden Link in die Adresszeile Ihres Browsers und folgen Sie der Anleitung. htt",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -4419,7 +4520,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4428,7 +4529,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/-charmante-2-zimmerwohnung-in-zentraler-lage-von-niederrad-/3514100784-203-16296",
    "title": "!Charmante 2 Zimmerwohnung in Zentraler Lage von Niederrad!",
-   "description": null,
+   "description": "Diese helle Wohnung im Frankfurter Stadtteil Niederrad überzeugt durch einen funktionalen Grundriss und gut geschnittene Räume. Der Wohnbereich bietet ausreichend Platz und wird durch große Fenster angenehm belichtet. Das Schlafzimmer ist praktisch geschnitten und lässt sich gut möblieren. Das Badezimmer ist kompakt und mit einer Badewanne ausgestattet. *Die Wohnung wird unmöbliert angeboten. # Ausstattung - 2 gut geschnittene Zimmer - lichtdurchflutete Räume - Waschmaschinenanschluss im Bad - Doppelt verglaste Fenster - Hausmeisterservice # Weitere Angaben - Verfügbar ab: 01.10.2026 - Objektzustand: gepflegt - Qualität der Ausstattung: Standard # Lagebeschreibung Die Wohnung befindet sich im Frankfurter Stadtteil Niederrad, einem etablierten und gut angebundenen Wohn- und Bürostandort. Die Lyoner Straße liegt im sogenannten „Bürostadt“-Quartier, das sich zunehmend zu einem gemischten Wohngebiet entwickelt. Einkauf & Versorgung: Supermärkte, Bäckereien und weitere Geschäfte des täglichen Bedarfs sind in wenigen Minuten erreichbar. Größere Einkaufsmöglichkeiten finden sich zusätzlich im nahegelegenen Stadtteilzentrum von Niederrad sowie in Sachsenhausen. Familie & Bildung: Kindergärten und Schulen befinden sich im näheren Umfeld und sind gut erreichbar, sowohl zu Fuß als auch mit dem Fahrrad oder öffentlichen Verkehrsmitteln. Medizinische Versorgung: Ärzte verschiedener Fachrichtungen sowie Apotheken sind in Niederrad vorhanden und schnell erreichbar. Kliniken und weitere medi",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -4450,7 +4551,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4459,7 +4560,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/gut-geschnittene-2-zimmer-wohnung-mit-balkon-zu-vermieten-/3514656956-203-16319",
    "title": "Gut geschnittene 2-Zimmer-Wohnung mit Balkon zu vermieten!",
-   "description": null,
+   "description": "Objektreferenz: MO 1600/13301/190 Die großzügig geschnittene 2-Zimmer- Wohnung liegt im obersten Geschoss des Gebäudes und hat eine wunderbare Aussicht in den Taunus und von der Küche einen tollen Blick auf die Skyline Frankfurts. Eine große Küche lädt zum Kochabend mit Freunden ein. Die Wohnung verfügt zudem über eine große Loggia, sowie über ein Badezimmer mit Badewanne. Bei dem Fußbodenbelag handelt es sich um einen grauen PVC-Boden. Das Badezimmer wurde in 2016 vollständig modernisiert. Ausreichend Stauraum ist vorhanden, denn zur Wohnung gehört ein Keller, sowie ein Abstellraum direkt neben der Wohnung. # Ausstattung Zentrale Warmwasserbereitung 1. Loggia Vinylboden Waschmaschinenanschluss Bad Gegensprechanlage Hausreinigung Dienstleister # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: gepflegt - Bodenbelag: Kunststoff # Lagebeschreibung Frankfurter Berg Zentral gelegen. Einkaufsmöglichkeiten, Grundschule und Kindergärten in unmittelbarer Nähe. Regelmäßige Bus- und S-Bahnverbindungen, inklusive einer Nachtbusverbindung sorgen für eine gute Erreichbarkeit. Direkte Anbindung an die A661. # Sonstiges Bitte beachten Sie, dass Sie zur Anmietung dieses Objekts über ein ausreichendes eigenes Arbeitseinkommen und eine positive Schufa-Auskunft verfügen müssen. Zudem weisen wir vorab darauf hin, dass in unseren Mietverträgen ein Kündigungsausschluss von 36 Monaten gilt. HINWEIS ZUR BEWERBUNG: Um Ihnen den bestmöglichen Service zu bieten, können Sie sich bei uns digita",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -4481,7 +4582,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4490,7 +4591,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/2-wg-zimmer-im-neuwertigen-altbau-frankfurt-gutleutviertel/3515021812-203-16314",
    "title": "2 WG-Zimmer im neuwertigen Altbau - Frankfurt-Gutleutviertel",
-   "description": null,
+   "description": "### Einleitung In einer 60 m² großen Zweizimmerwohnung im 1. Obergeschoss eines Altbaus im Gutleutviertel vermieten wir die beiden Zimmer einzeln. Beide sind hell und in neuwertigem Zustand. Küche, Bad mit Badewanne und den breiten Flur teilen Sie sich zu zweit. Wer zu zweit sucht, kann beide Zimmer zusammen anmieten. Die Wohnung wird zum 1. November 2026 frei. ### Die Highlights - Zwei helle Zimmer in einer 60-m²-Wohnung, einzeln oder zusammen anmietbar - Neuwertiger Zustand, bezugsfertig - Küche mit Abstellkammer und Platz für einen großen Esstisch - Bad mit Badewanne - Eigene Nische mit Waschmaschinenanschluss in der Wohnung - Breiter Flur - Gasetagenheizung - Wenige Minuten zum Main und zum Hauptbahnhof ### Daten des WG-Zimmers - Angeboten werden: zwei Zimmer, einzeln vermietet - Wohnfläche der Wohnung: ca. 60 m² - Geschoss: gelegen im 1. Obergeschoss - Gemeinschaftlich genutzt: Küche mit Abstellkammer, Bad mit Badewanne, Flur - Heizung: Gasetagenheizung (Gastherme in der Wohnung) - Übergabe: unmöbliert - Bezugsfrei ab: 01.11.2026 ### Miete pro Zimmer - Kaltmiete je Zimmer: 600 EUR - Nebenkostenpauschale je Zimmer: 90 EUR - Gesamt je Zimmer: 690 EUR monatlich - Kaution je Zimmer: 1.800 EUR (drei Kaltmieten), vor Schlüsselübergabe zu entrichten - Frei ab dem 1. November 2026 ### Übernahme von der Vormieterin Die Vormieterin bietet mehrere Einbauten und Möbel zur Übernahme an: die Einbauküche mit Elektrogeräten, einen Kleiderschrank, Badmöbel, die Flurmöbel und den Esstisch",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -4512,7 +4613,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4521,7 +4622,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-2-zimmer-wohnung-mit-balkon-/3515900485-203-9584",
    "title": "Moderne 2-Zimmer-Wohnung mit Balkon!",
-   "description": null,
+   "description": "Objektreferenz: MO 1600/13513/16 Diese gut geschnittene 2-Zimmer-Wohnung mit ca. 63 m² Wohnfläche überzeugt durch eine durchdachte Raumaufteilung und ein angenehmes Wohnambiente. Das Herzstück der Wohnung bildet der großzügige Wohn- und Essbereich, der viel Platz für individuelle Gestaltung bietet und direkten Zugang zum gemütlichen Balkon hat – ideal zum Entspannen nach einem langen Tag. Die separate Küche ist praktisch geschnitten und bietet ausreichend Platz zum Kochen. Das Schlafzimmer ist ruhig gelegen und bietet mit ca. 13 m² genügend Raum für ein großes Bett und einen Kleiderschrank. Das moderne Badezimmer ist mit einer Badewanne, WC und Waschbecken gut ausgestattet. Abgerundet wird das Raumangebot durch einen praktischen Abstellraum inkl. Waschmaschinenanschluss, der zusätzlichen Stauraum schafft sowie einen TG-Stellplatz, welcher obligatorisch zu 80,00 EUR / Monat anzumieten ist. # Ausstattung - Neubau-Zweitbezug - Badezimmer mit Badewanne - praktischer Abstellraum - TG-Stellplatz für 80,00 EUR / Monat - Balkon # Weitere Angaben - Verfügbar ab: 01.11.2026 - Objektzustand: neuwertig # Lagebeschreibung Die Wohnanlage befindet sich in ruhiger und zugleich gut angebundener Lage im Frankfurter Norden im Stadtteil Nieder-Eschbach. Die Umgebung zeichnet sich durch eine angenehme Mischung aus Wohnbebauung, Grünflächen und einer guten Infrastruktur für den täglichen Bedarf aus. Geschäfte des täglichen Bedarfs, Supermärkte, Apotheken, Ärzte sowie gastronomische Angebote sind i",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -4543,7 +4644,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4575,7 +4676,7 @@
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "ohnemakler:491158",
@@ -4608,7 +4709,7 @@
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12694354",
@@ -4638,7 +4739,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4669,7 +4770,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4700,7 +4801,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4731,7 +4832,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4763,7 +4864,7 @@
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13588008",
@@ -4793,7 +4894,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4854,7 +4955,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4915,7 +5016,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4946,7 +5047,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -4977,7 +5078,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5008,7 +5109,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5039,7 +5140,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5070,7 +5171,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5101,7 +5202,7 @@
     "36 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-21T14:16:33.705520+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5132,7 +5233,7 @@
     "39 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5163,7 +5264,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5194,7 +5295,7 @@
     "Kaltmiete 1451 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5225,7 +5326,7 @@
     "Kaltmiete 1860 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5256,7 +5357,7 @@
     "Kaltmiete 1440 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5287,7 +5388,7 @@
     "Kaltmiete 3320 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5318,7 +5419,7 @@
     "Kaltmiete 2185 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5349,7 +5450,7 @@
     "Kaltmiete 2400 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5410,7 +5511,7 @@
     "31 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-21T14:16:33.705520+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5441,7 +5542,7 @@
     "Kaltmiete 1700 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5472,7 +5573,7 @@
     "Kaltmiete 2750 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5503,7 +5604,7 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5564,7 +5665,7 @@
     "Kaltmiete 2170 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5612,9 +5713,9 @@
    "street": "Innenstadt",
    "zip": "60313",
    "city": "Frankfurt am Main",
-   "district": "Innenstadt I",
-   "lat": 50.11456,
-   "lng": 8.68359,
+   "district": "Innenstadt",
+   "lat": 50.11554,
+   "lng": 8.68287,
    "position_approx": true,
    "available_from": null,
    "image_url": "https://mms.immowelt.de/d/3/c/6/d3c68496-97d3-41d3-b8f3-990f831f6918.jpg?h=50",
@@ -5625,7 +5726,7 @@
     "Kaltmiete 1900 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5656,7 +5757,7 @@
     "Kaltmiete 3250 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5687,7 +5788,7 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5718,7 +5819,7 @@
     "Kaltmiete 2250 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5749,7 +5850,7 @@
     "23 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-21T11:07:52.487515+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5780,7 +5881,7 @@
     "24 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T05:05:53.005408+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5811,7 +5912,7 @@
     "Kaltmiete 2800 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5872,7 +5973,7 @@
     "26 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5933,7 +6034,7 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-21T11:07:52.487515+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5942,7 +6043,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/campus-living-frankfurt-vollmoeblierte-apartments/2989217033-203-4302",
    "title": "CAMPUS LIVING FRANKFURT - VOLLMÖBLIERTE APARTMENTS",
-   "description": null,
+   "description": "WIR SIND FAMILIE. UND HEISSEN JEDEN WILLKOMMEN! BEM VINDOS! Das CAMPUS LIVING Frankfurt ist die größte Apartmentanlage in Europa mit unterschiedlichen Apartmenttypen (ca.18 – 43 m²) sowie großzügigen Gemeinschaftsflächen im Herzen von Frankfurt. Insgesamt 1.021 neue Lifestyle-Apartments in einem Gebäude, in dem es dir an nichts fehlen wird – Dachterrasse mit Yoga-Fläche, Bar, Eventküche, Heimkino & sogar ein Restaurant und Hühner wird es in dem Haus geben! Unsere Miete versteht sich als All-in Miete. Die pauschalen Nebenkosten beinhalten hierbei: Wasser, Warmwasser, Heizung, Strom, Instandsetzungs- und Pflegearbeiten der Grau- und Grünflächen, Facility Manager, Winterdienst, Reinigung der Gemeinschaftsflächen, Müll, Internet/WLAN, TV-Anschluss etc. Hinweis: Der Rundfunk- und Fernsehbeitrag (ehemals GEZ) ist nicht enthalten, da es sich hier um einen personenbezogenen Beitrag handelt. Unsere Apartments verfügen über eine hochwertige Möblierung, eine eigene Küche sowie ein eigenes Bad in Dschungel-Optik. Alles, was du als Student, Young Professional oder Berufspendler brauchst! Teilweise mit Balkon oder Terrasse. Im Haus findest du mehrere Gemeinschaftsflächen wie zum Beispiel unsere Dachterrasse und unser Heimkino für Netflix-Abende. Hier kannst du einfach mal die Seele baumeln lassen – ideal um dich mit deinen Nachbarn zu connecten und ins Gespräch zu kommen. Sport machen – und das auch noch in den eigenen vier Wänden? Bei uns auch kein Problem! Auf dem hauseigenen Multifunkti",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -5964,7 +6065,7 @@
     "21 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -5973,10 +6074,10 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/voll-moeblierte-1-zimmer-wohnung-in-frankfurt/3443186432-203-4316",
    "title": "voll möblierte 1-Zimmer-Wohnung in Frankfurt",
-   "description": null,
-   "price_cold": null,
-   "price_warm": null,
-   "price_per_sqm": null,
+   "description": "OBJEKTBESCHREIBUNG Zur Miete steht eine gemütliche, voll möblierte 1-Zimmer-Wohnung in der Tucholskystraße 79, Frankfurt am Main. Die Wohnung ist ideal für Singles oder Berufspendler und bietet alles, was man für den Alltag braucht: Die Wohnung ist vor kurzem saniert worden und mit stilvollen Möbeln ausgestattet. Im Apartment gibt es eine schöne Küche, die getrennt vom Wohn-/Schlafbereich ist und zum Kochen und Essen einlädt. Das Badezimmer ist modern gefliesten voll ausgestattet. Warmmiete: 1080 € In der Warmmiete sind alle Betriebskosten und Heizung inkludiert. SONSTIGES EINZUGSDATUM: 1.10.2026 Mindestlaufzeit des Mietvertrags: 12 Monate Kaltmiete: 930€ Nebenkosten: 150€ (Vorauszahlung) \\= Warmmiete: 1080€ Kaution: 1.500€ LAGE Tucholskystraße 79, Sachsenhausen-Süd, 60598 Frankfurt am Main Die Wohnung befindet sich im Frankfurter Stadtteil Sachsenhausen, einem der beliebtesten Viertel der Stadt. Die Lage bietet eine hervorragende Anbindung an den öffentlichen Nahverkehr: Die nächste U-Bahn-Station ist nur wenige Gehminuten entfernt und bietet schnelle Verbindungen in die Innenstadt. Eine Bushaltestelle befindet sich in unmittelbarer Nähe, sodass Sie flexibel innerhalb der Stadt unterwegs sein können. In der Umgebung finden Sie zahlreiche Einkaufsmöglichkeiten, Restaurants und Cafés. Der nahegelegene Mainufer lädt zu Spaziergängen und Freizeitaktivitäten ein.",
+   "price_cold": 930,
+   "price_warm": 1080,
+   "price_per_sqm": 25.14,
    "sqm": 37.0,
    "rooms": 1.0,
    "street": null,
@@ -5995,7 +6096,7 @@
     "37 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6004,7 +6105,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/the-pulse-urbaner-luxus-und-komfort-ab-3-monaten-mietdauer/3463885986-203-16315",
    "title": "THE PULSE - Urbaner Luxus und Komfort ab 3 Monaten Mietdauer",
-   "description": null,
+   "description": "Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im Projekt THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien, es ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt, profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Zentrale Klimaanlage # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Dielen, Fliesen, Par",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6026,7 +6127,7 @@
     "43 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6035,7 +6136,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/the-pulse-urbaner-luxus-und-komfort-ab-3-monaten-mietdauer/3463923752-203-16315",
    "title": "THE PULSE - Urbaner Luxus und Komfort ab 3 Monaten Mietdauer",
-   "description": null,
+   "description": "Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im Projekt THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien, es ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt, profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Zentrale Klimaanlage # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Dielen, Fliesen, Par",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6057,7 +6158,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6066,7 +6167,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/the-pulse-urbaner-luxus-im-herzen-frankfurts/3473584635-203-16315",
    "title": "THE PULSE – Urbaner Luxus im Herzen Frankfurts",
-   "description": null,
+   "description": "Mitten in der Frankfurter Innenstadt erwartet Sie THE PULSE – ein exklusives Wohnkonzept mit 124 modernen, vollmöblierten Apartments, die stilvolles Design und maximalen Komfort vereinen. Jedes Apartment ist hochwertig ausgestattet: von Marken-Einbauküchen mit Induktionsherd und Spülmaschine über Vitra-Möbel und einem hohen Sicherheitsstandard. Hier ist wirklich alles vorhanden – von der Kaffeemaschine bis zum Geschirr und sämtlichen Kochutensilien – damit Sie sofort entspannt in Ihr neues Zuhause starten können. Die Lage spricht für sich: Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt genießen Sie perfekte Anbindungen an S-Bahn, U-Bahn und Tram. Ob Altstadt, Messe, Central Business District oder das pulsierende Bahnhofsviertel – alles erreichen Sie in kürzester Zeit. Auch der Flughafen ist durch die direkte S-Bahn-Verbindung bequem zu erreichen – ideal für Vielreisende und internationale Gäste. THE PULSE steht für urbanes Wohnen auf höchstem Niveau – mitten in der Stadt, perfekt ausgestattet und bereit für ein komfortables Leben ab dem ersten Tag. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Zentrale Klimaanlage # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Fliesen, Parkett # Lagebeschreibung Das Frankfurter Bahnhofsviertel ist ein faszinierender urbaner Stadtteil, der pulsierende Vielfalt und internationales Flair vereint. Direkt am Hauptbahnhof gelegen, ist es der perfekte Knotenpunkt, der den ",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6088,7 +6189,7 @@
     "41 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6097,7 +6198,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/the-pulse-urban-living-at-its-finest-im-herzen-von-frankfurt/3476023798-203-16315",
    "title": "THE PULSE – Urban Living at Its Finest im Herzen von Frankfurt",
-   "description": null,
+   "description": "THE PULSE – Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im Projekt THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung, z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien, es ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt, profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die es Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Fliesen, Pa",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6119,7 +6220,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6128,7 +6229,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-luxus-apartment-im-zentrum-frankfurts/3476023817-203-16315",
    "title": "Möbliertes Luxus-Apartment im Zentrum Frankfurts",
-   "description": null,
+   "description": "THE PULSE - Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im Projekt THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien, es ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt, profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Fliesen, Parket",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6150,7 +6251,7 @@
     "37 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6159,7 +6260,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/the-pulse-exklusiv-moeblierte-apartments-mit-klimaanlage-im-herzen-von-frankfurt/3476024158-203-16315",
    "title": "THE PULSE - Exklusiv möblierte Apartments mit Klimaanlage im Herzen von Frankfurt",
-   "description": null,
+   "description": "THE PULSE ist die perfekte Wahl für alle, die Frankfurt komfortabel erleben möchten: hochwertig möbliert, zentral gelegen und ideal für modernes Wohnen. Mitten in der Frankfurter Innenstadt erwartet Sie THE PULSE mit seinen exklusiven, vollmöblierten Apartments, die urbanen Komfort und zeitgemäßes Design vereinen. Jedes Apartment ist hochwertig ausgestattet, von der stilvollen Designer-Möblierung über die Marken-Einbauküche mit Induktionsherd und Spülmaschine bis hin zu sämtlichen Kochutensilien und Kaffeemaschine. Alles ist auf einen unkomplizierten Einzug und ein rundum angenehmes Wohnerlebnis ausgelegt. Eine Klimaanlage sorgt für zusätzlichen Wohnkomfort, während moderne Smart-Home-Funktionen und ein hoher Sicherheitsstandard ein sicheres und komfortables Wohngefühl garantieren. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Zentrale Klimaanlage # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Fliesen, Parkett # Lagebeschreibung Das Frankfurter Bahnhofsviertel ist ein faszinierender urbaner Stadtteil, der pulsierende Vielfalt und internationales Flair vereint. Direkt am Hauptbahnhof gelegen, ist es der perfekte Knotenpunkt, der den Charme historischer Architektur mit modernen, lebendigen Elementen kombiniert. Hier trifft sich die Welt: Reisende aus allen Ecken des Globus, Geschäftsleute und kreative Köpfe lassen sich von der einzigartigen Atmosphäre inspirieren. Das Viertel besticht durch seine bunte Mischung",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6181,7 +6282,7 @@
     "41 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6190,7 +6291,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/the-pulse-moeblierte-city-oase-mit-hochwertigem-wohnkomfort-und-klimaanlage/3476044670-203-16315",
    "title": "THE PULSE – Möblierte City-Oase mit hochwertigem Wohnkomfort und Klimaanlage",
-   "description": null,
+   "description": "Willkommen bei THE PULSE, einem modernen Wohnkonzept im Herzen von Frankfurt. Unsere stilvoll möblierten Apartments verbinden urbanen Komfort, hochwertiges Design und maximale Flexibilität. Ob für berufliche Projekte, einen Neustart in der Stadt oder als komfortables Zuhause – THE PULSE bietet Ihnen ein rundum durchdachtes Wohnerlebnis. Die Apartments befinden sich in einem umfassend kernsanierten Gebäude und überzeugen durch modernes Interior, effiziente Grundrisse und eine hochwertige Ausstattung. Viele Einheiten sind zum ruhigen Innenhof ausgerichtet und bieten eine angenehm entspannte Wohnatmosphäre. Highlights auf einen Blick: Digitale Besichtigungen möglich, Voll möbliert – „löffelfertig“, Warmmiete als Pauschalmiete inkl. sämtlicher Nebenkosten, Wohnungsgeberbescheinigung bei Übergabe, Eigenes Kellerabteil inklusive, Vollständige Ausstattung mit Geschirr, Bettwäsche & Handtüchern, Klimaanlage Ausstattung: Stilvolle Möblierung für sofortiges Wohlfühlen, Großzügiges Bad mit bodengleicher Dusche & edlen Fliesen, Hochwertige Parkettböden, Helle Fensterfronten, 3-fach verglast mit Schallschutzkonzept, Moderne Küche inkl. Geschirr & Besteck, Hoher Sicherheitsstandard (24h-Sicherheitskonzept), Gemeinschaftliche Waschmaschinen im Gebäude (Münzsystem). Die verkehrsgünstige Lage, nur einen Steinwurf vom Hauptbahnhof entfernt, bietet eine hervorragende Anbindung an den öffentlichen Nah- und Fernverkehr. Einkaufsmöglichkeiten, Restaurants und zahlreiche Freizeitangebote sind beque",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6212,7 +6313,7 @@
     "39 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6221,7 +6322,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/luxurioes-und-unkompliziert-voll-ausgestattete-wohnung-in-frankfurt/3476066067-203-16315",
    "title": "Luxuriös und unkompliziert – Voll ausgestattete Wohnung in Frankfurt",
-   "description": null,
+   "description": "THE PULSE - Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung, z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung, Zentrale Klimaanlage # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Flies",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6243,7 +6344,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6252,7 +6353,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/beyond-ordinary-voll-ausgestattete-luxuswohnung-in-zentraler-lage/3476066424-203-16315",
    "title": "Beyond ordinary – voll ausgestattete Luxuswohnung in zentraler Lage",
-   "description": null,
+   "description": "THE PULSE – Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt am Main. Im Projekt THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung, z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die es Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Fliesen,",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6274,7 +6375,7 @@
     "43 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6283,7 +6384,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/luxurioes-und-unkompliziert-voll-ausgestattete-wohnung-in-frankfurt/3476277496-203-16315",
    "title": "Luxuriös und unkompliziert – Voll ausgestattete Wohnung in Frankfurt",
-   "description": null,
+   "description": "THE PULSE - Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung, z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung, Zentrale Klimaanlage # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Flies",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6305,7 +6406,7 @@
     "45 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6314,7 +6415,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/urbaner-luxus-und-komfort-im-herzen-frankfurts/3476287844-203-16315",
    "title": "Urbaner Luxus und Komfort im Herzen Frankfurts",
-   "description": null,
+   "description": "THE PULSE - Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im Projekt THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien, es ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt, profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Fliesen, Parket",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6336,7 +6437,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6345,7 +6446,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/urban-living-am-puls-der-stadt/3476293271-203-16315",
    "title": "Urban Living am Puls der Stadt",
-   "description": null,
+   "description": "THE PULSE – Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im Projekt THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung, z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien, es ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt, profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die es Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Fliesen, Pa",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6367,7 +6468,7 @@
     "45 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6376,7 +6477,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/stilvolles-apartment-mit-erstklassiger-ausstattung/3476297374-203-16315",
    "title": "Stilvolles Apartment mit erstklassiger Ausstattung",
-   "description": null,
+   "description": "THE PULSE - Erleben Sie urbanen Luxus und Komfort im Zentrum von Frankfurt. Im THE PULSE erwarten Sie 124 moderne Wohnungen inmitten der Frankfurter Innenstadt. Die stilvoll möblierten Apartments garantieren nicht nur höchsten Komfort, sondern auch einen unkomplizierten Einstieg in Ihr neues Leben in der Stadt. Hier wird die Liebe zum Detail in jedem Apartment deutlich. Jede Wohnung verfügt über eine hochwertige Ausstattung, z.B. mit Marken-Einbauküchen inklusive Induktionsherd und Spülmaschine sowie Vitra-Möblierung. Zusätzlich sind ein hoher Sicherheitsstandard für Ihr Wohlbefinden sowie Smart-Home-Elemente selbstverständlich. Von der Kaffeemaschine bis zum Geschirr und Kochutensilien ist alles vorhanden. Nur eine Gehminute vom Frankfurter Hauptbahnhof entfernt profitieren Sie von exzellenten Verkehrsverbindungen durch S-Bahn, Tram und U-Bahn, die Ihnen ermöglichen, jede Ecke der Stadt im Handumdrehen zu erreichen. Innerhalb kürzester Zeit können Sie die charmante Altstadt, die Messe, den lebendigen Central Business District und das bunte Bahnhofsviertel mit seinen vielfältigen Freizeitmöglichkeiten und gastronomischen Highlights entdecken. Zudem ist der Flughafen dank der schnellen S-Bahn-Anbindung bequem zu erreichen – ein unschätzbarer Vorteil für internationale Reisende. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: neuwertig - Bodenbelag: Fliesen, Parkett # Lagebesc",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6398,7 +6499,7 @@
     "47 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6407,7 +6508,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/the-pulse-moeblierte-city-oase-ab-3-monaten-mietdauer/3476363123-203-16315",
    "title": "THE PULSE - Möblierte City-Oase ab 3 Monaten Mietdauer",
-   "description": null,
+   "description": "Diese stilvolle 2-Zimmer-Wohnung befindet sich in der siebten und zugleich obersten Etage eines umfassend kernsanierten Gebäudes und bietet ein außergewöhnliches Wohnambiente. Die Ausrichtung zum ruhigen Innenhof sorgt für eine angenehme, entspannte Atmosphäre – perfekt für alle, die urbanes Wohnen mit erholsamer Ruhe verbinden möchten. Bereits beim Betreten des Hauses empfängt Sie im Erdgeschoss eine einladende Lobby, die als Gemeinschaftsraum gestaltet wurde und den hochwertigen Charakter des gesamten Gebäudes unterstreicht. Die Wohnung selbst überzeugt durch ein tolles Raumgefühl, moderne Gestaltungselemente und eine komfortable Ausstattung auf hohem Niveau. Die Einheit ist vollständig möbliert und sofort bezugsbereit. Hochwertige Möbel, eine moderne Küche sowie geschmackvolle Details machen den Einzug besonders unkompliziert. Ergänzend stehen im Kellerbereich ein eigenes Kellerabteil sowie gemeinschaftlich nutzbare Waschmaschinen zur Verfügung. Die verkehrsgünstige Lage unweit des Hauptbahnhofs ermöglicht eine hervorragende Anbindung an den öffentlichen Nah- und Fernverkehr. Einkaufsmöglichkeiten, Gastronomie und kulturelle Angebote sind ebenfalls bequem erreichbar. Diese Wohnung vereint urbanen Komfort, hochwertige Ausstattung und ein durchdachtes Wohnkonzept – ideal für anspruchsvolle Singles oder Paare, die ein sofort beziehbares Zuhause in zentraler Lage suchen. # Ausstattung Einbauküche, Doorman, Einbauschränke, Einbaumöbel, Möbiliert, Deckenkühlung # Weitere Angaben",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6429,7 +6530,38 @@
     "43 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "kleinanzeigen:3501146062",
+   "source": "kleinanzeigen",
+   "kind": "portal",
+   "url": "https://www.kleinanzeigen.de/s-anzeige/moderne-3-5-zimmer-wohnung-in-frankfurt-kueche-balkon-tg/3501146062-203-4294",
+   "title": "Moderne 3,5-Zimmer-Wohnung in Frankfurt | Küche | Balkon | TG",
+   "description": "Zur Vermietung steht eine moderne und hochwertig ausgestattete 3,5-Zimmer-Wohnung im 2. Obergeschoss eines gepflegten Wohnhauses in Frankfurt am Main. Auf ca. 109 m² Wohnfläche erwartet Sie ein großzügiger, heller Grundriss mit 2,75 m Deckenhöhe, einer großen Terrasse sowie zwei Bädern – darunter ein Bad en Suite. Die moderne Einbauküche ist bereits mit Elektrogeräten und Spülmaschine ausgestattet. Weitere Highlights sind Fußbodenheizung in allen Räumen, elektrische Jalousien, ein Aufzug sowie ein eigener Tiefgaragenstellplatz. Eckdaten: * 109 m² Wohnfläche * 3,5 Zimmer * 2.\tObergeschoss mit Aufzug * 2 Badezimmer / Bad en Suite * Große Terrasse * Moderne Einbauküche * Fußbodenheizung * Elektrische Jalousien * Tiefgaragenstellplatz (100€) * Kaltmiete: 2.100 € / Monat * Nebenkosten: 350 € / Monat * Verfügbar: nach Vereinbarung Die Wohnung eignet sich ideal für Paare oder kleine Familien, die großzügiges, modernes Wohnen in Frankfurt mit einer hochwertigen Ausstattung verbinden möchten. Interesse? Schreiben Sie uns gerne über Kleinanzeigen mit einer kurzen Vorstellung Ihrer Person und dem gewünschten Einzugstermin.",
+   "price_cold": 2100,
+   "price_warm": null,
+   "price_per_sqm": 19.27,
+   "sqm": 109.0,
+   "rooms": 3.5,
+   "street": null,
+   "zip": "60389",
+   "city": "Frankfurt am Main",
+   "district": "Seckbach",
+   "lat": 50.14343,
+   "lng": 8.72589,
+   "position_approx": true,
+   "available_from": null,
+   "image_url": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/21/212c5f95-34e4-44dc-960f-3e1fef7cba71?rule=$_1.AUTO",
+   "wbs_required": null,
+   "commission": null,
+   "score": 0,
+   "score_reasons": [
+    "Kaltmiete 2100 EUR ueber Limit 1400 EUR"
+   ],
+   "first_seen": "2026-09-22T14:08:58.428601+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6438,10 +6570,10 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/1-zimmer-apartment-mit-ebk-concierge-erstbezug/3501263998-203-4321",
    "title": "1-Zimmer-Apartment mit EBK | Concierge | Erstbezug",
-   "description": null,
-   "price_cold": null,
+   "description": "Zur Vermietung steht ein 1-Zimmer-Apartment mit ca. 21 m² in Frankfurt. Die Wohnung befindet sich in der 6. Etage und wird erstmalig bezogen. Sie eignet sich ideal für eine Einzelperson, die eine moderne, kompakte Wohnung mit besonderem Wohnkomfort in Frankfurt sucht. Ausstattung • Erstbezug nach umfassender Sanierung • KfW-70-Standard • Moderne Einbauküche • Modernes Badezimmer • Elektrische Rollläden • Dreifach verglaste Fenster • Hochwertiger Boden in Holzoptik • Highspeed-Internet / Glasfaseranschluss • Gegensprechanlage • Eigener Kellerraum • Aufzug • Concierge-Service • Repräsentative Lobby • Exklusives gemeinschaftliches Sky Deck mit beeindruckendem Blick auf die Frankfurter Skyline • Community-Bereiche • Wasch- und Trockenmöglichkeiten im Gebäude • Fahrradstellplätze / Fahrradraum Mietkonditionen Kaltmiete: 885€ / Monat Nebenkostenvorauszahlung: 100€ / Monat Gesamt: 985€ / Monat Strom und Internet werden vom Mieter selbst angemeldet. Lage & Anbindung • Bushaltestelle direkt vor dem Gebäude • S-Bahn ca. 5-7 Gehminuten entfernt • Hauptbahnhof nur 1 S-Bahn-Station entfernt • Flughafen nur 2 S-Bahn-Stationen entfernt • Universitätsklinikum Frankfurt ca. 8 Min. mit dem Fahrrad • Fitnessstudio in der Nähe • Bäckerei, Gastronomie und weitere Ladenflächen direkt im Erdgeschoss • Sehr gute Anbindung an Innenstadt und Flughafen Bei Interesse freue ich mich über eine kurze Nachricht mit einigen Angaben zur Person, beruflichen Situation und dem gewünschten Einzugstermin. Besichti",
+   "price_cold": 885,
    "price_warm": null,
-   "price_per_sqm": null,
+   "price_per_sqm": 42.14,
    "sqm": 21.0,
    "rooms": 1.0,
    "street": null,
@@ -6460,8 +6592,8 @@
     "21 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "kleinanzeigen:3503362810",
@@ -6492,7 +6624,7 @@
    ],
    "first_seen": "2026-09-22T14:58:03.408383+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "kleinanzeigen:3508001924",
@@ -6523,6 +6655,37 @@
    ],
    "first_seen": "2026-09-22T14:58:03.408383+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "gone": true
+  },
+  {
+   "key": "kleinanzeigen:3508001941",
+   "source": "kleinanzeigen",
+   "kind": "portal",
+   "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-apartment-im-obersten-geschoss-mit-balkon-und-aufzug/3508001941-203-16314",
+   "title": "Möbliertes Apartment im obersten Geschoss mit Balkon und Aufzug",
+   "description": "### Einleitung Zum Semesterstart bieten wir Ihnen dieses möblierte Einzimmer-Apartment im obersten Geschoss eines gepflegten Mehrfamilienhauses im Frankfurter Gutleutviertel an, wenige Gehminuten vom Hauptbahnhof entfernt. Über Ihnen wohnt niemand mehr, der eigene Balkon geht ruhig nach hinten hinaus. Die Wohnung wurde frisch gestrichen und ist bezugsfertig möbliert - Sie brauchen nur Ihre Koffer. ### Die Highlights - Ein Zimmer auf ca. 28 m² im 6. Obergeschoss - oberste Etage, keine Nachbarn über Ihnen - Aufzug im Haus - Sie laufen die sechs Etagen nicht zu Fuß - Eigener Balkon - Wannenbad mit WC - in einem Apartment dieser Größe eine Seltenheit - Frisch gestrichen - Komplett möbliert in hellen Tönen, inklusive Pantry-Küche - Gas-Zentralheizung, Warmwasser über die Zentralanlage - Nur wenige Gehminuten zum Hauptbahnhof ### Daten der Wohnung - Wohnfläche: ca. 28 m² - Zimmer: 1 - Geschoss: 6. Obergeschoss - Heizung: Gas-Zentralheizung - Ausstattung: möbliert, Balkon, Wannenbad, Pantry-Küche, Aufzug - Bezugsfrei ab: 01.10.2026 ### Miete - Kaltmiete (inklusive Möblierung): 735 EUR - Kalte Nebenkosten: 85 EUR - Heizkosten: 35 EUR - Warmmiete: 855 EUR - Kaution: 2.205 EUR (3 Kaltmieten; vor Schlüsselübergabe zu entrichten) ### Energieausweis - Energiebedarfsausweis, Endenergiebedarf 122,73 kWh/(m²a), Energieeffizienzklasse D - Wesentlicher Energieträger Erdgas, Baujahr Gebäude 1959, Baujahr Wärmeerzeuger 2019 ### Lage Die Wohnung liegt im Gutleutviertel zwischen Hauptbahnhof und M",
+   "price_cold": null,
+   "price_warm": null,
+   "price_per_sqm": null,
+   "sqm": 28.0,
+   "rooms": 1.0,
+   "street": null,
+   "zip": "60327",
+   "city": "Frankfurt am Main",
+   "district": "Gutleutviertel",
+   "lat": 50.10046,
+   "lng": 8.64544,
+   "position_approx": true,
+   "available_from": null,
+   "image_url": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/fd/fdf6bbe9-f58a-41ed-8635-4276acdbc319?rule=$_59.AUTO",
+   "wbs_required": null,
+   "commission": null,
+   "score": 0,
+   "score_reasons": [
+    "28 m2 unter Minimum 50 m2"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6531,7 +6694,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/neubau-zweitbezug-grosszuegige-1-zimmer-wohnung-mit-terrasse-und-garten-/3508629828-203-9584",
    "title": "Neubau-Zweitbezug! Großzügige 1-Zimmer-Wohnung mit Terrasse und Garten!",
-   "description": null,
+   "description": "Objektreferenz: MO 1600/13508/3 Neuwertige 1-Zimmer-Wohnung mit tollem Garten! Der Neubau-Zweitbezug überzeugt durch einen großen, offenen Wohn- und Schlafbereich mit angrenzender Küche. Von hier aus betreten Sie auch Ihre großzügige Terrasse mit Garten. Die Einbauküche kann gegen faire Abschlagszahlung vom Vormieter übernommen werden. Das Tageslichtbad erwartet Sie mit Badewanne, WC, Waschbecken und einem Waschmaschinenanschluss. Abgerundet wird das Angebot durch einen eigenen Keller sowie einen TG-Stellplatz, der obligatorisch zu 80,00 EUR / Monat anzumieten ist. # Ausstattung - Terrassenwohnung mit Garten - offener Wohn- und Essbereich - Küche gegen Abschlag vom Vormieter (optional) - Tageslichtbad mit Badewanne - Keller - TG Stellplatz zu 80,00 EUR / Monat # Weitere Angaben - Verfügbar ab: 01.11.2026 - Objektzustand: neuwertig # Lagebeschreibung Die Wohnanlage befindet sich in ruhiger und zugleich gut angebundener Lage im Frankfurter Norden im Stadtteil Nieder-Eschbach. Die Umgebung zeichnet sich durch eine angenehme Mischung aus Wohnbebauung, Grünflächen und einer guten Infrastruktur für den täglichen Bedarf aus. Geschäfte des täglichen Bedarfs, Supermärkte, Apotheken, Ärzte sowie gastronomische Angebote sind in der näheren Umgebung gut erreichbar. Auch Kindergärten und Schulen befinden sich im Umfeld. Durch die nahegelegenen öffentlichen Verkehrsmittel besteht eine gute Anbindung an die Frankfurter Innenstadt und weitere Stadtteile. Über die umliegenden Hauptverkehrsstr",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6553,7 +6716,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6562,7 +6725,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/gut-geschnittene-2-zimmerwohnung-zu-vermieten-/3512869257-203-16319",
    "title": "Gut geschnittene 2-Zimmerwohnung zu vermieten!",
-   "description": null,
+   "description": "Objektreferenz: MO 1600/13002/50 Die gemütlich geschnittene 2-Zimmer- Wohnung befindet sich im Erdgeschoss eines gepflegten Mehrfamilienhauses und verfügt über ein Badezimmer mit Dusche, sowie über einen Wintergarten. Bei dem Fußboden handelt es sich um einen PVC-Boden in Laminatoptik. Badezimmer, Flur und Küche sind mit hellen Bodenfliesen ausgestattet. Zusätzlicher Stauraum ist vorhanden, denn zur Wohnung gehört ein Kellerabteil. # Ausstattung Zentrale Warmwasserbereitung Vinylboden Waschmaschinenanschluss Keller Gegensprechanlage Hausreinigung Dienstleister # Weitere Angaben - Verfügbar ab: ab sofort - Objektzustand: gepflegt - Bodenbelag: Kunststoff # Lagebeschreibung Frankfurter Berg Zentral gelegen. Einkaufsmöglichkeiten, Grundschule und Kindergärten in unmittelbarer Nähe. Regelmäßige Bus- und S-Bahnverbindungen, inklusive einer Nachtbusverbindung sorgen für eine gute Erreichbarkeit. Mit dem Auto erreichen Sie in wenigen Minuten die Frankfurter Innenstadt. # Sonstiges Bitte beachten Sie, dass Sie zur Anmietung dieses Objekts über eigenes ausreichendes Arbeits- oder Renteneinkommen, sowie über eine positive Schufa-Auskunft verfügen müssen. Zudem weisen wir vorab darauf hin, dass in unseren Mietverträgen ein Kündigungsausschluss von 36 Monaten besteht HINWEIS ZUR BEWERBUNG: Um Ihnen den bestmöglichen Service zu bieten, können Sie sich bei uns digital bewerben. Kopieren Sie den untenstehenden Link in die Adresszeile Ihres Browsers und folgen Sie der Anleitung. https://tena",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6584,7 +6747,7 @@
     "39 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6593,7 +6756,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/in-der-endetage-hochwertige-1-zimmer-neubauwohnung-einbaukueche-in-frankfurt-ostend-/3514618044-203-4298",
    "title": "In der Endetage: Hochwertige 1-Zimmer-Neubauwohnung Einbauküche in Frankfurt-Ostend!",
-   "description": null,
+   "description": "Die angebotene 1-Zimmer-Wohnung befindet sich in einem gepflegten Neubau und bietet eine Wohnfläche von ca. 28,35 m². Sie liegt im 6.OG (Endetage) und verfügt über ein gut geschnittene Zimmer mit einer durchdachten Raumaufteilung mit Schlafnische. Ein schöner Balkon lädt zum Entspannen und Verweilen ein. Perfekt für Singles! The offered 1-room apartment is located in a well-maintained newly built property and offers a living space of approx. 28.35 m². Situated on the 6th floor, it features a well-designed room layout with a practical sleeping alcove. A lovely balcony invites you to relax and unwind. Perfect for singles! # Ausstattung Hinweis: Die Wohnung ist erst ab dem 01. Januar 2027 verfügbar. Highlights: • Heller Wohn- und Essbereich • Hochwertige Einbauküche mit Geschirrspüler • Balkon • Modernes Badezimmer • Hochwertiges Echtholzparkett • Fußbodenheizung • Elektrische Außenrolladen • Freisprechanlage • Glasfaseranschluss möglich • Personenaufzug • Optional Tiefgaragenstellplatz verfügbar • Zentrale Lage und gute Verkehrsanbindung • Einkaufsmöglichkeiten fußläufig erreichbar +++ Highlights: • Bright living and dining area • High-quality fitted kitchen with dishwasher • Balcony • Modern bathroom • Premium real wood parquet flooring • Underfloor heating • Electric external shutters • Intercom system • Fiber-optic connection available • Passenger elevator • Optional underground parking space available • Central location with excellent transport connections • Shopping facili",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6615,7 +6778,7 @@
     "28 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6624,7 +6787,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-moeblierte-1-zimmer-wohnung-mit-grosser-terrasse-f-nied/3518887015-203-4310",
    "title": "Schöne möblierte 1-Zimmer-Wohnung mit großer Terrasse – F-Nied",
-   "description": null,
+   "description": "Schöne möblierte 1-Zimmer-Wohnung mit großer Terrasse – Nachmieter gesucht! Ich suche eine zuverlässige Nachmieterin bzw. einen zuverlässigen Nachmieter für meine schöne, möblierte 1-Zimmer-Wohnung in Frankfurt. Die Wohnung ist ca. 30 m² groß und verfügt über eine große Terrasse, die viel zusätzlichen Platz zum Entspannen bietet. Die Wohnung ist möbliert und bereits vollständig ausgestattet – inklusive Küche mit Spülmaschine und Badezimmer mit Badewanne. Ausstattung ca. 30 m² 1 Zimmer möbliert große Terrasse voll ausgestattete Küche Spülmaschine Badezimmer mit Badewanne eigener Kellerraum gemeinsamer Waschraum Waschmaschine zur gemeinschaftlichen Nutzung Internet inklusive Kosten 900 € monatlich – alles inklusive inklusive Nebenkosten, Heizung, Strom und Internet Kaution: 2.500 € Verfügbarkeit Die Wohnung ist ab dem 01.10.2026 verfügbar. Der Einzug bzw. die Übernahme ist zwischen dem 01.10. und 15.10.2026 nach Absprache möglich. Ich bin aktuell selbst mitten in meinem Umzug und würde mich sehr freuen, eine zuverlässige und passende Person für die Wohnung zu finden. Bitte nur ernstgemeinte und seriöse Anfragen. Bei Interesse schickt mir bitte zunächst eine kurze Nachricht mit ein paar Informationen zu euch. Weitere Informationen zur Wohnung, eine Beschreibung sowie die Mieterselbstauskunft lasse ich ernsthaft interessierten Personen gerne zukommen. Fotos der Wohnung findet ihr in der Anzeige. ☺️ Wichtig: Ich suche lediglich eine geeignete Nachmieterin bzw. einen geeigneten Nac",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6646,7 +6809,7 @@
     "30 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6655,7 +6818,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/zentrale-singlewohnung-mit-neuem-badezimmer-im-gallus-sucht-sie/3519224256-203-4306",
    "title": "Zentrale Singlewohnung  mit neuem Badezimmer im Gallus sucht SIE",
-   "description": null,
+   "description": "Objektreferenz: MO 1600/10201/42 Kleine 1-Zimmerwohnung mit gemütlicher Wohnküche. Das Tageslichtbad wurde frisch modernisiert, Ein Kellerraum wird zur Verfügung gestellt. # Ausstattung Zentrale Warmwasserbereitung Vinylboden Gegensprechanlage Hausreinigung Dienstleister # Weitere Angaben - Verfügbar ab: 01.10.2026 - Bodenbelag: Kunststoff # Lagebeschreibung Gallusviertel Die Bushaltestelle ist fußläufig in ca. 3 Minuten erreichbar. Den Bahnhof Galluswarte sowie den Hauptbahnhof Frankfurt erreichen Sie zu Fuß in ca. 15 Minuten. Die Autobahn A5 (Anschlussstelle Westkreuz) ist in ca. 6 Minuten mit dem Auto erreichbar. # Sonstiges Für die Anmietung der Wohnung setzen wir ausreichend eigenes Einkommen sowie eine positive Schufa voraus. Bitte beachten Sie: Hohe Fluktuationen belasten das Miteinander in einem Wohnhaus. Weil wir als GWH großen Wert auf stabile Nachbarschaften und die Gemeinschaft im Quartier legen, beinhalten unsere Mietverträge einen Kündigungsausschluss für die Dauer von 36 Monaten. HINWEIS ZUR BEWERBUNG: Um Ihnen den bestmöglichen Service zu bieten, können Sie sich bei uns digital bewerben. Kopieren Sie den untenstehenden Link in die Adresszeile Ihres Browsers und folgen Sie der Anleitung. https://tenant.immomio.com/apply/c0c7598e-2028-491d-86d5-6449d0c785f4 # Energie - Energieausweis: Energieverbrauchsausweis - Wesentliche Energieträger: Gas - Energieverbrauch: 101.1 kWh/(m²*a) - Energieeffizienzklasse: D - Baujahr (gemäß Energieausweis): 1950 - Heizungsart: Zen",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6677,7 +6840,7 @@
     "36 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6709,7 +6872,7 @@
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "kleinanzeigen:3520202426",
@@ -6717,7 +6880,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/schoene-helle-1-zimmer-wohnung-ab-01-10-2026-zu-vermieten/3520202426-203-4293",
    "title": "Schöne helle 1 Zimmer Wohnung ab 01.10.2026 zu vermieten",
-   "description": null,
+   "description": "Objektbeschreibung: Einbauküche muss vom Mieter gestellt werden. Laminatboden im Wohnbereich helle Räume innenliegendes Badezimmer mit Badewanne",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6739,7 +6902,7 @@
     "48 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6748,9 +6911,9 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/moeblierte-2-zimmer-wohnung-in-frankfurt-oberrad-800-warm/3520264585-203-19670",
    "title": "Möblierte 2 Zimmer Wohnung in Frankfurt Oberrad 800 € Warm",
-   "description": null,
+   "description": "Möblierte 2-Zimmer-Wohnung in Frankfurt-Oberrad – 800 € warm Ab sofort wird eine voll möblierte 2-Zimmer-Wohnung in Frankfurt-Oberrad angeboten. Die Wohnung befindet sich im 2. Obergeschoss und verfügt über eine moderne offene Küche. Ausstattung: * 2 Zimmer * Offene, voll ausgestattete Einbauküche * Kühlschrank * Waschmaschine * Fernseher * Sofa / Couch * ☕ Couchtisch * Voll möbliert * Eigenes Kellerabteil * 2. Obergeschoss Lage: Die Wohnung liegt in einer sehr guten und ruhigen Lage in Frankfurt-Oberrad. Die Straßenbahnhaltestelle ist nur ca. 1 Minute zu Fuß entfernt. Dadurch ist man schnell und unkompliziert in der Frankfurter Innenstadt. Warmmiete: 800 € Die Wohnung eignet sich ideal für eine Einzelperson oder ein Paar, das eine komplett möblierte Wohnung mit guter Verkehrsanbindung sucht. Bei Interesse gerne eine Nachricht schreiben. Weitere Informationen und Fotos können gerne geschickt werden.",
    "price_cold": null,
-   "price_warm": null,
+   "price_warm": 800,
    "price_per_sqm": null,
    "sqm": 38.0,
    "rooms": 2.0,
@@ -6770,7 +6933,7 @@
     "38 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6779,7 +6942,7 @@
    "kind": "portal",
    "url": "https://www.kleinanzeigen.de/s-anzeige/friedberger-platz-im-nordend-nachmieter-zum-15-11-2026-gesucht/3520364625-203-4303",
    "title": "Friedberger Platz im Nordend - Nachmieter zum 15.11.2026 gesucht",
-   "description": null,
+   "description": "Ich suche zum 15.11 zwecks Umzug einen Nachmieter / eine Nachmieterin für diese Wohnung 2 Minuten vom Friedi entfernt. Wichtig: der Vermieter besteht auf eine Mindestlaufzeit von 24 Monaten und einem Indexmietvertrag. Die Küche gehört zum Mietvertrag, also nichts zu befürchten :) So manche Möbel dürfen gerne übernommen werden, aber das schauen wir dann gern vor Ort. Die Miete ist schon Vermieter bestätigt - also keine Überraschungen.",
    "price_cold": null,
    "price_warm": null,
    "price_per_sqm": null,
@@ -6801,7 +6964,69 @@
     "41 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T15:14:12.139905+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "kleinanzeigen:3520489818",
+   "source": "kleinanzeigen",
+   "kind": "portal",
+   "url": "https://www.kleinanzeigen.de/s-anzeige/einzimmerwohnung-in-sachsenhausen/3520489818-203-4318",
+   "title": "Einzimmerwohnung in Sachsenhausen",
+   "description": "Unser Haus ist seht zentral. Die S Bahnstation Mühlberg und die Straßenbahn sind in 3 Minuten zu erreichen. Einkaufsmöglichkeiten sind auch in der Nähe. Der Stadtwald ist zu Fuß nur 20 Minuten entfernt.",
+   "price_cold": null,
+   "price_warm": null,
+   "price_per_sqm": null,
+   "sqm": 32.0,
+   "rooms": 1.0,
+   "street": null,
+   "zip": "60599",
+   "city": "Frankfurt am Main",
+   "district": "Sachsenhausen",
+   "lat": 50.10026,
+   "lng": 8.6836,
+   "position_approx": true,
+   "available_from": null,
+   "image_url": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/2f/2f3d1fad-8f0e-4998-9955-589b7b1e2bac?rule=$_1.AUTO",
+   "wbs_required": null,
+   "commission": null,
+   "score": 0,
+   "score_reasons": [
+    "32 m2 unter Minimum 50 m2"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "kleinanzeigen:3520494273",
+   "source": "kleinanzeigen",
+   "kind": "portal",
+   "url": "https://www.kleinanzeigen.de/s-anzeige/moebliertes-zimmer-im-studentenwohnheim-zur-untermiete/3520494273-203-16315",
+   "title": "Möbliertes Zimmer im Studentenwohnheim zur Untermiete",
+   "description": "Ich biete mein Appartement im Studentenwohnheim am Wiesenhüttenplatz von Oktober bis Mitte Februar zur Untermiete an. Das Appartement verfügt über eine eigene Pantryküche und ein eigenes Bad. Nur für Studierende. Bei Interesse gerne melden!",
+   "price_cold": null,
+   "price_warm": null,
+   "price_per_sqm": null,
+   "sqm": 20.0,
+   "rooms": 1.0,
+   "street": null,
+   "zip": "60329",
+   "city": "Frankfurt am Main",
+   "district": "Gutleutviertel",
+   "lat": 50.10716,
+   "lng": 8.66645,
+   "position_approx": true,
+   "available_from": null,
+   "image_url": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/ee/eef46a12-d01f-43db-9676-26272819f16d?rule=$_1.AUTO",
+   "wbs_required": null,
+   "commission": null,
+   "score": 0,
+   "score_reasons": [
+    "20 m2 unter Minimum 50 m2"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6832,7 +7057,7 @@
     "Kaltmiete 1412 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6863,7 +7088,7 @@
     "Kaltmiete 1471 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6894,7 +7119,7 @@
     "Kaltmiete 1549 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6925,7 +7150,7 @@
     "Kaltmiete 1703 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6956,7 +7181,7 @@
     "19 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -6987,7 +7212,7 @@
     "27 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7049,7 +7274,7 @@
     "35 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7110,7 +7335,7 @@
     "49 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T08:53:16.980131+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7133,7 +7358,7 @@
    "lng": 8.66658,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMTAxMDUzL2Exdnd4bTlu?sig=U7zoxgp8ZsKQzqt-VuJ1GDtYnIgNRJT1fHiz6xGaipk&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMTAxMDUzL2Exdnd4bTlu?sig=sJbiXxoxvv0T9T0naTh5sZox9sa5QkvHh-1Sf6CYIss&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7141,7 +7366,7 @@
     "Kaltmiete 1880 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7164,7 +7389,7 @@
    "lng": 8.68359,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMTI1Njc4LzRnY3lvbXJn?sig=S9YOr0-T1M6HTEnHluLp8zBSpNi1wecM9x02kW_GYew&exp=1790134039",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMTI1Njc4LzRnY3lvbXJn?sig=Ti8QShr_1N-CcYRE30AC5gAGJATYTDY64sL83e8aGXY&exp=1790146881",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7172,7 +7397,7 @@
     "Kaltmiete 1999 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7195,7 +7420,7 @@
    "lng": 8.63208,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvMjAxOC8xMS8yMC8xYWg0bHFkbTdkM3d5NWQz?sig=Im3uLnn5fAjf09M2eez7vzbQAKEvUxnnpauQCqxUQBU&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvMjAxOC8xMS8yMC8xYWg0bHFkbTdkM3d5NWQz?sig=QmOXktpwGGvkhSEjXxSC6poQ3qT32QtmmQPE5MPcQ7U&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7203,7 +7428,7 @@
     "35 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7226,7 +7451,7 @@
    "lng": 8.64271,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzM5NjgzLzdnOWxteDhk?sig=T7BGHI4J3hTbx7GIEtttKCKKkkUhbJ0CD5ZZHGDW6DM&exp=1790134039",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzM5NjgzLzdnOWxteDhk?sig=4-OH9bvz9STCPm_-zLsAicJZowZVr8-91ePZgO8CjFk&exp=1790146881",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7234,7 +7459,7 @@
     "22 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7257,7 +7482,7 @@
    "lng": 8.69997,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzU0ODI3L3phZnhtd3oz?sig=ECTmUKguf96SDexq0F3dHJ_jW6CxlkvQhCrPgkLWgWE&exp=1790134039",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzU0ODI3L3phZnhtd3oz?sig=SNt6B207TRqSr6_QoiADa_VUc-GEx4hZOf5RcNLH-sI&exp=1790146881",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7265,7 +7490,7 @@
     "Kaltmiete 1755 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7288,7 +7513,7 @@
    "lng": 8.68713,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYxNzQyL2Znbnl0NWMy?sig=NfaR2wmjG46QGJYjHuxTft61Zg_3gn1vDBaNKEue2yk&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYxNzQyL2Znbnl0NWMy?sig=i9e9ibrzM26-Qo6OczK1RM-2UFDieS0jePX4Qmys1UA&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7296,7 +7521,7 @@
     "24 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7319,7 +7544,7 @@
    "lng": 8.69997,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYyNzY0LzgydnhodzA2?sig=h-J2M24HZHBSrgb_EY6mMspaGzGqBgC_At1k4oTLRdM&exp=1790134039",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYyNzY0LzgydnhodzA2?sig=GEosfnJeS1LK8VvVLKL-iRPneipYB3qwDxHJ8EX4UTU&exp=1790146881",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7327,7 +7552,7 @@
     "21 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7350,7 +7575,7 @@
    "lng": 8.69297,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzgzMzg5L3IwNDFlY2Nt?sig=vv-93p9UWiNbAWnusw5iiLTBmXobhIN6QLtCWy1VP64&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzgzMzg5L3IwNDFlY2Nt?sig=_zBqafWnhGLk0caDaoJZZjd0SAqEL-nErDs5QPfxql4&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7358,7 +7583,7 @@
     "Kaltmiete 2200 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7381,7 +7606,7 @@
    "lng": 8.68359,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDQ2ODE2L3B0aTdhdWRl?sig=0U4ZiL2jvOju-69eAjAUWAcqFvJiLo3sBgmIGtuDOUI&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDQ2ODE2L3B0aTdhdWRl?sig=4QDr3gwet24DHUUNaAB-Hu5NPusoR1Y_ZiTiJ5zJn9g&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7389,7 +7614,7 @@
     "32 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7412,7 +7637,7 @@
    "lng": 8.69997,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4MDM0LzF3dGczYXlv?sig=k2vxdaFZTWd-UCpLa1mtG1mTLX39wHrCJV4aipglcwM&exp=1790134039",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4MDM0LzF3dGczYXlv?sig=Y-Y2QYAZFnM5QRhHdtW9JXKUKmFAJavvPmB6qsrNuc4&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7420,7 +7645,7 @@
     "23 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7443,7 +7668,7 @@
    "lng": 8.66052,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDcwOTIyL2FodTQ0YzNx?sig=8LO0bK6E-SjpQb7xk9HyIFHAcn-AXVebpJot-AWOtWA&exp=1790134039",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDcwOTIyL2FodTQ0YzNx?sig=34icY1PvxPndamthH9EKmHEjLuZLYUwd2T91M-MUOn0&exp=1790146881",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7451,7 +7676,7 @@
     "Kaltmiete 2800 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7474,7 +7699,7 @@
    "lng": 8.68713,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDc2Mzg3L2hpOGhnZ2l4?sig=jZ8-V6wqZyCiET1pjKJGbOK_4EFQEXrLGVJM00HWAbk&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDc2Mzg3L2hpOGhnZ2l4?sig=NR-k9vmM2x2zAIXMPv4ZcnYg3NXGEFfCCoEtZbpoTWw&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7482,7 +7707,7 @@
     "48 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7505,7 +7730,7 @@
    "lng": 8.6431,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDc4MTU5L2xldmQ0azVt?sig=K0MRoAIuTyAvV3Uah1hIxkT7KD3jxplk-WCdVXk_bLk&exp=1790134039",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDc4MTU5L2xldmQ0azVt?sig=9uQjQMTL7qxYKaENxI86DuAbLHmjXfyozBDoLwitDrc&exp=1790146881",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7513,7 +7738,7 @@
     "Kaltmiete 4000 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7536,7 +7761,7 @@
    "lng": 8.64271,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDgyODY3L2Z1aXEzZGVk?sig=KA3mSgvunbBtJZMCayWjtjR44GRCA2nFy89dKBChaUc&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDgyODY3L2Z1aXEzZGVk?sig=ZGkoc6oPifvwwurW4ckA46U3jHb8kPkKCNftfZxIHRo&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7544,7 +7769,7 @@
     "Kaltmiete 1440 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7567,7 +7792,7 @@
    "lng": 8.69997,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDgzOTY1L3UyYzg1MDI2?sig=zbAT7w9YuldRKYuBH1AJakb1YtRF2dxi2ZHo8mYq6_o&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDgzOTY1L3UyYzg1MDI2?sig=ibIzNdEPPPqQwORrFzKm27G5nKbgRFirbFJxTv-FYm0&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7575,7 +7800,7 @@
     "Kaltmiete 2100 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7598,7 +7823,7 @@
    "lng": 8.68713,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg0MzAyL3R4MDI3eGZ5?sig=YqFLyJf15bFZR6fi_eCfZMt2ohUF2V6MoQ9jGOqzAL4&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg0MzAyL3R4MDI3eGZ5?sig=bbiFSucVgVxAbUWuPSNtdp_-E80kqWJBNUbYkHYT_aA&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7606,7 +7831,7 @@
     "29 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7629,7 +7854,7 @@
    "lng": 8.76939,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg4OTQ4L3NuY2RreTQ0?sig=Q4oyxkexERDXkuXA8Tpa_pkM-d6Q-El9NKGjzUrrVTo&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg4OTQ4L3NuY2RreTQ0?sig=mnBcFHfzuKdkkDJ-4RQ5INkwWdjOPSLPa395wdl_ONg&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7637,7 +7862,7 @@
     "28 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7660,7 +7885,7 @@
    "lng": 8.6431,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg5OTA4LzJ6YzFqdmx5?sig=Iiy6_OqmY4Ce05485AaRPEE1bjdycG-5V5TlYNPtUBM&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg5OTA4LzJ6YzFqdmx5?sig=FJBCAbynGk6T_6_-9Ef3Axjh2NsKAWSdJRY_cnWFpCs&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7668,7 +7893,7 @@
     "Kaltmiete 3550 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7691,7 +7916,7 @@
    "lng": null,
    "position_approx": false,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkxMjQzL29nZW1udTg2?sig=5AKwo8T3JA1XRWfJ15SE0GlcObxtJrCS1e-xi2KO7gs&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkxMjQzL29nZW1udTg2?sig=iUag9PBjjKQLss7XnY9GQpqAU66mDWqURNbnkms7njc&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7699,7 +7924,7 @@
     "Kaltmiete 1900 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7722,7 +7947,7 @@
    "lng": 8.62346,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk0MTkxL3F4cGQxNHhz?sig=z__AP7T4IRTgOMbceXK-WVaME9I2qIfU9nWpNTR3F1Q&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk0MTkxL3F4cGQxNHhz?sig=inazkJIUhVHmA2hJXltrrGQJEmHlI-d0OrJHZB-pJq4&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7730,7 +7955,7 @@
     "43 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7753,7 +7978,7 @@
    "lng": 8.68713,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk1NTMyLzIwaDN4amwy?sig=98SlbhXMIwgxTcY1mNm3PzHRONFGa8oG_MqSq-0ghGY&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk1NTMyLzIwaDN4amwy?sig=ZeFb-xyCwtT28RcRnPUSbLCvXgUxX2V_8DHYTPzwfww&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7761,7 +7986,7 @@
     "Kaltmiete 2200 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7784,7 +8009,7 @@
    "lng": 8.68782,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk1NjA2L2ppbG5xZTRj?sig=BRGsCKBg5NpQUDr46mtet5pIbjCRazs24bOXMzLuNN8&exp=1790134036",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk1NjA2L2ppbG5xZTRj?sig=gGJSasdNHcsyriEyXz_RqIobItLA13uPPnjUsxWBIu0&exp=1790146877",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -7792,7 +8017,100 @@
     "33 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "sparkasse:FID-F12-318-680",
+   "source": "sparkasse",
+   "kind": "portal",
+   "url": "https://immobilien.sparkasse.de/expose/FID-F12-318-680.html",
+   "title": "Viel Raum für Stil und Struktur – Wohnung mit Dachterrasse in Neu-Isenburg",
+   "description": null,
+   "price_cold": 1600,
+   "price_warm": null,
+   "price_per_sqm": 9.14,
+   "sqm": 175.0,
+   "rooms": 5.0,
+   "street": null,
+   "zip": null,
+   "city": "Neu-Isenburg",
+   "district": null,
+   "lat": 50.04222,
+   "lng": 8.679219,
+   "position_approx": true,
+   "available_from": null,
+   "image_url": "https://portal.fio.de/cdn/media/apiv1?token=V5m5mbMRlTcUqpuAbFcBB8VbBmP9wM-2fS3AoqSw0pGa7grdJcOaA4khGEOA4eMMlc",
+   "wbs_required": null,
+   "commission": null,
+   "score": 0,
+   "score_reasons": [
+    "Kaltmiete 1600 EUR ueber Limit 1400 EUR"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "sparkasse:FID-F13-296-681",
+   "source": "sparkasse",
+   "kind": "portal",
+   "url": "https://immobilien.sparkasse.de/expose/FID-F13-296-681.html",
+   "title": "Geräumige 2,5 Zi.- Wohnung - Gesuchte Wohnlage - OF-Bürgel",
+   "description": null,
+   "price_cold": 1300,
+   "price_warm": null,
+   "price_per_sqm": 13.68,
+   "sqm": 95.0,
+   "rooms": 25.0,
+   "street": null,
+   "zip": null,
+   "city": "Offenbach",
+   "district": null,
+   "lat": 50.1250763,
+   "lng": 8.786677,
+   "position_approx": true,
+   "available_from": null,
+   "image_url": "https://portal.fio.de/cdn/media/apiv1?token=aZ3Y95hU4klN2IEeVP6-2bCk4ZE1Cx5gH8zo8Z20wyJYBgcagGNu6-2fqpmc52VE4hQn",
+   "wbs_required": null,
+   "commission": null,
+   "score": 0,
+   "score_reasons": [
+    "25 Zimmer ausserhalb 2-4"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "sparkasse:FID-F13-339-896",
+   "source": "sparkasse",
+   "kind": "portal",
+   "url": "https://immobilien.sparkasse.de/expose/FID-F13-339-896.html",
+   "title": "Neubau-Erstbezug! Moderne 4 Zi.-Wohnung in Offenbach-Bieber!",
+   "description": null,
+   "price_cold": 1500,
+   "price_warm": null,
+   "price_per_sqm": 0.14,
+   "sqm": 10385.0,
+   "rooms": 4.0,
+   "street": null,
+   "zip": null,
+   "city": "Offenbach",
+   "district": null,
+   "lat": 50.0889854,
+   "lng": 8.806255,
+   "position_approx": true,
+   "available_from": null,
+   "image_url": "https://portal.fio.de/cdn/media/apiv1?token=aZ3Y95hU4klN2IEeVP6-2bCu2YWkDhULjfYd7U4og5b6i0-2bv8wKir2xgdmRsOTChkC",
+   "wbs_required": null,
+   "commission": null,
+   "score": 0,
+   "score_reasons": [
+    "Kaltmiete 1500 EUR ueber Limit 1400 EUR"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7823,7 +8141,7 @@
     "49 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T05:05:53.005408+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7854,7 +8172,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T05:05:53.005408+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7885,8 +8203,8 @@
     "45 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T05:05:53.005408+00:00",
-   "last_seen": "2026-09-22T14:08:58.428601+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "vonovia:0648880006",
@@ -7916,7 +8234,7 @@
     "48 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7947,7 +8265,7 @@
     "41 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -7978,7 +8296,7 @@
     "37 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -8072,7 +8390,7 @@
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12281242",
@@ -8165,7 +8483,7 @@
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12281247",
@@ -8196,7 +8514,7 @@
    ],
    "first_seen": "2026-09-19T23:27:37.461575+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12281248",
@@ -8226,8 +8544,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-20T06:35:21.687110+00:00",
-   "last_seen": "2026-09-22T15:04:09.324883+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281265",
@@ -8257,7 +8575,7 @@
     "25 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -8289,7 +8607,7 @@
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12281299",
@@ -8450,6 +8768,7 @@
    "kind": "portal",
    "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main-Dornbusch.12281321.html",
    "title": "Parkstraße, Frankfurt am Main",
+   "description": "Parkstraße, Frankfurt am Main",
    "price_cold": null,
    "price_warm": 2700,
    "price_per_sqm": null,
@@ -8471,8 +8790,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-09-22T10:04:02.120004+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281327",
@@ -8503,7 +8822,7 @@
    ],
    "first_seen": "2026-09-19T22:28:48.100779+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12281331",
@@ -8534,7 +8853,7 @@
    ],
    "first_seen": "2026-09-20T06:35:21.687110+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12281333",
@@ -8716,8 +9035,8 @@
     "25 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
-   "last_seen": "2026-09-22T14:58:03.408383+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281341",
@@ -8778,8 +9097,8 @@
     "25 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
-   "last_seen": "2026-09-22T15:14:12.139905+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281344",
@@ -8809,7 +9128,7 @@
     "30 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -8841,7 +9160,7 @@
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12281351",
@@ -9022,7 +9341,7 @@
     "45 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9053,7 +9372,7 @@
     "6 Zimmer ausserhalb 2-4"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9084,7 +9403,7 @@
     "32 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9115,7 +9434,38 @@
     "1 Zimmer ausserhalb 2-4"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "wggesucht:13629885",
+   "source": "wggesucht",
+   "kind": "portal",
+   "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main-Niederrad.13629885.html",
+   "title": "Voll möbliertes 1 Zimmer zur Untermiete in Frankfurt-Niederrad frei",
+   "description": "Voll möbliertes 1 Zimmer zur Untermiete in Frankfurt-Niederrad frei",
+   "price_cold": null,
+   "price_warm": 600,
+   "price_per_sqm": null,
+   "sqm": 20.0,
+   "rooms": 2.5,
+   "street": "Lyoner Straße 40",
+   "zip": null,
+   "city": "Frankfurt am Main",
+   "district": "Niederrad",
+   "lat": 50.08829,
+   "lng": 8.64271,
+   "position_approx": true,
+   "available_from": "22.09.2026",
+   "image_url": "https://www.wg-gesucht.de/img/placeholder/dummy_small.png",
+   "wbs_required": null,
+   "commission": null,
+   "score": 0,
+   "score_reasons": [
+    "20 m2 unter Minimum 50 m2"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9184,6 +9534,7 @@
    "kind": "portal",
    "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main-Altstadt.13647123.html",
    "title": "Töngesgasse, Frankfurt am Main",
+   "description": "Töngesgasse, Frankfurt am Main",
    "price_cold": null,
    "price_warm": 2990,
    "price_per_sqm": null,
@@ -9205,8 +9556,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-20T00:38:27.034331+00:00",
-   "last_seen": "2026-09-22T14:01:55.374121+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13647137",
@@ -9337,6 +9688,7 @@
    "kind": "portal",
    "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main-Dornbusch.13647198.html",
    "title": "Eschersheimer Landstraße, Frankfurt am Main",
+   "description": "Eschersheimer Landstraße, Frankfurt am Main",
    "price_cold": null,
    "price_warm": 2990,
    "price_per_sqm": null,
@@ -9358,8 +9710,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-20T04:30:59.337143+00:00",
-   "last_seen": "2026-09-22T14:01:55.374121+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13647203",
@@ -9390,7 +9742,7 @@
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13647229",
@@ -9451,8 +9803,8 @@
     "25 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
-   "last_seen": "2026-09-22T15:04:09.324883+00:00",
-   "gone": true
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13647249",
@@ -9483,7 +9835,7 @@
    ],
    "first_seen": "2026-09-20T01:29:33.104663+00:00",
    "last_seen": "2026-09-22T15:28:53.297830+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13649213",
@@ -9513,7 +9865,38 @@
     "41 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
+   "gone": false
+  },
+  {
+   "key": "wggesucht:13669538",
+   "source": "wggesucht",
+   "kind": "portal",
+   "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main-Bockenheim.13669538.html",
+   "title": "Einzelapartment",
+   "description": "Einzelapartment\nBefristete Mietzeit: 26.09.2026 bis 29.11.2026.",
+   "price_cold": null,
+   "price_warm": 695,
+   "price_per_sqm": null,
+   "sqm": 17.0,
+   "rooms": 1.0,
+   "street": "Ginnheimer Landstraße 39",
+   "zip": null,
+   "city": "Frankfurt am Main",
+   "district": "Bockenheim",
+   "lat": 50.12331,
+   "lng": 8.64606,
+   "position_approx": true,
+   "available_from": "26.09.2026",
+   "image_url": "https://img.wg-gesucht.de/media/up/2026/25/2dd9b8a3e7bc9c77ca8ed28fd0fb8135122fb65a4fce20f67340de1d747a7d8a_178231860943494674780943420915.small.JPEG",
+   "wbs_required": null,
+   "commission": null,
+   "score": 0,
+   "score_reasons": [
+    "17 m2 unter Minimum 50 m2"
+   ],
+   "first_seen": "2026-09-22T19:02:47.321545+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9574,7 +9957,7 @@
     "15 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9605,7 +9988,7 @@
     "26 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9636,7 +10019,7 @@
     "45 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9697,7 +10080,7 @@
     "1 Zimmer ausserhalb 2-4"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9728,7 +10111,7 @@
     "39 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9759,7 +10142,7 @@
     "49 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9820,7 +10203,7 @@
     "32 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9851,7 +10234,7 @@
     "9 Zimmer ausserhalb 2-4"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9882,7 +10265,7 @@
     "27 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -9973,7 +10356,7 @@
     "39 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-21T21:15:56.616556+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -10004,7 +10387,7 @@
     "13 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:01:55.374121+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -10035,7 +10418,7 @@
     "44 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -10096,7 +10479,7 @@
     "47 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -10127,7 +10510,7 @@
     "44 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   },
   {
@@ -10158,7 +10541,7 @@
     "40 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T08:53:16.980131+00:00",
-   "last_seen": "2026-09-22T15:28:53.297830+00:00",
+   "last_seen": "2026-09-22T19:02:47.321545+00:00",
    "gone": false
   }
  ]
