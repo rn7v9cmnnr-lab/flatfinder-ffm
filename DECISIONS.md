@@ -41,3 +41,5 @@ will: Eintrag ergänzen, nicht überschreiben.
 - [ ] Auf [flathunter](https://github.com/flathunters/flathunter) aufsetzen statt eigene Adapter für IS24/Kleinanzeigen/Immowelt/wg-gesucht? Spart die Adapter-Pflege, die dieses Projekt sonst tötet. Entscheidung fällt, bevor der erste dieser vier Adapter gebaut wird.
 - [ ] ABG Frankfurt Holding: von außen TLS-Fehler, lokal gegenprüfen.
 
+
+- 2026-09-22: Kleinanzeigen und ohne-makler mit echten HTML-Fixtures ergänzen; unbekannte Mietart nicht raten. Genossenschaften mit Bewerbungszugang separat verlinken, nicht als automatisch erfasste Treffer ausgeben.

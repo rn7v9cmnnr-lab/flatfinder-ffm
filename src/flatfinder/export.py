@@ -27,6 +27,8 @@ from typing import Any, Dict, List, Optional
 
 from .adapters.base import Adapter, Blocked
 from .adapters.gwh import GwhAdapter
+from .adapters.kleinanzeigen import KleinanzeigenAdapter
+from .adapters.ohnemakler import OhneMaklerAdapter
 from .adapters.immowelt import ImmoweltAdapter
 from .adapters.nhw import NhwAdapter
 from .adapters.vonovia import VonoviaAdapter
@@ -53,6 +55,8 @@ def adapters_for(criteria: Criteria) -> List[Adapter]:
         GwhAdapter(criteria.city),
         # Portale
         WgGesuchtAdapter(criteria.city),
+        KleinanzeigenAdapter(),
+        OhneMaklerAdapter(),
         # Braucht einen Browser und faellt bei Bot-Schutz sauber aus
         ImmoweltAdapter(criteria.city),
     ]
@@ -175,6 +179,7 @@ def _to_dict(l: Listing) -> Dict[str, Any]:
         "kind": str(l.kind),
         "url": l.url,
         "title": l.title,
+        "description": l.description,
         "price_cold": l.price_cold,
         "price_warm": l.price_warm,
         "price_per_sqm": l.price_per_sqm,
