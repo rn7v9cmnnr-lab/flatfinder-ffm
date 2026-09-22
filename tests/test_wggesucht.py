@@ -57,3 +57,26 @@ def test_keine_kontaktstrecke(html):
     for l in WgGesuchtAdapter.parse_page(html, "Frankfurt am Main"):
         assert l.contact_form_url is None
         assert l.contact_email is None
+
+
+def test_structured_rental_end_is_preserved_as_fixed_term(html):
+    listings = {l.source_id: l for l in WgGesuchtAdapter.parse_page(html, "Frankfurt am Main")}
+    temporary = listings["14106813"]
+    assert temporary.available_from == "01.10.2026"
+    assert "Befristete Mietzeit: 01.10.2026 bis 31.03.2027." in temporary.description
+    assert "Befristete Mietzeit" not in listings["14108331"].description
+    assert listings["14108331"].available_from == "01.10.2026"
+    assert "bis 31.12.2036" in listings["7905205"].description
+
+
+def test_full_title_is_kept_for_exclusion_detection(html):
+    from selectolax.parser import HTMLParser
+    tree = HTMLParser(html)
+    node = tree.css_first("div.offer_list_item")
+    title = node.css_first("h2.truncate_title a")
+    full = "Schöne Wohnung. " + "Mit viel Licht und Platz. " * 6 + "Nur Zwischenmiete."
+    title.replace_with(HTMLParser("<a href='/wohnungen-in-Frankfurt.123.html'>" + full + "</a>").css_first("a"))
+    listing = WgGesuchtAdapter.parse_item(node, "Frankfurt am Main")
+    assert len(listing.title) <= 110
+    assert "Zwischenmiete" not in listing.title
+    assert "Zwischenmiete" in listing.description
