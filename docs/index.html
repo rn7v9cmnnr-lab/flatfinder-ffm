@@ -231,7 +231,7 @@
     <div class="f"><label for="umkreis">max. km</label>
       <input type="number" id="umkreis" step="0.5" min="0.5" placeholder="km"
              title="Luftlinie. Ein ~ vor der Entfernung heißt: Position geschätzt."></div>
-    <span class="tipp">oder in der Karte klicken · ohne Radius zunächst 3 km</span>
+    <span class="tipp">oder „Mittelpunkt setzen“ in der Karte · zunächst 3 km</span>
     <span id="umkreishinweis" class="muted" role="status" aria-live="polite"></span>
   </div>
 
@@ -265,7 +265,7 @@
 </div>
 
 <div id="lagehinweis" class="lagehinweis" hidden></div>
-<div id="kartenwerkzeuge" hidden><button type="button" id="suchgebiet">Suchgebiet anzeigen</button></div>
+<div id="kartenwerkzeuge" hidden><button type="button" id="suchgebiet">Suchgebiet anzeigen</button> <button type="button" id="mittelpunktSetzen" aria-pressed="false">Mittelpunkt setzen</button></div>
 <div id="karte" hidden></div>
 <div id="kartehinweis" class="muted" hidden></div>
 
@@ -510,7 +510,14 @@ function zeichnen(){
 }
 
 let MAP=null, MARKER=null, KREIS=null, MITTENMARKER=null, KARTE_AN=false, KLICK_MITTE=null;
-let KARTENBEREICH=null;
+let KARTENBEREICH=null, MITTE_SETZEN=false;
+
+function mitteSetzenModus(aktiv){
+  MITTE_SETZEN=aktiv;
+  el("mittelpunktSetzen").setAttribute("aria-pressed", aktiv);
+  el("mittelpunktSetzen").textContent=aktiv ? "Abbrechen – Punkt auf Karte wählen" : "Mittelpunkt setzen";
+  el("karte").style.cursor=aktiv ? "crosshair" : "";
+}
 
 function karteAufbauen(){
   if(MAP) return MAP;
@@ -520,13 +527,16 @@ function karteAufbauen(){
   }).addTo(MAP);
   MARKER = L.layerGroup().addTo(MAP);
   L.control.scale({imperial:false}).addTo(MAP);
-  // Klick auf die Karte setzt den Suchmittelpunkt. Das ist der ganze Sinn
-  // der Ansicht: zeigen statt tippen.
+  // Normale Klicks und Doppelklick-Zoom verändern niemals den Suchbereich.
   MAP.on("click", e => {
+    if(!MITTE_SETZEN) return;
+    mitteSetzenModus(false);
     KLICK_MITTE = [e.latlng.lat, e.latlng.lng];
     el("plz").value = "";
     el("mitte").value = "";
     if(!el("umkreis").value) el("umkreis").value = 3;
+    // Beim Platzieren den aktuellen Zoom erhalten; Übersicht gibt es per Button.
+    KARTENBEREICH=JSON.stringify([KLICK_MITTE,filterLesen().umkreis]);
     zeichnen();
   });
   return MAP;
@@ -579,7 +589,7 @@ function karteZeichnen(liste, mitte, radius){
   el("kartehinweis").textContent =
     `${mitPos.length} Angebote auf der Karte`
     + (ohne ? ` · ${ohne} ohne bekannte Lage (nur in der Liste)` : "")
-    + ` · Klick auf die Karte setzt den Mittelpunkt`
+    + ` · „Mittelpunkt setzen“ aktiviert die Punktauswahl`
     + ` · gestrichelter Rand = Lage über Stadtteil/PLZ geschätzt`;
 }
 
@@ -687,6 +697,7 @@ async function start(){
   el("filters").addEventListener("submit", e => e.preventDefault());
   el("filters").addEventListener("input", e => {
     if(e.target.id === "plz" || e.target.id === "mitte"){
+      mitteSetzenModus(false);
       KLICK_MITTE = null;
       if(e.target.id === "plz") el("mitte").value = "";
       else el("plz").value = "";
@@ -697,6 +708,7 @@ async function start(){
     }
     zeichnen();
   });
+  el("mittelpunktSetzen").onclick = () => mitteSetzenModus(!MITTE_SETZEN);
   el("suchgebiet").onclick = () => { KARTENBEREICH=null; zeichnen(); };
   el("ansicht").onclick = () => {
     KARTE_AN = !KARTE_AN;
@@ -710,6 +722,7 @@ async function start(){
   el("reset").onclick = () => {
     try{ localStorage.removeItem(LS); }catch(e){}
     HTMLFormElement.prototype.reset.call(el("filters"));
+    mitteSetzenModus(false);
     KLICK_MITTE = null;
     document.querySelectorAll('.chip').forEach(c=>c.setAttribute("aria-pressed","false"));
     zeichnen();

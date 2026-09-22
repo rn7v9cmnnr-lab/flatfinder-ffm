@@ -27,7 +27,18 @@ with sync_playwright() as p:
     page.locator('#mitte').select_option('50.1204,8.6520')
     assert page.locator('#plz').input_value() == ''
     assert page.evaluate('MAP.getCenter().distanceTo(L.latLng(50.1204,8.6520)) < 100')
+    page.evaluate('MAP.setZoom(16, {animate:false})')
+    page.locator('#karte').click(position={'x':80,'y':80})
+    assert page.evaluate('MAP.getZoom()') == 16
+    assert page.locator('#mitte').input_value() == '50.1204,8.6520'
+    page.locator('#karte').dblclick(position={'x':80,'y':80})
+    page.wait_for_function('MAP.getZoom() === 17')
+    page.wait_for_timeout(300)
+    assert page.evaluate('KLICK_MITTE === null')
+    page.locator('#mittelpunktSetzen').click()
     page.evaluate('MAP.fire("click", {latlng:L.latLng(50.1,8.7)})')
+    assert page.evaluate('MAP.getZoom()') == 17
+    assert page.locator('#mittelpunktSetzen').get_attribute('aria-pressed') == 'false' 
     assert page.evaluate('mittelpunkt(filterLesen())[0]') == 50.1
     page.locator('#plz').fill('60311')
     page.evaluate('MAP.panTo([50.15,8.75], {animate:false})')
