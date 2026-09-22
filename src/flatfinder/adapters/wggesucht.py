@@ -97,7 +97,8 @@ class WgGesuchtAdapter(HttpAdapter):
             return None
         url = href if href.startswith("http") else BASE + href
 
-        titel = link.text(strip=True) if link else "Wohnung"
+        originaltitel = link.text(separator=" ", strip=True) if link else "Wohnung"
+        titel = originaltitel
         # wg-gesucht packt die halbe Anzeige in den Titel - das ist in einer
         # Liste unlesbar. Am ersten Satzende kappen.
         titel = re.split(r"(?<=[.!?])\s", titel)[0][:110].strip() or "Wohnung"
@@ -122,7 +123,7 @@ class WgGesuchtAdapter(HttpAdapter):
                 strasse = re.sub(r"\s+", " ", teile[2]).strip() or None
 
         preis = flaeche = None
-        frei_ab = None
+        frei_ab = frei_bis = None
         zeile2 = node.css_first(".row.middle") or node
         for i, spalte in enumerate(zeile2.css("div[class*='col-xs-']")):
             text = spalte.text(strip=True)
@@ -130,8 +131,16 @@ class WgGesuchtAdapter(HttpAdapter):
                 preis = _zahl(text)
             elif "m²" in text and flaeche is None:
                 flaeche = _zahl(text, komma=True)
-            elif re.fullmatch(r"\d{2}\.\d{2}\.\d{4}", text):
-                frei_ab = text
+            else:
+                # This dedicated column contains either a start or a rental range.
+                # Previously fullmatch(single_date) silently discarded every range.
+                zeitraum = re.fullmatch(
+                    r"(\d{2}\.\d{2}\.\d{4}|ab sofort|sofort)"
+                    r"(?:\s*(?:-|–|—|bis)\s*(\d{2}\.\d{2}\.\d{4}))?",
+                    re.sub(r"\s+", " ", text), re.IGNORECASE,
+                )
+                if zeitraum:
+                    frei_ab, frei_bis = zeitraum.groups()
 
         bild = node.css_first("img.img-responsive")
         bild_url = bild.attributes.get("src") if bild else None
@@ -150,6 +159,11 @@ class WgGesuchtAdapter(HttpAdapter):
             city=city,
             district=stadtteil,
             available_from=frei_ab,
+            # Preserve the unabridged source title and the structured rental end.
+            # The shared exclusion filter reads this description in search + studio.
+            description=originaltitel + (
+                f"\nBefristete Mietzeit: {frei_ab} bis {frei_bis}." if frei_bis else ""
+            ),
             image_url=bild_url,
             contact_form_url=None,   # bewusst: robots.txt sperrt die Kontaktstrecke
         )

@@ -144,6 +144,9 @@ with sync_playwright() as p:
            ('Kein Wohnungstausch',[]),('Keine Zwischenmiete, aber befristet',['zeit'])]
     for title,wanted in cases:
         assert page.evaluate('(title)=>ausschlussTreffer({title})',title)==wanted, title
+    ranged={"title":"Helle Wohnung", "description":"Befristete Mietzeit: 01.10.2026 bis 31.03.2027."}
+    assert page.evaluate('(l)=>ausschlussTreffer(l)',ranged)==['zeit']
+    assert page.evaluate('(l)=>!FFSearch.matchesSaved({...l,source:"wggesucht"},{filters:{quellen:["wggesucht"],bezirke:[],ausschluss:["zeit"]},center:null})',ranged)
     page.locator('#reset').click()
     page.evaluate('ALLE.unshift({key:"test-temporary",title:"Zwischenmiete Test",source:ALLE[0].source,kind:"portal",score:50});zeichnen()')
     check=page.locator('.ausschluss[value="zeit"]')
