@@ -83,7 +83,10 @@
   .ausschlussfilter{padding:12px;border:1px solid var(--line);border-radius:9px;margin:12px 0;font-size:12px}
   .ausschlussfilter>b{display:block;margin-bottom:8px}
   .ausschlussfilter label{display:flex;align-items:center;gap:7px;margin:8px 0;cursor:pointer}
-  .ausschlussfilter input{accent-color:var(--accent);width:16px;height:16px;flex:none}
+  .ausschlussfilter input{appearance:none;width:18px;height:18px;flex:none;border:1px solid var(--line);border-radius:4px;background:var(--card);display:grid;place-content:center;cursor:pointer}
+  .ausschlussfilter input:checked{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 8%,var(--card))}
+  .ausschlussfilter input:checked::after{content:"×";color:var(--bad);font-size:22px;font-weight:700;line-height:16px}
+  .ausschlussfilter input:focus-visible{outline:2px solid var(--bad);outline-offset:3px}
   .ausschlussfilter [data-treffer]{color:var(--muted);margin-left:auto}
   .ausschlussfilter .feldhilfe{margin:10px 0 0;font-size:11px}
   .quellenliste{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
@@ -156,6 +159,10 @@
   tr.k-portal td.artcell{border-left-color:var(--k-portal)}
   tr.k-genossenschaft td.artcell{border-left-color:var(--k-coop)}
 
+  .weitere-quellen{margin:0 0 20px;font-size:12px;color:var(--muted)}
+  .weitere-quellen summary{cursor:pointer}
+  .weitere-quellen ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;list-style:none;padding:0}
+  .weitere-quellen small{display:block;margin-top:3px}
   .legendenzeile{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 16px;margin:-8px 0 14px;color:var(--muted);font-size:11px}
   .legende{display:flex;flex-wrap:wrap;gap:4px 12px;margin:0}
   .legende .kind{font-size:11px;gap:4px}
@@ -331,7 +338,7 @@
       <label><input type="checkbox" class="ausschluss" value="zeit"> Zwischenmiete / befristetes Wohnen <span data-treffer="zeit"></span></label>
       <label><input type="checkbox" class="ausschluss" value="untermiete"> Untermiete <span data-treffer="untermiete"></span></label>
       <label><input type="checkbox" class="ausschluss" value="tausch"> Wohnungstausch <span data-treffer="tausch"></span></label>
-      <p class="feldhilfe">Erkennung anhand des Anzeigentitels. Zahlen: aktive Angebote insgesamt. Nicht jede Befristung steht im Titel.</p>
+      <p class="feldhilfe">Rotes × = ausblenden. Erkennung anhand von Titel und vorhandener Beschreibung. Zahlen: aktive Angebote insgesamt. Die Erkennung kann Angaben übersehen.</p>
     </div>
     <p class="feldhilfe">Nur Warmmiete bekannt? Der Preisfilter erlaubt dafür 35 % Aufschlag.</p>
   </fieldset>
@@ -347,6 +354,7 @@
   </div>
 </form>
 
+<details class="weitere-quellen"><summary>Weitere Anbieter &amp; Genossenschaften · 11 direkte Zugänge</summary><p>Diese Seiten werden nicht automatisch in die Trefferliste übernommen. Viele vergeben Wohnungen über Bewerbungen oder Interessentenlisten. Stand der Prüfung: 22.09.2026.</p><ul><li><a href="https://www.immobilienscout24.de/Suche/de/hessen/frankfurt-am-main/wohnung-mieten" target="_blank" rel="noopener">ImmoScout24 ↗</a><small>Portal · automatischer Zugriff durch Roboterprüfung gesperrt</small></li><li><a href="https://www.abg.de/mieten/faire-wohnungsvergabe/interessentenformular/" target="_blank" rel="noopener">ABG Frankfurt Holding ↗</a><small>Wohnungsunternehmen · Interessentenliste</small></li><li><a href="https://www.vbs-frankfurt.de/wohnen/" target="_blank" rel="noopener">VBS Frankfurt eG ↗</a><small>Genossenschaft · Angebote über ImmoScout24</small></li><li><a href="https://www.bwv-frankfurt.de/angebote/" target="_blank" rel="noopener">Bau- und Wohnungsverein Frankfurt eG ↗</a><small>Genossenschaft · zuletzt nur Stellplätze</small></li><li><a href="https://www.wbg-ffm.de/mietinteressenten/" target="_blank" rel="noopener">Wohnungsbaugenossenschaft Frankfurt eG ↗</a><small>Genossenschaft · Informationen für Mietinteressenten</small></li><li><a href="https://fesv.de/" target="_blank" rel="noopener">Frankfurter Eisenbahn-Siedlungsverein eG ↗</a><small>Genossenschaft · Bestände und Kontakt</small></li><li><a href="https://fwg-eg.de/" target="_blank" rel="noopener">Frankfurter Wohnungs-Genossenschaft eG ↗</a><small>Genossenschaft · direkt nach freien Wohnungen fragen</small></li><li><a href="https://bg-bergen-enkheim.de/" target="_blank" rel="noopener">Baugenossenschaft Bergen-Enkheim eG ↗</a><small>Genossenschaft · Kontakt und Sprechzeiten</small></li><li><a href="https://www.juba-wohnen.de/bewerberbogen/" target="_blank" rel="noopener">JuBa ↗</a><small>Wohnungsunternehmen · Bewerberbogen</small></li><li><a href="https://www.gsw-ffm.de/de/mieten/" target="_blank" rel="noopener">GSW Frankfurt ↗</a><small>Wohnungsunternehmen · öffentliche Angebote, zuletzt außerhalb Frankfurts</small></li><li><a href="https://www.sahle-wohnen.de/immobilien/" target="_blank" rel="noopener">Sahle Wohnen ↗</a><small>Wohnungsunternehmen · bundesweite Suche, zuletzt keine Frankfurt-Treffer</small></li></ul></details>
 <div class="legendenzeile" aria-label="Legende der Anbieterarten">
 <div class="legende" id="legende"></div>
 <details class="legendendetails"><summary>Anbieterarten erklärt</summary>
@@ -417,6 +425,7 @@ function filterLesen(){
     plz:el("plz").value.trim(), karte:KARTE_AN, klick:KLICK_MITTE,
     bezirke:[...document.querySelectorAll('#bezirke .chip[aria-pressed="true"]')].map(c=>c.dataset.v),
     quellenVersion:2,
+    bekannteQuellen:[...document.querySelectorAll("#quellen input:not(:disabled)")].map(c=>c.value),
     quellen:[...document.querySelectorAll("#quellen input:checked")].map(c=>c.value),
     ausschluss:[...document.querySelectorAll(".ausschluss:checked")].map(c=>c.value),
 
@@ -441,13 +450,17 @@ function geladen(){
 const QUELLEN={
   vonovia:["Vonovia","Wohnungsunternehmen"],nhw:["NHW · Nassauische Heimstätte","Wohnungsunternehmen"],
   gwh:["GWH","Wohnungsunternehmen"],wggesucht:["WG-Gesucht.de","Immobilienportal"],immowelt:["Immowelt","Immobilienportal"],
-  immoscout:["ImmoScout24","Derzeit blockiert · keine Suche"],kleinanzeigen:["Kleinanzeigen","Derzeit blockiert · keine Suche"]
+  immoscout:["ImmoScout24","Derzeit blockiert · keine Suche"],kleinanzeigen:["Kleinanzeigen","Immobilienportal"],
+  ohnemakler:["ohne-makler.net","Provisionsfreie Angebote · Portal"]
 };
 function quellenName(key){return QUELLEN[key]?.[0]||key;}
 function quellenAufbauen(gespeichert){
   const vorhanden=[...new Set(ALLE.map(l=>l.source))];
   const keys=[...new Set([...Object.keys(QUELLEN),...vorhanden])];
-  const ausgewaehlt=gespeichert?.quellenVersion===2 ? gespeichert.quellen : gespeichert?.quellen?.length ? gespeichert.quellen : vorhanden;
+  const ausgewaehlt=[...(gespeichert?.quellenVersion===2 ? gespeichert.quellen||[] : gespeichert?.quellen?.length ? gespeichert.quellen : vorhanden)];
+  const bekannt=gespeichert?.bekannteQuellen||["vonovia","nhw","gwh","wggesucht","immowelt"];
+  // Include newly added sources without resetting deliberate empty or partial selections.
+  if(bekannt.every(k=>ausgewaehlt.includes(k))) vorhanden.filter(k=>!bekannt.includes(k)).forEach(k=>ausgewaehlt.push(k));
   el("quellen").replaceChildren(...keys.map(key=>{
     const label=document.createElement("label");label.className="quellenwahl";
     const input=document.createElement("input");input.type="checkbox";input.value=key;
@@ -487,10 +500,10 @@ function istNeu(l){
   return (Date.now() - new Date(l.first_seen).getTime()) < 36e5*24;
 }
 
-// Nur tatsächliche Angebotstitel prüfen, keine abgeleiteten Score-Begründungen.
+// Originaltitel und vorhandene Beschreibung prüfen, keine Score-Begründungen.
 // Untermiete kann unbefristet sein und ist deshalb ein eigener Filter.
 function ausschlussTreffer(l){
-  const titel=String(l.title||"").normalize("NFKC").toLowerCase();
+  const titel=String((l.title||"")+" "+(l.description||"")).normalize("NFKC").toLowerCase();
   const regeln={
     zeit:/\b(?:zwischenmiete|zwischenvermietung|befristet(?:e[rmns]?)?|zeitmiete|wohnen auf zeit|temporary rental|short[ -]term)\b/g,
     untermiete:/\b(?:untermiete|untervermietung|untermieter(?:in)?|sublet)\b/g,
@@ -784,6 +797,7 @@ function auswahlZeichnen(){
     <div class="facts">${facts.map(([k,v])=>`<div class="fact"><b>${esc(v)}</b><span>${esc(k)}</span></div>`).join("")}</div>
     <p>${esc([l.street,l.zip,l.district||l.city].filter(Boolean).join(", ")||"Adresse nicht angegeben")}</p>
     <p class="lage">${esc(lage)}</p>
+    ${l.description ? `<p>${esc(l.description)}</p>` : ""}
     <div class="why"><b>Bewertung: ${esc(l.score??0)}/100</b><br>${esc((l.score_reasons||[]).join(" · "))}</div>
     <div class="d-actions"><a class="primary" href="${esc(l.url)}" target="_blank" rel="noopener">Originalangebot öffnen ↗</a>
     ${hatLage ? '<button type="button" class="auf-karte">Auf Karte zeigen</button>' : ""}

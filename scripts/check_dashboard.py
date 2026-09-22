@@ -26,9 +26,9 @@ with sync_playwright() as p:
     page.locator('#anbieter').select_option('grossvermieter')
     assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),true)).every(l=>l.kind === "grossvermieter")')
     page.locator('#anbieter').select_option('genossenschaft')
-    assert page.locator('#leer').is_visible()
+    assert page.evaluate('ALLE.filter(l=>passt(l,filterLesen(),true)).every(l=>l.kind === "genossenschaft")')
     assert page.locator('#karte').is_visible()
-    assert 'keine Angebote' in page.locator('#coopstand').inner_text()
+    assert 'Angebote' in page.locator('#coopstand').text_content()
     page.locator('#anbieter').select_option('')
     assert page.locator('#umkreis').input_value() == '3'
     assert page.evaluate('MAP.getCenter().distanceTo(L.latLng(PLZ_POS["60311"])) < 100')
@@ -148,6 +148,8 @@ with sync_playwright() as p:
     page.evaluate('ALLE.unshift({key:"test-temporary",title:"Zwischenmiete Test",source:ALLE[0].source,kind:"portal",score:50});zeichnen()')
     check=page.locator('.ausschluss[value="zeit"]')
     check.check()
+    assert check.evaluate("e=>getComputedStyle(e,'::after').content").strip('"') == "×"
+    assert page.evaluate('(ausschlussTreffer({title:"Wohnung",description:"Nur Zwischenmiete"})).includes("zeit")')
     assert page.locator('#angebot-test-temporary').count()==0
     assert page.evaluate('filterLesen().ausschluss.includes("zeit")')
     page.reload()
