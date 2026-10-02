@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-02T00:00:33+00:00",
+ "generated_at": "2026-10-02T00:19:12+00:00",
  "city": "Frankfurt am Main",
  "plz": {
   "60306": [
@@ -172,11 +172,11 @@
   ]
  },
  "sources": {
-  "vonovia": "13 Angebote",
+  "vonovia": "1 Angebote",
   "nhw": "17 Angebote",
   "gwh": "14 Angebote",
   "wggesucht": "79 Angebote",
-  "kleinanzeigen": "54 Angebote",
+  "kleinanzeigen": "53 Angebote",
   "ohnemakler": "30 Angebote",
   "sparkasse": "3 Angebote",
   "immowelt": "18 Angebote"
@@ -286,7 +286,7 @@
    ],
    "first_seen": "2026-09-24T05:02:41.233612+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:0016720003",
@@ -322,7 +322,7 @@
    ],
    "first_seen": "2026-09-23T06:07:31.924662+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:0888170005",
@@ -425,7 +425,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-29T14:26:38.793963+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -495,7 +495,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -530,7 +530,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -671,7 +671,7 @@
    ],
    "first_seen": "2026-09-24T05:02:41.233612+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:0008990015",
@@ -741,7 +741,7 @@
    ],
    "first_seen": "2026-10-01T06:07:54.643979+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:0672920015",
@@ -843,7 +843,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-30T13:54:52.860702+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1013,7 +1013,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-23T17:13:36.337689+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1217,7 +1217,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-30T09:06:08.108354+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1251,7 +1251,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1489,7 +1489,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-25T17:38:28.968677+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1512,7 +1512,7 @@
    "lng": 8.61888,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzk0NTM4L29hcG91NXB4?sig=nFkPyso1HIfJYe_WnX56w0SqVEUbNGm5eZa8_jyyF5I&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzk0NTM4L29hcG91NXB4?sig=k80ZdhFrEaQPtReCjJnjeK-pHp6LIIKq7v17iJn5FYI&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 88,
@@ -1523,7 +1523,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1546,7 +1546,7 @@
    "lng": 8.56662,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDgyNTA4LzR6YjIzZ29j?sig=gpMT5b46aDLK3q1ciBWJ_rk7o4TJNjZDu9oGdGNxfcg&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDgyNTA4LzR6YjIzZ29j?sig=m4MikoIxiLcAdvFCUH1k9Og00VmLIUTJvBfm5xvdiQI&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 88,
@@ -1557,7 +1557,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-24T18:02:47.270533+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1580,7 +1580,7 @@
    "lng": 8.69997,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk5NzU0Lzk3Y2N2MzRr?sig=0QynkxcusggHTK1Gsq_JJ6LAQagghRKJ3qeGBGR_A30&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk5NzU0Lzk3Y2N2MzRr?sig=ctlJh5sPZH9aAsPXupRidR4ofNi2KIp4yOGe8Ys-3q8&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 87,
@@ -1591,7 +1591,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-28T20:54:28.737190+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1722,7 +1722,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1844,7 +1844,7 @@
    "lng": 8.61888,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkyMzQxL3dsN3IwbWtp?sig=EJzxXMdZEL63cVUPnKUsqTtE4gPI9WYA3a89jJy9wsE&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkyMzQxL3dsN3IwbWtp?sig=3lteIGOyryCwq17ZlOyhwBkR9prYe-6ybW0wHq5W1vE&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 85,
@@ -1854,7 +1854,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -1887,7 +1887,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-10-01T15:53:34.253974+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -2042,7 +2042,7 @@
    "lng": 8.62436,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAwMzgzLzZlZmt1aTdk?sig=TIMdSrQjTiKgSGd78a6NCae-CFBWiFQmM-UudS_KHp0&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAwMzgzLzZlZmt1aTdk?sig=rAW7WRaaTFPHGLTEsWjVaxTEMi579FS5zpiVsaUZxlY&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 83,
@@ -2052,7 +2052,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-30T13:54:52.860702+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -2086,7 +2086,7 @@
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:0569850020",
@@ -2119,7 +2119,7 @@
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:0672810016",
@@ -2316,7 +2316,7 @@
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:1539370005",
@@ -2350,7 +2350,7 @@
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:1539570009",
@@ -2416,7 +2416,7 @@
     "74 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-30T09:06:08.108354+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -2709,7 +2709,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-23T17:13:36.337689+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -2732,7 +2732,7 @@
    "lng": 8.64271,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk5MjAyL3c0cWRucjZn?sig=a0ubSwwOWIxwH4vwKolq0Lvf-s0UqbJiJp9emzzh9qQ&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk5MjAyL3c0cWRucjZn?sig=qT53GlOdPHVLn9HTvFHHhgQiwsdpIpcBwQOskkBnZ1E&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 72,
@@ -2742,7 +2742,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-27T08:22:03.960493+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -2775,7 +2775,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -2808,7 +2808,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -2864,7 +2864,7 @@
    "lng": 8.57221,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAwNDcyL3gyOXRqdnJz?sig=5hAvqAlNk3K2FmkZDPh9EuxvmpF3SpbbAfgnsrs7Rqw&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAwNDcyL3gyOXRqdnJz?sig=PkKz_ejpPV5TnWbMTCB8vIw0_kO-7FRrpUjMJfrqr0g&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 71,
@@ -2874,7 +2874,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-30T19:36:35.084040+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -2938,7 +2938,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -3002,7 +3002,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -3035,7 +3035,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -3100,7 +3100,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-25T17:38:28.968677+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -3132,7 +3132,7 @@
     "95 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T19:02:47.321545+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -3194,7 +3194,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-30T19:36:35.084040+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -3326,7 +3326,7 @@
     "105 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -4052,7 +4052,7 @@
     "77 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-26T05:35:29.728570+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -4085,7 +4085,7 @@
     "89 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-26T05:35:29.728570+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -4217,7 +4217,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-26T17:19:26.972766+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -4382,7 +4382,7 @@
     "75 m2 - grosszuegig"
    ],
    "first_seen": "2026-10-01T15:53:34.253974+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -4405,7 +4405,7 @@
    "lng": 8.68713,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI5OTk0LzUyanpxamx0?sig=e_a1MpaytMoLpWyD32NdfPEBuJ7AFOWRUBCdj0GNmaA&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI5OTk0LzUyanpxamx0?sig=l55huoiSCLTs-0wuhtlC2XAxh6T2Wdzn8s3mon_zQWE&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 67,
@@ -4416,7 +4416,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -4516,7 +4516,7 @@
    ],
    "first_seen": "2026-09-20T06:35:21.687110+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13643527",
@@ -4581,8 +4581,8 @@
     "125 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
-   "last_seen": "2026-10-01T00:00:21.382009+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13648936",
@@ -4615,7 +4615,7 @@
    ],
    "first_seen": "2026-09-20T01:29:33.104663+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13649050",
@@ -4810,7 +4810,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -4843,7 +4843,7 @@
     "80 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -4942,7 +4942,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-30T09:06:08.108354+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -5071,7 +5071,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -5103,7 +5103,7 @@
     "72 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -5327,8 +5327,8 @@
     "Wunschlage Bockenheim"
    ],
    "first_seen": "2026-09-24T06:51:22.981495+00:00",
-   "last_seen": "2026-10-01T19:40:34.549716+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "kleinanzeigen:3522599961",
@@ -5807,7 +5807,7 @@
     "Wunschlage Ostend"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -5871,7 +5871,7 @@
     "Wunschlage Westend"
    ],
    "first_seen": "2026-10-01T19:40:34.549716+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -5903,7 +5903,7 @@
     "Wunschlage Ostend"
    ],
    "first_seen": "2026-10-01T19:40:34.549716+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -5967,7 +5967,7 @@
     "Wunschlage Sachsenhausen"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -5999,7 +5999,7 @@
     "Wunschlage Bockenheim"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6063,7 +6063,7 @@
     "Wunschlage Sachsenhausen"
    ],
    "first_seen": "2026-09-22T10:04:02.120004+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6127,7 +6127,7 @@
     "Wunschlage Ostend"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6159,7 +6159,7 @@
     "Wunschlage Bornheim"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6254,7 +6254,7 @@
     "Wunschlage Bockenheim"
    ],
    "first_seen": "2026-09-28T14:34:58.192530+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6286,7 +6286,7 @@
     "Wunschlage Bornheim"
    ],
    "first_seen": "2026-09-30T06:52:44.169259+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6318,7 +6318,7 @@
     "Wunschlage Sachsenhausen"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6482,7 +6482,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6515,7 +6515,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6604,7 +6604,7 @@
    "lng": 8.64271,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk2NDA1L3QzejkzOHFi?sig=pkAC3lTJ_2ofPBlXPQIkYWjfMzbq8TvyzaWrWqxKcc4&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk2NDA1L3QzejkzOHFi?sig=ypdGjTgRiQ8oiRDWEss8tCSHGo_tgUQ9PVmbDEeP9fA&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 60,
@@ -6614,7 +6614,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6646,7 +6646,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6678,7 +6678,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6742,7 +6742,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6838,7 +6838,7 @@
     "22.00 EUR/m2 - teuer"
    ],
    "first_seen": "2026-09-30T19:36:35.084040+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -6870,8 +6870,8 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-01T07:54:04.352738+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "kleinanzeigen:3382666808",
@@ -7030,7 +7030,7 @@
     "92 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -7062,7 +7062,7 @@
     "86 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -7126,7 +7126,7 @@
     "139 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -7350,7 +7350,7 @@
     "75 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -7446,7 +7446,7 @@
     "81 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-30T13:54:52.860702+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -7798,7 +7798,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -7990,7 +7990,7 @@
     "66 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-26T05:35:29.728570+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -8854,7 +8854,7 @@
     "85 m2 - grosszuegig"
    ],
    "first_seen": "2026-10-01T15:53:34.253974+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -8950,7 +8950,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -9079,7 +9079,7 @@
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12282643",
@@ -9142,8 +9142,8 @@
     "101 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-10-01T20:38:18.778529+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12310163",
@@ -9239,7 +9239,7 @@
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12896897",
@@ -9270,8 +9270,8 @@
     "82 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T22:28:48.100779+00:00",
-   "last_seen": "2026-09-29T19:44:02.234844+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12902398",
@@ -9462,7 +9462,7 @@
    ],
    "first_seen": "2026-09-20T02:30:19.041266+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13740493",
@@ -9493,7 +9493,7 @@
     "75 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -9589,7 +9589,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-25T12:20:28.612621+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -9749,7 +9749,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -9814,7 +9814,7 @@
    ],
    "first_seen": "2026-09-20T00:38:27.034331+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13990389",
@@ -9939,7 +9939,7 @@
     "93 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10003,7 +10003,7 @@
     "86 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10162,7 +10162,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-20T07:29:02.702144+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10194,7 +10194,7 @@
     "85 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-22T08:53:16.980131+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10258,7 +10258,7 @@
     "90 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-28T20:54:28.737190+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10290,7 +10290,7 @@
     "65 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-27T13:23:50.048239+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10322,7 +10322,7 @@
     "65 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-27T21:43:06.973491+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10354,7 +10354,7 @@
     "100 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-28T14:34:58.192530+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10386,7 +10386,7 @@
     "75 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10418,7 +10418,7 @@
     "90 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-30T13:54:52.860702+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10450,7 +10450,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-30T19:36:35.084040+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10482,7 +10482,7 @@
     "65 m2 - grosszuegig"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10514,7 +10514,7 @@
     "70 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10546,7 +10546,7 @@
     "69 m2 - grosszuegig"
    ],
    "first_seen": "2026-09-24T12:59:21.891562+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10601,7 +10601,7 @@
    "lng": 8.62346,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk0MTkxL3F4cGQxNHhz?sig=wV3H-Q3KLafpocL5SYCwgo-ovsSGQKvO8mCaqQi-J-c&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk0MTkxL3F4cGQxNHhz?sig=-5rG-QhD7jkSCX_JO3LHH-945CP_BX_02OSDR9MaAP0&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 54,
@@ -10611,7 +10611,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10644,7 +10644,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10768,7 +10768,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10830,7 +10830,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-29T14:26:38.793963+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10861,7 +10861,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -10892,7 +10892,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -11047,7 +11047,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -11667,7 +11667,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-28T14:34:58.192530+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -11814,7 +11814,7 @@
    "lng": 8.62709,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/3b/3b0999f1-339d-44c4-b35c-c98be9a3bbf2?rule=$_1.AUTO",
+   "image_url": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/3b/3b0999f1-339d-44c4-b35c-c98be9a3bbf2?rule=$_59.AUTO",
    "wbs_required": null,
    "commission": null,
    "score": 50,
@@ -11822,7 +11822,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-30T06:52:44.169259+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12101,7 +12101,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-10-01T19:40:34.549716+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12165,7 +12165,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12197,7 +12197,7 @@
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13281072",
@@ -12227,7 +12227,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12320,7 +12320,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12474,7 +12474,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12505,7 +12505,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12536,7 +12536,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12598,7 +12598,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-23T23:16:41.740976+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12629,7 +12629,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-25T12:20:28.612621+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12660,7 +12660,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-25T08:00:13.530935+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12691,7 +12691,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-27T18:01:42.907014+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12722,7 +12722,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-27T18:01:42.907014+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12753,7 +12753,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-30T19:36:35.084040+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12846,7 +12846,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12877,7 +12877,7 @@
     "Grundkriterien erfuellt"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -12931,7 +12931,7 @@
    "lng": 8.68359,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzEyNTcyL21vaWF1dG5x?sig=7GrFYzfHTBuULUsNxa7beLyEl0zns23x7jfEsIulNq4&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzEyNTcyL21vaWF1dG5x?sig=wdO99Asl-yLVlrY7MBrT704EbTVOo96OShCxlZwyA8E&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 45,
@@ -12941,7 +12941,7 @@
     "provisionsfrei"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13003,7 +13003,7 @@
     "44 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13065,7 +13065,7 @@
     "43 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13096,7 +13096,7 @@
     "42 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-30T13:54:52.860702+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13158,7 +13158,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13220,7 +13220,7 @@
     "15 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-30T19:36:35.084040+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13282,7 +13282,7 @@
     "Kaltmiete 3320 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13313,7 +13313,7 @@
     "Kaltmiete 2185 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13344,7 +13344,7 @@
     "Kaltmiete 2400 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13467,7 +13467,7 @@
     "Kaltmiete 1700 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13529,7 +13529,7 @@
     "Kaltmiete 2750 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13560,7 +13560,7 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13622,7 +13622,7 @@
     "Kaltmiete 2170 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13683,7 +13683,7 @@
     "Kaltmiete 1900 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13714,7 +13714,7 @@
     "Kaltmiete 3050 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13745,7 +13745,7 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13776,7 +13776,7 @@
     "Kaltmiete 2250 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13807,7 +13807,7 @@
     "24 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-30T19:36:35.084040+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13931,7 +13931,7 @@
     "Kaltmiete 2600 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -13962,7 +13962,7 @@
     "12 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-30T19:36:35.084040+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14209,7 +14209,7 @@
     "28 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14240,7 +14240,7 @@
     "37 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14271,7 +14271,7 @@
     "43 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14364,7 +14364,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14395,7 +14395,7 @@
     "37 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14426,7 +14426,7 @@
     "41 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14457,7 +14457,7 @@
     "39 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14488,7 +14488,7 @@
     "22 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14519,7 +14519,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14550,7 +14550,7 @@
     "43 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14581,7 +14581,7 @@
     "45 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14612,7 +14612,7 @@
     "46 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14643,7 +14643,7 @@
     "45 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14674,7 +14674,7 @@
     "47 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14705,7 +14705,7 @@
     "43 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14736,7 +14736,7 @@
     "41 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14767,7 +14767,7 @@
     "24 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-30T13:54:52.860702+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -14954,7 +14954,7 @@
    ],
    "first_seen": "2026-09-22T14:58:03.408383+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "kleinanzeigen:3508001941",
@@ -15046,7 +15046,7 @@
     "27 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -15077,7 +15077,7 @@
     "37 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -15295,7 +15295,7 @@
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "kleinanzeigen:3520099828",
@@ -15728,8 +15728,8 @@
     "22 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-24T06:51:22.981495+00:00",
-   "last_seen": "2026-10-01T20:38:18.778529+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "kleinanzeigen:3520993161",
@@ -15791,7 +15791,7 @@
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "kleinanzeigen:3520994527",
@@ -15853,7 +15853,7 @@
    ],
    "first_seen": "2026-09-28T14:34:58.192530+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "kleinanzeigen:3521047154",
@@ -17092,7 +17092,7 @@
     "29 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -17123,7 +17123,7 @@
     "29 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-29T07:36:37.264605+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -17650,7 +17650,7 @@
     "5 Zimmer ausserhalb 2-4"
    ],
    "first_seen": "2026-09-30T06:52:44.169259+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -18487,7 +18487,7 @@
     "47 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-10-01T15:53:34.253974+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -18518,7 +18518,7 @@
     "22 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-10-01T15:53:34.253974+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -18549,7 +18549,7 @@
     "17 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-10-01T19:40:34.549716+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -18642,7 +18642,7 @@
     "Kaltmiete 1549 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -18766,7 +18766,7 @@
     "28 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-10-01T13:31:16.485297+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19075,7 +19075,7 @@
     "49 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T08:53:16.980131+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19098,7 +19098,7 @@
    "lng": 8.66658,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMTAxMDUzL2Exdnd4bTlu?sig=GV07J0zUvhvOB2-skLCTRvBTKabvybYqDn_pi-0DkbI&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMTAxMDUzL2Exdnd4bTlu?sig=VcHhm75gkDnh3R8I0Y8gUX1jMTfzN0WtF8Zwsxqow_w&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19106,7 +19106,7 @@
     "Kaltmiete 1880 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19129,7 +19129,7 @@
    "lng": 8.68359,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMTI1Njc4LzRnY3lvbXJn?sig=FC6VjvUSleNx94euDgzEd5TiLAbG5G2vmeb4N9Jx3bU&exp=1790942351",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMTI1Njc4LzRnY3lvbXJn?sig=7wjcFUm0ezHz-GES09SRCH44J0OkQRde50K6A8oQyeE&exp=1790943467",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19137,7 +19137,7 @@
     "Kaltmiete 1999 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19160,7 +19160,7 @@
    "lng": 8.63208,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvMjAxOC8xMS8yMC8xYWg0bHFkbTdkM3d5NWQz?sig=EVUuvDXwFjCbDsyNv9LE36RqIIAvHkQhZs_HzsFGNfk&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvMjAxOC8xMS8yMC8xYWg0bHFkbTdkM3d5NWQz?sig=jjPsbfEXnJslVeOxnJYZvrFyxyZ9VtpCYAAiReB-b28&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19168,7 +19168,7 @@
     "35 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19191,7 +19191,7 @@
    "lng": 8.64271,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzM5NjgzLzdnOWxteDhk?sig=lTubS2kSx6uYgh2fWV_CJmSVDz7wo2FfZ1roYbJ4p7A&exp=1790942351",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzM5NjgzLzdnOWxteDhk?sig=uo4oa11alfjeKmIn2WPUBWVeXQVE2kMXl5SD8ChOz-w&exp=1790943467",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19199,7 +19199,7 @@
     "22 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19222,7 +19222,7 @@
    "lng": 8.69997,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzU0ODI3L3phZnhtd3oz?sig=mC-DTrrodyv9cqpH1ZdbUv9kizCIIyCkMoAqlzhrdR8&exp=1790942351",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzU0ODI3L3phZnhtd3oz?sig=Pyrvg71W_1FTcuynbF23fHb4oGlfji5BTxkMNbDi2uU&exp=1790943467",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19230,7 +19230,7 @@
     "Kaltmiete 1755 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19284,7 +19284,7 @@
    "lng": 8.69997,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYyNzY0LzgydnhodzA2?sig=eiLiggft7lQc0w3Btw5vtkXg55lewUs9gJ7RMOeHl8w&exp=1790942351",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYyNzY0LzgydnhodzA2?sig=p5IzDbEZSsjRY1XB2a1lW2ZTlJSB8zTR4O6mD5jQN7o&exp=1790943467",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19292,7 +19292,7 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19315,7 +19315,7 @@
    "lng": 8.69297,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzgzMzg5L3IwNDFlY2Nt?sig=8c6leB24GKeT9WjVaNgRTWud82RCVfpJ8_f1ywi0Axg&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzgzMzg5L3IwNDFlY2Nt?sig=Uboao1rjH62vozecBHUZDFCHqcUGRtlDDDJzxgF6r3w&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19323,7 +19323,7 @@
     "Kaltmiete 2200 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19377,7 +19377,7 @@
    "lng": 8.69997,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4MDM0LzF3dGczYXlv?sig=40tZjq3bu6Ru1Pqfs2IYvn7ZvnxVAZvtRpoJiWk9EHk&exp=1790942351",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4MDM0LzF3dGczYXlv?sig=HUjE1KM4yB8NuFv7RbKDJjVwByEYhnFLSaG5waKNZsU&exp=1790943467",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19385,7 +19385,7 @@
     "23 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19408,7 +19408,7 @@
    "lng": 8.6431,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDY5NzUxL2d0cGo1eWF1?sig=0iRlfQcPOMrMDSHqnbEN9HFNEcjNXjGZphFnihTtavU&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDY5NzUxL2d0cGo1eWF1?sig=wifd1ZODpcojxZeKdWnzRzx8ju7L-RJWJ6H5zL3Isfc&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19416,7 +19416,7 @@
     "Kaltmiete 1500 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-23T20:31:59.102359+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19439,7 +19439,7 @@
    "lng": 8.66052,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDcwOTIyL2FodTQ0YzNx?sig=BzJyo-GpRS7Glc7Hxit8FEpNctSzMic2z48XNWEjTyk&exp=1790942351",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDcwOTIyL2FodTQ0YzNx?sig=fIvMR3fx0i4Av9qN2fIz51_quHmeZXbu0VzC8uCbf90&exp=1790943467",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19447,7 +19447,7 @@
     "Kaltmiete 2800 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19501,7 +19501,7 @@
    "lng": 8.6431,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDc4MTU5L2xldmQ0azVt?sig=uUgUe0Idf1GyUIKQAL346YZ8oyTsEXjbKZiP2cITIbo&exp=1790942351",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDc4MTU5L2xldmQ0azVt?sig=vHAQzkYQEWSc0JPFhZx8nME5ph4XZmW_ndQNWvCxQY0&exp=1790943467",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19509,7 +19509,7 @@
     "Kaltmiete 4000 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19532,7 +19532,7 @@
    "lng": 8.69997,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDgzOTY1L3UyYzg1MDI2?sig=ptk8CyTYq7JnxmS201dt9e_m7SkH0nnN_6v4S6LYmig&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDgzOTY1L3UyYzg1MDI2?sig=5NK6zdSnwJEWHy-rzcuYB-1REg5ZiEjCf_GZSpRLQgU&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19540,7 +19540,7 @@
     "Kaltmiete 2100 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19563,7 +19563,7 @@
    "lng": 8.68713,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg0MzAyL3R4MDI3eGZ5?sig=yqDCuUdjNVD3B1yqyzwaaRBbwECh5qDJdRePp30yyQo&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg0MzAyL3R4MDI3eGZ5?sig=wgrgjWykRM_hsnyFG0_Pj5_-VW7JLheR6UMa7hGIXGQ&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19571,7 +19571,7 @@
     "29 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19625,7 +19625,7 @@
    "lng": 8.6431,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg5OTA4LzJ6YzFqdmx5?sig=OCtWAsug3RvVZr7YYPlgLohdytK_mGy7JZ_K2q73cgg&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg5OTA4LzJ6YzFqdmx5?sig=n-zgitIHQ4OVrmX1wmLsfUq25P4Hn7G_HP8ekdKMkfc&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19633,7 +19633,7 @@
     "Kaltmiete 3550 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19656,7 +19656,7 @@
    "lng": null,
    "position_approx": false,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkxMjQzL29nZW1udTg2?sig=WzByJT-euIA6G5YCR-_92PoXyzSbOf5K_gWv6UtIZxA&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkxMjQzL29nZW1udTg2?sig=p6_connzWS3R4VzEe51azwEHMHIIzMxzWQVAuKPGuwM&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19664,7 +19664,7 @@
     "Kaltmiete 1900 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T14:08:58.428601+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19749,7 +19749,7 @@
    "lng": 8.68713,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk4MDkxL29seTFiZnR1?sig=2kN-AF31hFYeeDSpIEuA-S1UX6oqX3d5S8eQasEzxUU&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk4MDkxL29seTFiZnR1?sig=OE75LDIcXV0pU82CO4_xcek3wReD2MjMvolGUqdC4nk&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19757,7 +19757,7 @@
     "Kaltmiete 1890 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-23T11:49:59.259626+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19811,7 +19811,7 @@
    "lng": 8.68713,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk5MjEwL2hobzhkcjVy?sig=klrpTG9SkecZrof0rWTJs0B9wwSrVFN-e2OgZb6IsLI&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk5MjEwL2hobzhkcjVy?sig=KMlgqj7L19zd4S-HOQ5nWC4AoOJ6JsLPRoV2hlxyEag&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19819,7 +19819,7 @@
     "Kaltmiete 1750 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-27T08:22:03.960493+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19842,7 +19842,7 @@
    "lng": 8.61255,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAwMTQ2LzFuOHp1MTE3?sig=YCazq2t1agrmv87q0ERGVYjY-AIM2r8tgAW8_UfLpeE&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAwMTQ2LzFuOHp1MTE3?sig=eJ11RDK5lCo_5PBYGvDtOH29iCAX15VoS99pHFFBAdg&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19850,7 +19850,7 @@
     "40 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-30T06:52:44.169259+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19873,7 +19873,7 @@
    "lng": 8.64986,
    "position_approx": true,
    "available_from": null,
-   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAwMzg5LzR5eDBmMXVk?sig=ZZ7p7iz4WI_AIt-XVYzRTC-mA6pmosPVzCPIIum51Ks&exp=1790942347",
+   "image_url": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAwMzg5LzR5eDBmMXVk?sig=hQ8rvr6L2w4tFPFLozW9btGs0PkoRhmgdkwmbpfa-9Y&exp=1790943463",
    "wbs_required": null,
    "commission": false,
    "score": 0,
@@ -19881,7 +19881,7 @@
     "34 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-30T16:11:26.771075+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19912,7 +19912,7 @@
     "Kaltmiete 1600 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T19:02:47.321545+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19943,7 +19943,7 @@
     "Kaltmiete 1500 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-22T19:02:47.321545+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -19975,7 +19975,7 @@
    ],
    "first_seen": "2026-09-22T05:05:53.005408+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:0002120008",
@@ -20006,7 +20006,7 @@
    ],
    "first_seen": "2026-09-25T06:43:13.637841+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:0002190008",
@@ -20161,7 +20161,7 @@
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "vonovia:1539650014",
@@ -20222,7 +20222,7 @@
     "Kaltmiete 1407 EUR ueber Limit 1400 EUR"
    ],
    "first_seen": "2026-09-30T06:52:44.169259+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -20254,7 +20254,7 @@
    ],
    "first_seen": "2026-09-19T20:42:14.857047+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12194763",
@@ -20284,7 +20284,7 @@
     "43 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-30T19:36:35.084040+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -20430,7 +20430,7 @@
    "lat": 50.10841,
    "lng": 8.66815,
    "position_approx": true,
-   "available_from": "30.09.2026",
+   "available_from": "01.10.2026",
    "image_url": "https://img.wg-gesucht.de/media/up/2025/34/7328d454e168fb5b5dbbc3bc51b5513daae173194b90e2492172fbb16ecf5f9c_9619eb10_48b7_4270_bb62_4642c5865c12.small.jpg",
    "wbs_required": null,
    "commission": null,
@@ -20439,8 +20439,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-20T03:31:02.723653+00:00",
-   "last_seen": "2026-10-01T00:55:39.907771+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281245",
@@ -20564,7 +20564,7 @@
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12281266",
@@ -20625,8 +20625,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-10-01T20:38:18.778529+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281306",
@@ -20780,7 +20780,7 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -20833,7 +20833,7 @@
    "lat": 50.12492,
    "lng": 8.69232,
    "position_approx": true,
-   "available_from": "29.09.2026",
+   "available_from": "01.10.2026",
    "image_url": "https://img.wg-gesucht.de/media/up/2025/34/9211f33c386baa9a8babba944a630526364764757b443e235fbd53aa79856165_66c26acc_3b48_47a2_878e_10e4166281db.small.jpg",
    "wbs_required": null,
    "commission": null,
@@ -20842,8 +20842,8 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-20T06:35:21.687110+00:00",
-   "last_seen": "2026-09-29T19:44:02.234844+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281333",
@@ -20874,7 +20874,7 @@
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:12281334",
@@ -20926,7 +20926,7 @@
    "lat": 50.12636,
    "lng": 8.66792,
    "position_approx": true,
-   "available_from": "30.09.2026",
+   "available_from": "01.10.2026",
    "image_url": "https://img.wg-gesucht.de/media/up/2025/34/3ef45382fccfd3369c20ad0aec847b434ec69cca90e037bd631c26f70f6fb057_d12eb267_4612_4ad2_9d22_94ab34701b75.small.jpg",
    "wbs_required": null,
    "commission": null,
@@ -20935,8 +20935,8 @@
     "25 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-20T08:31:11.890276+00:00",
-   "last_seen": "2026-10-01T00:55:39.907771+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281337",
@@ -21028,8 +21028,8 @@
     "25 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:28:37.495987+00:00",
-   "last_seen": "2026-10-01T06:07:54.643979+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281341",
@@ -21183,7 +21183,7 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -21245,8 +21245,8 @@
     "30 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-10-01T19:40:34.549716+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281375",
@@ -21276,8 +21276,8 @@
     "30 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-01T15:53:34.253974+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:12281376",
@@ -21338,7 +21338,7 @@
     "2 Zimmer ausserhalb 2-4"
    ],
    "first_seen": "2026-09-28T01:00:05.273354+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -21369,7 +21369,7 @@
     "45 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -21400,7 +21400,7 @@
     "6 Zimmer ausserhalb 2-4"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -21431,7 +21431,7 @@
     "32 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -21462,7 +21462,7 @@
     "1 Zimmer ausserhalb 2-4"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -21493,7 +21493,7 @@
     "20 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T19:02:47.321545+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -21525,7 +21525,7 @@
    ],
    "first_seen": "2026-09-20T03:31:02.723653+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13647122",
@@ -21618,7 +21618,7 @@
    ],
    "first_seen": "2026-09-20T01:29:33.104663+00:00",
    "last_seen": "2026-10-02T00:00:33.359783+00:00",
-   "gone": false
+   "gone": true
   },
   {
    "key": "wggesucht:13647142",
@@ -21772,8 +21772,8 @@
     "30 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:24:39.184787+00:00",
-   "last_seen": "2026-10-01T20:38:18.778529+00:00",
-   "gone": true
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
+   "gone": false
   },
   {
    "key": "wggesucht:13647229",
@@ -21872,7 +21872,7 @@
    "key": "wggesucht:13649213",
    "source": "wggesucht",
    "kind": "portal",
-   "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main.13649213.html",
+   "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main.41.2.1.0.html?asset_id=13649213&pu=26270888&sort_column=1&sort_order=0",
    "title": "Mainzer Landstraße, Frankfurt am Main",
    "description": "Mainzer Landstraße, Frankfurt am Main",
    "price_cold": null,
@@ -21896,7 +21896,7 @@
     "41 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -21965,7 +21965,7 @@
    "key": "wggesucht:13891884",
    "source": "wggesucht",
    "kind": "portal",
-   "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main.41.2.1.0.html?asset_id=13891884&pu=26270888&sort_column=1&sort_order=0",
+   "url": "https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main-Bockenheim.13891884.html",
    "title": "Bettinastraße, Frankfurt am Main",
    "description": "Bettinastraße, Frankfurt am Main",
    "price_cold": null,
@@ -21989,7 +21989,7 @@
     "15 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22020,7 +22020,7 @@
     "26 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22051,7 +22051,7 @@
     "40 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T22:30:01.739179+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22236,7 +22236,7 @@
     "49 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22359,7 +22359,7 @@
     "27 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22450,7 +22450,7 @@
     "39 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-21T21:15:56.616556+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22481,7 +22481,7 @@
     "13 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-22T14:01:55.374121+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22512,7 +22512,7 @@
     "1 Zimmer ausserhalb 2-4"
    ],
    "first_seen": "2026-09-23T12:19:28.762746+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22574,7 +22574,7 @@
     "42 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-24T10:11:07.816000+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22636,7 +22636,7 @@
     "31 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-25T18:46:35.642175+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22667,7 +22667,7 @@
     "11 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-28T15:38:44.904085+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22698,7 +22698,7 @@
     "44 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-29T14:26:38.793963+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
@@ -22790,7 +22790,7 @@
     "47 m2 unter Minimum 50 m2"
    ],
    "first_seen": "2026-09-19T21:21:49.456880+00:00",
-   "last_seen": "2026-10-02T00:00:33.359783+00:00",
+   "last_seen": "2026-10-02T00:19:12.982129+00:00",
    "gone": false
   },
   {
